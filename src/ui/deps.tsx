@@ -3,12 +3,7 @@
 import { createContext, useContext, type ReactNode } from "react";
 import type { ContentBank } from "@/content/bank";
 import type { Language, Mode } from "@/content/types";
-
-/** A localStorage-like key/value store. */
-export type KeyValueStore = {
-  getItem(key: string): string | null;
-  setItem(key: string, value: string): void;
-};
+import type { KeyValueStore } from "@/play/storage";
 
 export type Report = {
   itemId: string;

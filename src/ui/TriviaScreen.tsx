@@ -1,36 +1,25 @@
-import { useEffect, useRef, useState, type PointerEvent } from "react";
+import type { ContentBank } from "@/content/bank";
 import type { Language, TriviaItem } from "@/content/types";
-import { pickNext, shuffle, triviaPool } from "@/play/deal";
+import { shuffle, triviaPool } from "@/play/deal";
 import { useDeps } from "./deps";
 import { Icon } from "./icons";
 import { difficultyLabels, triviaTopicLabels } from "./labels";
+import { useDeck } from "./useDeck";
+import { useSwipe } from "./useSwipe";
 
 const language: Language = "en";
 
+/** What has been revealed on a Trivia card. */
+type TriviaView = { options: string[] | null; revealed: boolean };
+
+const loadTriviaPool = async (content: ContentBank) => triviaPool(await content.trivia(), language);
+
 export function TriviaScreen({ goHome }: { goHome: () => void }) {
-  const { content, random } = useDeps();
-  const [pool, setPool] = useState<TriviaItem[] | null>(null);
-  const [card, setCard] = useState<TriviaItem | undefined>(undefined);
-  const [cardKey, setCardKey] = useState(0);
-
-  function next() {
-    if (!pool) return;
-    setCard(pickNext(pool, card, random));
-    setCardKey((key) => key + 1);
-  }
-
-  useEffect(() => {
-    let cancelled = false;
-    content.trivia().then((items) => {
-      if (cancelled) return;
-      const available = triviaPool(items, language);
-      setPool(available);
-      setCard(pickNext(available, undefined, random));
-    });
-    return () => {
-      cancelled = true;
-    };
-  }, [content, random]);
+  const deck = useDeck<TriviaItem, TriviaView>({
+    mode: "trivia",
+    loadPool: loadTriviaPool,
+    initialView: { options: null, revealed: false },
+  });
 
   return (
     <main className="play" data-mode="trivia">
@@ -42,18 +31,44 @@ export function TriviaScreen({ goHome }: { goHome: () => void }) {
           <i aria-hidden="true" /> Trivia · all topics
         </span>
       </header>
-      {pool !== null && card === undefined && <p className="empty">No Trivia cards yet.</p>}
-      {card && <TriviaCard key={cardKey} item={card} onNext={next} />}
+      {deck.reshuffled && (
+        <p className="notice" role="status">
+          You&apos;ve played everything, starting again.
+        </p>
+      )}
+      {deck.empty && <p className="empty">No Trivia cards yet.</p>}
+      {deck.card && (
+        <TriviaCard
+          key={deck.card.key}
+          item={deck.card.item}
+          view={deck.card.view}
+          onView={deck.setView}
+          onNext={deck.next}
+          onBack={deck.canGoBack ? deck.back : undefined}
+        />
+      )}
     </main>
   );
 }
 
-function TriviaCard({ item, onNext }: { item: TriviaItem; onNext: () => void }) {
+function TriviaCard({
+  item,
+  view,
+  onView,
+  onNext,
+  onBack,
+}: {
+  item: TriviaItem;
+  view: TriviaView;
+  onView: (view: TriviaView) => void;
+  onNext: () => void;
+  /** Missing on the first card of the trail. */
+  onBack?: () => void;
+}) {
   const { random } = useDeps();
-  const swipe = useSwipe({ onLeft: onNext });
+  const swipe = useSwipe({ onLeft: onNext, onRight: onBack });
   const text = item[language]!;
-  const [options, setOptions] = useState<string[] | null>(null);
-  const [revealed, setRevealed] = useState(false);
+  const { options, revealed } = view;
 
   return (
     <>
@@ -88,13 +103,17 @@ function TriviaCard({ item, onNext }: { item: TriviaItem; onNext: () => void }) 
       </div>
       <div className="links">
         {!options && !revealed && (
-          <button type="button" className="link" onClick={() => setOptions(shuffle([text.answer, ...text.options], random))}>
+          <button
+            type="button"
+            className="link"
+            onClick={() => onView({ ...view, options: shuffle([text.answer, ...text.options], random) })}
+          >
             Show options
           </button>
         )}
       </div>
       <div className="controls">
-        <button type="button" className="round" aria-label="Previous card" disabled>
+        <button type="button" className="round" aria-label="Previous card" disabled={!onBack} onClick={onBack}>
           <Icon name="back" />
         </button>
         {revealed ? (
@@ -102,7 +121,7 @@ function TriviaCard({ item, onNext }: { item: TriviaItem; onNext: () => void }) 
             Next
           </button>
         ) : (
-          <button type="button" className="round round-main" onClick={() => setRevealed(true)}>
+          <button type="button" className="round round-main" onClick={() => onView({ ...view, revealed: true })}>
             Reveal
           </button>
         )}
@@ -120,26 +139,4 @@ function questionSize(question: string) {
   if (question.length < 110) return "question-m";
   if (question.length < 200) return "question-l";
   return "question-xl";
-}
-
-const SWIPE_DISTANCE = 60;
-
-/** Horizontal swipe detection. Mostly vertical drags are left alone so the card can scroll. */
-function useSwipe({ onLeft }: { onLeft: () => void }) {
-  const start = useRef<{ x: number; y: number } | null>(null);
-  return {
-    onPointerDown(event: PointerEvent) {
-      start.current = { x: event.clientX, y: event.clientY };
-    },
-    onPointerCancel() {
-      start.current = null;
-    },
-    onPointerUp(event: PointerEvent) {
-      if (!start.current) return;
-      const dx = event.clientX - start.current.x;
-      const dy = Math.abs(event.clientY - start.current.y);
-      start.current = null;
-      if (dx < -SWIPE_DISTANCE && dy < Math.abs(dx) * 0.6) onLeft();
-    },
-  };
 }

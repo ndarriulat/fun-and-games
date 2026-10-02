@@ -1,5 +1,6 @@
 import { bundledContentBank } from "@/content/bundled";
-import type { AppDeps, KeyValueStore } from "./deps";
+import type { KeyValueStore } from "@/play/storage";
+import type { AppDeps } from "./deps";
 
 /** localStorage, made safe: private browsing or blocked storage just means nothing is remembered. */
 const browserStorage: KeyValueStore = {

@@ -1,7 +1,16 @@
 import { cleanup, render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it } from "vitest";
-import { fixedRandom, testDeps, triviaFixtures } from "@/test/fakes";
+import {
+  corruptStorage,
+  fixedRandom,
+  inMemoryStorage,
+  numberedTrivia,
+  sequenceRandom,
+  testDeps,
+  throwingStorage,
+  triviaFixtures,
+} from "@/test/fakes";
 import { App } from "./App";
 
 async function openTrivia(deps = testDeps()) {
@@ -161,6 +170,140 @@ describe("Trivia", () => {
 
     expect(screen.getByRole("button", { name: "Settings" })).toBeInTheDocument();
     expect(screen.queryByRole("article")).not.toBeInTheDocument();
+  });
+});
+
+describe("Back and the recent trail", () => {
+  it("returns to the previous card with what was revealed still showing", async () => {
+    const { user } = await openTrivia();
+    await showOptions(user);
+    await user.click(screen.getByRole("button", { name: "Reveal" }));
+    await user.click(screen.getByRole("button", { name: "Next card" }));
+
+    await user.click(screen.getByRole("button", { name: "Previous card" }));
+
+    expect(screen.getByText("What is the capital of Australia?")).toBeInTheDocument();
+    expect(screen.getByRole("listitem", { name: "Correct: Canberra" })).toBeInTheDocument();
+    expect(screen.getByText("Canberra was purpose-built as a compromise between Sydney and Melbourne.")).toBeInTheDocument();
+  });
+
+  it("disables Back on the first card", async () => {
+    const { user } = await openTrivia();
+    expect(screen.getByRole("button", { name: "Previous card" })).toBeDisabled();
+
+    await user.click(screen.getByRole("button", { name: "Next card" }));
+    await user.click(screen.getByRole("button", { name: "Previous card" }));
+
+    expect(screen.getByText("What is the capital of Australia?")).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Previous card" })).toBeDisabled();
+  });
+
+  it("goes back on swipe right", async () => {
+    const { user } = await openTrivia();
+    await user.click(screen.getByRole("button", { name: "Next card" }));
+
+    await swipe(user, screen.getByRole("article"), 120);
+
+    expect(screen.getByText("What is the capital of Australia?")).toBeInTheDocument();
+  });
+
+  it("moves forward through the trail on Next, keeping what was revealed, before dealing a new card", async () => {
+    const { user } = await openTrivia();
+    await user.click(screen.getByRole("button", { name: "Next card" }));
+    await user.click(screen.getByRole("button", { name: "Reveal" }));
+    await user.click(screen.getByRole("button", { name: "Previous card" }));
+
+    await user.click(screen.getByRole("button", { name: "Next card" }));
+    expect(screen.getByText("Which metal makes octopus blood blue?")).toBeInTheDocument();
+    expect(screen.getByText("Copper")).toBeInTheDocument();
+
+    await user.click(screen.getByRole("button", { name: "Next card" }));
+    expect(screen.getByText("In what year did Uruguay host and win the first FIFA World Cup?")).toBeInTheDocument();
+  });
+
+  it("goes back through at most 10 previous cards", async () => {
+    const { user } = await openTrivia(testDeps({ trivia: numberedTrivia(12) }));
+    for (let i = 0; i < 11; i++) await user.click(screen.getByRole("button", { name: "Next card" }));
+    expect(screen.getByText("Question 12?")).toBeInTheDocument();
+
+    for (let i = 0; i < 10; i++) await user.click(screen.getByRole("button", { name: "Previous card" }));
+
+    expect(screen.getByText("Question 2?")).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Previous card" })).toBeDisabled();
+  });
+});
+
+describe("Played history", () => {
+  it("doesn't deal a card already shown, even after a reload", async () => {
+    const storage = inMemoryStorage();
+    await openTrivia(testDeps({ storage }));
+    expect(screen.getByText("What is the capital of Australia?")).toBeInTheDocument();
+    cleanup();
+
+    await openTrivia(testDeps({ storage }));
+
+    expect(screen.getByText("Which metal makes octopus blood blue?")).toBeInTheDocument();
+  });
+
+  it("says so and starts again when every card has been played, not with the card just shown", async () => {
+    // Deals the cards in bank order, then picks the last candidate: without the rule,
+    // the card just shown (the last in the bank) would come straight back.
+    const { user } = await openTrivia(testDeps({ random: sequenceRandom(0, 0, 0, 0.999) }));
+    await user.click(screen.getByRole("button", { name: "Next card" }));
+    await user.click(screen.getByRole("button", { name: "Next card" }));
+    expect(screen.getByText("In what year did Uruguay host and win the first FIFA World Cup?")).toBeInTheDocument();
+    expect(screen.queryByRole("status")).not.toBeInTheDocument();
+
+    await user.click(screen.getByRole("button", { name: "Next card" }));
+
+    expect(screen.getByRole("status")).toHaveTextContent("You've played everything, starting again.");
+    expect(screen.getByText("Which metal makes octopus blood blue?")).toBeInTheDocument();
+
+    await user.click(screen.getByRole("button", { name: "Next card" }));
+    expect(screen.queryByRole("status")).not.toBeInTheDocument();
+    expect(screen.getByText("In what year did Uruguay host and win the first FIFA World Cup?")).toBeInTheDocument();
+  });
+
+  it("starts again straight away when a returning player has played everything, not with the last card they saw", async () => {
+    const storage = inMemoryStorage();
+    const { user } = await openTrivia(testDeps({ storage }));
+    await user.click(screen.getByRole("button", { name: "Next card" }));
+    await user.click(screen.getByRole("button", { name: "Next card" }));
+    expect(screen.getByText("In what year did Uruguay host and win the first FIFA World Cup?")).toBeInTheDocument();
+    cleanup();
+
+    // 0.999 picks the last candidate, which would be the card last seen without the rule.
+    await openTrivia(testDeps({ storage, random: fixedRandom(0.999) }));
+
+    expect(screen.getByRole("status")).toHaveTextContent("You've played everything, starting again.");
+    expect(screen.getByText("Which metal makes octopus blood blue?")).toBeInTheDocument();
+  });
+});
+
+describe("Device storage", () => {
+  it.each([
+    ["not JSON", corruptStorage("{oops")],
+    ["JSON null", corruptStorage("null")],
+    ["a JSON array", corruptStorage("[1, 2]")],
+    ["throwing", throwingStorage()],
+  ])("still plays, without repeating this session, when storage is %s", async (_, storage) => {
+    const { user } = await openTrivia(testDeps({ storage }));
+    expect(screen.getByText("What is the capital of Australia?")).toBeInTheDocument();
+
+    await user.click(screen.getByRole("button", { name: "Next card" }));
+    await user.click(screen.getByRole("button", { name: "Next card" }));
+
+    expect(screen.getByText("In what year did Uruguay host and win the first FIFA World Cup?")).toBeInTheDocument();
+  });
+
+  it("keeps playing and remembering after replacing corrupt data", async () => {
+    const storage = corruptStorage("{oops");
+    await openTrivia(testDeps({ storage }));
+    cleanup();
+
+    await openTrivia(testDeps({ storage }));
+
+    expect(screen.getByText("Which metal makes octopus blood blue?")).toBeInTheDocument();
   });
 });
 

@@ -12,3 +12,7 @@
 - [ ] Empty pool shows an empty state that opens Filters
 - [ ] Exhausting a filtered pool reshuffles only that pool
 - [ ] App-level tests cover the above
+
+## Comments
+
+- From ticket 03: pool-only clearing on reshuffle is already implemented in `deal()` (`src/play/deal.ts`) but has no app-level test yet, because there was no second pool. Cover it here: play out a filtered pool, then check that cards outside the filter are still treated as played.

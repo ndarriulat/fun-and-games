@@ -121,7 +121,7 @@ Three modes. Trivia and Talk are random across all non-hidden topics by default;
 
 ## Status
 
-Design agreed (2026-10-01). Ticket 01 (walking skeleton: Home + Trivia card, content check, CI) done.
+Design agreed (2026-10-01). Ticket 01 (walking skeleton: Home + Trivia card, content check, CI) and ticket 03 (played history, Back, reshuffle, storage adapter) done.
 
 ## Commands
 

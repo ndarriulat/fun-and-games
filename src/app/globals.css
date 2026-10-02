@@ -405,6 +405,16 @@ button:focus-visible {
   box-shadow: 0 4px 0 rgba(0, 0, 0, 0.15);
 }
 
+.notice {
+  margin: 0 0 12px;
+  padding: 10px 16px;
+  border-radius: 14px;
+  background: var(--sun);
+  color: var(--sun-ink);
+  font-weight: 700;
+  text-align: center;
+}
+
 .empty {
   margin: auto;
   font-size: 1.2rem;

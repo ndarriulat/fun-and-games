@@ -1,6 +1,7 @@
 import { inMemoryContentBank } from "@/content/bank";
 import type { TriviaItem } from "@/content/types";
-import type { AppDeps, KeyValueStore, Report, ReportSender } from "@/ui/deps";
+import type { KeyValueStore } from "@/play/storage";
+import type { AppDeps, Report, ReportSender } from "@/ui/deps";
 
 export function inMemoryStorage(seed: Record<string, string> = {}): KeyValueStore & { data: Map<string, string> } {
   const data = new Map(Object.entries(seed));
@@ -11,9 +12,33 @@ export function inMemoryStorage(seed: Record<string, string> = {}): KeyValueStor
   };
 }
 
+/** Storage holding something unreadable under every key, as left by a bug or an old version. */
+export function corruptStorage(value: string): KeyValueStore & { data: Map<string, string> } {
+  const storage = inMemoryStorage();
+  return { ...storage, getItem: (key) => storage.data.get(key) ?? value };
+}
+
+/** Storage that throws on every call, as in some private browsing modes. */
+export function throwingStorage(): KeyValueStore {
+  return {
+    getItem: () => {
+      throw new Error("Storage unavailable");
+    },
+    setItem: () => {
+      throw new Error("Storage unavailable");
+    },
+  };
+}
+
 /** Always returns the same value. 0 picks the first candidate, 0.999 the last. */
 export function fixedRandom(value = 0): () => number {
   return () => value;
+}
+
+/** Returns the values in order, then keeps returning the last one. */
+export function sequenceRandom(...values: number[]): () => number {
+  let i = 0;
+  return () => values[Math.min(i++, values.length - 1)];
 }
 
 export function recordingReportSender(): ReportSender & { sent: Report[]; failNext: boolean } {
@@ -92,3 +117,13 @@ export const triviaFixtures: TriviaItem[] = [
     },
   },
 ];
+
+/** Trivia items "Question 1?" … "Question n?", dealt in that order by fixedRandom(0). */
+export function numberedTrivia(count: number): TriviaItem[] {
+  return Array.from({ length: count }, (_, i) => ({
+    ...triviaFixtures[0],
+    id: `trv-gen-${90001 + i}`,
+    topic: "general" as const,
+    en: { ...triviaFixtures[0].en, question: `Question ${i + 1}?` },
+  }));
+}

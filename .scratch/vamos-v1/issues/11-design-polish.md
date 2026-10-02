@@ -12,3 +12,7 @@
 - [ ] Mode colours are consistent and readable in light and dark
 - [ ] Checked on a real phone viewport in both themes
 - [ ] Existing app-level tests still pass
+
+## Comments
+
+- From tickets 01/03: screens are in-memory state, so the phone's back button/gesture leaves the site instead of going Home. Sync screens with browser history (or the URL hash).

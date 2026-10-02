@@ -5,10 +5,39 @@ export function triviaPool(items: readonly TriviaItem[], language: Language): Tr
   return items.filter((item) => item[language] !== undefined);
 }
 
-/** Picks a random item, avoiding the one just shown when there's another choice. */
-export function pickNext<T>(pool: readonly T[], current: T | undefined, random: () => number): T | undefined {
-  const candidates = pool.length > 1 ? pool.filter((item) => item !== current) : pool;
-  return candidates[Math.floor(random() * candidates.length)];
+export type Dealt<T> = {
+  item: T;
+  /** The mode's played history after this deal, including the dealt item. */
+  played: string[];
+  /** True when every item in the pool had been played, so the pool's history was cleared first. */
+  reshuffled: boolean;
+};
+
+/**
+ * Deals a random unplayed item from the pool. When none are left, clears the history for this
+ * pool's items only and deals again, avoiding the card just shown when there's another choice.
+ */
+export function deal<T extends { id: string }>(
+  pool: readonly T[],
+  played: readonly string[],
+  currentId: string | undefined,
+  random: () => number,
+): Dealt<T> | undefined {
+  if (pool.length === 0) return undefined;
+  const playedIds = new Set(played);
+  const unplayed = pool.filter((item) => !playedIds.has(item.id));
+  const reshuffled = unplayed.length === 0;
+
+  let candidates = unplayed;
+  let history = [...played];
+  if (reshuffled) {
+    const poolIds = new Set(pool.map((item) => item.id));
+    history = played.filter((id) => !poolIds.has(id));
+    candidates = pool.length > 1 ? pool.filter((item) => item.id !== currentId) : [...pool];
+  }
+
+  const item = candidates[Math.floor(random() * candidates.length)];
+  return { item, played: [...history, item.id], reshuffled };
 }
 
 /** Fisher–Yates shuffle into a new array. */
