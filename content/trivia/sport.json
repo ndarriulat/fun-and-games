@@ -1,0 +1,27 @@
+[
+  {
+    "id": "trv-spo-00001",
+    "topic": "sport",
+    "difficulty": "easy",
+    "en": {
+      "question": "In basketball, how many players does each team have on the court?",
+      "answer": "5",
+      "options": [
+        "6",
+        "7",
+        "4"
+      ],
+      "fact": "James Naismith invented basketball in 1891, and the first hoops were peach baskets."
+    },
+    "es": {
+      "question": "En básquetbol, ¿cuántos jugadores tiene cada equipo en la cancha?",
+      "answer": "5",
+      "options": [
+        "6",
+        "7",
+        "4"
+      ],
+      "fact": "James Naismith inventó el básquetbol en 1891, y los primeros aros eran canastas de duraznos."
+    }
+  }
+]

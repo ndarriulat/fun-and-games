@@ -1,0 +1,27 @@
+[
+  {
+    "id": "trv-his-00001",
+    "topic": "history",
+    "difficulty": "medium",
+    "en": {
+      "question": "In what year did the Berlin Wall fall?",
+      "answer": "1989",
+      "options": [
+        "1991",
+        "1987",
+        "1985"
+      ],
+      "fact": "It opened on 9 November 1989, after an East German spokesman mistakenly announced that the border was open \"immediately\"."
+    },
+    "es": {
+      "question": "¿En qué año cayó el Muro de Berlín?",
+      "answer": "1989",
+      "options": [
+        "1991",
+        "1987",
+        "1985"
+      ],
+      "fact": "Se abrió el 9 de noviembre de 1989, después de que un vocero de Alemania Oriental anunciara por error que la frontera se abría «de inmediato»."
+    }
+  }
+]

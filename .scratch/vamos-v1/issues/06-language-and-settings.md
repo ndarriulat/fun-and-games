@@ -12,4 +12,5 @@
 - [ ] First-launch suggestion shown once for `es` browsers only; dismissing keeps English
 - [ ] Language persists across reloads
 - [ ] Every UI string exists in both languages (enforced by types)
+- [ ] Items pending translation (no `es`) never appear when playing in Spanish (app-level test; the filter already exists in `triviaPool`)
 - [ ] App-level tests cover the above, using the injected browser language

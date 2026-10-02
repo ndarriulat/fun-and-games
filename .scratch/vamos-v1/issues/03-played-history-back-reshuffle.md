@@ -16,3 +16,7 @@ Build this for all modes, not only Trivia: history is kept per mode and keyed by
 - [ ] First card after a reshuffle is not the card just shown (when the pool has more than one item)
 - [ ] Corrupt or throwing storage does not crash the app; defaults are used
 - [ ] All covered by app-level tests through the injection seam
+
+## Comments
+
+- From ticket 01 review: screens are in-memory state, so the phone's back button/gesture leaves the site instead of going Home. Worth syncing screens with browser history (or the URL hash) here or in ticket 11.

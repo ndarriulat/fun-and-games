@@ -121,7 +121,11 @@ Three modes. Trivia and Talk are random across all non-hidden topics by default;
 
 ## Status
 
-Design agreed (2026-10-01). Nothing built yet.
+Design agreed (2026-10-01). Ticket 01 (walking skeleton: Home + Trivia card, content check, CI) done.
+
+## Commands
+
+`npm run dev` · `npm test` · `npm run typecheck` · `npm run lint` · `npm run build`
 
 ## Agent skills
 
@@ -136,3 +140,5 @@ Default labels: `needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-huma
 ### Domain docs
 
 Single-context: one `GLOSSARY.md` and `docs/adr/` at the repo root. See `docs/agents/domain.md`.
+
+@AGENTS.md

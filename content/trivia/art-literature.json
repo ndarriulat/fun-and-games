@@ -1,0 +1,27 @@
+[
+  {
+    "id": "trv-art-00001",
+    "topic": "art-literature",
+    "difficulty": "easy",
+    "en": {
+      "question": "Who painted the Mona Lisa?",
+      "answer": "Leonardo da Vinci",
+      "options": [
+        "Michelangelo",
+        "Raphael",
+        "Botticelli"
+      ],
+      "fact": "It hangs in the Louvre behind bulletproof glass. It was stolen in 1911 and only recovered in 1913."
+    },
+    "es": {
+      "question": "¿Quién pintó la Mona Lisa?",
+      "answer": "Leonardo da Vinci",
+      "options": [
+        "Miguel Ángel",
+        "Rafael",
+        "Botticelli"
+      ],
+      "fact": "Está en el Louvre detrás de un vidrio blindado. La robaron en 1911 y recién la recuperaron en 1913."
+    }
+  }
+]

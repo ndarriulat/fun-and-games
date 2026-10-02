@@ -1,0 +1,27 @@
+[
+  {
+    "id": "trv-fbl-00001",
+    "topic": "football",
+    "difficulty": "medium",
+    "en": {
+      "question": "Who scored the \"Hand of God\" goal at the 1986 World Cup?",
+      "answer": "Diego Maradona",
+      "options": [
+        "Pelé",
+        "Zico",
+        "Michel Platini"
+      ],
+      "fact": "It was against England in the quarter-final. Four minutes later he scored a solo goal that was later voted the Goal of the Century."
+    },
+    "es": {
+      "question": "¿Quién hizo el gol de la «Mano de Dios» en el Mundial de 1986?",
+      "answer": "Diego Maradona",
+      "options": [
+        "Pelé",
+        "Zico",
+        "Michel Platini"
+      ],
+      "fact": "Fue contra Inglaterra en los cuartos de final. Cuatro minutos después hizo un gol individual que más tarde fue votado el Gol del Siglo."
+    }
+  }
+]

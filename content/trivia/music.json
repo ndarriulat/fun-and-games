@@ -1,0 +1,27 @@
+[
+  {
+    "id": "trv-mus-00001",
+    "topic": "music",
+    "difficulty": "easy",
+    "en": {
+      "question": "How many strings does a standard guitar have?",
+      "answer": "6",
+      "options": [
+        "4",
+        "5",
+        "8"
+      ],
+      "fact": "A bass guitar usually has four strings, tuned like the four lowest strings of a guitar but an octave lower."
+    },
+    "es": {
+      "question": "¿Cuántas cuerdas tiene una guitarra común?",
+      "answer": "6",
+      "options": [
+        "4",
+        "5",
+        "8"
+      ],
+      "fact": "El bajo eléctrico suele tener cuatro cuerdas, afinadas como las cuatro más graves de la guitarra pero una octava más abajo."
+    }
+  }
+]

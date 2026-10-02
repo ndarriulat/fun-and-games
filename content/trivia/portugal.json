@@ -1,0 +1,27 @@
+[
+  {
+    "id": "trv-por-00001",
+    "topic": "portugal",
+    "difficulty": "medium",
+    "en": {
+      "question": "What is the custard tart sold in almost every Portuguese café called in Portuguese?",
+      "answer": "Pastel de nata",
+      "options": [
+        "Bola de Berlim",
+        "Queijada",
+        "Travesseiro"
+      ],
+      "fact": "The recipe is said to come from the monks of the Jerónimos Monastery in Lisbon's Belém district. The bakery next door has sold them since 1837."
+    },
+    "es": {
+      "question": "¿Cómo se llama en portugués la tartaleta de crema que venden en casi todos los cafés de Portugal?",
+      "answer": "Pastel de nata",
+      "options": [
+        "Bola de Berlim",
+        "Queijada",
+        "Travesseiro"
+      ],
+      "fact": "Se dice que la receta viene de los monjes del Monasterio de los Jerónimos, en el barrio lisboeta de Belém. La pastelería de al lado los vende desde 1837."
+    }
+  }
+]

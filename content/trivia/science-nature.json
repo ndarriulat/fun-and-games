@@ -1,0 +1,27 @@
+[
+  {
+    "id": "trv-sci-00001",
+    "topic": "science-nature",
+    "difficulty": "hard",
+    "en": {
+      "question": "Octopus blood is blue. Which metal makes it that colour?",
+      "answer": "Copper",
+      "options": [
+        "Iron",
+        "Zinc",
+        "Cobalt"
+      ],
+      "fact": "Octopuses carry oxygen with haemocyanin, a copper-based protein, instead of the iron-based haemoglobin we use."
+    },
+    "es": {
+      "question": "La sangre del pulpo es azul. ¿Qué metal le da ese color?",
+      "answer": "Cobre",
+      "options": [
+        "Hierro",
+        "Zinc",
+        "Cobalto"
+      ],
+      "fact": "Los pulpos transportan el oxígeno con hemocianina, una proteína a base de cobre, en lugar de la hemoglobina con hierro que usamos nosotros."
+    }
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "id": "trv-uru-00001",
+    "topic": "uruguay",
+    "difficulty": "easy",
+    "en": {
+      "question": "In what year did Uruguay host and win the first FIFA World Cup?",
+      "answer": "1930",
+      "options": [
+        "1950",
+        "1924",
+        "1934"
+      ],
+      "fact": "The final was played at the Estadio Centenario in Montevideo, built for the tournament and named for the hundredth anniversary of Uruguay's first constitution."
+    },
+    "es": {
+      "question": "¿En qué año Uruguay organizó y ganó el primer Mundial de fútbol?",
+      "answer": "1930",
+      "options": [
+        "1950",
+        "1924",
+        "1934"
+      ],
+      "fact": "La final se jugó en el Estadio Centenario de Montevideo, construido para el Mundial y llamado así por los cien años de la primera Constitución."
+    }
+  }
+]

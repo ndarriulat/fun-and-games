@@ -1,0 +1,27 @@
+[
+  {
+    "id": "trv-geo-00001",
+    "topic": "geography",
+    "difficulty": "easy",
+    "en": {
+      "question": "What is the capital of Australia?",
+      "answer": "Canberra",
+      "options": [
+        "Sydney",
+        "Melbourne",
+        "Perth"
+      ],
+      "fact": "Canberra was picked as a compromise between rivals Sydney and Melbourne, and was built from scratch to be the capital."
+    },
+    "es": {
+      "question": "¿Cuál es la capital de Australia?",
+      "answer": "Canberra",
+      "options": [
+        "Sídney",
+        "Melbourne",
+        "Perth"
+      ],
+      "fact": "Canberra se eligió como punto medio entre Sídney y Melbourne, que se disputaban el título, y se construyó de cero para ser la capital."
+    }
+  }
+]

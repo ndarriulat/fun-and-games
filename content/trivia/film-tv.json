@@ -1,0 +1,27 @@
+[
+  {
+    "id": "trv-ftv-00001",
+    "topic": "film-tv",
+    "difficulty": "easy",
+    "en": {
+      "question": "What is the name of the toy cowboy in Toy Story?",
+      "answer": "Woody",
+      "options": [
+        "Buzz",
+        "Rex",
+        "Hamm"
+      ],
+      "fact": "Toy Story (1995) was the first feature film made entirely with computer animation."
+    },
+    "es": {
+      "question": "¿Cómo se llama el vaquero de juguete de Toy Story?",
+      "answer": "Woody",
+      "options": [
+        "Buzz",
+        "Rex",
+        "Hamm"
+      ],
+      "fact": "Toy Story (1995) fue el primer largometraje hecho completamente con animación por computadora."
+    }
+  }
+]

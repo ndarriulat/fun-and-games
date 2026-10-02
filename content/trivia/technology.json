@@ -1,0 +1,27 @@
+[
+  {
+    "id": "trv-tec-00001",
+    "topic": "technology",
+    "difficulty": "medium",
+    "en": {
+      "question": "What does HTTP, at the start of web addresses, stand for?",
+      "answer": "HyperText Transfer Protocol",
+      "options": [
+        "High Transfer Text Process",
+        "Hyperlink Text Transport Program",
+        "Home Terminal Transfer Protocol"
+      ],
+      "fact": "Tim Berners-Lee created it at CERN around 1990, along with HTML and the first web browser."
+    },
+    "es": {
+      "question": "¿Qué significa HTTP, la sigla al principio de las direcciones web?",
+      "answer": "Protocolo de transferencia de hipertexto",
+      "options": [
+        "Proceso de texto de alta transferencia",
+        "Programa de transporte de texto con hipervínculos",
+        "Protocolo de transferencia de terminal doméstica"
+      ],
+      "fact": "Lo creó Tim Berners-Lee en el CERN alrededor de 1990, junto con el HTML y el primer navegador web."
+    }
+  }
+]

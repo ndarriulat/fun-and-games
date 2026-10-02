@@ -1,0 +1,27 @@
+[
+  {
+    "id": "trv-lan-00001",
+    "topic": "language-words",
+    "difficulty": "medium",
+    "en": {
+      "question": "Which letter doesn't appear in the name of any US state?",
+      "answer": "Q",
+      "options": [
+        "Z",
+        "J",
+        "X"
+      ],
+      "fact": "Z is in Arizona, J in New Jersey and X in Texas and New Mexico, but no state has a Q."
+    },
+    "es": {
+      "question": "¿Qué letra no aparece en el nombre en inglés de ningún estado de Estados Unidos?",
+      "answer": "Q",
+      "options": [
+        "Z",
+        "J",
+        "X"
+      ],
+      "fact": "La Z está en Arizona, la J en New Jersey y la X en Texas y New Mexico, pero ningún estado tiene una Q."
+    }
+  }
+]

@@ -15,15 +15,22 @@ English only for UI text is fine here; ticket 06 adds the language layer.
 
 **Blocked by:** None (can start immediately)
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] Home shows three coloured mode cards and a settings icon
-- [ ] Tapping Trivia shows a full-screen card from the bank, chosen using the injected random source
-- [ ] Card shows topic and difficulty
-- [ ] Show options shows exactly 4 choices, shuffled, including the answer
-- [ ] Reveal shows the answer and fun fact; correct option highlighted when options are showing
-- [ ] Next and swipe left both deal a new card; Home returns to the home screen
-- [ ] App-level tests cover all of the above through the injection seam with a fixture bank and fixed random source
-- [ ] Content check validates every Trivia file (schema, unique IDs matching format and topic, `en` present and complete, `es` complete if present, exactly 3 options none equal to the answer, valid enums), naming file, ID and field on failure
-- [ ] Items with no `es` block are reported as pending translation (not a failure) and are left out of the pool when playing in Spanish
-- [ ] CI runs type-check, lint, tests and build
+- [x] Home shows three coloured mode cards and a settings icon
+- [x] Tapping Trivia shows a full-screen card from the bank, chosen using the injected random source
+- [x] Card shows topic and difficulty
+- [x] Show options shows exactly 4 choices, shuffled, including the answer
+- [x] Reveal shows the answer and fun fact; correct option highlighted when options are showing
+- [x] Next and swipe left both deal a new card; Home returns to the home screen
+- [x] App-level tests cover all of the above through the injection seam with a fixture bank and fixed random source
+- [x] Content check validates every Trivia file (schema, unique IDs matching format and topic, `en` present and complete, `es` complete if present, exactly 3 options none equal to the answer, valid enums), naming file, ID and field on failure
+- [x] Items with no `es` block are reported as pending translation (not a failure) and are left out of the pool when playing in Spanish
+- [x] CI runs type-check, lint, tests and build
+
+## Comments
+
+- Implemented as one client-side `App` (in-memory screens) at `/`, so tests can render the whole app through the injection seam. Phone back button currently leaves the site; see note on ticket 03.
+- The Spanish pool filter (`triviaPool` in `src/play/deal.ts`) leaves out items with no `es`, but there's no language state until ticket 06, so its app-level test moved to ticket 06's checklist.
+- Puzzles, Talk and Settings open a "coming soon" screen.
+- Starter content: one item per Trivia topic (14), both languages, IDs `trv-<code>-00001`.

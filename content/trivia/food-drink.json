@@ -1,0 +1,27 @@
+[
+  {
+    "id": "trv-fdr-00001",
+    "topic": "food-drink",
+    "difficulty": "medium",
+    "en": {
+      "question": "Which country does Gouda cheese come from?",
+      "answer": "The Netherlands",
+      "options": [
+        "Belgium",
+        "Switzerland",
+        "Denmark"
+      ],
+      "fact": "It's named after the Dutch city of Gouda, where it was traded for centuries."
+    },
+    "es": {
+      "question": "¿De qué país es originario el queso gouda?",
+      "answer": "Países Bajos",
+      "options": [
+        "Bélgica",
+        "Suiza",
+        "Dinamarca"
+      ],
+      "fact": "Se llama así por la ciudad neerlandesa de Gouda, donde se comerciaba desde hace siglos."
+    }
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "id": "trv-gen-00001",
+    "topic": "general",
+    "difficulty": "hard",
+    "en": {
+      "question": "How many minutes are there in a whole week?",
+      "answer": "10,080",
+      "options": [
+        "1,440",
+        "8,760",
+        "10,800"
+      ],
+      "fact": "7 days × 24 hours × 60 minutes. A single day has 1,440 minutes."
+    },
+    "es": {
+      "question": "¿Cuántos minutos tiene una semana entera?",
+      "answer": "10.080",
+      "options": [
+        "1.440",
+        "8.760",
+        "10.800"
+      ],
+      "fact": "7 días × 24 horas × 60 minutos. Un solo día tiene 1.440 minutos."
+    }
+  }
+]
