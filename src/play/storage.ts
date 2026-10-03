@@ -1,4 +1,4 @@
-import type { Mode } from "@/content/types";
+import { languages, type Language, type Mode } from "@/content/types";
 import { allTopics, isTopicVisibility, type TopicChanges } from "./topics";
 
 /** A localStorage-like key/value store. */
@@ -10,8 +10,11 @@ export type KeyValueStore = {
 const KEY = "vamos";
 const VERSION = 1;
 
-/** Everything Vamos remembers on this phone. Later tickets add language, theme and filters. */
+/** Everything Vamos remembers on this phone. Later tickets add theme and filters. */
 export type SavedState = {
+  language: Language;
+  /** True once the first-launch suggestion has been offered, or the player picked a language themselves. */
+  languageSuggested: boolean;
   /** IDs of the items played in each mode, keyed by item ID only (not language). */
   played: Record<Mode, string[]>;
   /** Only the player's changes from the default topic visibility. */
@@ -19,7 +22,7 @@ export type SavedState = {
 };
 
 function defaults(): SavedState {
-  return { played: { trivia: [], puzzles: [], talk: [] }, topics: {} };
+  return { language: "en", languageSuggested: false, played: { trivia: [], puzzles: [], talk: [] }, topics: {} };
 }
 
 /**
@@ -61,6 +64,8 @@ export function appStorage(store: KeyValueStore): AppStorage {
 function parse(data: unknown): SavedState {
   const state = defaults();
   if (!isRecord(data) || data.version !== VERSION) return state;
+  if (languages.includes(data.language as Language)) state.language = data.language as Language;
+  if (typeof data.languageSuggested === "boolean") state.languageSuggested = data.languageSuggested;
   if (isRecord(data.played)) {
     for (const mode of Object.keys(state.played) as Mode[]) {
       const ids = data.played[mode];

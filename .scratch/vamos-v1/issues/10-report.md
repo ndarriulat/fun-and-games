@@ -14,3 +14,7 @@ Creating the Formspree form and setting the env var in Vercel is a small human s
 - [ ] Success shows confirmation; failure shows error with Retry that resends
 - [ ] Closing the overlay returns to the same card
 - [ ] App-level tests use a recording, failable fake sender
+
+## Comments
+
+- From ticket 06: when playing in Spanish, a card dealt before the switch that has no Spanish yet stays on screen in English. Report should send the language the card was actually shown in (`item[language] ? language : "en"`), not the app's language.

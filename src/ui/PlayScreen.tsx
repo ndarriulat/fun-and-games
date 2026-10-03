@@ -1,41 +1,68 @@
 import type { ReactNode } from "react";
-import type { Mode } from "@/content/types";
+import { languages, type Mode } from "@/content/types";
 import { Icon } from "./icons";
+import { useLanguage } from "./language";
 
 /** The frame around every mode's card: top row, the reshuffle notice and the empty state. */
 export function PlayScreen({
   mode,
-  title,
   reshuffled,
   empty,
   goHome,
   children,
 }: {
-  mode: Mode;
-  title: string;
+  mode: Exclude<Mode, "puzzles">;
   reshuffled: boolean;
   empty: boolean;
   goHome: () => void;
   children: ReactNode;
 }) {
+  const { t } = useLanguage();
+  const title = t[mode].name;
+
   return (
     <main className="play" data-mode={mode}>
       <header className="play-top">
-        <button type="button" className="icon-btn" aria-label="Home" onClick={goHome}>
+        <button type="button" className="icon-btn" aria-label={t.home} onClick={goHome}>
           <Icon name="home" />
         </button>
         <span className="chip">
-          <i aria-hidden="true" /> {title} · all topics
+          <i aria-hidden="true" />
+          <span className="chip-text">
+            {title} · {t.allTopics}
+          </span>
         </span>
+        <LanguageToggle />
       </header>
       {reshuffled && (
         <p className="notice" role="status">
-          You&apos;ve played everything, starting again.
+          {t.reshuffled}
         </p>
       )}
-      {empty && <p className="empty">No {title} cards yet.</p>}
+      {empty && <p className="empty">{t.noCards(title)}</p>}
       {children}
     </main>
+  );
+}
+
+/** Switches language without leaving the card, for a mixed group. */
+function LanguageToggle() {
+  const { language, setLanguage, t } = useLanguage();
+
+  return (
+    <div className="lang-toggle" role="group" aria-label={t.language}>
+      {languages.map((option) => (
+        <button
+          key={option}
+          type="button"
+          className="lang-option"
+          aria-pressed={option === language}
+          onClick={() => setLanguage(option)}
+        >
+          {option.toUpperCase()}
+        </button>
+      ))}
+    </div>
   );
 }
 
@@ -50,15 +77,17 @@ export function CardControls({
   /** Missing on the first card of the trail. */
   onBack?: () => void;
 }) {
+  const { t } = useLanguage();
+
   return (
     <div className="controls">
-      <button type="button" className="round" aria-label="Previous card" disabled={!onBack} onClick={onBack}>
+      <button type="button" className="round" aria-label={t.previousCard} disabled={!onBack} onClick={onBack}>
         <Icon name="back" />
       </button>
       <button type="button" className="round round-main" onClick={main.onClick}>
         {main.label}
       </button>
-      <button type="button" className="round" aria-label="Next card" onClick={onNext}>
+      <button type="button" className="round" aria-label={t.nextCard} onClick={onNext}>
         <Icon name="next" />
       </button>
     </div>

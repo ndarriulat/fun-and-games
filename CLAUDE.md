@@ -53,6 +53,7 @@ Three modes. Trivia and Talk are random across all non-hidden topics by default;
   - Puzzles: Hint (up to 3) · Reveal
   - Talk: Follow-up
   - Always: Next · Back · Report · Home. Swipe left = Next, swipe right = Back. Back goes through the last 10 cards in this mode, keeping what was revealed.
+  - Top bar: an EN | ES toggle switches language in place, keeping the card and what was revealed.
 - **Settings:**
   - Language (English / Español)
   - Theme: Light / Dark / Follow phone. Default is Light.
@@ -121,7 +122,7 @@ Three modes. Trivia and Talk are random across all non-hidden topics by default;
 
 ## Status
 
-Design agreed (2026-10-01). Puzzles moved to v1.1 and Uruguay hidden by default (2026-10-03); v1 tickets in `.scratch/vamos-v1/`, Puzzles tickets in `.scratch/vamos-v1-1/`. Ticket 01 (walking skeleton: Home + Trivia card, content check, CI), ticket 03 (played history, Back, reshuffle, storage adapter), ticket 22 (Uruguay hidden by default) and ticket 05 (Talk mode, Puzzles "Coming soon" on Home, 12 starter Talk cards) done.
+Design agreed (2026-10-01). Puzzles moved to v1.1 and Uruguay hidden by default (2026-10-03); v1 tickets in `.scratch/vamos-v1/`, Puzzles tickets in `.scratch/vamos-v1-1/`. Ticket 01 (walking skeleton: Home + Trivia card, content check, CI), ticket 03 (played history, Back, reshuffle, storage adapter), ticket 22 (Uruguay hidden by default), ticket 05 (Talk mode, Puzzles "Coming soon" on Home, 12 starter Talk cards) and ticket 06 (language, Settings screen, first-launch Spanish suggestion) done.
 
 ## Commands
 

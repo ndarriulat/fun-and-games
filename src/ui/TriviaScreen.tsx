@@ -3,28 +3,31 @@ import type { Language, TriviaItem } from "@/content/types";
 import { playablePool, shuffle } from "@/play/deal";
 import type { SavedState } from "@/play/storage";
 import { useDeps } from "./deps";
-import { difficultyLabels, triviaTopicLabels } from "./labels";
+import { useLanguage } from "./language";
 import { CardControls, PlayScreen, questionSize } from "./PlayScreen";
 import { useDeck } from "./useDeck";
 import { useSwipe } from "./useSwipe";
 
-const language: Language = "en";
+/**
+ * What has been revealed on a Trivia card. Options are kept as their shuffled order, by index into
+ * [answer, ...wrong options], so they stay put when the language changes.
+ */
+type TriviaView = { options: number[] | null; revealed: boolean };
 
-/** What has been revealed on a Trivia card. */
-type TriviaView = { options: string[] | null; revealed: boolean };
-
-const loadTriviaPool = async (content: ContentBank, saved: SavedState) =>
+const loadTriviaPool = async (content: ContentBank, saved: SavedState, language: Language) =>
   playablePool(await content.trivia(), language, saved.topics);
 
 export function TriviaScreen({ goHome }: { goHome: () => void }) {
+  const { language } = useLanguage();
   const deck = useDeck<TriviaItem, TriviaView>({
     mode: "trivia",
+    language,
     loadPool: loadTriviaPool,
     initialView: { options: null, revealed: false },
   });
 
   return (
-    <PlayScreen mode="trivia" title="Trivia" reshuffled={deck.reshuffled} empty={deck.empty} goHome={goHome}>
+    <PlayScreen mode="trivia" reshuffled={deck.reshuffled} empty={deck.empty} goHome={goHome}>
       {deck.card && (
         <TriviaCard
           key={deck.card.key}
@@ -54,8 +57,11 @@ function TriviaCard({
   onBack?: () => void;
 }) {
   const { random } = useDeps();
+  const { language, t } = useLanguage();
   const swipe = useSwipe({ onLeft: onNext, onRight: onBack });
-  const text = item[language]!;
+  // A card dealt in English and pending translation stays in English after a switch.
+  const text = item[language] ?? item.en;
+  const choices = [text.answer, ...text.options];
   const { options, revealed } = view;
 
   return (
@@ -64,22 +70,23 @@ function TriviaCard({
         <article className={revealed ? "card card-back" : "card card-front"} {...swipe}>
           <div className="card-scroll">
             <div className="card-meta">
-              <span>{triviaTopicLabels[item.topic]}</span>
-              <span>{difficultyLabels[item.difficulty]}</span>
+              <span>{t.triviaTopics[item.topic]}</span>
+              <span>{t.difficulties[item.difficulty]}</span>
             </div>
             <p className={revealed ? "question-small" : `question ${questionSize(text.question)}`}>{text.question}</p>
             {revealed && <p className="answer">{text.answer}</p>}
             {options && (
-              <ol className="options" aria-label="Options">
-                {options.map((option) => {
-                  const correct = revealed && option === text.answer;
+              <ol className="options" aria-label={t.options}>
+                {options.map((index) => {
+                  // Index 0 is the answer.
+                  const correct = revealed && index === 0;
                   return (
                     <li
-                      key={option}
+                      key={index}
                       className={correct ? "option option-correct" : "option"}
-                      aria-label={correct ? `Correct: ${option}` : undefined}
+                      aria-label={correct ? t.correct(choices[index]) : undefined}
                     >
-                      {option}
+                      {choices[index]}
                     </li>
                   );
                 })}
@@ -94,14 +101,14 @@ function TriviaCard({
           <button
             type="button"
             className="link"
-            onClick={() => onView({ ...view, options: shuffle([text.answer, ...text.options], random) })}
+            onClick={() => onView({ ...view, options: shuffle(choices.map((_, i) => i), random) })}
           >
-            Show options
+            {t.showOptions}
           </button>
         )}
       </div>
       <CardControls
-        main={revealed ? { label: "Next", onClick: onNext } : { label: "Reveal", onClick: () => onView({ ...view, revealed: true }) }}
+        main={revealed ? { label: t.next, onClick: onNext } : { label: t.reveal, onClick: () => onView({ ...view, revealed: true }) }}
         onNext={onNext}
         onBack={onBack}
       />

@@ -157,7 +157,7 @@ button:focus-visible {
 /* ---------- Play screen ---------- */
 
 .play,
-.coming-soon {
+.settings {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -182,13 +182,48 @@ button:focus-visible {
   align-items: center;
   justify-content: center;
   gap: 8px;
+  min-width: 0;
+  padding: 0 14px;
+}
+
+.chip-text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .chip i {
+  flex: none;
+
   width: 12px;
   height: 12px;
   border-radius: 50%;
   background: var(--mode);
+}
+
+/* EN | ES on the play screen. */
+.lang-toggle {
+  flex: none;
+  height: 52px;
+  padding: 4px;
+  border-radius: 16px;
+  background: var(--surface);
+  border: 1.5px solid var(--line);
+  display: flex;
+  gap: 2px;
+}
+
+.lang-option {
+  min-width: 44px;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.lang-option[aria-pressed="true"] {
+  background: var(--mode);
+  color: var(--on-mode);
 }
 
 .deck {
@@ -471,18 +506,86 @@ button:focus-visible {
   color: var(--muted);
 }
 
-/* ---------- Coming soon ---------- */
+/* ---------- Settings ---------- */
 
-.coming-soon-title {
-  margin: 24px 0 0;
+.settings-title {
+  margin: 12px 0 8px;
   font-family: var(--font-display);
   font-weight: 800;
   font-size: 2.6rem;
-  color: var(--mode, var(--ink));
 }
 
-.coming-soon-text {
+.setting {
+  display: grid;
+  gap: 10px;
+}
+
+.setting-name {
   margin: 0;
-  font-size: 1.3rem;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--muted);
+}
+
+.segmented {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  padding: 6px;
+  border-radius: 20px;
+  background: var(--surface);
+  border: 1.5px solid var(--line);
+}
+
+.segment {
+  min-height: 56px;
+  border-radius: 14px;
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: var(--muted);
+}
+
+.segment[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--surface);
+}
+
+/* ---------- First-launch language suggestion ---------- */
+
+.suggestion {
+  border-radius: 20px;
+  padding: 14px 16px;
+  background: var(--sun);
+  color: var(--sun-ink);
+  display: grid;
+  gap: 10px;
+}
+
+.suggestion-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.4rem;
+}
+
+.suggestion-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.suggestion-accept {
+  min-height: 48px;
+  padding: 0 18px;
+  border-radius: 14px;
+  background: var(--ink);
+  color: var(--surface);
+  font-weight: 800;
+}
+
+.suggestion .link {
+  color: var(--sun-ink);
 }

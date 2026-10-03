@@ -2,9 +2,10 @@
 
 import { useState } from "react";
 import type { Mode } from "@/content/types";
-import { ComingSoonScreen } from "./ComingSoonScreen";
 import { DepsProvider, type AppDeps } from "./deps";
 import { HomeScreen } from "./HomeScreen";
+import { LanguageProvider } from "./language";
+import { SettingsScreen } from "./SettingsScreen";
 import { TalkScreen } from "./TalkScreen";
 import { TriviaScreen } from "./TriviaScreen";
 
@@ -18,12 +19,14 @@ export function App({ deps }: { deps: AppDeps }) {
 
   return (
     <DepsProvider deps={deps}>
-      <div className="app">
-        {screen === "home" && <HomeScreen go={setScreen} />}
-        {screen === "trivia" && <TriviaScreen goHome={goHome} />}
-        {screen === "talk" && <TalkScreen goHome={goHome} />}
-        {screen === "settings" && <ComingSoonScreen title="Settings" goHome={goHome} />}
-      </div>
+      <LanguageProvider>
+        <div className="app">
+          {screen === "home" && <HomeScreen go={setScreen} />}
+          {screen === "trivia" && <TriviaScreen goHome={goHome} />}
+          {screen === "talk" && <TalkScreen goHome={goHome} />}
+          {screen === "settings" && <SettingsScreen goHome={goHome} />}
+        </div>
+      </LanguageProvider>
     </DepsProvider>
   );
 }

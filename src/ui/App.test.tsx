@@ -38,9 +38,9 @@ async function openTalk(deps = testDeps()) {
   return rendered;
 }
 
-async function showOptions(user: ReturnType<typeof userEvent.setup>) {
-  await user.click(screen.getByRole("button", { name: "Show options" }));
-  return within(screen.getByRole("list", { name: "Options" }))
+async function showOptions(user: ReturnType<typeof userEvent.setup>, button = "Show options", list = "Options") {
+  await user.click(screen.getByRole("button", { name: button }));
+  return within(screen.getByRole("list", { name: list }))
     .getAllByRole("listitem")
     .map((option) => option.textContent);
 }
@@ -76,15 +76,208 @@ describe("Puzzles on Home", () => {
   });
 });
 
-describe("Screens not built yet", () => {
-  it("Settings shows a coming-soon screen with a way home", async () => {
+describe("Settings", () => {
+  it("opens from Home with a language choice, and goes back Home", async () => {
     const { user } = renderApp();
 
     await user.click(screen.getByRole("button", { name: "Settings" }));
-    expect(screen.getByText(/coming soon/i)).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Settings" })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "English" })).toHaveAttribute("aria-pressed", "true");
+    expect(screen.getByRole("button", { name: "Español" })).toHaveAttribute("aria-pressed", "false");
 
     await user.click(screen.getByRole("button", { name: "Home" }));
     expect(screen.getByRole("button", { name: /trivia/i })).toBeInTheDocument();
+  });
+});
+
+describe("Language", () => {
+  async function chooseSpanishInSettings(user: ReturnType<typeof userEvent.setup>) {
+    await user.click(screen.getByRole("button", { name: "Settings" }));
+    await user.click(screen.getByRole("button", { name: "Español" }));
+    await user.click(screen.getByRole("button", { name: "Inicio" }));
+  }
+
+  it("switches all UI text and card content to Spanish from Settings", async () => {
+    const { user } = renderApp();
+
+    await chooseSpanishInSettings(user);
+    expect(screen.getByRole("button", { name: "Configuración" })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /acertijos/i })).toHaveTextContent(/próximamente/i);
+
+    await user.click(screen.getByRole("button", { name: /trivia/i }));
+    expect(await screen.findByText("¿Cuál es la capital de Australia?")).toBeInTheDocument();
+    expect(screen.getByText("Geografía")).toBeInTheDocument();
+    expect(screen.getByText("Fácil")).toBeInTheDocument();
+    expect(screen.getByText(/todos los temas/)).toBeInTheDocument();
+
+    const options = await showOptions(user, "Ver opciones", "Opciones");
+    expect([...options].sort()).toEqual(["Canberra", "Melbourne", "Perth", "Sídney"]);
+    await user.click(screen.getByRole("button", { name: "Revelar" }));
+    expect(screen.getByRole("listitem", { name: "Correcta: Canberra" })).toBeInTheDocument();
+    expect(screen.getByText("Canberra se construyó a propósito como punto medio entre Sídney y Melbourne.")).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Tarjeta siguiente" })).toBeInTheDocument();
+  });
+
+  it("shows Talk cards and their buttons in Spanish", async () => {
+    const { user } = renderApp();
+    await chooseSpanishInSettings(user);
+
+    await user.click(screen.getByRole("button", { name: /charla/i }));
+
+    expect(await screen.findByText("¿Qué preferís: poder volar o ser invisible?")).toBeInTheDocument();
+    expect(screen.getByText("Qué pasaría si")).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Otra pregunta" }));
+    expect(screen.getByText("¿A dónde irías primero?")).toBeInTheDocument();
+  });
+
+  it("switches the card on screen in place, keeping what was revealed", async () => {
+    const { user } = await openTrivia();
+    await showOptions(user);
+    await user.click(screen.getByRole("button", { name: "Reveal" }));
+
+    await user.click(screen.getByRole("button", { name: "ES" }));
+
+    expect(screen.getByText("¿Cuál es la capital de Australia?")).toBeInTheDocument();
+    expect(screen.getByRole("listitem", { name: "Correcta: Canberra" })).toBeInTheDocument();
+    expect(within(screen.getByRole("list", { name: "Opciones" })).getByText("Sídney")).toBeInTheDocument();
+    expect(screen.getByText("Canberra se construyó a propósito como punto medio entre Sídney y Melbourne.")).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "ES" })).toHaveAttribute("aria-pressed", "true");
+
+    await user.click(screen.getByRole("button", { name: "Tarjeta anterior" }));
+    expect(screen.getByText("¿Cuál es la capital de Australia?")).toBeInTheDocument();
+  });
+
+  it("keeps the trail and the follow-ups showing when switching on a Talk card", async () => {
+    const { user } = await openTalk();
+    await user.click(screen.getByRole("button", { name: "Follow-up" }));
+    await user.click(screen.getByRole("button", { name: "Next card" }));
+    await user.click(screen.getByRole("button", { name: "Previous card" }));
+
+    await user.click(screen.getByRole("button", { name: "ES" }));
+
+    expect(screen.getByText("¿Qué preferís: poder volar o ser invisible?")).toBeInTheDocument();
+    expect(followUps("Más preguntas")).toEqual(["¿A dónde irías primero?"]);
+    await user.click(screen.getByRole("button", { name: "Tarjeta siguiente" }));
+    expect(screen.getByText("¿Cuál es la mejor comida que comiste en tu vida?")).toBeInTheDocument();
+  });
+
+  it("never deals a card pending translation in Spanish, but keeps one already on screen in English", async () => {
+    // 0.999 picks the last candidate: the Portugal card, which has no Spanish yet.
+    const { user } = await openTrivia(testDeps({ random: fixedRandom(0.999) }));
+    expect(screen.getByText(PORTUGAL_QUESTION)).toBeInTheDocument();
+
+    await user.click(screen.getByRole("button", { name: "ES" }));
+    expect(screen.getByText(PORTUGAL_QUESTION)).toBeInTheDocument();
+
+    const dealt: (string | null)[] = [];
+    for (let i = 0; i < 5; i++) {
+      await user.click(screen.getByRole("button", { name: "Tarjeta siguiente" }));
+      dealt.push(screen.getByRole("article").textContent);
+    }
+    expect(dealt.join()).not.toContain(PORTUGAL_QUESTION);
+    expect(dealt.join()).toContain("¿Qué metal hace que la sangre del pulpo sea azul?");
+  });
+
+  it("keeps the card on screen, without an empty message, when nothing is translated yet", async () => {
+    const { user } = await openTrivia(testDeps({ trivia: [triviaFixtures[2]] }));
+
+    await user.click(screen.getByRole("button", { name: "ES" }));
+
+    expect(screen.getByText(PORTUGAL_QUESTION)).toBeInTheDocument();
+    expect(screen.queryByText(/todavía no hay/i)).not.toBeInTheDocument();
+  });
+
+  it("is remembered on the phone across a reload", async () => {
+    const storage = inMemoryStorage();
+    const { user } = renderApp(testDeps({ storage }));
+    await chooseSpanishInSettings(user);
+    cleanup();
+
+    renderApp(testDeps({ storage }));
+
+    expect(screen.getByRole("button", { name: "Configuración" })).toBeInTheDocument();
+  });
+
+  it("is remembered when switched from a card", async () => {
+    const storage = inMemoryStorage();
+    const { user } = await openTrivia(testDeps({ storage }));
+    await user.click(screen.getByRole("button", { name: "ES" }));
+    cleanup();
+
+    renderApp(testDeps({ storage }));
+
+    expect(screen.getByRole("button", { name: "Configuración" })).toBeInTheDocument();
+  });
+});
+
+describe("First-launch language suggestion", () => {
+  const spanishPhone = () => testDeps({ storage: inMemoryStorage(), browserLanguage: () => "es-UY" });
+
+  function suggestion() {
+    return screen.queryByRole("region", { name: "¿Jugamos en español?" });
+  }
+
+  it("isn't offered when the phone isn't in Spanish", () => {
+    renderApp(testDeps({ browserLanguage: () => "pt-PT" }));
+
+    expect(suggestion()).not.toBeInTheDocument();
+  });
+
+  it("is offered on a Spanish phone, which stays in English until it's accepted", () => {
+    renderApp(spanishPhone());
+
+    expect(suggestion()).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Settings" })).toBeInTheDocument();
+  });
+
+  it("switches to Spanish when accepted, and isn't offered again", async () => {
+    const deps = spanishPhone();
+    const { user } = renderApp(deps);
+
+    await user.click(within(suggestion()!).getByRole("button", { name: "Sí, en español" }));
+    expect(suggestion()).not.toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Configuración" })).toBeInTheDocument();
+    cleanup();
+
+    renderApp(deps);
+    expect(suggestion()).not.toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Configuración" })).toBeInTheDocument();
+  });
+
+  it("keeps English when dismissed, and isn't offered again", async () => {
+    const deps = spanishPhone();
+    const { user } = renderApp(deps);
+
+    await user.click(within(suggestion()!).getByRole("button", { name: "Keep English" }));
+    expect(suggestion()).not.toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Settings" })).toBeInTheDocument();
+    cleanup();
+
+    renderApp(deps);
+    expect(suggestion()).not.toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Settings" })).toBeInTheDocument();
+  });
+
+  it("is offered only once, even if the player ignores it", () => {
+    const deps = spanishPhone();
+    renderApp(deps);
+    expect(suggestion()).toBeInTheDocument();
+    cleanup();
+
+    renderApp(deps);
+
+    expect(suggestion()).not.toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Settings" })).toBeInTheDocument();
+  });
+
+  it("isn't offered again once the player has picked a language themselves", async () => {
+    const deps = spanishPhone();
+    const { user } = renderApp(deps);
+    await user.click(screen.getByRole("button", { name: "Settings" }));
+    await user.click(screen.getByRole("button", { name: "English" }));
+    await user.click(screen.getByRole("button", { name: "Home" }));
+
+    expect(suggestion()).not.toBeInTheDocument();
   });
 });
 
@@ -326,8 +519,8 @@ describe("Talk", () => {
   });
 });
 
-function followUps() {
-  return within(screen.getByRole("list", { name: "Follow-ups" }))
+function followUps(list = "Follow-ups") {
+  return within(screen.getByRole("list", { name: list }))
     .getAllByRole("listitem")
     .map((followUp) => followUp.textContent);
 }

@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { ContentBank } from "@/content/bank";
-import type { Mode } from "@/content/types";
+import type { Language, Mode } from "@/content/types";
 import { deal } from "@/play/deal";
 import { appStorage, type SavedState } from "@/play/storage";
 import { useDeps } from "./deps";
@@ -16,16 +16,19 @@ type Trail<T, V> = { cards: DeckCard<T, V>[]; index: number };
 /**
  * One mode's deck: deals unplayed items from the pool, remembers them as played on this phone,
  * and keeps a recent trail of cards (with their revealed state) for Back and Next.
- * The trail lives in memory only.
+ * The trail lives in memory only. Changing language reloads the pool but keeps the trail, so the
+ * card on screen stays put and switches language in place.
  */
 export function useDeck<T extends { id: string }, V>({
   mode,
+  language,
   loadPool,
   initialView,
 }: {
   mode: Mode;
+  language: Language;
   /** Must be stable (defined outside the component). Gets the saved state, for hidden topics. */
-  loadPool: (content: ContentBank, saved: SavedState) => Promise<readonly T[]>;
+  loadPool: (content: ContentBank, saved: SavedState, language: Language) => Promise<readonly T[]>;
   initialView: V;
 }) {
   const { content, storage, random } = useDeps();
@@ -59,24 +62,26 @@ export function useDeck<T extends { id: string }, V>({
   useEffect(() => {
     let cancelled = false;
     const state = saved.load();
-    loadPool(content, state).then((items) => {
+    loadPool(content, state, language).then((items) => {
       if (cancelled) return;
-      played.current = state.played[mode];
       setPool(items);
+      // Deal only the first card: a later reload (a language change) keeps the card on screen.
+      if (trailRef.current.cards.length > 0) return;
+      played.current = state.played[mode];
       setTrail(dealOnto({ cards: [], index: -1 }, items));
     });
     return () => {
       cancelled = true;
     };
-    // Deal once per pool load. dealOnto also reads random and initialView at deal time, but
+    // Deal at most once per pool load. dealOnto also reads random and initialView at deal time, but
     // re-running this when their identity changes would deal a new card and wipe the trail.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [content, loadPool, mode, saved]);
+  }, [content, language, loadPool, mode, saved]);
 
   return {
     card: trail.cards[trail.index] as DeckCard<T, V> | undefined,
-    /** True once the pool has loaded and turned out empty. */
-    empty: pool !== null && pool.length === 0,
+    /** True once the pool has loaded and turned out empty, with no card left on screen from before a language change. */
+    empty: pool !== null && pool.length === 0 && trail.cards.length === 0,
     /** True when this card was dealt after the whole pool had been played. */
     reshuffled,
     canGoBack: trail.index > 0,
