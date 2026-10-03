@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import type { ContentBank } from "@/content/bank";
 import type { Mode } from "@/content/types";
 import { deal } from "@/play/deal";
-import { appStorage } from "@/play/storage";
+import { appStorage, type SavedState } from "@/play/storage";
 import { useDeps } from "./deps";
 
 /** How many previous cards Back can return to. */
@@ -24,8 +24,8 @@ export function useDeck<T extends { id: string }, V>({
   initialView,
 }: {
   mode: Mode;
-  /** Must be stable (defined outside the component). */
-  loadPool: (content: ContentBank) => Promise<readonly T[]>;
+  /** Must be stable (defined outside the component). Gets the saved state, for hidden topics. */
+  loadPool: (content: ContentBank, saved: SavedState) => Promise<readonly T[]>;
   initialView: V;
 }) {
   const { content, storage, random } = useDeps();
@@ -58,9 +58,10 @@ export function useDeck<T extends { id: string }, V>({
 
   useEffect(() => {
     let cancelled = false;
-    loadPool(content).then((items) => {
+    const state = saved.load();
+    loadPool(content, state).then((items) => {
       if (cancelled) return;
-      played.current = saved.load().played[mode];
+      played.current = state.played[mode];
       setPool(items);
       setTrail(dealOnto({ cards: [], index: -1 }, items));
     });

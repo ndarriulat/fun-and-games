@@ -1,5 +1,5 @@
 import { inMemoryContentBank } from "@/content/bank";
-import type { TriviaItem } from "@/content/types";
+import type { Mode, TriviaItem } from "@/content/types";
 import type { KeyValueStore } from "@/play/storage";
 import type { AppDeps, Report, ReportSender } from "@/ui/deps";
 
@@ -56,6 +56,28 @@ export function recordingReportSender(): ReportSender & { sent: Report[]; failNe
   return sender;
 }
 
+/** Storage as left by a returning player: what they've played and their changes to topic visibility. */
+export function savedStorage({
+  played = {},
+  topics,
+}: {
+  played?: Partial<Record<Mode, string[]>>;
+  topics?: unknown;
+}): KeyValueStore & { data: Map<string, string> } {
+  const state = { version: 1, played: { trivia: [], puzzles: [], talk: [], ...played }, topics };
+  return inMemoryStorage({ vamos: JSON.stringify(state) });
+}
+
+/** Everything Vamos has saved, parsed. */
+export function storedState(storage: { data: Map<string, string> }): Record<string, unknown> {
+  return JSON.parse(storage.data.get("vamos") ?? "null");
+}
+
+/** Changes the saved topic visibility, as the Settings toggles will (ticket 09). */
+export function setStoredTopics(storage: { data: Map<string, string> }, topics: unknown) {
+  storage.data.set("vamos", JSON.stringify({ ...storedState(storage), topics }));
+}
+
 export function testDeps(
   overrides: Partial<Omit<AppDeps, "content">> & { trivia?: readonly TriviaItem[] } = {},
 ): AppDeps {
@@ -105,6 +127,18 @@ export const triviaFixtures: TriviaItem[] = [
       fact: "La sangre del pulpo lleva el oxígeno con hemocianina, una proteína a base de cobre.",
     },
   },
+  {
+    id: "trv-por-90001",
+    topic: "portugal",
+    difficulty: "medium",
+    en: {
+      question: "What is the name of Lisbon's famous yellow tram route through Alfama?",
+      answer: "Tram 28",
+      options: ["Tram 15", "Tram 12", "Tram 1"],
+      fact: "Tram 28 still runs the old Remodelado cars, built in the 1930s.",
+    },
+  },
+  // Hidden by default, so with no saved changes it's never dealt.
   {
     id: "trv-uru-90001",
     topic: "uruguay",

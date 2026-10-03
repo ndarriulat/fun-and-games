@@ -1,4 +1,5 @@
 import type { Mode } from "@/content/types";
+import { allTopics, isTopicVisibility, type TopicChanges } from "./topics";
 
 /** A localStorage-like key/value store. */
 export type KeyValueStore = {
@@ -9,14 +10,16 @@ export type KeyValueStore = {
 const KEY = "vamos";
 const VERSION = 1;
 
-/** Everything Vamos remembers on this phone. Later tickets add language, theme, hidden topics and filters. */
+/** Everything Vamos remembers on this phone. Later tickets add language, theme and filters. */
 export type SavedState = {
   /** IDs of the items played in each mode, keyed by item ID only (not language). */
   played: Record<Mode, string[]>;
+  /** Only the player's changes from the default topic visibility. */
+  topics: TopicChanges;
 };
 
 function defaults(): SavedState {
-  return { played: { trivia: [], puzzles: [], talk: [] } };
+  return { played: { trivia: [], puzzles: [], talk: [] }, topics: {} };
 }
 
 /**
@@ -57,10 +60,18 @@ export function appStorage(store: KeyValueStore): AppStorage {
 /** Keeps whatever parts of the saved data are valid; anything else gets its default. */
 function parse(data: unknown): SavedState {
   const state = defaults();
-  if (!isRecord(data) || data.version !== VERSION || !isRecord(data.played)) return state;
-  for (const mode of Object.keys(state.played) as Mode[]) {
-    const ids = data.played[mode];
-    if (Array.isArray(ids)) state.played[mode] = ids.filter((id): id is string => typeof id === "string");
+  if (!isRecord(data) || data.version !== VERSION) return state;
+  if (isRecord(data.played)) {
+    for (const mode of Object.keys(state.played) as Mode[]) {
+      const ids = data.played[mode];
+      if (Array.isArray(ids)) state.played[mode] = ids.filter((id): id is string => typeof id === "string");
+    }
+  }
+  if (isRecord(data.topics)) {
+    for (const topic of allTopics) {
+      const change = data.topics[topic];
+      if (isTopicVisibility(change)) state.topics[topic] = change;
+    }
   }
   return state;
 }

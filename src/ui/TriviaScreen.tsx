@@ -1,6 +1,7 @@
 import type { ContentBank } from "@/content/bank";
 import type { Language, TriviaItem } from "@/content/types";
 import { shuffle, triviaPool } from "@/play/deal";
+import type { SavedState } from "@/play/storage";
 import { useDeps } from "./deps";
 import { Icon } from "./icons";
 import { difficultyLabels, triviaTopicLabels } from "./labels";
@@ -12,7 +13,8 @@ const language: Language = "en";
 /** What has been revealed on a Trivia card. */
 type TriviaView = { options: string[] | null; revealed: boolean };
 
-const loadTriviaPool = async (content: ContentBank) => triviaPool(await content.trivia(), language);
+const loadTriviaPool = async (content: ContentBank, saved: SavedState) =>
+  triviaPool(await content.trivia(), language, saved.topics);
 
 export function TriviaScreen({ goHome }: { goHome: () => void }) {
   const deck = useDeck<TriviaItem, TriviaView>({
