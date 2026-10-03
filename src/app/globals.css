@@ -129,7 +129,14 @@ button:focus-visible {
   box-shadow: 0 6px 0 rgba(0, 0, 0, 0.15);
 }
 
-.mode-card:active {
+/* A mode that isn't playable yet (Puzzles until v1.1). */
+.mode-card:disabled {
+  cursor: default;
+  opacity: 0.55;
+  box-shadow: none;
+}
+
+.mode-card:not(:disabled):active {
   transform: translateY(3px);
   box-shadow: 0 3px 0 rgba(0, 0, 0, 0.15);
 }
@@ -349,6 +356,49 @@ button:focus-visible {
 
 .card-back .option-correct::before {
   content: "✓ ";
+}
+
+/* Talk: the two would-you-rather choices, and follow-ups as lines with a mode-colour rule. */
+.choices {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.choice {
+  border-radius: 16px;
+  padding: 14px 16px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 1.15;
+  background: var(--mode);
+  color: var(--on-mode);
+}
+
+/* Outlined rather than yellow: yellow means answers and hints, and neither choice is the answer. */
+.choice + .choice {
+  background: none;
+  color: var(--mode);
+  border: 3px solid var(--mode);
+}
+
+.follow-ups {
+  list-style: none;
+  margin: 4px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.follow-up {
+  border-left: 5px solid var(--mode);
+  padding: 4px 0 4px 14px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.35;
 }
 
 .links {

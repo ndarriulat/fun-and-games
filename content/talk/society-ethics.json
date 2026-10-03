@@ -1,0 +1,22 @@
+[
+  {
+    "id": "tlk-soc-00001",
+    "topic": "society-ethics",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "If you found a wallet full of cash with no ID, only a photo of a family, what would you do?",
+      "followUps": [
+        "Would your answer change if nobody could ever find out?",
+        "Is keeping money you found ever fair?"
+      ]
+    },
+    "es": {
+      "question": "Si encontraras una billetera llena de plata, sin documentos, solo con la foto de una familia, ¿qué harías?",
+      "followUps": [
+        "¿Cambiaría tu respuesta si nadie pudiera enterarse nunca?",
+        "¿Alguna vez es justo quedarse con plata que encontraste?"
+      ]
+    }
+  }
+]

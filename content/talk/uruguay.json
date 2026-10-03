@@ -1,0 +1,20 @@
+[
+  {
+    "id": "tlk-uru-00001",
+    "topic": "uruguay",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "What's the most Uruguayan thing you've ever done abroad?",
+      "followUps": [
+        "Did anyone around you understand what was going on?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué es lo más uruguayo que hiciste estando en el exterior?",
+      "followUps": [
+        "¿Alguien alrededor entendió lo que estaba pasando?"
+      ]
+    }
+  }
+]

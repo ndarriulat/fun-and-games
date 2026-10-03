@@ -5,9 +5,11 @@ import type { Mode } from "@/content/types";
 import { ComingSoonScreen } from "./ComingSoonScreen";
 import { DepsProvider, type AppDeps } from "./deps";
 import { HomeScreen } from "./HomeScreen";
+import { TalkScreen } from "./TalkScreen";
 import { TriviaScreen } from "./TriviaScreen";
 
-export type Screen = "home" | Mode | "settings";
+/** Puzzles is a v1.1 mode: Home shows it as coming soon. */
+export type Screen = "home" | Exclude<Mode, "puzzles"> | "settings";
 
 /** The whole app. Its outside dependencies all come in through `deps`. */
 export function App({ deps }: { deps: AppDeps }) {
@@ -19,8 +21,7 @@ export function App({ deps }: { deps: AppDeps }) {
       <div className="app">
         {screen === "home" && <HomeScreen go={setScreen} />}
         {screen === "trivia" && <TriviaScreen goHome={goHome} />}
-        {screen === "puzzles" && <ComingSoonScreen title="Puzzles" mode="puzzles" goHome={goHome} />}
-        {screen === "talk" && <ComingSoonScreen title="Talk" mode="talk" goHome={goHome} />}
+        {screen === "talk" && <TalkScreen goHome={goHome} />}
         {screen === "settings" && <ComingSoonScreen title="Settings" goHome={goHome} />}
       </div>
     </DepsProvider>

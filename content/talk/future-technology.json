@@ -1,0 +1,22 @@
+[
+  {
+    "id": "tlk-fut-00001",
+    "topic": "future-technology",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "Which invention from science fiction do you most wish existed today?",
+      "followUps": [
+        "What's the first thing you'd use it for?",
+        "What could go wrong with it?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué invento de la ciencia ficción te gustaría que existiera hoy?",
+      "followUps": [
+        "¿Qué sería lo primero que harías con él?",
+        "¿Qué podría salir mal?"
+      ]
+    }
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "tlk-fri-00001",
+    "topic": "friendship-relationships",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "What's a small thing a friend once did for you that you've never forgotten?",
+      "followUps": [
+        "Did you ever tell them how much it mattered?",
+        "What small thing do you do for the people you care about?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué es algo chico que un amigo hizo por vos y que nunca te olvidaste?",
+      "followUps": [
+        "¿Alguna vez le dijiste lo que significó?",
+        "¿Qué cosa chica hacés vos por la gente que querés?"
+      ]
+    }
+  }
+]

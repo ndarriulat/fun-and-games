@@ -1,0 +1,22 @@
+[
+  {
+    "id": "tlk-pop-00001",
+    "topic": "pop-culture",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "Which film or series do you think everyone here should watch?",
+      "followUps": [
+        "What would you say to convince them?",
+        "Which popular one did you never understand the hype about?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué película o serie pensás que todos acá tendrían que ver?",
+      "followUps": [
+        "¿Qué les dirías para convencerlos?",
+        "¿Cuál de las famosas nunca entendiste por qué gusta tanto?"
+      ]
+    }
+  }
+]

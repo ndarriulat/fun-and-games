@@ -2,10 +2,11 @@ import type { Mode } from "@/content/types";
 import { Icon } from "./icons";
 import type { Screen } from "./App";
 
-const modes: { mode: Mode; name: string; blurb: string }[] = [
-  { mode: "trivia", name: "Trivia", blurb: "Guess the answer, then reveal" },
-  { mode: "puzzles", name: "Puzzles", blurb: "Riddles, logic, maths and words" },
-  { mode: "talk", name: "Talk", blurb: "Questions to get everyone talking" },
+const modes: { mode: Mode; name: string; blurb: string; screen?: Screen }[] = [
+  { mode: "trivia", name: "Trivia", blurb: "Guess the answer, then reveal", screen: "trivia" },
+  // Puzzles arrives in v1.1, so it has no screen yet.
+  { mode: "puzzles", name: "Puzzles", blurb: "Coming soon" },
+  { mode: "talk", name: "Talk", blurb: "Questions to get everyone talking", screen: "talk" },
 ];
 
 export function HomeScreen({ go }: { go: (screen: Screen) => void }) {
@@ -18,8 +19,15 @@ export function HomeScreen({ go }: { go: (screen: Screen) => void }) {
         </button>
       </header>
       <nav className="mode-list" aria-label="Modes">
-        {modes.map(({ mode, name, blurb }) => (
-          <button key={mode} type="button" className="mode-card" data-mode={mode} onClick={() => go(mode)}>
+        {modes.map(({ mode, name, blurb, screen }) => (
+          <button
+            key={mode}
+            type="button"
+            className="mode-card"
+            data-mode={mode}
+            disabled={!screen}
+            onClick={screen && (() => go(screen))}
+          >
             <span className="mode-name">{name}</span>
             <span className="mode-blurb">{blurb}</span>
           </button>

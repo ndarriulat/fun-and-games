@@ -132,3 +132,136 @@ describe("content check: Trivia", () => {
     ]);
   });
 });
+
+const talkEn = {
+  question: "Would you rather be able to fly or be invisible?",
+  optionA: "Fly",
+  optionB: "Be invisible",
+  followUps: ["Where would you go first?", "Would you tell anyone?"],
+};
+const talkEs = {
+  question: "¿Qué preferís: poder volar o ser invisible?",
+  optionA: "Volar",
+  optionB: "Ser invisible",
+  followUps: ["¿A dónde irías primero?", "¿Se lo contarías a alguien?"],
+};
+const validTalk = {
+  id: "tlk-hyp-00001",
+  topic: "hypotheticals",
+  type: "would-you-rather",
+  intensity: "light",
+  en: talkEn,
+  es: talkEs,
+};
+
+describe("content check: Talk", () => {
+  function checkTalk(items: unknown, path = "talk/hypotheticals.json") {
+    return checkContent([{ path, data: items }]);
+  }
+
+  function problemsFor(item: unknown) {
+    return checkTalk([item]).problems.map(({ id, field }) => ({ id, field }));
+  }
+
+  it("accepts a valid file", () => {
+    expect(checkTalk([validTalk])).toEqual({ problems: [], pending: [] });
+  });
+
+  it("accepts a question card with one follow-up and no options", () => {
+    const question = { question: "What's the best meal you've ever had?", followUps: ["Who were you with?"] };
+    expect(problemsFor({ ...validTalk, type: "question", en: question, es: undefined })).toEqual([]);
+  });
+
+  it("reports an item with no es block as pending translation, not a problem", () => {
+    expect(checkTalk([{ ...validTalk, es: undefined }])).toEqual({
+      problems: [],
+      pending: [{ file: "talk/hypotheticals.json", id: "tlk-hyp-00001" }],
+    });
+  });
+
+  it.each([
+    ["no follow-ups", []],
+    ["three follow-ups", ["One?", "Two?", "Three?"]],
+    ["an empty follow-up", ["One?", " "]],
+    ["follow-ups that aren't a list", "One?"],
+  ])("rejects %s", (_, followUps) => {
+    expect(problemsFor({ ...validTalk, es: { ...talkEs, followUps } })).toEqual([
+      { id: "tlk-hyp-00001", field: "es.followUps" },
+    ]);
+  });
+
+  it("requires a question", () => {
+    expect(problemsFor({ ...validTalk, en: { ...talkEn, question: "" } })).toEqual([
+      { id: "tlk-hyp-00001", field: "en.question" },
+    ]);
+  });
+
+  it("requires both options on a would-you-rather card", () => {
+    expect(problemsFor({ ...validTalk, en: { ...talkEn, optionA: undefined }, es: { ...talkEs, optionB: "" } })).toEqual([
+      { id: "tlk-hyp-00001", field: "en.optionA" },
+      { id: "tlk-hyp-00001", field: "es.optionB" },
+    ]);
+  });
+
+  it("rejects options on a question card", () => {
+    expect(problemsFor({ ...validTalk, type: "question" })).toEqual([
+      { id: "tlk-hyp-00001", field: "en.optionA" },
+      { id: "tlk-hyp-00001", field: "en.optionB" },
+      { id: "tlk-hyp-00001", field: "es.optionA" },
+      { id: "tlk-hyp-00001", field: "es.optionB" },
+    ]);
+  });
+
+  it("rejects an invalid type and intensity", () => {
+    expect(problemsFor({ ...validTalk, type: "poll", intensity: "spicy" })).toEqual([
+      { id: "tlk-hyp-00001", field: "type" },
+      { id: "tlk-hyp-00001", field: "intensity" },
+    ]);
+  });
+
+  it("requires en to be present", () => {
+    expect(problemsFor({ ...validTalk, en: undefined })).toEqual([{ id: "tlk-hyp-00001", field: "en" }]);
+  });
+
+  it("rejects a Trivia-style ID", () => {
+    expect(problemsFor({ ...validTalk, id: "trv-hyp-00001" })).toEqual([{ id: "trv-hyp-00001", field: "id" }]);
+  });
+
+  it("rejects an ID whose code doesn't match the topic", () => {
+    expect(problemsFor({ ...validTalk, id: "tlk-foo-00001" })).toEqual([{ id: "tlk-foo-00001", field: "id" }]);
+  });
+
+  it("rejects a topic that doesn't match the file", () => {
+    expect(problemsFor({ ...validTalk, id: "tlk-fod-00001", topic: "food" })).toEqual([
+      { id: "tlk-fod-00001", field: "topic" },
+    ]);
+  });
+
+  it("rejects a Trivia topic in a Talk file", () => {
+    const report = checkTalk([{ ...validTalk, topic: "geography" }], "talk/geography.json");
+
+    expect(report.problems.map(({ field }) => field)).toEqual(["(file)", "topic"]);
+  });
+
+  it("rejects IDs used twice across Trivia and Talk files alike", () => {
+    const report = checkContent([
+      { path: "talk/hypotheticals.json", data: [validTalk] },
+      { path: "talk/hypotheticals-2.json", data: [validTalk] },
+    ]);
+
+    expect(report.problems.map(({ file, field }) => ({ file, field }))).toContainEqual({
+      file: "talk/hypotheticals-2.json",
+      field: "id",
+    });
+  });
+});
+
+describe("content check: files", () => {
+  it("rejects a file outside the known mode folders", () => {
+    const report = checkContent([{ path: "jokes/hypotheticals.json", data: [validTalk] }]);
+
+    expect(report.problems.map(({ file, field }) => ({ file, field }))).toEqual([
+      { file: "jokes/hypotheticals.json", field: "(file)" },
+    ]);
+  });
+});

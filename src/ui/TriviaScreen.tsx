@@ -1,10 +1,10 @@
 import type { ContentBank } from "@/content/bank";
 import type { Language, TriviaItem } from "@/content/types";
-import { shuffle, triviaPool } from "@/play/deal";
+import { playablePool, shuffle } from "@/play/deal";
 import type { SavedState } from "@/play/storage";
 import { useDeps } from "./deps";
-import { Icon } from "./icons";
 import { difficultyLabels, triviaTopicLabels } from "./labels";
+import { CardControls, PlayScreen, questionSize } from "./PlayScreen";
 import { useDeck } from "./useDeck";
 import { useSwipe } from "./useSwipe";
 
@@ -14,7 +14,7 @@ const language: Language = "en";
 type TriviaView = { options: string[] | null; revealed: boolean };
 
 const loadTriviaPool = async (content: ContentBank, saved: SavedState) =>
-  triviaPool(await content.trivia(), language, saved.topics);
+  playablePool(await content.trivia(), language, saved.topics);
 
 export function TriviaScreen({ goHome }: { goHome: () => void }) {
   const deck = useDeck<TriviaItem, TriviaView>({
@@ -24,21 +24,7 @@ export function TriviaScreen({ goHome }: { goHome: () => void }) {
   });
 
   return (
-    <main className="play" data-mode="trivia">
-      <header className="play-top">
-        <button type="button" className="icon-btn" aria-label="Home" onClick={goHome}>
-          <Icon name="home" />
-        </button>
-        <span className="chip">
-          <i aria-hidden="true" /> Trivia · all topics
-        </span>
-      </header>
-      {deck.reshuffled && (
-        <p className="notice" role="status">
-          You&apos;ve played everything, starting again.
-        </p>
-      )}
-      {deck.empty && <p className="empty">No Trivia cards yet.</p>}
+    <PlayScreen mode="trivia" title="Trivia" reshuffled={deck.reshuffled} empty={deck.empty} goHome={goHome}>
       {deck.card && (
         <TriviaCard
           key={deck.card.key}
@@ -49,7 +35,7 @@ export function TriviaScreen({ goHome }: { goHome: () => void }) {
           onBack={deck.canGoBack ? deck.back : undefined}
         />
       )}
-    </main>
+    </PlayScreen>
   );
 }
 
@@ -114,31 +100,11 @@ function TriviaCard({
           </button>
         )}
       </div>
-      <div className="controls">
-        <button type="button" className="round" aria-label="Previous card" disabled={!onBack} onClick={onBack}>
-          <Icon name="back" />
-        </button>
-        {revealed ? (
-          <button type="button" className="round round-main" onClick={onNext}>
-            Next
-          </button>
-        ) : (
-          <button type="button" className="round round-main" onClick={() => onView({ ...view, revealed: true })}>
-            Reveal
-          </button>
-        )}
-        <button type="button" className="round" aria-label="Next card" onClick={onNext}>
-          <Icon name="next" />
-        </button>
-      </div>
+      <CardControls
+        main={revealed ? { label: "Next", onClick: onNext } : { label: "Reveal", onClick: () => onView({ ...view, revealed: true }) }}
+        onNext={onNext}
+        onBack={onBack}
+      />
     </>
   );
-}
-
-/** Longer questions step down in size so they still fit on the card. */
-function questionSize(question: string) {
-  if (question.length < 60) return "question-s";
-  if (question.length < 110) return "question-m";
-  if (question.length < 200) return "question-l";
-  return "question-xl";
 }

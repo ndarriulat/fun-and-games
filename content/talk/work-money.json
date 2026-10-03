@@ -1,0 +1,24 @@
+[
+  {
+    "id": "tlk-wrk-00001",
+    "topic": "work-money",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "Would you rather have a job you love that pays just enough, or a boring job that pays double?",
+      "optionA": "A job I love that pays just enough",
+      "optionB": "A boring job that pays double",
+      "followUps": [
+        "Is there a salary that would change your answer?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué preferís: un trabajo que te encanta y te da para vivir justo, o un trabajo aburrido que paga el doble?",
+      "optionA": "Un trabajo que me encanta y me da justo",
+      "optionB": "Un trabajo aburrido que paga el doble",
+      "followUps": [
+        "¿Hay algún sueldo que te haría cambiar de respuesta?"
+      ]
+    }
+  }
+]

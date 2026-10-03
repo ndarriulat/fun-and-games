@@ -1,9 +1,9 @@
-import { triviaTopicCodes, type TriviaTopic } from "@/content/types";
+import { talkTopicCodes, triviaTopicCodes, type TalkTopic, type TriviaTopic } from "@/content/types";
 
-/** A topic that can be hidden in Settings. Talk topics join these in ticket 05. */
-export type Topic = TriviaTopic;
+/** A topic that can be hidden in Settings. Topics in both modes (Uruguay, Portugal) are one topic. */
+export type Topic = TriviaTopic | TalkTopic;
 
-export const allTopics = Object.keys(triviaTopicCodes) as Topic[];
+export const allTopics = [...new Set([...Object.keys(triviaTopicCodes), ...Object.keys(talkTopicCodes)])] as Topic[];
 
 /**
  * The player's changes from the default visibility, never the full list. A topic added later as

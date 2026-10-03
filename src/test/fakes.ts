@@ -1,5 +1,5 @@
 import { inMemoryContentBank } from "@/content/bank";
-import type { Mode, TriviaItem } from "@/content/types";
+import type { Mode, TalkItem, TriviaItem } from "@/content/types";
 import type { KeyValueStore } from "@/play/storage";
 import type { AppDeps, Report, ReportSender } from "@/ui/deps";
 
@@ -79,11 +79,11 @@ export function setStoredTopics(storage: { data: Map<string, string> }, topics: 
 }
 
 export function testDeps(
-  overrides: Partial<Omit<AppDeps, "content">> & { trivia?: readonly TriviaItem[] } = {},
+  overrides: Partial<Omit<AppDeps, "content">> & { trivia?: readonly TriviaItem[]; talk?: readonly TalkItem[] } = {},
 ): AppDeps {
-  const { trivia = triviaFixtures, ...rest } = overrides;
+  const { trivia = triviaFixtures, talk = talkFixtures, ...rest } = overrides;
   return {
-    content: inMemoryContentBank({ trivia }),
+    content: inMemoryContentBank({ trivia, talk }),
     storage: inMemoryStorage(),
     random: fixedRandom(0),
     reports: recordingReportSender(),
@@ -161,3 +161,59 @@ export function numberedTrivia(count: number): TriviaItem[] {
     en: { ...triviaFixtures[0].en, question: `Question ${i + 1}?` },
   }));
 }
+
+export const talkFixtures: TalkItem[] = [
+  {
+    id: "tlk-hyp-90001",
+    topic: "hypotheticals",
+    type: "would-you-rather",
+    intensity: "light",
+    en: {
+      question: "Would you rather be able to fly or be invisible?",
+      optionA: "Fly",
+      optionB: "Be invisible",
+      followUps: ["Where would you go first?", "Would you tell anyone?"],
+    },
+    es: {
+      question: "¿Qué preferís: poder volar o ser invisible?",
+      optionA: "Volar",
+      optionB: "Ser invisible",
+      followUps: ["¿A dónde irías primero?", "¿Se lo contarías a alguien?"],
+    },
+  },
+  {
+    id: "tlk-fod-90001",
+    topic: "food",
+    type: "question",
+    intensity: "light",
+    en: {
+      question: "What's the best meal you've ever had?",
+      followUps: ["Who were you with?"],
+    },
+    es: {
+      question: "¿Cuál es la mejor comida que comiste en tu vida?",
+      followUps: ["¿Con quién estabas?"],
+    },
+  },
+  {
+    id: "tlk-por-90001",
+    topic: "portugal",
+    type: "question",
+    intensity: "deep",
+    en: {
+      question: "What surprised you most when you moved to Portugal?",
+      followUps: ["Does it still surprise you?", "What would you tell someone about to move here?"],
+    },
+  },
+  // Hidden by default, so with no saved changes it's never dealt.
+  {
+    id: "tlk-uru-90001",
+    topic: "uruguay",
+    type: "question",
+    intensity: "light",
+    en: {
+      question: "What's the most Uruguayan thing you've ever done abroad?",
+      followUps: ["Did anyone understand what was going on?"],
+    },
+  },
+];

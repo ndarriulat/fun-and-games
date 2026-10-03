@@ -10,18 +10,30 @@ import {
   sequenceRandom,
   setStoredTopics,
   storedState,
+  talkFixtures,
   testDeps,
   throwingStorage,
   triviaFixtures,
 } from "@/test/fakes";
 import { App } from "./App";
 
+const WYR_QUESTION = "Would you rather be able to fly or be invisible?";
+const FOOD_QUESTION = "What's the best meal you've ever had?";
+const PORTUGAL_TALK_QUESTION = "What surprised you most when you moved to Portugal?";
+const URUGUAY_TALK_QUESTION = "What's the most Uruguayan thing you've ever done abroad?";
 const PORTUGAL_QUESTION = "What is the name of Lisbon's famous yellow tram route through Alfama?";
 const URUGUAY_QUESTION = "In what year did Uruguay host and win the first FIFA World Cup?";
 
 async function openTrivia(deps = testDeps()) {
   const rendered = renderApp(deps);
   await rendered.user.click(screen.getByRole("button", { name: /trivia/i }));
+  await screen.findByRole("article");
+  return rendered;
+}
+
+async function openTalk(deps = testDeps()) {
+  const rendered = renderApp(deps);
+  await rendered.user.click(screen.getByRole("button", { name: /talk/i }));
   await screen.findByRole("article");
   return rendered;
 }
@@ -50,11 +62,25 @@ describe("Home", () => {
   });
 });
 
-describe("Modes not built yet", () => {
-  it.each(["Puzzles", "Talk", "Settings"])("%s shows a coming-soon screen with a way home", async (name) => {
+describe("Puzzles on Home", () => {
+  it("shows Puzzles as coming soon, and tapping it does nothing", async () => {
+    const { user } = renderApp();
+    const puzzles = screen.getByRole("button", { name: /puzzles/i });
+
+    expect(puzzles).toHaveTextContent(/coming soon/i);
+    expect(puzzles).toBeDisabled();
+
+    await user.click(puzzles);
+    expect(screen.getByRole("button", { name: "Settings" })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /trivia/i })).toBeInTheDocument();
+  });
+});
+
+describe("Screens not built yet", () => {
+  it("Settings shows a coming-soon screen with a way home", async () => {
     const { user } = renderApp();
 
-    await user.click(screen.getByRole("button", { name: new RegExp(name, "i") }));
+    await user.click(screen.getByRole("button", { name: "Settings" }));
     expect(screen.getByText(/coming soon/i)).toBeInTheDocument();
 
     await user.click(screen.getByRole("button", { name: "Home" }));
@@ -178,6 +204,133 @@ describe("Trivia", () => {
     expect(screen.queryByRole("article")).not.toBeInTheDocument();
   });
 });
+
+describe("Talk", () => {
+  it("deals a would-you-rather card showing its topic and both choices", async () => {
+    await openTalk();
+
+    expect(screen.getByText(WYR_QUESTION)).toBeInTheDocument();
+    expect(screen.getByText("Hypotheticals")).toBeInTheDocument();
+    const choices = within(screen.getByRole("list", { name: "Choices" }));
+    expect(choices.getAllByRole("listitem").map((choice) => choice.textContent)).toEqual(["Fly", "Be invisible"]);
+  });
+
+  it("shows no choices on a plain question card", async () => {
+    await openTalk(testDeps({ random: fixedRandom(0.999) }));
+
+    expect(screen.getByText(PORTUGAL_TALK_QUESTION)).toBeInTheDocument();
+    expect(screen.getByText("Portugal 🇵🇹")).toBeInTheDocument();
+    expect(screen.queryByRole("list", { name: "Choices" })).not.toBeInTheDocument();
+  });
+
+  it("reveals the follow-ups one at a time, in order, then the button becomes Next", async () => {
+    const { user } = await openTalk();
+    expect(screen.queryByRole("list", { name: "Follow-ups" })).not.toBeInTheDocument();
+
+    await user.click(screen.getByRole("button", { name: "Follow-up" }));
+    expect(followUps()).toEqual(["Where would you go first?"]);
+
+    await user.click(screen.getByRole("button", { name: "Follow-up" }));
+    expect(followUps()).toEqual(["Where would you go first?", "Would you tell anyone?"]);
+    expect(screen.queryByRole("button", { name: "Follow-up" })).not.toBeInTheDocument();
+
+    await user.click(screen.getByRole("button", { name: "Next" }));
+    expect(screen.getByText(FOOD_QUESTION)).toBeInTheDocument();
+  });
+
+  it("removes the Follow-up button after a card's only follow-up", async () => {
+    const { user } = await openTalk(testDeps({ talk: [talkFixtures[1]] }));
+
+    await user.click(screen.getByRole("button", { name: "Follow-up" }));
+
+    expect(followUps()).toEqual(["Who were you with?"]);
+    expect(screen.queryByRole("button", { name: "Follow-up" })).not.toBeInTheDocument();
+  });
+
+  it("deals a new card, with no follow-ups showing, on Next and on swipe left", async () => {
+    const { user } = await openTalk();
+    await user.click(screen.getByRole("button", { name: "Follow-up" }));
+
+    await user.click(screen.getByRole("button", { name: "Next card" }));
+    expect(screen.getByText(FOOD_QUESTION)).toBeInTheDocument();
+    expect(screen.queryByRole("list", { name: "Follow-ups" })).not.toBeInTheDocument();
+
+    await swipe(user, screen.getByRole("article"), -120);
+    expect(screen.getByText(PORTUGAL_TALK_QUESTION)).toBeInTheDocument();
+  });
+
+  it("goes back on Back and swipe right, keeping the follow-ups that were showing", async () => {
+    const { user } = await openTalk();
+    await user.click(screen.getByRole("button", { name: "Follow-up" }));
+    await user.click(screen.getByRole("button", { name: "Next card" }));
+    await user.click(screen.getByRole("button", { name: "Next card" }));
+
+    await user.click(screen.getByRole("button", { name: "Previous card" }));
+    expect(screen.getByText(FOOD_QUESTION)).toBeInTheDocument();
+
+    await swipe(user, screen.getByRole("article"), 120);
+    expect(screen.getByText(WYR_QUESTION)).toBeInTheDocument();
+    expect(followUps()).toEqual(["Where would you go first?"]);
+    expect(screen.getByRole("button", { name: "Previous card" })).toBeDisabled();
+  });
+
+  it("keeps its own played history, apart from Trivia's, across a reload", async () => {
+    const storage = inMemoryStorage();
+    await openTalk(testDeps({ storage }));
+    cleanup();
+    await openTrivia(testDeps({ storage }));
+    expect(screen.getByText("What is the capital of Australia?")).toBeInTheDocument();
+    cleanup();
+
+    await openTalk(testDeps({ storage }));
+
+    expect(screen.getByText(FOOD_QUESTION)).toBeInTheDocument();
+    expect(storedState(storage).played).toMatchObject({ trivia: ["trv-geo-90001"], talk: ["tlk-hyp-90001", "tlk-fod-90001"] });
+  });
+
+  it("says so and starts again when every Talk card has been played", async () => {
+    const { user } = await openTalk(testDeps({ random: sequenceRandom(0, 0, 0, 0.999) }));
+    await user.click(screen.getByRole("button", { name: "Next card" }));
+    await user.click(screen.getByRole("button", { name: "Next card" }));
+    expect(screen.getByText(PORTUGAL_TALK_QUESTION)).toBeInTheDocument();
+
+    await user.click(screen.getByRole("button", { name: "Next card" }));
+
+    expect(screen.getByRole("status")).toHaveTextContent("You've played everything, starting again.");
+    expect(screen.getByText(FOOD_QUESTION)).toBeInTheDocument();
+  });
+
+  it("never deals Uruguay with default settings, but does once the player has shown it", async () => {
+    // 0.999 picks the last candidate: the Uruguay card is last in the bank.
+    const { user } = await openTalk(testDeps({ random: fixedRandom(0.999) }));
+    const dealt = [screen.getByRole("article").textContent];
+    for (let i = 0; i < 5; i++) {
+      await user.click(screen.getByRole("button", { name: "Next card" }));
+      dealt.push(screen.getByRole("article").textContent);
+    }
+    expect(dealt.join()).not.toContain(URUGUAY_TALK_QUESTION);
+    cleanup();
+
+    await openTalk(testDeps({ storage: savedStorage({ topics: { uruguay: "shown" } }), random: fixedRandom(0.999) }));
+    expect(screen.getByText(URUGUAY_TALK_QUESTION)).toBeInTheDocument();
+    expect(screen.getByText("Uruguay 🇺🇾")).toBeInTheDocument();
+  });
+
+  it("goes back to Home", async () => {
+    const { user } = await openTalk();
+
+    await user.click(screen.getByRole("button", { name: "Home" }));
+
+    expect(screen.getByRole("button", { name: "Settings" })).toBeInTheDocument();
+    expect(screen.queryByRole("article")).not.toBeInTheDocument();
+  });
+});
+
+function followUps() {
+  return within(screen.getByRole("list", { name: "Follow-ups" }))
+    .getAllByRole("listitem")
+    .map((followUp) => followUp.textContent);
+}
 
 describe("Back and the recent trail", () => {
   it("returns to the previous card with what was revealed still showing", async () => {

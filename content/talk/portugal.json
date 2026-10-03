@@ -1,0 +1,22 @@
+[
+  {
+    "id": "tlk-por-00001",
+    "topic": "portugal",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "What do you miss most about home since moving to Portugal, and what would you miss about Portugal if you left?",
+      "followUps": [
+        "Has what you miss changed over time?",
+        "Which place feels like home now?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué es lo que más extrañás de tu país desde que te mudaste a Portugal, y qué extrañarías de Portugal si te fueras?",
+      "followUps": [
+        "¿Lo que extrañás fue cambiando con el tiempo?",
+        "¿Qué lugar sentís como tu casa hoy?"
+      ]
+    }
+  }
+]

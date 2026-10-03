@@ -1,0 +1,26 @@
+[
+  {
+    "id": "tlk-hyp-00001",
+    "topic": "hypotheticals",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "Would you rather be able to talk to animals or speak every human language?",
+      "optionA": "Talk to animals",
+      "optionB": "Speak every human language",
+      "followUps": [
+        "Which animal would you talk to first?",
+        "What would you do with the power on an ordinary Tuesday?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué preferís: poder hablar con los animales o hablar todos los idiomas del mundo?",
+      "optionA": "Hablar con los animales",
+      "optionB": "Hablar todos los idiomas",
+      "followUps": [
+        "¿Con qué animal hablarías primero?",
+        "¿Qué harías con ese poder un martes cualquiera?"
+      ]
+    }
+  }
+]

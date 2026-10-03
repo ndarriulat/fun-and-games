@@ -1,11 +1,15 @@
-import type { Language, TriviaItem } from "@/content/types";
-import { isTopicHidden, type TopicChanges } from "./topics";
+import type { Language } from "@/content/types";
+import { isTopicHidden, type Topic, type TopicChanges } from "./topics";
 
 /**
  * The items that can be dealt: hidden topics are left out, and so are pending translations
  * when playing in Spanish.
  */
-export function triviaPool(items: readonly TriviaItem[], language: Language, topicChanges: TopicChanges): TriviaItem[] {
+export function playablePool<T extends { topic: Topic; en: unknown; es?: unknown }>(
+  items: readonly T[],
+  language: Language,
+  topicChanges: TopicChanges,
+): T[] {
   return items.filter((item) => item[language] !== undefined && !isTopicHidden(item.topic, topicChanges));
 }
 

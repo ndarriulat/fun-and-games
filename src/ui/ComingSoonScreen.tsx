@@ -1,9 +1,8 @@
-import type { Mode } from "@/content/types";
 import { Icon } from "./icons";
 
-export function ComingSoonScreen({ title, mode, goHome }: { title: string; mode?: Mode; goHome: () => void }) {
+export function ComingSoonScreen({ title, goHome }: { title: string; goHome: () => void }) {
   return (
-    <main className="coming-soon" data-mode={mode}>
+    <main className="coming-soon">
       <header className="play-top">
         <button type="button" className="icon-btn" aria-label="Home" onClick={goHome}>
           <Icon name="home" />

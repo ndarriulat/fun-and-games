@@ -1,0 +1,22 @@
+[
+  {
+    "id": "tlk-chi-00001",
+    "topic": "childhood-memories",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "What was your favourite game as a kid, and could you still play it today?",
+      "followUps": [
+        "Who did you usually play it with?",
+        "Is there anything from your childhood you wish kids still did?"
+      ]
+    },
+    "es": {
+      "question": "¿Cuál era tu juego favorito de chico, y lo podrías jugar hoy?",
+      "followUps": [
+        "¿Con quién lo jugabas casi siempre?",
+        "¿Hay algo de tu infancia que te gustaría que los gurises siguieran haciendo?"
+      ]
+    }
+  }
+]

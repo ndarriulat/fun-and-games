@@ -1,0 +1,26 @@
+[
+  {
+    "id": "tlk-tra-00001",
+    "topic": "travel-places",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "Would you rather spend a month in a city you've never heard of or a month somewhere you already love?",
+      "optionA": "A city I've never heard of",
+      "optionB": "Somewhere I already love",
+      "followUps": [
+        "Where is the place you already love?",
+        "What makes a place feel like home?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué preferís: pasar un mes en una ciudad de la que nunca escuchaste hablar o un mes en un lugar que ya te encanta?",
+      "optionA": "Una ciudad desconocida",
+      "optionB": "Un lugar que ya me encanta",
+      "followUps": [
+        "¿Cuál es ese lugar que ya te encanta?",
+        "¿Qué hace que un lugar se sienta como tu casa?"
+      ]
+    }
+  }
+]

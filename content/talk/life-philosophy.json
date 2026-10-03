@@ -1,0 +1,22 @@
+[
+  {
+    "id": "tlk-lif-00001",
+    "topic": "life-philosophy",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "What's something you believed strongly ten years ago that you've completely changed your mind about?",
+      "followUps": [
+        "What made you change your mind?",
+        "What do you believe now that you might drop in another ten years?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué es algo en lo que creías mucho hace diez años y sobre lo que cambiaste totalmente de opinión?",
+      "followUps": [
+        "¿Qué te hizo cambiar de idea?",
+        "¿En qué creés hoy que capaz dejás de creer en otros diez años?"
+      ]
+    }
+  }
+]

@@ -18,9 +18,10 @@ function loadFiles(mode: string): ContentFile[] {
 
 describe("the real content bank", () => {
   const triviaFiles = loadFiles("trivia");
+  const talkFiles = loadFiles("talk");
 
   it("passes the content check", () => {
-    const { problems, pending } = checkContent(triviaFiles);
+    const { problems, pending } = checkContent([...triviaFiles, ...talkFiles]);
 
     if (pending.length > 0) {
       console.info(`${pending.length} item(s) pending translation:\n${pending.map((p) => `  ${p.file} ${p.id}`).join("\n")}`);
@@ -32,6 +33,14 @@ describe("the real content bank", () => {
     const fileIds = triviaFiles.flatMap((file) => (file.data as { id: string }[]).map((item) => item.id));
     const bundledIds = (await bundledContentBank.trivia()).map((item) => item.id);
 
+    expect([...bundledIds].sort()).toEqual([...fileIds].sort());
+  });
+
+  it("bundles every Talk file into the app", async () => {
+    const fileIds = talkFiles.flatMap((file) => (file.data as { id: string }[]).map((item) => item.id));
+    const bundledIds = (await bundledContentBank.talk()).map((item) => item.id);
+
+    expect(fileIds).not.toEqual([]);
     expect([...bundledIds].sort()).toEqual([...fileIds].sort());
   });
 });
