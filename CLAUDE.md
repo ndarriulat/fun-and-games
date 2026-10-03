@@ -56,7 +56,7 @@ Three modes. Trivia and Talk are random across all non-hidden topics by default;
 - **Settings:**
   - Language (English / Español)
   - Theme: Light / Dark / Follow phone. Default is Light.
-  - Hide topics: one toggle per topic, all shown by default, applies to Trivia and Talk. A hidden topic never appears, not in random play and not in the Filters list.
+  - Hide topics: one toggle per topic, applies to Trivia and Talk. All shown by default except Uruguay, which is hidden until turned on. A hidden topic never appears, not in random play and not in the Filters list.
 
 ## Design
 
@@ -97,7 +97,7 @@ Three modes. Trivia and Talk are random across all non-hidden topics by default;
 ```
 
 - Puzzles add `"hints"` (3 items) and use `"type"` (riddle / logic / maths / word) instead of `topic`.
-- Talk cards add `"followUps"`, `"type"` (question / would-you-rather) and `"intensity"` (light / deep).
+- Talk cards add `"followUps"` (1–2), `"type"` (question / would-you-rather) and `"intensity"` (light / deep). Would-you-rather cards also have per-language `"optionA"` and `"optionB"`.
 
 ## Tech
 
@@ -107,12 +107,12 @@ Three modes. Trivia and Talk are random across all non-hidden topics by default;
 
 ## Milestones
 
-1. **v1:** the full app with 100 items per mode, in both languages, deployed, and tested on a real trip.
+1. **v1:** Trivia and Talk with 100 items each, in both languages, deployed, and tested on a real trip. Home shows Puzzles as a non-tappable "Coming soon" card.
    - Trivia: about 7 per topic; 40% easy, 40% medium, 20% hard.
-   - Puzzles: 25 per type.
    - Talk: about 8 per topic; about 25% deep and 25% would-you-rather.
-2. **Grow content** in batches toward 10,000 trivia / 1,000 puzzles / 2,000 Talk.
-3. **Phase 2:**
+2. **v1.1:** Puzzles mode with 25 per type, in both languages, and its own road test.
+3. **Grow content** in batches toward 10,000 trivia / 1,000 puzzles / 2,000 Talk.
+4. **Phase 2:**
    - Offline mode (PWA), downloading only the chosen language.
    - Accounts, favourites and synced history.
    - Quick Score: enter players at the start, tick who got each one right on Reveal, totals at the end.
@@ -121,7 +121,7 @@ Three modes. Trivia and Talk are random across all non-hidden topics by default;
 
 ## Status
 
-Design agreed (2026-10-01). Ticket 01 (walking skeleton: Home + Trivia card, content check, CI) and ticket 03 (played history, Back, reshuffle, storage adapter) done.
+Design agreed (2026-10-01). Puzzles moved to v1.1 and Uruguay hidden by default (2026-10-03); v1 tickets in `.scratch/vamos-v1/`, Puzzles tickets in `.scratch/vamos-v1-1/`. Ticket 01 (walking skeleton: Home + Trivia card, content check, CI), ticket 03 (played history, Back, reshuffle, storage adapter), ticket 22 (Uruguay hidden by default) and ticket 05 (Talk mode, Puzzles "Coming soon" on Home, 12 starter Talk cards) done.
 
 ## Commands
 
