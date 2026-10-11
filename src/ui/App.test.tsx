@@ -112,9 +112,11 @@ describe("Language", () => {
 
     const options = await showOptions(user, "Ver opciones", "Opciones");
     expect([...options].sort()).toEqual(["Canberra", "Melbourne", "Perth", "Sídney"]);
-    await user.click(screen.getByRole("button", { name: "Revelar" }));
+    await user.click(screen.getByRole("button", { name: "Respuesta" }));
     expect(screen.getByRole("listitem", { name: "Correcta: Canberra" })).toBeInTheDocument();
     expect(screen.getByText("Canberra se construyó a propósito como punto medio entre Sídney y Melbourne.")).toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: "Respuesta" })).not.toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Siguiente" })).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Tarjeta siguiente" })).toBeInTheDocument();
   });
 
@@ -126,8 +128,12 @@ describe("Language", () => {
 
     expect(await screen.findByText("¿Qué preferís: poder volar o ser invisible?")).toBeInTheDocument();
     expect(screen.getByText("Qué pasaría si")).toBeInTheDocument();
-    await user.click(screen.getByRole("button", { name: "Otra pregunta" }));
-    expect(screen.getByText("¿A dónde irías primero?")).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Más" }));
+    expect(followUps("Más preguntas")).toEqual(["¿A dónde irías primero?"]);
+    await user.click(screen.getByRole("button", { name: "Más" }));
+    expect(followUps("Más preguntas")).toEqual(["¿A dónde irías primero?", "¿Se lo contarías a alguien?"]);
+    expect(screen.queryByRole("button", { name: "Más" })).not.toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Siguiente" })).toBeInTheDocument();
   });
 
   it("switches the card on screen in place, keeping what was revealed", async () => {
