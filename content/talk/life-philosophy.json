@@ -18,5 +18,98 @@
         "¿En qué creés hoy que capaz dejás de creer en otros diez años?"
       ]
     }
+  },
+  {
+    "id": "tlk-lif-00002",
+    "topic": "life-philosophy",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "What's a piece of advice you were given that turned out to be completely wrong?",
+      "followUps": [
+        "Who gave it to you, and do they still believe it?",
+        "What would you say instead?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-lif-00003",
+    "topic": "life-philosophy",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "What does a good life look like to you, in one sentence?",
+      "followUps": [
+        "How close are you to it right now?",
+        "Would you have said the same thing at fifteen?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-lif-00004",
+    "topic": "life-philosophy",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "Would you rather have a life full of adventure but little comfort, or a calm, comfortable life with few surprises?",
+      "optionA": "Adventure, little comfort",
+      "optionB": "Calm and comfortable",
+      "followUps": [
+        "Which one are you actually living right now?",
+        "Can you really have both?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-lif-00005",
+    "topic": "life-philosophy",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "What's something you're proud of that nobody ever congratulated you for?",
+      "followUps": [
+        "Why do you think nobody noticed?",
+        "Is there something someone here deserves congratulating for?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-lif-00006",
+    "topic": "life-philosophy",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "Is it better to be a big fish in a small pond or a small fish in a big pond?",
+      "followUps": [
+        "Which one have you been for most of your life?",
+        "Have you ever switched ponds? Was it worth it?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-lif-00007",
+    "topic": "life-philosophy",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "What would you want people to say about you when you're not in the room?",
+      "followUps": [
+        "Do you think they say it already?",
+        "What could you do this month to earn it?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-lif-00008",
+    "topic": "life-philosophy",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "How much of where you are today is luck, and how much is hard work?",
+      "followUps": [
+        "What's the luckiest break you ever got?",
+        "Would you admit that in a job interview?"
+      ]
+    }
   }
 ]

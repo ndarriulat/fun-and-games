@@ -16,5 +16,102 @@
         "¿Qué plato de los otros extrañarías más?"
       ]
     }
+  },
+  {
+    "id": "tlk-fod-00002",
+    "topic": "food",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "Would you rather only eat sweet food or only eat savoury food for the rest of your life?",
+      "optionA": "Only sweet",
+      "optionB": "Only savoury",
+      "followUps": [
+        "Which dish from the other side would you miss most?",
+        "Is a tomato sweet or savoury, for the rules?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-fod-00003",
+    "topic": "food",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "Would you rather eat your favourite meal every day for a year, or never eat it again?",
+      "optionA": "Every day for a year",
+      "optionB": "Never again",
+      "followUps": [
+        "How long until you started to hate it?",
+        "What is that meal, exactly?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-fod-00004",
+    "topic": "food",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "Would you rather give up coffee or give up cheese for good?",
+      "optionA": "Give up coffee",
+      "optionB": "Give up cheese",
+      "followUps": [
+        "What would you replace it with?",
+        "Who here would crack first?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-fod-00005",
+    "topic": "food",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "What's a food combination you love that other people find disgusting?",
+      "followUps": [
+        "Can you convince someone here to try it?",
+        "How did you discover it?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-fod-00006",
+    "topic": "food",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "What's a dish from your family that nobody else makes quite right?",
+      "followUps": [
+        "Do you know the recipe, or is it a secret?",
+        "Who will keep it going?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-fod-00007",
+    "topic": "food",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "Pineapple on pizza, ketchup on pasta, milk before cereal: which food crime is truly unforgivable?",
+      "followUps": [
+        "Which food rule do you secretly break?",
+        "Who here commits the worst food crimes?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-fod-00008",
+    "topic": "food",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "You're opening a restaurant with only three dishes on the menu. What are they?",
+      "followUps": [
+        "What's it called?",
+        "Who here would you hire, and for which job?"
+      ]
+    }
   }
 ]

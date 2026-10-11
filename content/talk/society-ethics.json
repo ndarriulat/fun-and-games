@@ -18,5 +18,100 @@
         "¿Alguna vez es justo quedarse con plata que encontraste?"
       ]
     }
+  },
+  {
+    "id": "tlk-soc-00002",
+    "topic": "society-ethics",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "When is it OK to lie to protect someone's feelings, and when does it cross a line?",
+      "followUps": [
+        "What's a white lie you told that you still think was right?",
+        "Would you want your friends to lie to you that way?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-soc-00003",
+    "topic": "society-ethics",
+    "type": "would-you-rather",
+    "intensity": "deep",
+    "en": {
+      "question": "Would you rather live in a world with no crime but cameras everywhere, or total privacy with crime as it is today?",
+      "optionA": "No crime, cameras everywhere",
+      "optionB": "Total privacy, crime as it is",
+      "followUps": [
+        "Who would you trust to watch the cameras?",
+        "What's one thing you'd stop doing if you were always watched?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-soc-00004",
+    "topic": "society-ethics",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "At what age should kids get a real say in big family decisions, like moving house?",
+      "followUps": [
+        "What decision do you wish your parents had asked you about?",
+        "Should a kid's vote count as much as an adult's?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-soc-00005",
+    "topic": "society-ethics",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "Is it fair to judge someone today for something they posted online ten years ago?",
+      "followUps": [
+        "Where would you draw the line?",
+        "Is there anything of yours you'd hate to be judged on?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-soc-00006",
+    "topic": "society-ethics",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "Would you rather everyone always told you the brutal truth, or everyone was always kind, even if it meant fibbing?",
+      "optionA": "The brutal truth, always",
+      "optionB": "Kindness, even with fibs",
+      "followUps": [
+        "Who in your life already does the first one?",
+        "Which would make the world a better place overall?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-soc-00007",
+    "topic": "society-ethics",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "Should you still tip for bad service? What is a tip really for?",
+      "followUps": [
+        "How does tipping work where you grew up?",
+        "Would you rather tipping disappeared altogether?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-soc-00008",
+    "topic": "society-ethics",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "You see someone shoplifting baby food. What do you do, and why?",
+      "followUps": [
+        "Would it change if it were a bottle of wine instead?",
+        "Who is actually harmed here?"
+      ]
+    }
   }
 ]

@@ -22,5 +22,97 @@
         "¿Qué hace que un lugar se sienta como tu casa?"
       ]
     }
+  },
+  {
+    "id": "tlk-tra-00002",
+    "topic": "travel-places",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "What's the most overrated place you've ever visited, and what was the hidden gem nearby?",
+      "followUps": [
+        "Would you go back to either?",
+        "What do tourists always miss there?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-tra-00003",
+    "topic": "travel-places",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "Would you rather have free flights for life but always in the middle seat, or pay full price and always fly business?",
+      "optionA": "Free flights, middle seat forever",
+      "optionB": "Full price, always business",
+      "followUps": [
+        "Where would you fly first?",
+        "How long a flight could you survive in the middle seat?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-tra-00004",
+    "topic": "travel-places",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "If you had to move to another country tomorrow, where would you go and what would you miss first?",
+      "followUps": [
+        "What would you pack that isn't practical at all?",
+        "Who here would visit you first?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-tra-00005",
+    "topic": "travel-places",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "What trip changed the way you see the world, or yourself?",
+      "followUps": [
+        "What surprised you most about coming home?",
+        "Is there a place you're scared to revisit in case it's changed?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-tra-00006",
+    "topic": "travel-places",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "What's the worst travel disaster you've had that makes a great story now?",
+      "followUps": [
+        "Who was with you, and do they tell it the same way?",
+        "What did it teach you to always pack?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-tra-00007",
+    "topic": "travel-places",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "A visitor gets one perfect day in your hometown. Where do you take them?",
+      "followUps": [
+        "Where would you never take them?",
+        "Where do locals go that tourists never find?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-tra-00008",
+    "topic": "travel-places",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "Beach, mountains or a big city: where do you truly recharge, and where do you just pretend to?",
+      "followUps": [
+        "Are you a packed-itinerary traveller or a zero-plans one?"
+      ]
+    }
   }
 ]

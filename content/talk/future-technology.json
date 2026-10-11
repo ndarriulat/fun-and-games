@@ -18,5 +18,100 @@
         "¿Qué podría salir mal?"
       ]
     }
+  },
+  {
+    "id": "tlk-fut-00002",
+    "topic": "future-technology",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "Would you rather lose all your photos forever or all your messages forever?",
+      "optionA": "Lose all my photos",
+      "optionB": "Lose all my messages",
+      "followUps": [
+        "Which photo or chat would you fight hardest to save?",
+        "Do you ever actually look back at them?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-fut-00003",
+    "topic": "future-technology",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "Would you rather travel 100 years into the past or 100 years into the future, with no way back?",
+      "optionA": "100 years into the past",
+      "optionB": "100 years into the future",
+      "followUps": [
+        "What would you take with you?",
+        "How long before people realised you didn't belong?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-fut-00004",
+    "topic": "future-technology",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "If you could upload your mind to a computer and live forever, would it still be you?",
+      "followUps": [
+        "Would you do it? When?",
+        "Who would you want in there with you?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-fut-00005",
+    "topic": "future-technology",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "What's something we use every day that people in 50 years will laugh at us for?",
+      "followUps": [
+        "What will they think was the most reckless thing we did?",
+        "What will they be jealous we still had?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-fut-00006",
+    "topic": "future-technology",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "If a self-driving car has to choose, should it protect its passengers or the people on the street?",
+      "followUps": [
+        "Would you buy a car that might choose against you?",
+        "Who should decide: the owner, the carmaker or the law?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-fut-00007",
+    "topic": "future-technology",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "An app promises to plan your whole day for maximum happiness. Would you let it run your life for a week?",
+      "followUps": [
+        "What's the first thing you think it would cut?",
+        "What would you never let it decide?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-fut-00008",
+    "topic": "future-technology",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "Which job that exists today will have completely disappeared by the time we're old?",
+      "followUps": [
+        "What brand-new job will exist instead?",
+        "Is there a job you hope a machine never takes?"
+      ]
+    }
   }
 ]

@@ -22,5 +22,100 @@
         "¿Qué harías con ese poder un martes cualquiera?"
       ]
     }
+  },
+  {
+    "id": "tlk-hyp-00002",
+    "topic": "hypotheticals",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "Would you rather be able to pause time or rewind it by ten seconds?",
+      "optionA": "Pause time",
+      "optionB": "Rewind ten seconds",
+      "followUps": [
+        "When last week would you have used it?",
+        "How long before someone caught on?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hyp-00003",
+    "topic": "hypotheticals",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "Would you rather always know when someone is lying, or always get away with lying yourself?",
+      "optionA": "Always spot a lie",
+      "optionB": "Always get away with a lie",
+      "followUps": [
+        "Who would you test it on first?",
+        "Would it make your friendships better or worse?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hyp-00004",
+    "topic": "hypotheticals",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "If you could live one year of your life again, knowing what you know now, which year would you pick?",
+      "followUps": [
+        "What would you do differently?",
+        "Would you risk changing everything that came after?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hyp-00005",
+    "topic": "hypotheticals",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "You get to add one new rule that everyone in the world must follow. What is it?",
+      "followUps": [
+        "How would people try to get around it?",
+        "What happens to people who break it?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hyp-00006",
+    "topic": "hypotheticals",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "If you could instantly master any skill, but had to lose one you already have, what would you trade?",
+      "followUps": [
+        "Which skill would you never give up?",
+        "Would anyone here notice the swap?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hyp-00007",
+    "topic": "hypotheticals",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "A genie grants you a superpower, but it only works on Mondays. Which one do you pick?",
+      "followUps": [
+        "How would your Mondays change?",
+        "What would you do the rest of the week to get ready?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hyp-00008",
+    "topic": "hypotheticals",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "If a theme song played every time you walked into a room, what would yours be?",
+      "followUps": [
+        "Which song would you hate to get stuck with?",
+        "Pick one for the person next to you."
+      ]
+    }
   }
 ]
