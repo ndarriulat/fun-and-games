@@ -104,7 +104,8 @@ Three modes. Trivia and Talk are random across all non-hidden topics by default;
 
 - Next.js + React + TypeScript. No Vite.
 - Front end only in phase 1. No backend, no database, no offline mode.
-- Hosted on Vercel, deployed from a public GitHub repo.
+- Hosted on Vercel, deployed from a public GitHub repo (github.com/ndarriulat/fun-and-games). Every push to `main` deploys.
+- Live: https://fun-and-games-vert.vercel.app/
 
 ## Milestones
 
