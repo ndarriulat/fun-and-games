@@ -16,5 +16,98 @@
         "¿Alguien alrededor entendió lo que estaba pasando?"
       ]
     }
+  },
+  {
+    "id": "tlk-uru-00002",
+    "topic": "uruguay",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "Would you rather spend the whole summer in Punta del Este or in Cabo Polonio?",
+      "optionA": "Punta del Este",
+      "optionB": "Cabo Polonio",
+      "followUps": [
+        "What would you do there every single day?",
+        "Which Uruguayan beach is overrated, honestly?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-uru-00003",
+    "topic": "uruguay",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "What are your mate rules, and which one does everyone else get wrong?",
+      "followUps": [
+        "Who here is the worst person to share a mate with?",
+        "Have you ever had to explain mate to a foreigner?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-uru-00004",
+    "topic": "uruguay",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "Would you rather give up asado or dulce de leche for the rest of your life?",
+      "optionA": "Give up asado",
+      "optionB": "Give up dulce de leche",
+      "followUps": [
+        "What's the best asado you've ever been to?",
+        "Who among you makes the best asado?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-uru-00005",
+    "topic": "uruguay",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "Which neighbourhood or town in Uruguay would you show a foreign friend first, and why there?",
+      "followUps": [
+        "Where would you never take them?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-uru-00006",
+    "topic": "uruguay",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "What makes someone Uruguayan: being born there, growing up there, or something else?",
+      "followUps": [
+        "Do Uruguayans who move abroad stay Uruguayan forever?",
+        "Which Uruguayan habit would you never lose?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-uru-00007",
+    "topic": "uruguay",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "What's your best memory from Carnaval, the Llamadas or a night at the tablado?",
+      "followUps": [
+        "Which murga or comparsa line can you still sing?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-uru-00008",
+    "topic": "uruguay",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "If you'd grown up anywhere other than Uruguay, what would be most different about you?",
+      "followUps": [
+        "What would you never have learned?",
+        "Would you still have ended up friends with the people here?"
+      ]
+    }
   }
 ]

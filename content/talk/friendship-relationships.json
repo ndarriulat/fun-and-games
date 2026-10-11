@@ -18,5 +18,99 @@
         "¿Qué cosa chica hacés vos por la gente que querés?"
       ]
     }
+  },
+  {
+    "id": "tlk-fri-00002",
+    "topic": "friendship-relationships",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "How did the people here first meet, and does everyone remember it the same way?",
+      "followUps": [
+        "What was your first impression of each other?",
+        "When did you realise you'd end up friends?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-fri-00003",
+    "topic": "friendship-relationships",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "Would you rather have one best friend who knows everything about you, or ten good friends who each know a different side of you?",
+      "optionA": "One best friend",
+      "optionB": "Ten good friends",
+      "followUps": [
+        "Which side of you do the fewest people know?",
+        "Which of the two do you have right now?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-fri-00004",
+    "topic": "friendship-relationships",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "What friendship faded away that you still think about?",
+      "followUps": [
+        "If you could send them one message, what would it say?",
+        "Do you think they think about it too?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-fri-00005",
+    "topic": "friendship-relationships",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "What keeps a friendship alive when someone moves away or life gets busy?",
+      "followUps": [
+        "Who could you call after five years and it would feel like no time had passed?",
+        "Which friendship deserves more effort from you?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-fri-00006",
+    "topic": "friendship-relationships",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "On a group trip, would you rather someone else plans everything and you just show up, or you plan it all exactly your way?",
+      "optionA": "Someone else plans, I show up",
+      "optionB": "I plan everything my way",
+      "followUps": [
+        "Who in this group is the planner?",
+        "What's the best trip someone else planned for you?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-fri-00007",
+    "topic": "friendship-relationships",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "What's the best advice a friend ever gave you, even if you ignored it at the time?",
+      "followUps": [
+        "Did you ever tell them they were right?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-fri-00008",
+    "topic": "friendship-relationships",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "When a friend is about to make a big mistake, how honest should you be?",
+      "followUps": [
+        "Has anyone ever done that for you?",
+        "What would you want this group to tell you to your face?"
+      ]
+    }
   }
 ]

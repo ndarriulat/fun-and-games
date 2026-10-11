@@ -20,5 +20,97 @@
         "¿Hay algún sueldo que te haría cambiar de respuesta?"
       ]
     }
+  },
+  {
+    "id": "tlk-wrk-00002",
+    "topic": "work-money",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "What's the worst job you've ever had, and what did it teach you?",
+      "followUps": [
+        "Would you do it again for double the pay?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-wrk-00003",
+    "topic": "work-money",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "Would you rather work four long days a week or five short ones?",
+      "optionA": "Four long days",
+      "optionB": "Five short days",
+      "followUps": [
+        "What would you do with the extra day?",
+        "Would you actually rest, or fill it with errands?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-wrk-00004",
+    "topic": "work-money",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "Would you rather get a big pay rise or a boss you really like?",
+      "optionA": "A big pay rise",
+      "optionB": "A boss I really like",
+      "followUps": [
+        "How big would the rise have to be to put up with a terrible boss?",
+        "Who's the best boss you've ever had, and why?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-wrk-00005",
+    "topic": "work-money",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "If money were no problem at all, would you still work? What would you do all day?",
+      "followUps": [
+        "How long until you got bored?",
+        "What's stopping you from doing a small version of it now?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-wrk-00006",
+    "topic": "work-money",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "What's the best money you've ever spent, and what was a total waste?",
+      "followUps": [
+        "What would you never spend money on, even if you were rich?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-wrk-00007",
+    "topic": "work-money",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "What did your family teach you about money, out loud or without saying a word?",
+      "followUps": [
+        "Which of those lessons are you glad you dropped?",
+        "What would you pass on to the next generation?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-wrk-00008",
+    "topic": "work-money",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "What job did you want when you were ten, and how far off are you now?",
+      "followUps": [
+        "Is there any part of that dream in what you do today?"
+      ]
+    }
   }
 ]

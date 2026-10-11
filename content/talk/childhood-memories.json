@@ -18,5 +18,100 @@
         "¿Hay algo de tu infancia que te gustaría que los gurises siguieran haciendo?"
       ]
     }
+  },
+  {
+    "id": "tlk-chi-00002",
+    "topic": "childhood-memories",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "What did you get in trouble for as a kid that you still think was unfair?",
+      "followUps": [
+        "Did your parents ever hear the whole story?",
+        "Would you punish your own kid for it?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-chi-00003",
+    "topic": "childhood-memories",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "Would you rather relive your best birthday or your best summer holiday as a kid?",
+      "optionA": "My best birthday",
+      "optionB": "My best summer holiday",
+      "followUps": [
+        "What made it so good?",
+        "Who was there?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-chi-00004",
+    "topic": "childhood-memories",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "What smell, song or taste instantly takes you back to being a kid?",
+      "followUps": [
+        "Where exactly does it take you?",
+        "When did you last come across it?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-chi-00005",
+    "topic": "childhood-memories",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "What did you only understand about your parents once you grew up?",
+      "followUps": [
+        "Have you ever told them?",
+        "What will younger people in your family only understand about you later?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-chi-00006",
+    "topic": "childhood-memories",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "Would you rather go back to school for a week knowing what you know now, or be a kid again for one day with zero responsibilities?",
+      "optionA": "A week at school, knowing what I know",
+      "optionB": "One carefree day as a kid",
+      "followUps": [
+        "What would you do first?",
+        "Who would you go and find?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-chi-00007",
+    "topic": "childhood-memories",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "What did you believe as a kid that turned out to be completely wrong?",
+      "followUps": [
+        "Who told you, and did they know it wasn't true?",
+        "Do you still half-believe it?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-chi-00008",
+    "topic": "childhood-memories",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "Which adult outside your family shaped who you are today, and do they know it?",
+      "followUps": [
+        "What did they do that stuck with you?",
+        "Who might you be that person for?"
+      ]
+    }
   }
 ]

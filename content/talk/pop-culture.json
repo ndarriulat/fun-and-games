@@ -18,5 +18,101 @@
         "¿Cuál de las famosas nunca entendiste por qué gusta tanto?"
       ]
     }
+  },
+  {
+    "id": "tlk-pop-00002",
+    "topic": "pop-culture",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "Would you rather live inside your favourite film for a week, or have its main character come and live with you for a week?",
+      "optionA": "I live in the film",
+      "optionB": "The character lives with me",
+      "followUps": [
+        "Which film is it?",
+        "How long before it all went wrong?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-pop-00003",
+    "topic": "pop-culture",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "For the rest of your life, would you rather only listen to music from before 2000 or only music from after 2000?",
+      "optionA": "Only before 2000",
+      "optionB": "Only after 2000",
+      "followUps": [
+        "Which artist would hurt most to lose?",
+        "Is music getting better or worse?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-pop-00004",
+    "topic": "pop-culture",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "Which famous person would be the best to get stuck in a lift with, and who would be the worst?",
+      "followUps": [
+        "What would you talk about for the first hour?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-pop-00005",
+    "topic": "pop-culture",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "What's a song you're embarrassed to love?",
+      "followUps": [
+        "Will you sing a bit of it right now?",
+        "Who here would it surprise most?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-pop-00006",
+    "topic": "pop-culture",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "If your life were a TV series, what genre would it be, and who would play you?",
+      "followUps": [
+        "What would it be called?",
+        "What would happen in the season finale?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-pop-00007",
+    "topic": "pop-culture",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "Would you rather be famous for a song everyone knows but hates, or a film only a few people love?",
+      "optionA": "A song everyone knows and hates",
+      "optionB": "A film only a few people love",
+      "followUps": [
+        "What would the song be about?",
+        "Which famous song do you think its own singer secretly hates?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-pop-00008",
+    "topic": "pop-culture",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "Which film, book or song changed the way you saw something in your own life?",
+      "followUps": [
+        "Did you go back to it later, and did it hold up?",
+        "Who would you most like to share it with?"
+      ]
+    }
   }
 ]

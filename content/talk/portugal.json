@@ -18,5 +18,97 @@
         "¿Qué lugar sentís como tu casa hoy?"
       ]
     }
+  },
+  {
+    "id": "tlk-por-00002",
+    "topic": "portugal",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "What was the biggest surprise in your first month living in Portugal?",
+      "followUps": [
+        "What feels normal now that shocked you back then?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-por-00003",
+    "topic": "portugal",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "Would you rather live in Lisbon or Porto for the next ten years?",
+      "optionA": "Lisbon",
+      "optionB": "Porto",
+      "followUps": [
+        "What would you miss most about the other one?",
+        "Where outside the big cities would you consider living?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-por-00004",
+    "topic": "portugal",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "What's the funniest mistake you've made trying to speak Portuguese?",
+      "followUps": [
+        "Which Portuguese word still defeats you?",
+        "Do locals switch to English on you, and how do you feel about it?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-por-00005",
+    "topic": "portugal",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "Would you rather spend a whole day sorting out Portuguese paperwork, or learn to drive a manual car up Lisbon's steepest hills?",
+      "optionA": "A whole day of paperwork",
+      "optionB": "Manual car on Lisbon's hills",
+      "followUps": [
+        "What's your worst paperwork story here?",
+        "Who helped you get through it?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-por-00006",
+    "topic": "portugal",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "Which Portuguese habit have you picked up that people back home would find strange?",
+      "followUps": [
+        "Which habit from home have you refused to give up?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-por-00007",
+    "topic": "portugal",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "When do you feel most like a foreigner in Portugal, and when do you forget you are one?",
+      "followUps": [
+        "Do you think you'll ever feel fully local?",
+        "Does it matter to you if you don't?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-por-00008",
+    "topic": "portugal",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "What's the best day trip you've done in Portugal, and what should a newcomer never miss?",
+      "followUps": [
+        "Which place do all expats rave about that you found overrated?"
+      ]
+    }
   }
 ]
