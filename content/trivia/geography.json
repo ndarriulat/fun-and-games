@@ -23,5 +23,95 @@
       ],
       "fact": "Canberra se eligió como punto medio entre Sídney y Melbourne, que se disputaban el título, y se construyó de cero para ser la capital."
     }
+  },
+  {
+    "id": "trv-geo-00002",
+    "topic": "geography",
+    "difficulty": "easy",
+    "en": {
+      "question": "What is the longest river in South America?",
+      "answer": "The Amazon",
+      "options": [
+        "The Paraná",
+        "The Orinoco",
+        "The São Francisco"
+      ],
+      "fact": "The Amazon carries more water than any other river on Earth, about a fifth of all the river water that flows into the oceans."
+    }
+  },
+  {
+    "id": "trv-geo-00003",
+    "topic": "geography",
+    "difficulty": "easy",
+    "en": {
+      "question": "What is the largest ocean on Earth?",
+      "answer": "The Pacific",
+      "options": [
+        "The Atlantic",
+        "The Indian",
+        "The Arctic"
+      ],
+      "fact": "The Pacific covers more of the planet than all of the land on Earth put together."
+    }
+  },
+  {
+    "id": "trv-geo-00004",
+    "topic": "geography",
+    "difficulty": "medium",
+    "en": {
+      "question": "What is the highest mountain in South America?",
+      "answer": "Aconcagua",
+      "options": [
+        "Chimborazo",
+        "Huascarán",
+        "Ojos del Salado"
+      ],
+      "fact": "At about 6,960 metres, it's the highest mountain anywhere outside Asia. It's in Argentina, near the border with Chile."
+    }
+  },
+  {
+    "id": "trv-geo-00005",
+    "topic": "geography",
+    "difficulty": "medium",
+    "en": {
+      "question": "Mount Kilimanjaro is in which country?",
+      "answer": "Tanzania",
+      "options": [
+        "Kenya",
+        "Uganda",
+        "Ethiopia"
+      ],
+      "fact": "It's the highest mountain in Africa, at 5,895 metres, and it's a dormant volcano."
+    }
+  },
+  {
+    "id": "trv-geo-00006",
+    "topic": "geography",
+    "difficulty": "hard",
+    "en": {
+      "question": "Counting its overseas territories, which country has the most time zones?",
+      "answer": "France",
+      "options": [
+        "Russia",
+        "The United States",
+        "The United Kingdom"
+      ],
+      "fact": "Thanks to territories from French Polynesia to Réunion, France spans 12 time zones. Russia and the US have 11 each."
+    }
+  },
+  {
+    "id": "trv-geo-00007",
+    "topic": "geography",
+    "difficulty": "hard",
+    "en": {
+      "question": "Which river flows through more countries than any other?",
+      "answer": "The Danube",
+      "options": [
+        "The Rhine",
+        "The Mekong",
+        "The Volga"
+      ],
+      "fact": "It passes through ten countries and four capitals: Vienna, Bratislava, Budapest and Belgrade."
+    }
   }
 ]

@@ -23,5 +23,95 @@
       ],
       "fact": "Se abrió el 9 de noviembre de 1989, después de que un vocero de Alemania Oriental anunciara por error que la frontera se abría «de inmediato»."
     }
+  },
+  {
+    "id": "trv-his-00002",
+    "topic": "history",
+    "difficulty": "easy",
+    "en": {
+      "question": "Who was the first person to walk on the Moon?",
+      "answer": "Neil Armstrong",
+      "options": [
+        "Buzz Aldrin",
+        "Yuri Gagarin",
+        "Michael Collins"
+      ],
+      "fact": "Buzz Aldrin followed him about 20 minutes later, while Michael Collins stayed in orbit in the command module."
+    }
+  },
+  {
+    "id": "trv-his-00003",
+    "topic": "history",
+    "difficulty": "easy",
+    "en": {
+      "question": "Which ancient civilisation built the pyramids of Giza?",
+      "answer": "The Egyptians",
+      "options": [
+        "The Romans",
+        "The Greeks",
+        "The Maya"
+      ],
+      "fact": "The Great Pyramid was the tallest building made by humans for about 3,800 years."
+    }
+  },
+  {
+    "id": "trv-his-00004",
+    "topic": "history",
+    "difficulty": "easy",
+    "en": {
+      "question": "In what year did the Titanic sink?",
+      "answer": "1912",
+      "options": [
+        "1905",
+        "1915",
+        "1921"
+      ],
+      "fact": "It sank on its very first voyage, from Southampton to New York, after hitting an iceberg."
+    }
+  },
+  {
+    "id": "trv-his-00005",
+    "topic": "history",
+    "difficulty": "medium",
+    "en": {
+      "question": "Who was the first woman to win a Nobel Prize?",
+      "answer": "Marie Curie",
+      "options": [
+        "Ada Lovelace",
+        "Florence Nightingale",
+        "Rosalind Franklin"
+      ],
+      "fact": "She won two, in two different sciences: Physics in 1903 and Chemistry in 1911."
+    }
+  },
+  {
+    "id": "trv-his-00006",
+    "topic": "history",
+    "difficulty": "hard",
+    "en": {
+      "question": "How long did the Hundred Years' War actually last?",
+      "answer": "116 years",
+      "options": [
+        "100 years",
+        "99 years",
+        "124 years"
+      ],
+      "fact": "It ran from 1337 to 1453, between England and France, with long truces in between."
+    }
+  },
+  {
+    "id": "trv-his-00007",
+    "topic": "history",
+    "difficulty": "hard",
+    "en": {
+      "question": "Which was the first self-governing country to give women the vote in national elections?",
+      "answer": "New Zealand",
+      "options": [
+        "Finland",
+        "Australia",
+        "The United Kingdom"
+      ],
+      "fact": "New Zealand women first voted in 1893. In 1906 Finland became the first country where women could also stand for parliament."
+    }
   }
 ]

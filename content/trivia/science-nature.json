@@ -23,5 +23,95 @@
       ],
       "fact": "Los pulpos transportan el oxígeno con hemocianina, una proteína a base de cobre, en lugar de la hemoglobina con hierro que usamos nosotros."
     }
+  },
+  {
+    "id": "trv-sci-00002",
+    "topic": "science-nature",
+    "difficulty": "easy",
+    "en": {
+      "question": "What gas do plants take in from the air to make their food?",
+      "answer": "Carbon dioxide",
+      "options": [
+        "Oxygen",
+        "Nitrogen",
+        "Hydrogen"
+      ],
+      "fact": "The process is called photosynthesis, and the oxygen we breathe is its by-product."
+    }
+  },
+  {
+    "id": "trv-sci-00003",
+    "topic": "science-nature",
+    "difficulty": "easy",
+    "en": {
+      "question": "What is the largest planet in our solar system?",
+      "answer": "Jupiter",
+      "options": [
+        "Saturn",
+        "Neptune",
+        "Uranus"
+      ],
+      "fact": "More than 1,300 Earths could fit inside it."
+    }
+  },
+  {
+    "id": "trv-sci-00004",
+    "topic": "science-nature",
+    "difficulty": "easy",
+    "en": {
+      "question": "How many legs does a spider have?",
+      "answer": "8",
+      "options": [
+        "6",
+        "10",
+        "12"
+      ],
+      "fact": "Insects have six legs, so spiders aren't insects. They're arachnids, like scorpions."
+    }
+  },
+  {
+    "id": "trv-sci-00005",
+    "topic": "science-nature",
+    "difficulty": "medium",
+    "en": {
+      "question": "What is the chemical symbol for gold?",
+      "answer": "Au",
+      "options": [
+        "Ag",
+        "Go",
+        "Gd"
+      ],
+      "fact": "It comes from aurum, Latin for gold. Ag, for silver, comes from argentum, which also gave Argentina its name."
+    }
+  },
+  {
+    "id": "trv-sci-00006",
+    "topic": "science-nature",
+    "difficulty": "medium",
+    "en": {
+      "question": "Roughly how long does sunlight take to reach Earth?",
+      "answer": "About 8 minutes",
+      "options": [
+        "About 8 seconds",
+        "About 1 hour",
+        "About 1 day"
+      ],
+      "fact": "So if the Sun suddenly went out, we wouldn't notice for about eight minutes."
+    }
+  },
+  {
+    "id": "trv-sci-00007",
+    "topic": "science-nature",
+    "difficulty": "medium",
+    "en": {
+      "question": "What is the only mammal that can truly fly?",
+      "answer": "The bat",
+      "options": [
+        "The flying squirrel",
+        "The sugar glider",
+        "The colugo"
+      ],
+      "fact": "Bats make up about a fifth of all mammal species. The others on the list only glide."
+    }
   }
 ]

@@ -23,5 +23,95 @@
       ],
       "fact": "Toy Story (1995) fue el primer largometraje hecho completamente con animación por computadora."
     }
+  },
+  {
+    "id": "trv-ftv-00002",
+    "topic": "film-tv",
+    "difficulty": "easy",
+    "en": {
+      "question": "In The Lion King, what is the name of Simba's father?",
+      "answer": "Mufasa",
+      "options": [
+        "Scar",
+        "Rafiki",
+        "Zazu"
+      ],
+      "fact": "James Earl Jones voiced Mufasa in both the 1994 film and the 2019 remake."
+    }
+  },
+  {
+    "id": "trv-ftv-00003",
+    "topic": "film-tv",
+    "difficulty": "easy",
+    "en": {
+      "question": "What is the name of the school of witchcraft and wizardry in Harry Potter?",
+      "answer": "Hogwarts",
+      "options": [
+        "Durmstrang",
+        "Beauxbatons",
+        "Ilvermorny"
+      ],
+      "fact": "Its Latin motto means \"Never tickle a sleeping dragon\"."
+    }
+  },
+  {
+    "id": "trv-ftv-00004",
+    "topic": "film-tv",
+    "difficulty": "medium",
+    "en": {
+      "question": "Who directed both Jurassic Park and E.T.?",
+      "answer": "Steven Spielberg",
+      "options": [
+        "George Lucas",
+        "James Cameron",
+        "Ridley Scott"
+      ],
+      "fact": "Jurassic Park and Schindler's List, two of his biggest films, both came out in 1993."
+    }
+  },
+  {
+    "id": "trv-ftv-00005",
+    "topic": "film-tv",
+    "difficulty": "medium",
+    "en": {
+      "question": "What is the name of the coffee shop where the gang hangs out in Friends?",
+      "answer": "Central Perk",
+      "options": [
+        "The Daily Grind",
+        "Monk's",
+        "MacLaren's"
+      ],
+      "fact": "The show ran for ten seasons, from 1994 to 2004."
+    }
+  },
+  {
+    "id": "trv-ftv-00006",
+    "topic": "film-tv",
+    "difficulty": "medium",
+    "en": {
+      "question": "In which fictional city does Batman fight crime?",
+      "answer": "Gotham City",
+      "options": [
+        "Metropolis",
+        "Star City",
+        "Central City"
+      ],
+      "fact": "Gotham was a nickname for New York long before Batman. The writer Washington Irving used it in 1807."
+    }
+  },
+  {
+    "id": "trv-ftv-00007",
+    "topic": "film-tv",
+    "difficulty": "hard",
+    "en": {
+      "question": "Released in 1927, what was the first feature film with synchronised spoken dialogue?",
+      "answer": "The Jazz Singer",
+      "options": [
+        "Metropolis",
+        "Wings",
+        "Sunrise"
+      ],
+      "fact": "Most of the film is actually silent. Only about two minutes have synchronised talking."
+    }
   }
 ]

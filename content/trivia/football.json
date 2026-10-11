@@ -23,5 +23,95 @@
       ],
       "fact": "Fue contra Inglaterra en los cuartos de final. Cuatro minutos después hizo un gol individual que más tarde fue votado el Gol del Siglo."
     }
+  },
+  {
+    "id": "trv-fbl-00002",
+    "topic": "football",
+    "difficulty": "easy",
+    "en": {
+      "question": "What colour card does a referee show to send a player off?",
+      "answer": "Red",
+      "options": [
+        "Yellow",
+        "Green",
+        "Blue"
+      ],
+      "fact": "Cards were first used at the 1970 World Cup. English referee Ken Aston got the idea while waiting at a traffic light."
+    }
+  },
+  {
+    "id": "trv-fbl-00003",
+    "topic": "football",
+    "difficulty": "easy",
+    "en": {
+      "question": "How long is a professional football match, not counting stoppage time?",
+      "answer": "90 minutes",
+      "options": [
+        "80 minutes",
+        "100 minutes",
+        "120 minutes"
+      ],
+      "fact": "Two halves of 45 minutes. If a knockout game needs extra time, that adds two halves of 15."
+    }
+  },
+  {
+    "id": "trv-fbl-00004",
+    "topic": "football",
+    "difficulty": "easy",
+    "en": {
+      "question": "Which country has won the most men's World Cups?",
+      "answer": "Brazil",
+      "options": [
+        "Germany",
+        "Italy",
+        "Argentina"
+      ],
+      "fact": "Brazil has won five, and it's the only team to have played at every World Cup."
+    }
+  },
+  {
+    "id": "trv-fbl-00005",
+    "topic": "football",
+    "difficulty": "medium",
+    "en": {
+      "question": "Which club has won the most European Cup and Champions League titles?",
+      "answer": "Real Madrid",
+      "options": [
+        "AC Milan",
+        "Bayern Munich",
+        "Liverpool"
+      ],
+      "fact": "Real Madrid won the first five European Cups in a row, from 1956 to 1960."
+    }
+  },
+  {
+    "id": "trv-fbl-00006",
+    "topic": "football",
+    "difficulty": "hard",
+    "en": {
+      "question": "Which country won the first Women's World Cup, in 1991?",
+      "answer": "The United States",
+      "options": [
+        "Norway",
+        "Germany",
+        "China"
+      ],
+      "fact": "It was held in China, and Michelle Akers scored both goals in the 2–1 final against Norway."
+    }
+  },
+  {
+    "id": "trv-fbl-00007",
+    "topic": "football",
+    "difficulty": "hard",
+    "en": {
+      "question": "Who scored Uruguay's winning goal against Brazil in the 1950 \"Maracanazo\"?",
+      "answer": "Alcides Ghiggia",
+      "options": [
+        "Juan Alberto Schiaffino",
+        "Obdulio Varela",
+        "Óscar Míguez"
+      ],
+      "fact": "Schiaffino had equalised first. Ghiggia's goal made it 2–1 in front of around 200,000 people at the Maracanã."
+    }
   }
 ]

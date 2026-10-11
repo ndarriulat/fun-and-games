@@ -23,5 +23,95 @@
       ],
       "fact": "James Naismith inventó el básquetbol en 1891, y los primeros aros eran canastas de duraznos."
     }
+  },
+  {
+    "id": "trv-spo-00002",
+    "topic": "sport",
+    "difficulty": "easy",
+    "en": {
+      "question": "How many rings are on the Olympic flag?",
+      "answer": "5",
+      "options": [
+        "4",
+        "6",
+        "7"
+      ],
+      "fact": "Pierre de Coubertin designed it in 1913. He said its colours, with the white background, included at least one from every nation's flag."
+    }
+  },
+  {
+    "id": "trv-spo-00003",
+    "topic": "sport",
+    "difficulty": "easy",
+    "en": {
+      "question": "In tennis, what word means a score of zero?",
+      "answer": "Love",
+      "options": [
+        "Nil",
+        "Duck",
+        "Zip"
+      ],
+      "fact": "A tennis game goes love, 15, 30, 40, then game."
+    }
+  },
+  {
+    "id": "trv-spo-00004",
+    "topic": "sport",
+    "difficulty": "medium",
+    "en": {
+      "question": "In golf, what do you call a score of one under par on a hole?",
+      "answer": "A birdie",
+      "options": [
+        "An eagle",
+        "A bogey",
+        "An albatross"
+      ],
+      "fact": "Two under is an eagle and three under is an albatross. One over is a bogey."
+    }
+  },
+  {
+    "id": "trv-spo-00005",
+    "topic": "sport",
+    "difficulty": "medium",
+    "en": {
+      "question": "To the nearest kilometre, how long is a marathon?",
+      "answer": "42 km",
+      "options": [
+        "40 km",
+        "45 km",
+        "38 km"
+      ],
+      "fact": "It's exactly 42.195 km. The odd distance comes from the 1908 London Olympics, where the course was set to finish in front of the royal box."
+    }
+  },
+  {
+    "id": "trv-spo-00006",
+    "topic": "sport",
+    "difficulty": "medium",
+    "en": {
+      "question": "How many players does each rugby union team have on the field?",
+      "answer": "15",
+      "options": [
+        "11",
+        "13",
+        "7"
+      ],
+      "fact": "Rugby league uses 13 players, and rugby sevens, an Olympic sport since 2016, uses seven."
+    }
+  },
+  {
+    "id": "trv-spo-00007",
+    "topic": "sport",
+    "difficulty": "hard",
+    "en": {
+      "question": "In what year were the first modern Olympic Games held?",
+      "answer": "1896",
+      "options": [
+        "1900",
+        "1888",
+        "1912"
+      ],
+      "fact": "They were held in Athens, and the winners got silver medals. Gold for first place came later."
+    }
   }
 ]

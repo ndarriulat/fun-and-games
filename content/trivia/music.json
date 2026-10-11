@@ -23,5 +23,95 @@
       ],
       "fact": "El bajo eléctrico suele tener cuatro cuerdas, afinadas como las cuatro más graves de la guitarra pero una octava más abajo."
     }
+  },
+  {
+    "id": "trv-mus-00002",
+    "topic": "music",
+    "difficulty": "easy",
+    "en": {
+      "question": "Which band sang \"Hey Jude\" and \"Let It Be\"?",
+      "answer": "The Beatles",
+      "options": [
+        "The Rolling Stones",
+        "Queen",
+        "The Beach Boys"
+      ],
+      "fact": "\"Hey Jude\" runs over seven minutes, and the \"na na na\" singalong at the end takes up about four of them."
+    }
+  },
+  {
+    "id": "trv-mus-00003",
+    "topic": "music",
+    "difficulty": "medium",
+    "en": {
+      "question": "How many keys does a standard piano have?",
+      "answer": "88",
+      "options": [
+        "76",
+        "96",
+        "100"
+      ],
+      "fact": "52 of them are white and 36 are black."
+    }
+  },
+  {
+    "id": "trv-mus-00004",
+    "topic": "music",
+    "difficulty": "medium",
+    "en": {
+      "question": "Which country does the band ABBA come from?",
+      "answer": "Sweden",
+      "options": [
+        "Norway",
+        "Denmark",
+        "Finland"
+      ],
+      "fact": "They shot to fame by winning Eurovision in 1974 with \"Waterloo\"."
+    }
+  },
+  {
+    "id": "trv-mus-00005",
+    "topic": "music",
+    "difficulty": "medium",
+    "en": {
+      "question": "Which composer kept writing music after going almost completely deaf?",
+      "answer": "Ludwig van Beethoven",
+      "options": [
+        "Wolfgang Amadeus Mozart",
+        "Johann Sebastian Bach",
+        "Frédéric Chopin"
+      ],
+      "fact": "His Ninth Symphony, with the \"Ode to Joy\", premiered in 1824, when he was almost totally deaf."
+    }
+  },
+  {
+    "id": "trv-mus-00006",
+    "topic": "music",
+    "difficulty": "medium",
+    "en": {
+      "question": "What is Michael Jackson's best-selling album?",
+      "answer": "Thriller",
+      "options": [
+        "Bad",
+        "Off the Wall",
+        "Dangerous"
+      ],
+      "fact": "Released in 1982, it's widely considered the best-selling album of all time."
+    }
+  },
+  {
+    "id": "trv-mus-00007",
+    "topic": "music",
+    "difficulty": "hard",
+    "en": {
+      "question": "Which orchestral instrument usually has 47 strings and seven pedals?",
+      "answer": "The harp",
+      "options": [
+        "The piano",
+        "The harpsichord",
+        "The zither"
+      ],
+      "fact": "Each pedal changes the pitch of every string of one note, so one pedal handles all the Cs, another all the Ds, and so on."
+    }
   }
 ]
