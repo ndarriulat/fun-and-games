@@ -37,6 +37,16 @@
         "Larry Page"
       ],
       "fact": "They started it in 1975. The name is short for \"microcomputer software\"."
+    },
+    "es": {
+      "question": "¿Quién fundó Microsoft junto con Paul Allen?",
+      "answer": "Bill Gates",
+      "options": [
+        "Steve Jobs",
+        "Steve Wozniak",
+        "Larry Page"
+      ],
+      "fact": "La fundaron en 1975. El nombre viene de «microcomputer software», software para microcomputadoras."
     }
   },
   {
@@ -52,6 +62,16 @@
         "Sega"
       ],
       "fact": "It grew out of a cancelled project with Nintendo to build a CD add-on for the Super Nintendo."
+    },
+    "es": {
+      "question": "¿Qué empresa fabrica la PlayStation?",
+      "answer": "Sony",
+      "options": [
+        "Nintendo",
+        "Microsoft",
+        "Sega"
+      ],
+      "fact": "Nació de un proyecto cancelado con Nintendo para hacerle un lector de CD al Super Nintendo."
     }
   },
   {
@@ -67,6 +87,16 @@
         "External"
       ],
       "fact": "Ray Tomlinson sent the first network email in 1971 and chose the @ sign to separate the user's name from the computer's."
+    },
+    "es": {
+      "question": "¿Qué significa la «e» de «e-mail»?",
+      "answer": "Electrónico",
+      "options": [
+        "Fácil",
+        "Expreso",
+        "Externo"
+      ],
+      "fact": "Ray Tomlinson mandó el primer correo por red en 1971 y eligió la @ para separar el nombre del usuario del de la computadora."
     }
   },
   {
@@ -82,6 +112,16 @@
         "Universal Signal Band"
       ],
       "fact": "USB first came out in 1996. USB-C, which plugs in either way up, arrived in 2014."
+    },
+    "es": {
+      "question": "¿Qué significa la sigla USB?",
+      "answer": "Bus serie universal",
+      "options": [
+        "Placa de sistema universal",
+        "Puente estándar unificado",
+        "Banda de señal universal"
+      ],
+      "fact": "El USB salió en 1996. El USB-C, que se enchufa de cualquier lado, llegó en 2014."
     }
   },
   {
@@ -97,6 +137,16 @@
         "2010"
       ],
       "fact": "Steve Jobs introduced it as \"an iPod, a phone and an internet communicator\" in one device."
+    },
+    "es": {
+      "question": "¿En qué año salió el primer iPhone?",
+      "answer": "2007",
+      "options": [
+        "2005",
+        "2009",
+        "2010"
+      ],
+      "fact": "Steve Jobs lo presentó como «un iPod, un teléfono y un comunicador de internet» en un solo aparato."
     }
   },
   {
@@ -112,6 +162,16 @@
         "microsoft.com"
       ],
       "fact": "It was registered on 15 March 1985 by Symbolics, a computer company in Massachusetts."
+    },
+    "es": {
+      "question": "¿Cuál fue el primer dominio .com que se registró?",
+      "answer": "symbolics.com",
+      "options": [
+        "ibm.com",
+        "apple.com",
+        "microsoft.com"
+      ],
+      "fact": "Lo registró el 15 de marzo de 1985 Symbolics, una empresa de computadoras de Massachusetts."
     }
   }
 ]

@@ -37,6 +37,16 @@
         "The São Francisco"
       ],
       "fact": "The Amazon carries more water than any other river on Earth, about a fifth of all the river water that flows into the oceans."
+    },
+    "es": {
+      "question": "¿Cuál es el río más largo de América del Sur?",
+      "answer": "El Amazonas",
+      "options": [
+        "El Paraná",
+        "El Orinoco",
+        "El São Francisco"
+      ],
+      "fact": "El Amazonas lleva más agua que cualquier otro río del planeta: más o menos la quinta parte de toda el agua de río que llega a los océanos."
     }
   },
   {
@@ -52,6 +62,16 @@
         "The Arctic"
       ],
       "fact": "The Pacific covers more of the planet than all of the land on Earth put together."
+    },
+    "es": {
+      "question": "¿Cuál es el océano más grande del planeta?",
+      "answer": "El Pacífico",
+      "options": [
+        "El Atlántico",
+        "El Índico",
+        "El Ártico"
+      ],
+      "fact": "El Pacífico ocupa más superficie que toda la tierra firme del planeta junta."
     }
   },
   {
@@ -67,6 +87,16 @@
         "Ojos del Salado"
       ],
       "fact": "At about 6,960 metres, it's the highest mountain anywhere outside Asia. It's in Argentina, near the border with Chile."
+    },
+    "es": {
+      "question": "¿Cuál es la montaña más alta de América del Sur?",
+      "answer": "El Aconcagua",
+      "options": [
+        "El Chimborazo",
+        "El Huascarán",
+        "El Ojos del Salado"
+      ],
+      "fact": "Con unos 6.960 metros, es la montaña más alta fuera de Asia. Está en Argentina, cerca de la frontera con Chile."
     }
   },
   {
@@ -82,6 +112,16 @@
         "Ethiopia"
       ],
       "fact": "It's the highest mountain in Africa, at 5,895 metres, and it's a dormant volcano."
+    },
+    "es": {
+      "question": "¿En qué país está el monte Kilimanjaro?",
+      "answer": "Tanzania",
+      "options": [
+        "Kenia",
+        "Uganda",
+        "Etiopía"
+      ],
+      "fact": "Es la montaña más alta de África, con 5.895 metros, y es un volcán dormido."
     }
   },
   {
@@ -97,6 +137,16 @@
         "The United Kingdom"
       ],
       "fact": "Thanks to territories from French Polynesia to Réunion, France spans 12 time zones. Russia and the US have 11 each."
+    },
+    "es": {
+      "question": "Si contás sus territorios de ultramar, ¿qué país tiene más husos horarios?",
+      "answer": "Francia",
+      "options": [
+        "Rusia",
+        "Estados Unidos",
+        "Reino Unido"
+      ],
+      "fact": "Gracias a territorios que van de la Polinesia Francesa a la isla Reunión, Francia abarca 12 husos horarios. Rusia y Estados Unidos tienen 11 cada uno."
     }
   },
   {
@@ -112,6 +162,16 @@
         "The Volga"
       ],
       "fact": "It passes through ten countries and four capitals: Vienna, Bratislava, Budapest and Belgrade."
+    },
+    "es": {
+      "question": "¿Qué río atraviesa más países que ningún otro?",
+      "answer": "El Danubio",
+      "options": [
+        "El Rin",
+        "El Mekong",
+        "El Volga"
+      ],
+      "fact": "Pasa por diez países y cuatro capitales: Viena, Bratislava, Budapest y Belgrado."
     }
   }
 ]

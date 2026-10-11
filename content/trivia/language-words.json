@@ -37,6 +37,16 @@
         "Hindi"
       ],
       "fact": "If you count people who learned it as a second language too, English comes out on top."
+    },
+    "es": {
+      "question": "¿Qué idioma tiene más hablantes nativos en el mundo?",
+      "answer": "Chino mandarín",
+      "options": [
+        "Inglés",
+        "Español",
+        "Hindi"
+      ],
+      "fact": "Si se cuenta también a quienes lo aprendieron como segunda lengua, el que gana es el inglés."
     }
   },
   {
@@ -52,6 +62,16 @@
         "28"
       ],
       "fact": "The Spanish alphabet has 27, thanks to the ñ."
+    },
+    "es": {
+      "question": "¿Cuántas letras tiene el alfabeto inglés?",
+      "answer": "26",
+      "options": [
+        "24",
+        "27",
+        "28"
+      ],
+      "fact": "El alfabeto español tiene 27, gracias a la ñ."
     }
   },
   {
@@ -67,6 +87,16 @@
         "Italian"
       ],
       "fact": "Brazil has about 20 times as many Portuguese speakers as Portugal itself."
+    },
+    "es": {
+      "question": "¿Cuál es el idioma oficial de Brasil?",
+      "answer": "Portugués",
+      "options": [
+        "Español",
+        "Francés",
+        "Italiano"
+      ],
+      "fact": "Brasil tiene unas 20 veces más hablantes de portugués que el propio Portugal."
     }
   },
   {
@@ -82,6 +112,16 @@
         "A homophone"
       ],
       "fact": "\"A man, a plan, a canal: Panama\" is a famous palindromic sentence."
+    },
+    "es": {
+      "question": "¿Cómo se llama una palabra que se lee igual al derecho y al revés, como «reconocer»?",
+      "answer": "Palíndromo",
+      "options": [
+        "Anagrama",
+        "Acrónimo",
+        "Homófono"
+      ],
+      "fact": "«Anita lava la tina» es una frase palíndroma famosa."
     }
   },
   {
@@ -97,6 +137,16 @@
         "Japanese"
       ],
       "fact": "It comes from robota, meaning forced labour, and first appeared in Karel Čapek's 1920 play R.U.R."
+    },
+    "es": {
+      "question": "¿De qué idioma viene la palabra «robot»?",
+      "answer": "Checo",
+      "options": [
+        "Alemán",
+        "Ruso",
+        "Japonés"
+      ],
+      "fact": "Viene de robota, que significa «trabajo forzado», y apareció por primera vez en la obra de teatro R.U.R., de Karel Čapek, de 1920."
     }
   },
   {
@@ -112,6 +162,16 @@
         "5"
       ],
       "fact": "German, French, Italian and Romansh. Romansh is spoken by less than one per cent of the Swiss."
+    },
+    "es": {
+      "question": "¿Cuántos idiomas oficiales tiene Suiza?",
+      "answer": "4",
+      "options": [
+        "2",
+        "3",
+        "5"
+      ],
+      "fact": "Alemán, francés, italiano y romanche. El romanche lo habla menos del uno por ciento de los suizos."
     }
   }
 ]

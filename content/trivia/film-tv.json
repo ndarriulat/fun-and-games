@@ -37,6 +37,16 @@
         "Zazu"
       ],
       "fact": "James Earl Jones voiced Mufasa in both the 1994 film and the 2019 remake."
+    },
+    "es": {
+      "question": "En El rey león, ¿cómo se llama el papá de Simba?",
+      "answer": "Mufasa",
+      "options": [
+        "Scar",
+        "Rafiki",
+        "Zazú"
+      ],
+      "fact": "James Earl Jones le puso la voz a Mufasa en inglés tanto en la película de 1994 como en la nueva versión de 2019."
     }
   },
   {
@@ -52,6 +62,16 @@
         "Ilvermorny"
       ],
       "fact": "Its Latin motto means \"Never tickle a sleeping dragon\"."
+    },
+    "es": {
+      "question": "¿Cómo se llama el colegio de magia y hechicería de Harry Potter?",
+      "answer": "Hogwarts",
+      "options": [
+        "Durmstrang",
+        "Beauxbatons",
+        "Ilvermorny"
+      ],
+      "fact": "Su lema en latín significa «Nunca le hagas cosquillas a un dragón dormido»."
     }
   },
   {
@@ -67,6 +87,16 @@
         "Ridley Scott"
       ],
       "fact": "Jurassic Park and Schindler's List, two of his biggest films, both came out in 1993."
+    },
+    "es": {
+      "question": "¿Quién dirigió Jurassic Park y también E.T.?",
+      "answer": "Steven Spielberg",
+      "options": [
+        "George Lucas",
+        "James Cameron",
+        "Ridley Scott"
+      ],
+      "fact": "Jurassic Park y La lista de Schindler, dos de sus películas más grandes, se estrenaron las dos en 1993."
     }
   },
   {
@@ -82,6 +112,16 @@
         "MacLaren's"
       ],
       "fact": "The show ran for ten seasons, from 1994 to 2004."
+    },
+    "es": {
+      "question": "¿Cómo se llama la cafetería donde se juntan los protagonistas de Friends?",
+      "answer": "Central Perk",
+      "options": [
+        "The Daily Grind",
+        "Monk's",
+        "MacLaren's"
+      ],
+      "fact": "La serie duró diez temporadas, de 1994 a 2004."
     }
   },
   {
@@ -97,6 +137,16 @@
         "Central City"
       ],
       "fact": "Gotham was a nickname for New York long before Batman. The writer Washington Irving used it in 1807."
+    },
+    "es": {
+      "question": "¿En qué ciudad ficticia combate el crimen Batman?",
+      "answer": "Ciudad Gótica",
+      "options": [
+        "Metrópolis",
+        "Star City",
+        "Central City"
+      ],
+      "fact": "Gotham era un apodo de Nueva York mucho antes de Batman. El escritor Washington Irving ya lo usaba en 1807."
     }
   },
   {
@@ -112,6 +162,16 @@
         "Sunrise"
       ],
       "fact": "Most of the film is actually silent. Only about two minutes have synchronised talking."
+    },
+    "es": {
+      "question": "Estrenada en 1927, ¿cuál fue la primera película de largometraje con diálogos hablados sincronizados?",
+      "answer": "El cantor de jazz",
+      "options": [
+        "Metrópolis",
+        "Alas",
+        "Amanecer"
+      ],
+      "fact": "En realidad casi toda la película es muda: solo tiene unos dos minutos de diálogo sincronizado."
     }
   }
 ]

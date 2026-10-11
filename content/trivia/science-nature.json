@@ -37,6 +37,16 @@
         "Hydrogen"
       ],
       "fact": "The process is called photosynthesis, and the oxygen we breathe is its by-product."
+    },
+    "es": {
+      "question": "¿Qué gas toman las plantas del aire para fabricar su alimento?",
+      "answer": "Dióxido de carbono",
+      "options": [
+        "Oxígeno",
+        "Nitrógeno",
+        "Hidrógeno"
+      ],
+      "fact": "El proceso se llama fotosíntesis, y el oxígeno que respiramos es lo que sobra."
     }
   },
   {
@@ -52,6 +62,16 @@
         "Uranus"
       ],
       "fact": "More than 1,300 Earths could fit inside it."
+    },
+    "es": {
+      "question": "¿Cuál es el planeta más grande del sistema solar?",
+      "answer": "Júpiter",
+      "options": [
+        "Saturno",
+        "Neptuno",
+        "Urano"
+      ],
+      "fact": "Adentro entrarían más de 1.300 planetas como la Tierra."
     }
   },
   {
@@ -67,6 +87,16 @@
         "12"
       ],
       "fact": "Insects have six legs, so spiders aren't insects. They're arachnids, like scorpions."
+    },
+    "es": {
+      "question": "¿Cuántas patas tiene una araña?",
+      "answer": "8",
+      "options": [
+        "6",
+        "10",
+        "12"
+      ],
+      "fact": "Los insectos tienen seis patas, así que las arañas no son insectos: son arácnidos, como los escorpiones."
     }
   },
   {
@@ -82,6 +112,16 @@
         "Gd"
       ],
       "fact": "It comes from aurum, Latin for gold. Ag, for silver, comes from argentum, which also gave Argentina its name."
+    },
+    "es": {
+      "question": "¿Cuál es el símbolo químico del oro?",
+      "answer": "Au",
+      "options": [
+        "Ag",
+        "Or",
+        "Gd"
+      ],
+      "fact": "Viene de aurum, «oro» en latín. Ag, el de la plata, viene de argentum, que también le dio nombre a Argentina."
     }
   },
   {
@@ -97,6 +137,16 @@
         "About 1 day"
       ],
       "fact": "So if the Sun suddenly went out, we wouldn't notice for about eight minutes."
+    },
+    "es": {
+      "question": "¿Más o menos cuánto tarda la luz del Sol en llegar a la Tierra?",
+      "answer": "Unos 8 minutos",
+      "options": [
+        "Unos 8 segundos",
+        "Una hora",
+        "Un día"
+      ],
+      "fact": "O sea que si el Sol se apagara de golpe, no nos daríamos cuenta hasta unos ocho minutos después."
     }
   },
   {
@@ -112,6 +162,16 @@
         "The colugo"
       ],
       "fact": "Bats make up about a fifth of all mammal species. The others on the list only glide."
+    },
+    "es": {
+      "question": "¿Cuál es el único mamífero que puede volar de verdad?",
+      "answer": "El murciélago",
+      "options": [
+        "La ardilla voladora",
+        "El petauro del azúcar",
+        "El colugo"
+      ],
+      "fact": "Los murciélagos son alrededor de la quinta parte de todas las especies de mamíferos. Los otros de la lista solo planean."
     }
   }
 ]

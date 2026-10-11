@@ -37,6 +37,16 @@
         "The Beach Boys"
       ],
       "fact": "\"Hey Jude\" runs over seven minutes, and the \"na na na\" singalong at the end takes up about four of them."
+    },
+    "es": {
+      "question": "¿Qué banda cantaba «Hey Jude» y «Let It Be»?",
+      "answer": "The Beatles",
+      "options": [
+        "The Rolling Stones",
+        "Queen",
+        "The Beach Boys"
+      ],
+      "fact": "«Hey Jude» dura más de siete minutos, y el «na na na» del final ocupa unos cuatro."
     }
   },
   {
@@ -52,6 +62,16 @@
         "100"
       ],
       "fact": "52 of them are white and 36 are black."
+    },
+    "es": {
+      "question": "¿Cuántas teclas tiene un piano estándar?",
+      "answer": "88",
+      "options": [
+        "76",
+        "96",
+        "100"
+      ],
+      "fact": "52 son blancas y 36 son negras."
     }
   },
   {
@@ -67,6 +87,16 @@
         "Finland"
       ],
       "fact": "They shot to fame by winning Eurovision in 1974 with \"Waterloo\"."
+    },
+    "es": {
+      "question": "¿De qué país es la banda ABBA?",
+      "answer": "Suecia",
+      "options": [
+        "Noruega",
+        "Dinamarca",
+        "Finlandia"
+      ],
+      "fact": "Se hicieron famosos al ganar Eurovisión en 1974 con «Waterloo»."
     }
   },
   {
@@ -82,6 +112,16 @@
         "Frédéric Chopin"
       ],
       "fact": "His Ninth Symphony, with the \"Ode to Joy\", premiered in 1824, when he was almost totally deaf."
+    },
+    "es": {
+      "question": "¿Qué compositor siguió escribiendo música después de quedarse casi completamente sordo?",
+      "answer": "Ludwig van Beethoven",
+      "options": [
+        "Wolfgang Amadeus Mozart",
+        "Johann Sebastian Bach",
+        "Frédéric Chopin"
+      ],
+      "fact": "Su Novena Sinfonía, la del «Himno a la alegría», se estrenó en 1824, cuando estaba casi totalmente sordo."
     }
   },
   {
@@ -97,6 +137,16 @@
         "Dangerous"
       ],
       "fact": "Released in 1982, it's widely considered the best-selling album of all time."
+    },
+    "es": {
+      "question": "¿Cuál es el disco más vendido de Michael Jackson?",
+      "answer": "Thriller",
+      "options": [
+        "Bad",
+        "Off the Wall",
+        "Dangerous"
+      ],
+      "fact": "Salió en 1982 y se lo considera el disco más vendido de la historia."
     }
   },
   {
@@ -112,6 +162,16 @@
         "The zither"
       ],
       "fact": "Each pedal changes the pitch of every string of one note, so one pedal handles all the Cs, another all the Ds, and so on."
+    },
+    "es": {
+      "question": "¿Qué instrumento de orquesta suele tener 47 cuerdas y siete pedales?",
+      "answer": "El arpa",
+      "options": [
+        "El piano",
+        "El clavicémbalo",
+        "La cítara"
+      ],
+      "fact": "Cada pedal cambia la afinación de todas las cuerdas de una misma nota: uno maneja todos los do, otro todos los re, y así."
     }
   }
 ]

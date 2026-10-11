@@ -37,6 +37,16 @@
         "Michael Collins"
       ],
       "fact": "Buzz Aldrin followed him about 20 minutes later, while Michael Collins stayed in orbit in the command module."
+    },
+    "es": {
+      "question": "¿Quién fue la primera persona en caminar sobre la Luna?",
+      "answer": "Neil Armstrong",
+      "options": [
+        "Buzz Aldrin",
+        "Yuri Gagarin",
+        "Michael Collins"
+      ],
+      "fact": "Buzz Aldrin bajó unos 20 minutos después, mientras Michael Collins se quedaba en órbita en el módulo de mando."
     }
   },
   {
@@ -52,6 +62,16 @@
         "The Maya"
       ],
       "fact": "The Great Pyramid was the tallest building made by humans for about 3,800 years."
+    },
+    "es": {
+      "question": "¿Qué civilización antigua construyó las pirámides de Guiza?",
+      "answer": "Los egipcios",
+      "options": [
+        "Los romanos",
+        "Los griegos",
+        "Los mayas"
+      ],
+      "fact": "La Gran Pirámide fue la construcción humana más alta del mundo durante unos 3.800 años."
     }
   },
   {
@@ -67,6 +87,16 @@
         "1921"
       ],
       "fact": "It sank on its very first voyage, from Southampton to New York, after hitting an iceberg."
+    },
+    "es": {
+      "question": "¿En qué año se hundió el Titanic?",
+      "answer": "1912",
+      "options": [
+        "1905",
+        "1915",
+        "1921"
+      ],
+      "fact": "Se hundió en su primer viaje, de Southampton a Nueva York, después de chocar con un iceberg."
     }
   },
   {
@@ -82,6 +112,16 @@
         "Rosalind Franklin"
       ],
       "fact": "She won two, in two different sciences: Physics in 1903 and Chemistry in 1911."
+    },
+    "es": {
+      "question": "¿Quién fue la primera mujer en ganar un Premio Nobel?",
+      "answer": "Marie Curie",
+      "options": [
+        "Ada Lovelace",
+        "Florence Nightingale",
+        "Rosalind Franklin"
+      ],
+      "fact": "Ganó dos, en dos ciencias distintas: Física en 1903 y Química en 1911."
     }
   },
   {
@@ -97,6 +137,16 @@
         "124 years"
       ],
       "fact": "It ran from 1337 to 1453, between England and France, with long truces in between."
+    },
+    "es": {
+      "question": "¿Cuánto duró en realidad la Guerra de los Cien Años?",
+      "answer": "116 años",
+      "options": [
+        "100 años",
+        "99 años",
+        "124 años"
+      ],
+      "fact": "Fue de 1337 a 1453, entre Inglaterra y Francia, con largas treguas en el medio."
     }
   },
   {
@@ -112,6 +162,16 @@
         "The United Kingdom"
       ],
       "fact": "New Zealand women first voted in 1893. In 1906 Finland became the first country where women could also stand for parliament."
+    },
+    "es": {
+      "question": "¿Cuál fue el primer país autónomo en dar a las mujeres el voto en elecciones nacionales?",
+      "answer": "Nueva Zelanda",
+      "options": [
+        "Finlandia",
+        "Australia",
+        "Reino Unido"
+      ],
+      "fact": "Las neozelandesas votaron por primera vez en 1893. En 1906 Finlandia fue el primer país donde las mujeres también podían ser candidatas al parlamento."
     }
   }
 ]

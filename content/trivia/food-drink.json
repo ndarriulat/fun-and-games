@@ -37,6 +37,16 @@
         "Cucumber"
       ],
       "fact": "The name comes from Nahuatl, the Aztec language: āhuacatl means avocado and mōlli means sauce."
+    },
+    "es": {
+      "question": "¿Cuál es el ingrediente principal del guacamole?",
+      "answer": "Palta",
+      "options": [
+        "Tomate",
+        "Arvejas",
+        "Pepino"
+      ],
+      "fact": "El nombre viene del náhuatl, la lengua de los aztecas: āhuacatl quiere decir palta y mōlli, salsa."
     }
   },
   {
@@ -52,6 +62,16 @@
         "Thailand"
       ],
       "fact": "Sushi began as a way of preserving fish in fermented rice, and the rice used to be thrown away."
+    },
+    "es": {
+      "question": "¿De qué país es el sushi?",
+      "answer": "Japón",
+      "options": [
+        "China",
+        "Corea",
+        "Tailandia"
+      ],
+      "fact": "El sushi empezó como una forma de conservar pescado en arroz fermentado, y el arroz se tiraba."
     }
   },
   {
@@ -67,6 +87,16 @@
         "White beans"
       ],
       "fact": "Hummus is simply the Arabic word for chickpea."
+    },
+    "es": {
+      "question": "¿Cuál es el ingrediente principal del hummus?",
+      "answer": "Garbanzos",
+      "options": [
+        "Lentejas",
+        "Habas",
+        "Porotos blancos"
+      ],
+      "fact": "Hummus es simplemente la palabra árabe para «garbanzo»."
     }
   },
   {
@@ -82,6 +112,16 @@
         "Cinnamon"
       ],
       "fact": "Each crocus flower gives just three red threads, and they're picked by hand."
+    },
+    "es": {
+      "question": "Por peso, ¿cuál es la especia más cara del mundo?",
+      "answer": "Azafrán",
+      "options": [
+        "Vainilla",
+        "Cardamomo",
+        "Canela"
+      ],
+      "fact": "Cada flor de azafrán da solo tres hebras rojas, y se cosechan a mano."
     }
   },
   {
@@ -97,6 +137,16 @@
         "Shortcrust pastry"
       ],
       "fact": "Choux means \"cabbages\" in French, after the knobbly shape of the little buns."
+    },
+    "es": {
+      "question": "¿Con qué masa se hacen los profiteroles y los éclairs?",
+      "answer": "Masa choux",
+      "options": [
+        "Masa de hojaldre",
+        "Masa filo",
+        "Masa quebrada"
+      ],
+      "fact": "Choux quiere decir «repollos» en francés, por la forma abollada de los bollitos. Acá también le dicen masa bomba."
     }
   },
   {
@@ -112,6 +162,16 @@
         "Vanilla"
       ],
       "fact": "Bergamot is a small, sour citrus fruit grown mostly in Calabria, in southern Italy."
+    },
+    "es": {
+      "question": "¿Qué le da al té Earl Grey su sabor tan particular?",
+      "answer": "Bergamota",
+      "options": [
+        "Lavanda",
+        "Jazmín",
+        "Vainilla"
+      ],
+      "fact": "La bergamota es un cítrico chico y ácido, parecido a una lima, que se cultiva sobre todo en Calabria, en el sur de Italia."
     }
   }
 ]

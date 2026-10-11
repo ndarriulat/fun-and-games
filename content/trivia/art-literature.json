@@ -37,6 +37,16 @@
         "Oscar Wilde"
       ],
       "fact": "The play is set in Verona, where a house said to be Juliet's draws crowds of tourists to its balcony."
+    },
+    "es": {
+      "question": "¿Quién escribió Romeo y Julieta?",
+      "answer": "William Shakespeare",
+      "options": [
+        "Charles Dickens",
+        "Christopher Marlowe",
+        "Oscar Wilde"
+      ],
+      "fact": "La obra transcurre en Verona, donde una casa que dicen que fue de Julieta atrae a montones de turistas a su balcón."
     }
   },
   {
@@ -52,6 +62,16 @@
         "Pablo Picasso"
       ],
       "fact": "He painted it in 1889 while staying at a hospital in Saint-Rémy-de-Provence, based on the view from his window."
+    },
+    "es": {
+      "question": "¿Quién pintó La noche estrellada?",
+      "answer": "Vincent van Gogh",
+      "options": [
+        "Claude Monet",
+        "Paul Gauguin",
+        "Pablo Picasso"
+      ],
+      "fact": "La pintó en 1889, mientras estaba internado en un hospital de Saint-Rémy-de-Provence, a partir de lo que veía desde su ventana."
     }
   },
   {
@@ -67,6 +87,16 @@
         "Charles Dickens"
       ],
       "fact": "Holmes never actually says \"Elementary, my dear Watson\" in any of Conan Doyle's stories."
+    },
+    "es": {
+      "question": "¿Qué autor creó a Sherlock Holmes?",
+      "answer": "Arthur Conan Doyle",
+      "options": [
+        "Agatha Christie",
+        "Edgar Allan Poe",
+        "Charles Dickens"
+      ],
+      "fact": "En ninguno de los cuentos ni novelas de Conan Doyle Holmes dice «Elemental, mi querido Watson»."
     }
   },
   {
@@ -82,6 +112,16 @@
         "Julio Cortázar"
       ],
       "fact": "It's set in the made-up town of Macondo. He won the Nobel Prize in Literature in 1982."
+    },
+    "es": {
+      "question": "¿Quién escribió Cien años de soledad?",
+      "answer": "Gabriel García Márquez",
+      "options": [
+        "Mario Vargas Llosa",
+        "Jorge Luis Borges",
+        "Julio Cortázar"
+      ],
+      "fact": "Transcurre en Macondo, un pueblo inventado. Ganó el Premio Nobel de Literatura en 1982."
     }
   },
   {
@@ -97,6 +137,16 @@
         "Francisco Goya"
       ],
       "fact": "He developed Cubism together with the French painter Georges Braque."
+    },
+    "es": {
+      "question": "¿Qué artista español fue uno de los creadores del cubismo?",
+      "answer": "Pablo Picasso",
+      "options": [
+        "Salvador Dalí",
+        "Joan Miró",
+        "Francisco de Goya"
+      ],
+      "fact": "Desarrolló el cubismo junto con el pintor francés Georges Braque."
     }
   },
   {
@@ -112,6 +162,16 @@
         "The Old Man and the Sea"
       ],
       "fact": "Herman Melville's novel sold poorly in his lifetime and only became a classic after he died."
+    },
+    "es": {
+      "question": "¿Qué novela empieza con la frase «Llámenme Ismael»?",
+      "answer": "Moby Dick",
+      "options": [
+        "La isla del tesoro",
+        "Robinson Crusoe",
+        "El viejo y el mar"
+      ],
+      "fact": "La novela de Herman Melville se vendió poco en vida del autor y recién se volvió un clásico después de su muerte."
     }
   }
 ]

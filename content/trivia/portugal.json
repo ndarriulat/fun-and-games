@@ -37,6 +37,16 @@
         "Merci"
       ],
       "fact": "It literally means \"obliged\", so it matches the speaker: men say obrigado, women say obrigada."
+    },
+    "es": {
+      "question": "En Portugal, ¿qué dice una mujer para dar las gracias?",
+      "answer": "Obrigada",
+      "options": [
+        "Obrigado",
+        "Gracias",
+        "Merci"
+      ],
+      "fact": "Quiere decir literalmente «obligada», así que concuerda con quien habla: los hombres dicen obrigado y las mujeres, obrigada."
     }
   },
   {
@@ -52,6 +62,16 @@
         "Bossa nova"
       ],
       "fact": "UNESCO declared fado part of the Intangible Cultural Heritage of Humanity in 2011."
+    },
+    "es": {
+      "question": "¿Cómo se llama el famoso estilo de música melancólica de Portugal, que se escucha en las tabernas de Lisboa?",
+      "answer": "Fado",
+      "options": [
+        "Flamenco",
+        "Samba",
+        "Bossa nova"
+      ],
+      "fact": "La UNESCO declaró al fado Patrimonio Cultural Inmaterial de la Humanidad en 2011."
     }
   },
   {
@@ -67,6 +87,16 @@
         "25"
       ],
       "fact": "Many of Lisbon's trams are vintage cars from the 1930s, rebuilt and still in daily service."
+    },
+    "es": {
+      "question": "¿Qué número tiene el famoso tranvía amarillo que recorre Graça, Alfama y Estrela en Lisboa?",
+      "answer": "28",
+      "options": [
+        "12",
+        "15",
+        "25"
+      ],
+      "fact": "Muchos de los tranvías de Lisboa son coches antiguos de los años treinta, restaurados y todavía en servicio todos los días."
     }
   },
   {
@@ -82,6 +112,16 @@
         "Carapau"
       ],
       "fact": "The Portuguese say there's a bacalhau recipe for every day of the year, yet most of the cod is imported from Norway."
+    },
+    "es": {
+      "question": "¿Cómo se llama en portugués el bacalao seco y salado que aparece en casi todos los menús?",
+      "answer": "Bacalhau",
+      "options": [
+        "Sardinhas",
+        "Polvo",
+        "Carapau"
+      ],
+      "fact": "Los portugueses dicen que hay una receta de bacalhau para cada día del año, aunque la mayor parte se importa de Noruega."
     }
   },
   {
@@ -97,6 +137,16 @@
         "CPF"
       ],
       "fact": "Giving your NIF when you pay registers the receipt with the tax office, which can earn you deductions on your income tax."
+    },
+    "es": {
+      "question": "¿Cómo se llama el número fiscal que necesita todo residente en Portugal y que te piden en la caja?",
+      "answer": "NIF",
+      "options": [
+        "NISS",
+        "NIE",
+        "CPF"
+      ],
+      "fact": "Si das tu NIF al pagar, la factura queda registrada ante el fisco portugués, y eso te puede dar deducciones en el impuesto a la renta."
     }
   },
   {
@@ -112,6 +162,16 @@
         "1855"
       ],
       "fact": "It struck on 1 November. The quake, a tsunami and fires that burned for days levelled much of the city."
+    },
+    "es": {
+      "question": "¿En qué año el gran terremoto destruyó buena parte de Lisboa?",
+      "answer": "1755",
+      "options": [
+        "1655",
+        "1805",
+        "1855"
+      ],
+      "fact": "Fue el 1 de noviembre. El terremoto, un tsunami e incendios que duraron días arrasaron gran parte de la ciudad."
     }
   }
 ]

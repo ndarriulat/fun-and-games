@@ -37,6 +37,16 @@
         "Pancho"
       ],
       "fact": "Chivito means \"little goat\", but there's no goat in it. The story goes that it was invented in Punta del Este for a customer who asked for goat meat."
+    },
+    "es": {
+      "question": "¿Cómo se llama el famoso sándwich uruguayo de lomo, con jamón, queso, huevo y mucho más?",
+      "answer": "Chivito",
+      "options": [
+        "Choripán",
+        "Milanesa al pan",
+        "Pancho"
+      ],
+      "fact": "No lleva nada de chivito. Dicen que lo inventaron en Punta del Este para un cliente que pidió carne de chivo y no había."
     }
   },
   {
@@ -52,6 +62,16 @@
         "Cumbia"
       ],
       "fact": "In 2009 UNESCO added candombe to its list of the Intangible Cultural Heritage of Humanity."
+    },
+    "es": {
+      "question": "¿Cómo se llama la música afrouruguaya que se toca con tambores en la calle?",
+      "answer": "Candombe",
+      "options": [
+        "Murga",
+        "Milonga",
+        "Cumbia"
+      ],
+      "fact": "En 2009 la UNESCO incluyó al candombe en su lista del Patrimonio Cultural Inmaterial de la Humanidad."
     }
   },
   {
@@ -67,6 +87,16 @@
         "Colonia"
       ],
       "fact": "Its famous hand sculpture on Playa Brava, by Chilean artist Mario Irarrázabal, dates from 1982."
+    },
+    "es": {
+      "question": "¿En qué departamento está Punta del Este?",
+      "answer": "Maldonado",
+      "options": [
+        "Rocha",
+        "Canelones",
+        "Colonia"
+      ],
+      "fact": "La famosa escultura de La Mano en la Playa Brava, del artista chileno Mario Irarrázabal, es de 1982."
     }
   },
   {
@@ -82,6 +112,16 @@
         "21"
       ],
       "fact": "The newest is Flores, created in 1885, which brought the total to 19."
+    },
+    "es": {
+      "question": "¿Cuántos departamentos tiene Uruguay?",
+      "answer": "19",
+      "options": [
+        "17",
+        "18",
+        "21"
+      ],
+      "fact": "El más nuevo es Flores, creado en 1885, que completó los 19."
     }
   },
   {
@@ -97,6 +137,16 @@
         "Juana de Ibarbourou"
       ],
       "fact": "Benedetti was born in Paso de los Toros in 1920 and wrote poems, novels, stories and essays."
+    },
+    "es": {
+      "question": "¿Quién escribió el poema «Táctica y estrategia»?",
+      "answer": "Mario Benedetti",
+      "options": [
+        "Juan Carlos Onetti",
+        "Eduardo Galeano",
+        "Juana de Ibarbourou"
+      ],
+      "fact": "Benedetti nació en Paso de los Toros en 1920 y escribió poesía, novelas, cuentos y ensayos."
     }
   },
   {
@@ -112,6 +162,16 @@
         "Cerro Arequita"
       ],
       "fact": "It's only about 514 metres high, in Maldonado. Until a survey in 1973, Cerro de las Ánimas was thought to be the highest."
+    },
+    "es": {
+      "question": "¿Cuál es el punto más alto de Uruguay?",
+      "answer": "Cerro Catedral",
+      "options": [
+        "Cerro de las Ánimas",
+        "Cerro Pan de Azúcar",
+        "Cerro Arequita"
+      ],
+      "fact": "Mide apenas unos 514 metros y está en Maldonado. Hasta una medición de 1973, se creía que el más alto era el Cerro de las Ánimas."
     }
   }
 ]
