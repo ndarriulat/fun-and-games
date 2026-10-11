@@ -23,5 +23,95 @@
       ],
       "fact": "La Z está en Arizona, la J en New Jersey y la X en Texas y New Mexico, pero ningún estado tiene una Q."
     }
+  },
+  {
+    "id": "trv-lan-00002",
+    "topic": "language-words",
+    "difficulty": "easy",
+    "en": {
+      "question": "Which language has the most native speakers in the world?",
+      "answer": "Mandarin Chinese",
+      "options": [
+        "English",
+        "Spanish",
+        "Hindi"
+      ],
+      "fact": "If you count people who learned it as a second language too, English comes out on top."
+    }
+  },
+  {
+    "id": "trv-lan-00003",
+    "topic": "language-words",
+    "difficulty": "easy",
+    "en": {
+      "question": "How many letters are there in the English alphabet?",
+      "answer": "26",
+      "options": [
+        "24",
+        "27",
+        "28"
+      ],
+      "fact": "The Spanish alphabet has 27, thanks to the ñ."
+    }
+  },
+  {
+    "id": "trv-lan-00004",
+    "topic": "language-words",
+    "difficulty": "easy",
+    "en": {
+      "question": "What is the official language of Brazil?",
+      "answer": "Portuguese",
+      "options": [
+        "Spanish",
+        "French",
+        "Italian"
+      ],
+      "fact": "Brazil has about 20 times as many Portuguese speakers as Portugal itself."
+    }
+  },
+  {
+    "id": "trv-lan-00005",
+    "topic": "language-words",
+    "difficulty": "medium",
+    "en": {
+      "question": "What do you call a word that reads the same backwards and forwards, like \"level\"?",
+      "answer": "A palindrome",
+      "options": [
+        "An anagram",
+        "An acronym",
+        "A homophone"
+      ],
+      "fact": "\"A man, a plan, a canal: Panama\" is a famous palindromic sentence."
+    }
+  },
+  {
+    "id": "trv-lan-00006",
+    "topic": "language-words",
+    "difficulty": "hard",
+    "en": {
+      "question": "Which language does the word \"robot\" come from?",
+      "answer": "Czech",
+      "options": [
+        "German",
+        "Russian",
+        "Japanese"
+      ],
+      "fact": "It comes from robota, meaning forced labour, and first appeared in Karel Čapek's 1920 play R.U.R."
+    }
+  },
+  {
+    "id": "trv-lan-00007",
+    "topic": "language-words",
+    "difficulty": "hard",
+    "en": {
+      "question": "How many official languages does Switzerland have?",
+      "answer": "4",
+      "options": [
+        "2",
+        "3",
+        "5"
+      ],
+      "fact": "German, French, Italian and Romansh. Romansh is spoken by less than one per cent of the Swiss."
+    }
   }
 ]

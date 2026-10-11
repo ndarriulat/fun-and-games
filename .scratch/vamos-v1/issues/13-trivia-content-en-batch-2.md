@@ -6,10 +6,19 @@ Write English only and omit the `es` block; the translation ticket adds it (the 
 
 **Blocked by:** 12 (Trivia content (English), batch 1)
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] ~7 items per topic listed above
-- [ ] Difficulty mix within the batch ~40% easy, 40% medium, 20% hard
-- [ ] Every answer and fun fact fact-checked
-- [ ] Uruguay pitched at locals; Portugal pitched at expats
-- [ ] Content check passes; Trivia totals ~100
+- [x] ~7 items per topic listed above
+- [x] Difficulty mix within the batch ~40% easy, 40% medium, 20% hard
+- [x] Every answer and fun fact fact-checked
+- [x] Uruguay pitched at locals; Portugal pitched at expats
+- [x] Content check passes; Trivia totals ~100
+
+## Comments
+
+- Added 42 English items (IDs 00002–00007 in each topic); every topic now has 7, counting the starter. Trivia total is 98 (14 topics × 7).
+- Per topic (easy/medium/hard, incl. starter): Food & Drink 3/2/2, Language & Words 3/2/2, Technology 3/3/1, Art & Literature 3/3/1, Uruguay 3/3/1, Portugal 2/4/1, General 3/2/2.
+- Batch total 49: 20 easy (41%), 19 medium (39%), 10 hard (20%). Whole bank: 40 easy, 38 medium, 20 hard.
+- Replaced a planned Uruguay item about the length of the Rambla: sources give anything from 22 to 30 km, so it became a chivito question instead. The coffee-per-person question was dropped too, since rankings swing between Finland and Luxembourg.
+- Uruguay items are local knowledge (chivito, candombe, departments, Benedetti, Cerro Catedral); Portugal items are things expats run into (obrigada, fado, tram 28, bacalhau, NIF, the 1755 earthquake).
+- The chivito origin is told as a story ("the story goes"), since it's a local legend rather than a record.

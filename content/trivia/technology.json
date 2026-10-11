@@ -23,5 +23,95 @@
       ],
       "fact": "Lo creó Tim Berners-Lee en el CERN alrededor de 1990, junto con el HTML y el primer navegador web."
     }
+  },
+  {
+    "id": "trv-tec-00002",
+    "topic": "technology",
+    "difficulty": "easy",
+    "en": {
+      "question": "Who co-founded Microsoft with Paul Allen?",
+      "answer": "Bill Gates",
+      "options": [
+        "Steve Jobs",
+        "Steve Wozniak",
+        "Larry Page"
+      ],
+      "fact": "They started it in 1975. The name is short for \"microcomputer software\"."
+    }
+  },
+  {
+    "id": "trv-tec-00003",
+    "topic": "technology",
+    "difficulty": "easy",
+    "en": {
+      "question": "Which company makes the PlayStation?",
+      "answer": "Sony",
+      "options": [
+        "Nintendo",
+        "Microsoft",
+        "Sega"
+      ],
+      "fact": "It grew out of a cancelled project with Nintendo to build a CD add-on for the Super Nintendo."
+    }
+  },
+  {
+    "id": "trv-tec-00004",
+    "topic": "technology",
+    "difficulty": "easy",
+    "en": {
+      "question": "What does the \"e\" in \"email\" stand for?",
+      "answer": "Electronic",
+      "options": [
+        "Easy",
+        "Express",
+        "External"
+      ],
+      "fact": "Ray Tomlinson sent the first network email in 1971 and chose the @ sign to separate the user's name from the computer's."
+    }
+  },
+  {
+    "id": "trv-tec-00005",
+    "topic": "technology",
+    "difficulty": "medium",
+    "en": {
+      "question": "What does USB stand for?",
+      "answer": "Universal Serial Bus",
+      "options": [
+        "Universal System Board",
+        "Unified Standard Bridge",
+        "Universal Signal Band"
+      ],
+      "fact": "USB first came out in 1996. USB-C, which plugs in either way up, arrived in 2014."
+    }
+  },
+  {
+    "id": "trv-tec-00006",
+    "topic": "technology",
+    "difficulty": "medium",
+    "en": {
+      "question": "In what year was the first iPhone released?",
+      "answer": "2007",
+      "options": [
+        "2005",
+        "2009",
+        "2010"
+      ],
+      "fact": "Steve Jobs introduced it as \"an iPod, a phone and an internet communicator\" in one device."
+    }
+  },
+  {
+    "id": "trv-tec-00007",
+    "topic": "technology",
+    "difficulty": "hard",
+    "en": {
+      "question": "What was the very first .com domain ever registered?",
+      "answer": "symbolics.com",
+      "options": [
+        "ibm.com",
+        "apple.com",
+        "microsoft.com"
+      ],
+      "fact": "It was registered on 15 March 1985 by Symbolics, a computer company in Massachusetts."
+    }
   }
 ]

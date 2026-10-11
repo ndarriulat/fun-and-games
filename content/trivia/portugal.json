@@ -23,5 +23,95 @@
       ],
       "fact": "Se dice que la receta viene de los monjes del Monasterio de los Jerónimos, en el barrio lisboeta de Belém. La pastelería de al lado los vende desde 1837."
     }
+  },
+  {
+    "id": "trv-por-00002",
+    "topic": "portugal",
+    "difficulty": "easy",
+    "en": {
+      "question": "In Portugal, what does a woman say to say \"thank you\"?",
+      "answer": "Obrigada",
+      "options": [
+        "Obrigado",
+        "Gracias",
+        "Merci"
+      ],
+      "fact": "It literally means \"obliged\", so it matches the speaker: men say obrigado, women say obrigada."
+    }
+  },
+  {
+    "id": "trv-por-00003",
+    "topic": "portugal",
+    "difficulty": "easy",
+    "en": {
+      "question": "What is the name of Portugal's famous mournful style of music, often heard in Lisbon's taverns?",
+      "answer": "Fado",
+      "options": [
+        "Flamenco",
+        "Samba",
+        "Bossa nova"
+      ],
+      "fact": "UNESCO declared fado part of the Intangible Cultural Heritage of Humanity in 2011."
+    }
+  },
+  {
+    "id": "trv-por-00004",
+    "topic": "portugal",
+    "difficulty": "medium",
+    "en": {
+      "question": "What number is the famous yellow tram that rattles through Graça, Alfama and Estrela in Lisbon?",
+      "answer": "28",
+      "options": [
+        "12",
+        "15",
+        "25"
+      ],
+      "fact": "Many of Lisbon's trams are vintage cars from the 1930s, rebuilt and still in daily service."
+    }
+  },
+  {
+    "id": "trv-por-00005",
+    "topic": "portugal",
+    "difficulty": "medium",
+    "en": {
+      "question": "What is the Portuguese name for the salted dried cod found on almost every menu?",
+      "answer": "Bacalhau",
+      "options": [
+        "Sardinhas",
+        "Polvo",
+        "Carapau"
+      ],
+      "fact": "The Portuguese say there's a bacalhau recipe for every day of the year, yet most of the cod is imported from Norway."
+    }
+  },
+  {
+    "id": "trv-por-00006",
+    "topic": "portugal",
+    "difficulty": "medium",
+    "en": {
+      "question": "What is the tax number every resident needs in Portugal, and gets asked for at the till, called?",
+      "answer": "NIF",
+      "options": [
+        "NISS",
+        "NIE",
+        "CPF"
+      ],
+      "fact": "Giving your NIF when you pay registers the receipt with the tax office, which can earn you deductions on your income tax."
+    }
+  },
+  {
+    "id": "trv-por-00007",
+    "topic": "portugal",
+    "difficulty": "hard",
+    "en": {
+      "question": "In what year did the great earthquake destroy much of Lisbon?",
+      "answer": "1755",
+      "options": [
+        "1655",
+        "1805",
+        "1855"
+      ],
+      "fact": "It struck on 1 November. The quake, a tsunami and fires that burned for days levelled much of the city."
+    }
   }
 ]

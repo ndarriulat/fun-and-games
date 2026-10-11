@@ -23,5 +23,95 @@
       ],
       "fact": "Se llama así por la ciudad neerlandesa de Gouda, donde se comerciaba desde hace siglos."
     }
+  },
+  {
+    "id": "trv-fdr-00002",
+    "topic": "food-drink",
+    "difficulty": "easy",
+    "en": {
+      "question": "What is the main ingredient in guacamole?",
+      "answer": "Avocado",
+      "options": [
+        "Tomato",
+        "Peas",
+        "Cucumber"
+      ],
+      "fact": "The name comes from Nahuatl, the Aztec language: āhuacatl means avocado and mōlli means sauce."
+    }
+  },
+  {
+    "id": "trv-fdr-00003",
+    "topic": "food-drink",
+    "difficulty": "easy",
+    "en": {
+      "question": "Which country does sushi come from?",
+      "answer": "Japan",
+      "options": [
+        "China",
+        "Korea",
+        "Thailand"
+      ],
+      "fact": "Sushi began as a way of preserving fish in fermented rice, and the rice used to be thrown away."
+    }
+  },
+  {
+    "id": "trv-fdr-00004",
+    "topic": "food-drink",
+    "difficulty": "easy",
+    "en": {
+      "question": "What is the main ingredient in hummus?",
+      "answer": "Chickpeas",
+      "options": [
+        "Lentils",
+        "Broad beans",
+        "White beans"
+      ],
+      "fact": "Hummus is simply the Arabic word for chickpea."
+    }
+  },
+  {
+    "id": "trv-fdr-00005",
+    "topic": "food-drink",
+    "difficulty": "medium",
+    "en": {
+      "question": "By weight, what is the most expensive spice in the world?",
+      "answer": "Saffron",
+      "options": [
+        "Vanilla",
+        "Cardamom",
+        "Cinnamon"
+      ],
+      "fact": "Each crocus flower gives just three red threads, and they're picked by hand."
+    }
+  },
+  {
+    "id": "trv-fdr-00006",
+    "topic": "food-drink",
+    "difficulty": "hard",
+    "en": {
+      "question": "What kind of pastry are profiteroles and éclairs made from?",
+      "answer": "Choux pastry",
+      "options": [
+        "Puff pastry",
+        "Filo pastry",
+        "Shortcrust pastry"
+      ],
+      "fact": "Choux means \"cabbages\" in French, after the knobbly shape of the little buns."
+    }
+  },
+  {
+    "id": "trv-fdr-00007",
+    "topic": "food-drink",
+    "difficulty": "hard",
+    "en": {
+      "question": "What gives Earl Grey tea its distinctive flavour?",
+      "answer": "Bergamot",
+      "options": [
+        "Lavender",
+        "Jasmine",
+        "Vanilla"
+      ],
+      "fact": "Bergamot is a small, sour citrus fruit grown mostly in Calabria, in southern Italy."
+    }
   }
 ]

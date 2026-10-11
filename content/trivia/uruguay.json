@@ -23,5 +23,95 @@
       ],
       "fact": "La final se jugó en el Estadio Centenario de Montevideo, construido para el Mundial y llamado así por los cien años de la primera Constitución."
     }
+  },
+  {
+    "id": "trv-uru-00002",
+    "topic": "uruguay",
+    "difficulty": "easy",
+    "en": {
+      "question": "What is the name of Uruguay's famous steak sandwich, loaded with ham, cheese, egg and more?",
+      "answer": "Chivito",
+      "options": [
+        "Choripán",
+        "Milanesa al pan",
+        "Pancho"
+      ],
+      "fact": "Chivito means \"little goat\", but there's no goat in it. The story goes that it was invented in Punta del Este for a customer who asked for goat meat."
+    }
+  },
+  {
+    "id": "trv-uru-00003",
+    "topic": "uruguay",
+    "difficulty": "easy",
+    "en": {
+      "question": "What is the name of the Afro-Uruguayan music played on drums in the street?",
+      "answer": "Candombe",
+      "options": [
+        "Murga",
+        "Milonga",
+        "Cumbia"
+      ],
+      "fact": "In 2009 UNESCO added candombe to its list of the Intangible Cultural Heritage of Humanity."
+    }
+  },
+  {
+    "id": "trv-uru-00004",
+    "topic": "uruguay",
+    "difficulty": "medium",
+    "en": {
+      "question": "Which department is Punta del Este in?",
+      "answer": "Maldonado",
+      "options": [
+        "Rocha",
+        "Canelones",
+        "Colonia"
+      ],
+      "fact": "Its famous hand sculpture on Playa Brava, by Chilean artist Mario Irarrázabal, dates from 1982."
+    }
+  },
+  {
+    "id": "trv-uru-00005",
+    "topic": "uruguay",
+    "difficulty": "medium",
+    "en": {
+      "question": "How many departments does Uruguay have?",
+      "answer": "19",
+      "options": [
+        "17",
+        "18",
+        "21"
+      ],
+      "fact": "The newest is Flores, created in 1885, which brought the total to 19."
+    }
+  },
+  {
+    "id": "trv-uru-00006",
+    "topic": "uruguay",
+    "difficulty": "medium",
+    "en": {
+      "question": "Who wrote the poem \"Táctica y estrategia\"?",
+      "answer": "Mario Benedetti",
+      "options": [
+        "Juan Carlos Onetti",
+        "Eduardo Galeano",
+        "Juana de Ibarbourou"
+      ],
+      "fact": "Benedetti was born in Paso de los Toros in 1920 and wrote poems, novels, stories and essays."
+    }
+  },
+  {
+    "id": "trv-uru-00007",
+    "topic": "uruguay",
+    "difficulty": "hard",
+    "en": {
+      "question": "What is the highest point in Uruguay?",
+      "answer": "Cerro Catedral",
+      "options": [
+        "Cerro de las Ánimas",
+        "Cerro Pan de Azúcar",
+        "Cerro Arequita"
+      ],
+      "fact": "It's only about 514 metres high, in Maldonado. Until a survey in 1973, Cerro de las Ánimas was thought to be the highest."
+    }
   }
 ]

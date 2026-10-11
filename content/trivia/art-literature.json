@@ -23,5 +23,95 @@
       ],
       "fact": "Está en el Louvre detrás de un vidrio blindado. La robaron en 1911 y recién la recuperaron en 1913."
     }
+  },
+  {
+    "id": "trv-art-00002",
+    "topic": "art-literature",
+    "difficulty": "easy",
+    "en": {
+      "question": "Who wrote Romeo and Juliet?",
+      "answer": "William Shakespeare",
+      "options": [
+        "Charles Dickens",
+        "Christopher Marlowe",
+        "Oscar Wilde"
+      ],
+      "fact": "The play is set in Verona, where a house said to be Juliet's draws crowds of tourists to its balcony."
+    }
+  },
+  {
+    "id": "trv-art-00003",
+    "topic": "art-literature",
+    "difficulty": "easy",
+    "en": {
+      "question": "Who painted The Starry Night?",
+      "answer": "Vincent van Gogh",
+      "options": [
+        "Claude Monet",
+        "Paul Gauguin",
+        "Pablo Picasso"
+      ],
+      "fact": "He painted it in 1889 while staying at a hospital in Saint-Rémy-de-Provence, based on the view from his window."
+    }
+  },
+  {
+    "id": "trv-art-00004",
+    "topic": "art-literature",
+    "difficulty": "medium",
+    "en": {
+      "question": "Which author created Sherlock Holmes?",
+      "answer": "Arthur Conan Doyle",
+      "options": [
+        "Agatha Christie",
+        "Edgar Allan Poe",
+        "Charles Dickens"
+      ],
+      "fact": "Holmes never actually says \"Elementary, my dear Watson\" in any of Conan Doyle's stories."
+    }
+  },
+  {
+    "id": "trv-art-00005",
+    "topic": "art-literature",
+    "difficulty": "medium",
+    "en": {
+      "question": "Who wrote One Hundred Years of Solitude?",
+      "answer": "Gabriel García Márquez",
+      "options": [
+        "Mario Vargas Llosa",
+        "Jorge Luis Borges",
+        "Julio Cortázar"
+      ],
+      "fact": "It's set in the made-up town of Macondo. He won the Nobel Prize in Literature in 1982."
+    }
+  },
+  {
+    "id": "trv-art-00006",
+    "topic": "art-literature",
+    "difficulty": "medium",
+    "en": {
+      "question": "Which Spanish artist co-founded Cubism?",
+      "answer": "Pablo Picasso",
+      "options": [
+        "Salvador Dalí",
+        "Joan Miró",
+        "Francisco Goya"
+      ],
+      "fact": "He developed Cubism together with the French painter Georges Braque."
+    }
+  },
+  {
+    "id": "trv-art-00007",
+    "topic": "art-literature",
+    "difficulty": "hard",
+    "en": {
+      "question": "Which novel begins with the line \"Call me Ishmael\"?",
+      "answer": "Moby-Dick",
+      "options": [
+        "Treasure Island",
+        "Robinson Crusoe",
+        "The Old Man and the Sea"
+      ],
+      "fact": "Herman Melville's novel sold poorly in his lifetime and only became a classic after he died."
+    }
   }
 ]
