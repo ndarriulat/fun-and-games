@@ -79,10 +79,10 @@ export function CardControls({
   );
 }
 
-/** Longer questions step down in size so they still fit on the card. */
-export function questionSize(question: string) {
-  if (question.length < 60) return "question-s";
-  if (question.length < 110) return "question-m";
-  if (question.length < 200) return "question-l";
-  return "question-xl";
+const QUESTION_SIZES = ["question-s", "question-m", "question-l", "question-xl"];
+
+/** Longer questions step down in size so they still fit on the card. `smaller` steps down further when the card holds more. */
+export function questionSize(question: string, smaller = 0) {
+  const size = question.length < 60 ? 0 : question.length < 110 ? 1 : question.length < 200 ? 2 : 3;
+  return QUESTION_SIZES[Math.min(size + smaller, QUESTION_SIZES.length - 1)];
 }

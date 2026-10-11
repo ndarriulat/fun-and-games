@@ -7,9 +7,9 @@ import type { Screen } from "./App";
 
 const modes: { mode: Mode; screen?: Screen }[] = [
   { mode: "trivia", screen: "trivia" },
+  { mode: "talk", screen: "talk" },
   // Puzzles arrives in v1.1, so it has no screen yet.
   { mode: "puzzles" },
-  { mode: "talk", screen: "talk" },
 ];
 
 export function HomeScreen({ go }: { go: (screen: Screen) => void }) {

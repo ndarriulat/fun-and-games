@@ -73,8 +73,20 @@ function TriviaCard({
               <span>{t.triviaTopics[item.topic]}</span>
               <span>{t.difficulties[item.difficulty]}</span>
             </div>
-            <p className={revealed ? "question-small" : `question ${questionSize(text.question)}`}>{text.question}</p>
+            {/* With the four options showing, the question steps down a size so they fit without scrolling. */}
+            <p className={revealed ? "question-small" : `question ${questionSize(text.question, options ? 1 : 0)}`}>
+              {text.question}
+            </p>
             {revealed && <p className="answer">{text.answer}</p>}
+            {!options && !revealed && (
+              <button
+                type="button"
+                className="option option-show"
+                onClick={() => onView({ ...view, options: shuffle(choices.map((_, i) => i), random) })}
+              >
+                {t.showOptions}
+              </button>
+            )}
             {options && (
               <ol className="options" aria-label={t.options}>
                 {options.map((index) => {
@@ -95,17 +107,6 @@ function TriviaCard({
             {revealed && <p className="fact">{text.fact}</p>}
           </div>
         </article>
-      </div>
-      <div className="links">
-        {!options && !revealed && (
-          <button
-            type="button"
-            className="link"
-            onClick={() => onView({ ...view, options: shuffle(choices.map((_, i) => i), random) })}
-          >
-            {t.showOptions}
-          </button>
-        )}
       </div>
       <CardControls
         main={revealed ? { label: t.next, onClick: onNext } : { label: t.reveal, onClick: () => onView({ ...view, revealed: true }) }}

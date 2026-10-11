@@ -385,6 +385,30 @@ button:focus-visible {
   font-size: 1.2rem;
 }
 
+/* Short phones (iPhone SE): slimmer options and slightly smaller questions so all four options fit. */
+@media (max-height: 700px) {
+  .option {
+    padding-block: 9px;
+  }
+  .question-m {
+    font-size: 1.8rem;
+  }
+  .question-l {
+    font-size: 1.45rem;
+  }
+  .question-xl {
+    font-size: 1.3rem;
+  }
+}
+
+/* "Show options": a single dashed box where the options will appear. */
+.option-show {
+  min-height: 52px;
+  color: var(--mode);
+  font-weight: 800;
+  text-align: center;
+}
+
 .card-back .option {
   border-color: rgba(255, 255, 255, 0.5);
 }

@@ -52,6 +52,17 @@ function renderApp(deps = testDeps()) {
 }
 
 describe("Home", () => {
+  it("lists the modes in order: Trivia, Talk, then Puzzles", () => {
+    renderApp();
+
+    const modes = within(screen.getByRole("navigation")).getAllByRole("button");
+    expect(modes.map((mode) => mode.textContent)).toEqual([
+      expect.stringMatching(/^Trivia/),
+      expect.stringMatching(/^Talk/),
+      expect.stringMatching(/^Puzzles/),
+    ]);
+  });
+
   it("shows the three modes and a settings button", () => {
     renderApp();
 
@@ -360,6 +371,17 @@ describe("Trivia", () => {
 
     expect(options).toHaveLength(4);
     expect([...options].sort()).toEqual(["Canberra", "Melbourne", "Perth", "Sydney"]);
+    expect(screen.queryByRole("button", { name: "Show options" })).not.toBeInTheDocument();
+  });
+
+  it("shows the options inside the card, in place of the Show options button", async () => {
+    const { user } = await openTrivia();
+    const card = within(screen.getByRole("article"));
+    expect(card.getByRole("button", { name: "Show options" })).toBeInTheDocument();
+
+    await user.click(card.getByRole("button", { name: "Show options" }));
+
+    expect(card.getByRole("list", { name: "Options" })).toBeInTheDocument();
     expect(screen.queryByRole("button", { name: "Show options" })).not.toBeInTheDocument();
   });
 

@@ -46,7 +46,7 @@ Three modes. Trivia and Talk are random across all non-hidden topics by default;
 
 ## Screens
 
-- **Home:** three big coloured cards (Trivia / Puzzles / Talk); a top bar with the EN | ES toggle and a settings (gear) icon.
+- **Home:** three big coloured cards (Trivia / Talk / Puzzles); a top bar with the EN | ES toggle and a settings (gear) icon.
 - **Tap a mode:** go straight into a full-screen card from a random mix. A small Filters button narrows topics/types and difficulty.
 - **Card actions:**
   - Trivia: Show options · Reveal
@@ -123,7 +123,7 @@ Three modes. Trivia and Talk are random across all non-hidden topics by default;
 
 ## Status
 
-Design agreed (2026-10-01). Puzzles moved to v1.1 and Uruguay hidden by default (2026-10-03); v1 tickets in `.scratch/vamos-v1/`, Puzzles tickets in `.scratch/vamos-v1-1/`. Ticket 01 (walking skeleton: Home + Trivia card, content check, CI), ticket 03 (played history, Back, reshuffle, storage adapter), ticket 22 (Uruguay hidden by default), ticket 05 (Talk mode, Puzzles "Coming soon" on Home, 12 starter Talk cards), ticket 06 (language, Settings screen, first-launch Spanish suggestion) ticket 25 (EN | ES toggle on Home, gear Settings icon) ticket 24 (Spanish "Más" and "Respuesta" button labels) and the v1 content, tickets 12–14 and 18–20 (98 Trivia items and 96 Talk cards, all in English and Spanish), done.
+Design agreed (2026-10-01). Puzzles moved to v1.1 and Uruguay hidden by default (2026-10-03); v1 tickets in `.scratch/vamos-v1/`, Puzzles tickets in `.scratch/vamos-v1-1/`. Ticket 01 (walking skeleton: Home + Trivia card, content check, CI), ticket 03 (played history, Back, reshuffle, storage adapter), ticket 22 (Uruguay hidden by default), ticket 05 (Talk mode, Puzzles "Coming soon" on Home, 12 starter Talk cards), ticket 06 (language, Settings screen, first-launch Spanish suggestion) ticket 25 (EN | ES toggle on Home, gear Settings icon) ticket 24 (Spanish "Más" and "Respuesta" button labels), ticket 27 ("Show options" inside the Trivia card; Home order Trivia / Talk / Puzzles) and the v1 content, tickets 12–14 and 18–20 (98 Trivia items and 96 Talk cards, all in English and Spanish), done.
 
 ## Commands
 
