@@ -15,7 +15,7 @@
       "question": "¿Qué película o serie pensás que todos acá tendrían que ver?",
       "followUps": [
         "¿Qué les dirías para convencerlos?",
-        "¿Cuál de las famosas nunca entendiste por qué gusta tanto?"
+        "¿Qué película o serie famosa nunca entendiste por qué gusta tanto?"
       ]
     }
   },
@@ -79,7 +79,7 @@
       ]
     },
     "es": {
-      "question": "¿Con qué famoso sería lo mejor quedarte trancado en un ascensor, y con cuál lo peor?",
+      "question": "¿Con qué persona famosa sería lo mejor que se trancara el ascensor, y con cuál lo peor?",
       "followUps": [
         "¿De qué hablarían la primera hora?"
       ]
@@ -118,7 +118,7 @@
       ]
     },
     "es": {
-      "question": "Si tu vida fuera una serie, ¿de qué género sería y quién te haría de vos?",
+      "question": "Si tu vida fuera una serie, ¿de qué género sería y quién haría de vos?",
       "followUps": [
         "¿Cómo se llamaría?",
         "¿Qué pasaría en el último capítulo de la temporada?"
@@ -140,7 +140,7 @@
       ]
     },
     "es": {
-      "question": "¿Qué preferís: ser famoso por una canción que todo el mundo conoce pero odia, o por una película que aman solo unos pocos?",
+      "question": "¿Qué preferís: la fama por una canción que todo el mundo conoce pero odia, o por una película que aman solo unos pocos?",
       "optionA": "Una canción que todos conocen y odian",
       "optionB": "Una película que aman unos pocos",
       "followUps": [
@@ -164,7 +164,7 @@
     "es": {
       "question": "¿Qué película, libro o canción te cambió la forma de ver algo de tu propia vida?",
       "followUps": [
-        "¿Volviste a verla, leerlo o escucharla después, y seguía estando buena?",
+        "¿La volviste a ver, leer o escuchar después? ¿Te siguió gustando?",
         "¿Con quién te gustaría más compartirla?"
       ]
     }

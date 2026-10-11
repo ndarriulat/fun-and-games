@@ -116,7 +116,7 @@
       ]
     },
     "es": {
-      "question": "¿Qué te hace uruguayo: haber nacido en Uruguay, haberte criado ahí, o otra cosa?",
+      "question": "¿Qué hace que alguien sea de Uruguay: haber nacido ahí, haberse criado ahí, o algo más?",
       "followUps": [
         "¿Los uruguayos que se van al exterior siguen siendo uruguayos para siempre?",
         "¿Qué costumbre uruguaya no perderías nunca?"
@@ -157,7 +157,7 @@
       "question": "Si te hubieras criado en cualquier otro lugar que no fuera Uruguay, ¿qué sería lo más distinto en vos?",
       "followUps": [
         "¿Qué no hubieras aprendido nunca?",
-        "¿Igual habrías terminado siendo amigo de los que están acá?"
+        "¿Igual habrías terminado en este grupo?"
       ]
     }
   }

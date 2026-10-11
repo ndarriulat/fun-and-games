@@ -118,12 +118,12 @@
       ]
     },
     "es": {
-      "question": "En un viaje con amigos, ¿qué preferís: que otro organice todo y vos solo aparecés, o organizar vos todo exactamente a tu manera?",
-      "optionA": "Que organice otro, yo aparezco",
+      "question": "En un viaje con amigos, ¿qué preferís: que otra persona organice todo y vos solo aparezcas, o organizar vos todo exactamente a tu manera?",
+      "optionA": "Que organice otra persona, yo aparezco",
       "optionB": "Organizo todo a mi manera",
       "followUps": [
-        "¿Quién es el que organiza en este grupo?",
-        "¿Cuál es el mejor viaje que te organizó otro?"
+        "¿Quién organiza siempre en este grupo?",
+        "¿Cuál es el mejor viaje que te organizó otra persona?"
       ]
     }
   },
@@ -158,7 +158,7 @@
       ]
     },
     "es": {
-      "question": "Cuando un amigo está por mandarse una macana grande, ¿qué tan honesto tenés que ser?",
+      "question": "Cuando alguien de tus amigos está por mandarse una macana grande, ¿hasta dónde tenés que decirle la verdad?",
       "followUps": [
         "¿Alguien lo hizo alguna vez por vos?",
         "¿Qué querrías que este grupo te dijera en la cara?"

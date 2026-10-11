@@ -12,10 +12,10 @@
       ]
     },
     "es": {
-      "question": "¿Cuál era tu juego favorito de chico, y lo podrías jugar hoy?",
+      "question": "¿Cuál era tu juego favorito en tu infancia, y lo podrías jugar hoy?",
       "followUps": [
         "¿Con quién lo jugabas casi siempre?",
-        "¿Hay algo de tu infancia que te gustaría que los gurises siguieran haciendo?"
+        "¿Hay algo de tu infancia que te gustaría que los niños de hoy siguieran haciendo?"
       ]
     }
   },
@@ -32,7 +32,7 @@
       ]
     },
     "es": {
-      "question": "¿Qué rezongo de cuando eras chico todavía te parece injusto?",
+      "question": "¿Qué rezongo de tu infancia todavía te parece injusto?",
       "followUps": [
         "¿Tus padres se enteraron alguna vez de la historia completa?",
         "¿Castigarías a tu propio hijo por eso?"
@@ -54,7 +54,7 @@
       ]
     },
     "es": {
-      "question": "¿Qué preferís revivir: tu mejor cumpleaños o tus mejores vacaciones de verano de chico?",
+      "question": "¿Qué preferís revivir de tu infancia: tu mejor cumpleaños o tus mejores vacaciones de verano?",
       "optionA": "Mi mejor cumpleaños",
       "optionB": "Mis mejores vacaciones de verano",
       "followUps": [
@@ -76,7 +76,7 @@
       ]
     },
     "es": {
-      "question": "¿Qué olor, canción o sabor te lleva al instante a cuando eras chico?",
+      "question": "¿Qué olor, canción o sabor te lleva al instante a tu infancia?",
       "followUps": [
         "¿A dónde te lleva, exactamente?",
         "¿Cuándo fue la última vez que te lo cruzaste?"
@@ -118,9 +118,9 @@
       ]
     },
     "es": {
-      "question": "¿Qué preferís: volver una semana a la escuela sabiendo lo que sabés hoy, o ser gurí de nuevo por un día sin ninguna responsabilidad?",
+      "question": "¿Qué preferís: volver una semana a la escuela sabiendo lo que sabés hoy, o volver a la infancia por un día sin ninguna responsabilidad?",
       "optionA": "Una semana en la escuela, sabiendo lo que sé",
-      "optionB": "Un día de gurí, sin preocupaciones",
+      "optionB": "Un día de vuelta en la infancia, sin preocupaciones",
       "followUps": [
         "¿Qué harías primero?",
         "¿A quién irías a buscar?"
@@ -140,7 +140,7 @@
       ]
     },
     "es": {
-      "question": "¿Qué creías de chico que resultó ser totalmente falso?",
+      "question": "¿Qué creías en tu infancia que resultó ser totalmente falso?",
       "followUps": [
         "¿Quién te lo dijo, y sabía que no era cierto?",
         "¿Todavía te lo creés un poquito?"

@@ -14,12 +14,12 @@
       "fact": "Tim Berners-Lee created it at CERN around 1990, along with HTML and the first web browser."
     },
     "es": {
-      "question": "¿Qué significa HTTP, la sigla al principio de las direcciones web?",
-      "answer": "Protocolo de transferencia de hipertexto",
+      "question": "¿Qué significa en inglés HTTP, la sigla al principio de las direcciones web?",
+      "answer": "HyperText Transfer Protocol (protocolo de transferencia de hipertexto)",
       "options": [
-        "Proceso de texto de alta transferencia",
-        "Programa de transporte de texto con hipervínculos",
-        "Protocolo de transferencia de terminal doméstica"
+        "High Transfer Text Process",
+        "Hyperlink Text Transport Program",
+        "Home Terminal Transfer Protocol"
       ],
       "fact": "Lo creó Tim Berners-Lee en el CERN alrededor de 1990, junto con el HTML y el primer navegador web."
     }
@@ -92,9 +92,9 @@
       "question": "¿Qué significa la «e» de «e-mail»?",
       "answer": "Electrónico",
       "options": [
-        "Fácil",
         "Expreso",
-        "Externo"
+        "Externo",
+        "Especial"
       ],
       "fact": "Ray Tomlinson mandó el primer correo por red en 1971 y eligió la @ para separar el nombre del usuario del de la computadora."
     }
@@ -114,12 +114,12 @@
       "fact": "USB first came out in 1996. USB-C, which plugs in either way up, arrived in 2014."
     },
     "es": {
-      "question": "¿Qué significa la sigla USB?",
-      "answer": "Bus serie universal",
+      "question": "¿Qué significa en inglés la sigla USB?",
+      "answer": "Universal Serial Bus (bus serie universal)",
       "options": [
-        "Placa de sistema universal",
-        "Puente estándar unificado",
-        "Banda de señal universal"
+        "Universal System Board",
+        "Unified Standard Bridge",
+        "Universal Signal Band"
       ],
       "fact": "El USB salió en 1996. El USB-C, que se enchufa de cualquier lado, llegó en 2014."
     }
