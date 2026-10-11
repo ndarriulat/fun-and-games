@@ -15,4 +15,4 @@ Needs a human: create/connect the public GitHub repo, connect it to Vercel, and 
 
 ## Comments
 
-- The repo is public (owner's decision, 2026-10-11). It uses its own GitHub account through an SSH host alias (`github-vamos`), so other projects on the laptop keep their own credentials.
+- The repo is public (owner's decision, 2026-10-11). It uses its own GitHub account through an SSH host alias (`github-fun-and-games`), so other projects on the laptop keep their own credentials.
