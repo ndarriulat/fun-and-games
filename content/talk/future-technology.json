@@ -32,6 +32,15 @@
         "Which photo or chat would you fight hardest to save?",
         "Do you ever actually look back at them?"
       ]
+    },
+    "es": {
+      "question": "¿Qué preferís: perder para siempre todas tus fotos o todos tus mensajes?",
+      "optionA": "Perder todas mis fotos",
+      "optionB": "Perder todos mis mensajes",
+      "followUps": [
+        "¿Qué foto o qué chat pelearías más por salvar?",
+        "¿De verdad los volvés a mirar?"
+      ]
     }
   },
   {
@@ -47,6 +56,15 @@
         "What would you take with you?",
         "How long before people realised you didn't belong?"
       ]
+    },
+    "es": {
+      "question": "¿Qué preferís: viajar 100 años al pasado o 100 años al futuro, sin poder volver?",
+      "optionA": "100 años al pasado",
+      "optionB": "100 años al futuro",
+      "followUps": [
+        "¿Qué te llevarías?",
+        "¿Cuánto tardaría la gente en darse cuenta de que no sos de ahí?"
+      ]
     }
   },
   {
@@ -59,6 +77,13 @@
       "followUps": [
         "Would you do it? When?",
         "Who would you want in there with you?"
+      ]
+    },
+    "es": {
+      "question": "Si pudieras subir tu mente a una computadora y vivir para siempre, ¿seguirías siendo vos?",
+      "followUps": [
+        "¿Lo harías? ¿Cuándo?",
+        "¿A quién querrías ahí adentro con vos?"
       ]
     }
   },
@@ -73,6 +98,13 @@
         "What will they think was the most reckless thing we did?",
         "What will they be jealous we still had?"
       ]
+    },
+    "es": {
+      "question": "¿Qué usamos todos los días de lo que la gente se va a reír dentro de 50 años?",
+      "followUps": [
+        "¿Qué van a pensar que fue lo más imprudente que hacíamos?",
+        "¿Qué nos van a envidiar que todavía teníamos?"
+      ]
     }
   },
   {
@@ -85,6 +117,13 @@
       "followUps": [
         "Would you buy a car that might choose against you?",
         "Who should decide: the owner, the carmaker or the law?"
+      ]
+    },
+    "es": {
+      "question": "Si un auto que se maneja solo tiene que elegir, ¿debería proteger a los que van adentro o a la gente en la calle?",
+      "followUps": [
+        "¿Te comprarías un auto que capaz elige en tu contra?",
+        "¿Quién debería decidirlo: el dueño, la empresa o la ley?"
       ]
     }
   },
@@ -99,6 +138,13 @@
         "What's the first thing you think it would cut?",
         "What would you never let it decide?"
       ]
+    },
+    "es": {
+      "question": "Una aplicación promete organizarte todo el día para que seas lo más feliz posible. ¿La dejarías manejarte la vida una semana?",
+      "followUps": [
+        "¿Qué es lo primero que pensás que sacaría?",
+        "¿Qué no la dejarías decidir nunca?"
+      ]
     }
   },
   {
@@ -111,6 +157,13 @@
       "followUps": [
         "What brand-new job will exist instead?",
         "Is there a job you hope a machine never takes?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué trabajo de los que existen hoy va a haber desaparecido del todo cuando seamos viejos?",
+      "followUps": [
+        "¿Qué trabajo nuevo va a existir en su lugar?",
+        "¿Hay algún trabajo que ojalá nunca haga una máquina?"
       ]
     }
   }

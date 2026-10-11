@@ -32,6 +32,15 @@
         "Which film is it?",
         "How long before it all went wrong?"
       ]
+    },
+    "es": {
+      "question": "¿Qué preferís: vivir una semana adentro de tu película favorita, o que el protagonista venga a vivir una semana con vos?",
+      "optionA": "Yo vivo en la película",
+      "optionB": "El protagonista vive conmigo",
+      "followUps": [
+        "¿Qué película es?",
+        "¿Cuánto tardaría en salir todo mal?"
+      ]
     }
   },
   {
@@ -47,6 +56,15 @@
         "Which artist would hurt most to lose?",
         "Is music getting better or worse?"
       ]
+    },
+    "es": {
+      "question": "Por el resto de tu vida, ¿qué preferís: escuchar solo música de antes del 2000 o solo música de después del 2000?",
+      "optionA": "Solo de antes del 2000",
+      "optionB": "Solo de después del 2000",
+      "followUps": [
+        "¿Qué artista te dolería más perder?",
+        "¿La música está mejorando o empeorando?"
+      ]
     }
   },
   {
@@ -58,6 +76,12 @@
       "question": "Which famous person would be the best to get stuck in a lift with, and who would be the worst?",
       "followUps": [
         "What would you talk about for the first hour?"
+      ]
+    },
+    "es": {
+      "question": "¿Con qué famoso sería lo mejor quedarte trancado en un ascensor, y con cuál lo peor?",
+      "followUps": [
+        "¿De qué hablarían la primera hora?"
       ]
     }
   },
@@ -72,6 +96,13 @@
         "Will you sing a bit of it right now?",
         "Who here would it surprise most?"
       ]
+    },
+    "es": {
+      "question": "¿Qué canción te encanta y te da vergüenza admitirlo?",
+      "followUps": [
+        "¿Cantás un pedacito ahora?",
+        "¿A quién de acá le sorprendería más?"
+      ]
     }
   },
   {
@@ -84,6 +115,13 @@
       "followUps": [
         "What would it be called?",
         "What would happen in the season finale?"
+      ]
+    },
+    "es": {
+      "question": "Si tu vida fuera una serie, ¿de qué género sería y quién te haría de vos?",
+      "followUps": [
+        "¿Cómo se llamaría?",
+        "¿Qué pasaría en el último capítulo de la temporada?"
       ]
     }
   },
@@ -100,6 +138,15 @@
         "What would the song be about?",
         "Which famous song do you think its own singer secretly hates?"
       ]
+    },
+    "es": {
+      "question": "¿Qué preferís: ser famoso por una canción que todo el mundo conoce pero odia, o por una película que aman solo unos pocos?",
+      "optionA": "Una canción que todos conocen y odian",
+      "optionB": "Una película que aman unos pocos",
+      "followUps": [
+        "¿De qué trataría la canción?",
+        "¿Qué canción famosa pensás que su propio cantante odia en secreto?"
+      ]
     }
   },
   {
@@ -112,6 +159,13 @@
       "followUps": [
         "Did you go back to it later, and did it hold up?",
         "Who would you most like to share it with?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué película, libro o canción te cambió la forma de ver algo de tu propia vida?",
+      "followUps": [
+        "¿Volviste a verla, leerlo o escucharla después, y seguía estando buena?",
+        "¿Con quién te gustaría más compartirla?"
       ]
     }
   }

@@ -29,6 +29,12 @@
       "followUps": [
         "What feels normal now that shocked you back then?"
       ]
+    },
+    "es": {
+      "question": "¿Qué fue lo que más te sorprendió en tu primer mes viviendo en Portugal?",
+      "followUps": [
+        "¿Qué te parece normal hoy que en ese momento te chocó?"
+      ]
     }
   },
   {
@@ -44,6 +50,15 @@
         "What would you miss most about the other one?",
         "Where outside the big cities would you consider living?"
       ]
+    },
+    "es": {
+      "question": "¿Qué preferís: vivir en Lisboa o en Oporto los próximos diez años?",
+      "optionA": "Lisboa",
+      "optionB": "Oporto",
+      "followUps": [
+        "¿Qué extrañarías más de la otra?",
+        "¿Dónde, fuera de las ciudades grandes, te animarías a vivir?"
+      ]
     }
   },
   {
@@ -56,6 +71,13 @@
       "followUps": [
         "Which Portuguese word still defeats you?",
         "Do locals switch to English on you, and how do you feel about it?"
+      ]
+    },
+    "es": {
+      "question": "¿Cuál fue el error más gracioso que cometiste intentando hablar portugués?",
+      "followUps": [
+        "¿Qué palabra en portugués todavía no te sale?",
+        "¿Los portugueses te cambian al inglés? ¿Qué sentís cuando pasa?"
       ]
     }
   },
@@ -72,6 +94,15 @@
         "What's your worst paperwork story here?",
         "Who helped you get through it?"
       ]
+    },
+    "es": {
+      "question": "¿Qué preferís: pasar un día entero haciendo trámites en Portugal, o aprender a manejar un auto con cambios en las subidas más empinadas de Lisboa?",
+      "optionA": "Un día entero de trámites",
+      "optionB": "Auto con cambios en las subidas de Lisboa",
+      "followUps": [
+        "¿Cuál es tu peor historia de trámites acá?",
+        "¿Quién te ayudó a sobrevivirla?"
+      ]
     }
   },
   {
@@ -83,6 +114,12 @@
       "question": "Which Portuguese habit have you picked up that people back home would find strange?",
       "followUps": [
         "Which habit from home have you refused to give up?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué costumbre portuguesa agarraste que a la gente de tu país le parecería rara?",
+      "followUps": [
+        "¿Qué costumbre de tu país te negaste a largar?"
       ]
     }
   },
@@ -97,6 +134,13 @@
         "Do you think you'll ever feel fully local?",
         "Does it matter to you if you don't?"
       ]
+    },
+    "es": {
+      "question": "¿Cuándo te sentís más extranjero en Portugal, y cuándo te olvidás de que lo sos?",
+      "followUps": [
+        "¿Pensás que alguna vez te vas a sentir del todo local?",
+        "¿Te importa si no pasa?"
+      ]
     }
   },
   {
@@ -108,6 +152,12 @@
       "question": "What's the best day trip you've done in Portugal, and what should a newcomer never miss?",
       "followUps": [
         "Which place do all expats rave about that you found overrated?"
+      ]
+    },
+    "es": {
+      "question": "¿Cuál es la mejor escapada de un día que hiciste en Portugal, y qué no se puede perder alguien recién llegado?",
+      "followUps": [
+        "¿Qué lugar que todos los expatriados aman te pareció sobrevalorado?"
       ]
     }
   }

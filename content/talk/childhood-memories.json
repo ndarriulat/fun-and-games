@@ -30,6 +30,13 @@
         "Did your parents ever hear the whole story?",
         "Would you punish your own kid for it?"
       ]
+    },
+    "es": {
+      "question": "¿Qué rezongo de cuando eras chico todavía te parece injusto?",
+      "followUps": [
+        "¿Tus padres se enteraron alguna vez de la historia completa?",
+        "¿Castigarías a tu propio hijo por eso?"
+      ]
     }
   },
   {
@@ -45,6 +52,15 @@
         "What made it so good?",
         "Who was there?"
       ]
+    },
+    "es": {
+      "question": "¿Qué preferís revivir: tu mejor cumpleaños o tus mejores vacaciones de verano de chico?",
+      "optionA": "Mi mejor cumpleaños",
+      "optionB": "Mis mejores vacaciones de verano",
+      "followUps": [
+        "¿Qué lo hizo tan bueno?",
+        "¿Quién estaba?"
+      ]
     }
   },
   {
@@ -58,6 +74,13 @@
         "Where exactly does it take you?",
         "When did you last come across it?"
       ]
+    },
+    "es": {
+      "question": "¿Qué olor, canción o sabor te lleva al instante a cuando eras chico?",
+      "followUps": [
+        "¿A dónde te lleva, exactamente?",
+        "¿Cuándo fue la última vez que te lo cruzaste?"
+      ]
     }
   },
   {
@@ -70,6 +93,13 @@
       "followUps": [
         "Have you ever told them?",
         "What will younger people in your family only understand about you later?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué entendiste de tus padres recién cuando creciste?",
+      "followUps": [
+        "¿Alguna vez se lo dijiste?",
+        "¿Qué van a entender de vos más adelante los más chicos de tu familia?"
       ]
     }
   },
@@ -86,6 +116,15 @@
         "What would you do first?",
         "Who would you go and find?"
       ]
+    },
+    "es": {
+      "question": "¿Qué preferís: volver una semana a la escuela sabiendo lo que sabés hoy, o ser gurí de nuevo por un día sin ninguna responsabilidad?",
+      "optionA": "Una semana en la escuela, sabiendo lo que sé",
+      "optionB": "Un día de gurí, sin preocupaciones",
+      "followUps": [
+        "¿Qué harías primero?",
+        "¿A quién irías a buscar?"
+      ]
     }
   },
   {
@@ -99,6 +138,13 @@
         "Who told you, and did they know it wasn't true?",
         "Do you still half-believe it?"
       ]
+    },
+    "es": {
+      "question": "¿Qué creías de chico que resultó ser totalmente falso?",
+      "followUps": [
+        "¿Quién te lo dijo, y sabía que no era cierto?",
+        "¿Todavía te lo creés un poquito?"
+      ]
     }
   },
   {
@@ -111,6 +157,13 @@
       "followUps": [
         "What did they do that stuck with you?",
         "Who might you be that person for?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué adulto fuera de tu familia te marcó para ser quien sos hoy, y lo sabe?",
+      "followUps": [
+        "¿Qué hizo que te quedó grabado?",
+        "¿Para quién podrías ser vos esa persona?"
       ]
     }
   }

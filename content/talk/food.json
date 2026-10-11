@@ -30,6 +30,15 @@
         "Which dish from the other side would you miss most?",
         "Is a tomato sweet or savoury, for the rules?"
       ]
+    },
+    "es": {
+      "question": "¿Qué preferís: comer solo cosas dulces o solo cosas saladas por el resto de tu vida?",
+      "optionA": "Solo dulce",
+      "optionB": "Solo salado",
+      "followUps": [
+        "¿Qué plato del otro lado extrañarías más?",
+        "Para las reglas: ¿el tomate es dulce o salado?"
+      ]
     }
   },
   {
@@ -44,6 +53,15 @@
       "followUps": [
         "How long until you started to hate it?",
         "What is that meal, exactly?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué preferís: comer tu comida favorita todos los días durante un año, o no comerla nunca más?",
+      "optionA": "Todos los días por un año",
+      "optionB": "Nunca más",
+      "followUps": [
+        "¿Cuánto tardarías en odiarla?",
+        "¿Cuál es esa comida, exactamente?"
       ]
     }
   },
@@ -60,6 +78,15 @@
         "What would you replace it with?",
         "Who here would crack first?"
       ]
+    },
+    "es": {
+      "question": "¿Qué preferís: dejar el café o dejar el queso para siempre?",
+      "optionA": "Dejar el café",
+      "optionB": "Dejar el queso",
+      "followUps": [
+        "¿Con qué lo reemplazarías?",
+        "¿Quién de acá aflojaría primero?"
+      ]
     }
   },
   {
@@ -72,6 +99,13 @@
       "followUps": [
         "Can you convince someone here to try it?",
         "How did you discover it?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué combinación de comida te encanta y a los demás les da asco?",
+      "followUps": [
+        "¿Podés convencer a alguien de acá de que la pruebe?",
+        "¿Cómo la descubriste?"
       ]
     }
   },
@@ -86,6 +120,13 @@
         "Do you know the recipe, or is it a secret?",
         "Who will keep it going?"
       ]
+    },
+    "es": {
+      "question": "¿Qué plato de tu familia nadie más hace igual?",
+      "followUps": [
+        "¿Sabés la receta, o es un secreto?",
+        "¿Quién la va a seguir haciendo?"
+      ]
     }
   },
   {
@@ -99,6 +140,13 @@
         "Which food rule do you secretly break?",
         "Who here commits the worst food crimes?"
       ]
+    },
+    "es": {
+      "question": "Pizza con ananá, pasta con kétchup, la leche antes que los cereales: ¿qué crimen culinario no tiene perdón?",
+      "followUps": [
+        "¿Qué regla de la comida rompés en secreto?",
+        "¿Quién de acá comete los peores crímenes culinarios?"
+      ]
     }
   },
   {
@@ -111,6 +159,13 @@
       "followUps": [
         "What's it called?",
         "Who here would you hire, and for which job?"
+      ]
+    },
+    "es": {
+      "question": "Vas a abrir un restorán con solo tres platos en el menú. ¿Cuáles son?",
+      "followUps": [
+        "¿Cómo se llama?",
+        "¿A quién de acá contratarías, y para qué?"
       ]
     }
   }

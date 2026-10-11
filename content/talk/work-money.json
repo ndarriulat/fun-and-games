@@ -31,6 +31,12 @@
       "followUps": [
         "Would you do it again for double the pay?"
       ]
+    },
+    "es": {
+      "question": "¿Cuál fue el peor laburo que tuviste, y qué te enseñó?",
+      "followUps": [
+        "¿Lo volverías a hacer por el doble de plata?"
+      ]
     }
   },
   {
@@ -45,6 +51,15 @@
       "followUps": [
         "What would you do with the extra day?",
         "Would you actually rest, or fill it with errands?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué preferís: trabajar cuatro días largos por semana o cinco días cortos?",
+      "optionA": "Cuatro días largos",
+      "optionB": "Cinco días cortos",
+      "followUps": [
+        "¿Qué harías con el día extra?",
+        "¿Descansarías de verdad, o lo llenarías de trámites?"
       ]
     }
   },
@@ -61,6 +76,15 @@
         "How big would the rise have to be to put up with a terrible boss?",
         "Who's the best boss you've ever had, and why?"
       ]
+    },
+    "es": {
+      "question": "¿Qué preferís: un buen aumento de sueldo o un jefe que te caiga bien de verdad?",
+      "optionA": "Un buen aumento",
+      "optionB": "Un jefe que me cae bien",
+      "followUps": [
+        "¿Qué tan grande tendría que ser el aumento para bancarte a un jefe horrible?",
+        "¿Cuál fue el mejor jefe que tuviste, y por qué?"
+      ]
     }
   },
   {
@@ -74,6 +98,13 @@
         "How long until you got bored?",
         "What's stopping you from doing a small version of it now?"
       ]
+    },
+    "es": {
+      "question": "Si la plata no fuera ningún problema, ¿seguirías trabajando? ¿Qué harías todo el día?",
+      "followUps": [
+        "¿Cuánto tardarías en aburrirte?",
+        "¿Qué te impide hacer una versión chiquita de eso ahora?"
+      ]
     }
   },
   {
@@ -85,6 +116,12 @@
       "question": "What's the best money you've ever spent, and what was a total waste?",
       "followUps": [
         "What would you never spend money on, even if you were rich?"
+      ]
+    },
+    "es": {
+      "question": "¿Cuál es la plata mejor gastada de tu vida, y cuál fue un desperdicio total?",
+      "followUps": [
+        "¿En qué no gastarías nunca, aunque fueras rico?"
       ]
     }
   },
@@ -99,6 +136,13 @@
         "Which of those lessons are you glad you dropped?",
         "What would you pass on to the next generation?"
       ]
+    },
+    "es": {
+      "question": "¿Qué te enseñó tu familia sobre la plata, ya sea diciéndotelo o sin decir una palabra?",
+      "followUps": [
+        "¿Qué lecciones te alegra haber dejado atrás?",
+        "¿Qué le pasarías a la próxima generación?"
+      ]
     }
   },
   {
@@ -110,6 +154,12 @@
       "question": "What job did you want when you were ten, and how far off are you now?",
       "followUps": [
         "Is there any part of that dream in what you do today?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué querías ser cuando tenías diez años, y qué tan lejos estás hoy?",
+      "followUps": [
+        "¿Queda algo de ese sueño en lo que hacés hoy?"
       ]
     }
   }

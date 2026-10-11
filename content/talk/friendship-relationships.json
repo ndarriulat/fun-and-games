@@ -30,6 +30,13 @@
         "What was your first impression of each other?",
         "When did you realise you'd end up friends?"
       ]
+    },
+    "es": {
+      "question": "¿Cómo se conocieron los que están acá, y todos se acuerdan igual?",
+      "followUps": [
+        "¿Qué primera impresión tuvieron unos de otros?",
+        "¿Cuándo se dieron cuenta de que iban a ser amigos?"
+      ]
     }
   },
   {
@@ -45,6 +52,15 @@
         "Which side of you do the fewest people know?",
         "Which of the two do you have right now?"
       ]
+    },
+    "es": {
+      "question": "¿Qué preferís: un mejor amigo que sabe todo de vos, o diez buenos amigos que conocen cada uno una parte distinta tuya?",
+      "optionA": "Un mejor amigo",
+      "optionB": "Diez buenos amigos",
+      "followUps": [
+        "¿Qué parte tuya conoce menos gente?",
+        "¿Cuál de las dos tenés hoy?"
+      ]
     }
   },
   {
@@ -58,6 +74,13 @@
         "If you could send them one message, what would it say?",
         "Do you think they think about it too?"
       ]
+    },
+    "es": {
+      "question": "¿Qué amistad se fue apagando y todavía la tenés en la cabeza?",
+      "followUps": [
+        "Si pudieras mandarle un solo mensaje, ¿qué le dirías?",
+        "¿Pensás que la otra persona también se acuerda?"
+      ]
     }
   },
   {
@@ -70,6 +93,13 @@
       "followUps": [
         "Who could you call after five years and it would feel like no time had passed?",
         "Which friendship deserves more effort from you?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué mantiene viva una amistad cuando alguien se muda lejos o la vida se complica?",
+      "followUps": [
+        "¿A quién podrías llamar después de cinco años y que sea como si no hubiera pasado el tiempo?",
+        "¿Qué amistad se merece que le pongas más ganas?"
       ]
     }
   },
@@ -86,6 +116,15 @@
         "Who in this group is the planner?",
         "What's the best trip someone else planned for you?"
       ]
+    },
+    "es": {
+      "question": "En un viaje con amigos, ¿qué preferís: que otro organice todo y vos solo aparecés, o organizar vos todo exactamente a tu manera?",
+      "optionA": "Que organice otro, yo aparezco",
+      "optionB": "Organizo todo a mi manera",
+      "followUps": [
+        "¿Quién es el que organiza en este grupo?",
+        "¿Cuál es el mejor viaje que te organizó otro?"
+      ]
     }
   },
   {
@@ -97,6 +136,12 @@
       "question": "What's the best advice a friend ever gave you, even if you ignored it at the time?",
       "followUps": [
         "Did you ever tell them they were right?"
+      ]
+    },
+    "es": {
+      "question": "¿Cuál es el mejor consejo que te dio un amigo, aunque en su momento no le hiciste caso?",
+      "followUps": [
+        "¿Alguna vez le dijiste que tenía razón?"
       ]
     }
   },
@@ -110,6 +155,13 @@
       "followUps": [
         "Has anyone ever done that for you?",
         "What would you want this group to tell you to your face?"
+      ]
+    },
+    "es": {
+      "question": "Cuando un amigo está por mandarse una macana grande, ¿qué tan honesto tenés que ser?",
+      "followUps": [
+        "¿Alguien lo hizo alguna vez por vos?",
+        "¿Qué querrías que este grupo te dijera en la cara?"
       ]
     }
   }

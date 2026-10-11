@@ -36,6 +36,15 @@
         "When last week would you have used it?",
         "How long before someone caught on?"
       ]
+    },
+    "es": {
+      "question": "¿Qué preferís: poder pausar el tiempo o rebobinarlo diez segundos?",
+      "optionA": "Pausar el tiempo",
+      "optionB": "Rebobinar diez segundos",
+      "followUps": [
+        "¿En qué momento de la semana pasada lo hubieras usado?",
+        "¿Cuánto tardaría alguien en darse cuenta?"
+      ]
     }
   },
   {
@@ -51,6 +60,15 @@
         "Who would you test it on first?",
         "Would it make your friendships better or worse?"
       ]
+    },
+    "es": {
+      "question": "¿Qué preferís: darte cuenta siempre cuando alguien te miente, o que nunca te descubran cuando mentís vos?",
+      "optionA": "Darme cuenta siempre",
+      "optionB": "Que nunca me descubran",
+      "followUps": [
+        "¿Con quién lo probarías primero?",
+        "¿Tus amistades mejorarían o empeorarían?"
+      ]
     }
   },
   {
@@ -63,6 +81,13 @@
       "followUps": [
         "What would you do differently?",
         "Would you risk changing everything that came after?"
+      ]
+    },
+    "es": {
+      "question": "Si pudieras vivir de nuevo un año de tu vida, sabiendo lo que sabés hoy, ¿qué año elegirías?",
+      "followUps": [
+        "¿Qué harías distinto?",
+        "¿Te arriesgarías a cambiar todo lo que vino después?"
       ]
     }
   },
@@ -77,6 +102,13 @@
         "How would people try to get around it?",
         "What happens to people who break it?"
       ]
+    },
+    "es": {
+      "question": "Podés inventar una regla nueva que todo el mundo tenga que cumplir. ¿Cuál es?",
+      "followUps": [
+        "¿Cómo intentaría la gente zafar de cumplirla?",
+        "¿Qué le pasa al que no la cumple?"
+      ]
     }
   },
   {
@@ -89,6 +121,13 @@
       "followUps": [
         "Which skill would you never give up?",
         "Would anyone here notice the swap?"
+      ]
+    },
+    "es": {
+      "question": "Si pudieras dominar al instante cualquier habilidad, pero a cambio perdieras una que ya tenés, ¿qué cambiarías?",
+      "followUps": [
+        "¿Qué habilidad no largarías nunca?",
+        "¿Alguien acá notaría el cambio?"
       ]
     }
   },
@@ -103,6 +142,13 @@
         "How would your Mondays change?",
         "What would you do the rest of the week to get ready?"
       ]
+    },
+    "es": {
+      "question": "Un genio te da un superpoder, pero solo funciona los lunes. ¿Cuál elegís?",
+      "followUps": [
+        "¿Cómo cambiarían tus lunes?",
+        "¿Qué harías el resto de la semana para prepararte?"
+      ]
     }
   },
   {
@@ -115,6 +161,13 @@
       "followUps": [
         "Which song would you hate to get stuck with?",
         "Pick one for the person next to you."
+      ]
+    },
+    "es": {
+      "question": "Si cada vez que entraras a un lugar sonara tu canción de fondo, ¿cuál sería?",
+      "followUps": [
+        "¿Qué canción odiarías que te tocara?",
+        "Elegí una para el que tenés al lado."
       ]
     }
   }

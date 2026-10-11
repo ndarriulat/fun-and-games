@@ -34,6 +34,13 @@
         "Would you go back to either?",
         "What do tourists always miss there?"
       ]
+    },
+    "es": {
+      "question": "¿Cuál es el lugar más sobrevalorado que visitaste, y qué joyita escondida había cerca?",
+      "followUps": [
+        "¿Volverías a alguno de los dos?",
+        "¿Qué se pierden siempre los turistas ahí?"
+      ]
     }
   },
   {
@@ -49,6 +56,15 @@
         "Where would you fly first?",
         "How long a flight could you survive in the middle seat?"
       ]
+    },
+    "es": {
+      "question": "¿Qué preferís: vuelos gratis de por vida pero siempre en el asiento del medio, o pagar precio completo y volar siempre en business?",
+      "optionA": "Gratis, siempre en el medio",
+      "optionB": "Precio completo, siempre business",
+      "followUps": [
+        "¿A dónde volarías primero?",
+        "¿Cuántas horas de vuelo aguantarías en el asiento del medio?"
+      ]
     }
   },
   {
@@ -61,6 +77,13 @@
       "followUps": [
         "What would you pack that isn't practical at all?",
         "Who here would visit you first?"
+      ]
+    },
+    "es": {
+      "question": "Si mañana te tuvieras que mudar a otro país, ¿a dónde irías y qué extrañarías primero?",
+      "followUps": [
+        "¿Qué meterías en la valija que no sirve para nada?",
+        "¿Quién de acá te visitaría primero?"
       ]
     }
   },
@@ -75,6 +98,13 @@
         "What surprised you most about coming home?",
         "Is there a place you're scared to revisit in case it's changed?"
       ]
+    },
+    "es": {
+      "question": "¿Qué viaje te cambió la forma de ver el mundo, o de verte a vos?",
+      "followUps": [
+        "¿Qué fue lo que más te sorprendió al volver?",
+        "¿Hay algún lugar al que te da miedo volver por si cambió?"
+      ]
     }
   },
   {
@@ -87,6 +117,13 @@
       "followUps": [
         "Who was with you, and do they tell it the same way?",
         "What did it teach you to always pack?"
+      ]
+    },
+    "es": {
+      "question": "¿Cuál fue el peor desastre de un viaje que hoy es una historia buenísima?",
+      "followUps": [
+        "¿Quién estaba con vos, y lo cuenta igual?",
+        "¿Qué aprendiste a llevar siempre después de eso?"
       ]
     }
   },
@@ -101,6 +138,13 @@
         "Where would you never take them?",
         "Where do locals go that tourists never find?"
       ]
+    },
+    "es": {
+      "question": "Alguien de afuera tiene un solo día perfecto en tu ciudad. ¿A dónde lo llevás?",
+      "followUps": [
+        "¿A dónde no lo llevarías nunca?",
+        "¿A dónde van los locales que los turistas nunca encuentran?"
+      ]
     }
   },
   {
@@ -112,6 +156,12 @@
       "question": "Beach, mountains or a big city: where do you truly recharge, and where do you just pretend to?",
       "followUps": [
         "Are you a packed-itinerary traveller or a zero-plans one?"
+      ]
+    },
+    "es": {
+      "question": "Playa, sierras o una ciudad grande: ¿dónde descansás de verdad, y dónde hacés como que descansás?",
+      "followUps": [
+        "¿Sos de viajar con todo planificado o sin ningún plan?"
       ]
     }
   }

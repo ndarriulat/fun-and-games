@@ -30,6 +30,15 @@
         "What would you do there every single day?",
         "Which Uruguayan beach is overrated, honestly?"
       ]
+    },
+    "es": {
+      "question": "¿Qué preferís: pasar todo el verano en Punta del Este o en Cabo Polonio?",
+      "optionA": "Punta del Este",
+      "optionB": "Cabo Polonio",
+      "followUps": [
+        "¿Qué harías ahí todos los días sin falta?",
+        "Sinceramente, ¿qué playa uruguaya está sobrevalorada?"
+      ]
     }
   },
   {
@@ -42,6 +51,13 @@
       "followUps": [
         "Who here is the worst person to share a mate with?",
         "Have you ever had to explain mate to a foreigner?"
+      ]
+    },
+    "es": {
+      "question": "¿Cuáles son tus reglas del mate, y cuál es la que todos los demás hacen mal?",
+      "followUps": [
+        "¿Quién de acá es el peor para compartir un mate?",
+        "¿Alguna vez le tuviste que explicar el mate a un extranjero?"
       ]
     }
   },
@@ -58,6 +74,15 @@
         "What's the best asado you've ever been to?",
         "Who among you makes the best asado?"
       ]
+    },
+    "es": {
+      "question": "¿Qué preferís: dejar el asado o dejar el dulce de leche por el resto de tu vida?",
+      "optionA": "Dejar el asado",
+      "optionB": "Dejar el dulce de leche",
+      "followUps": [
+        "¿Cuál fue el mejor asado al que fuiste?",
+        "¿Quién de ustedes hace el mejor asado?"
+      ]
     }
   },
   {
@@ -69,6 +94,12 @@
       "question": "Which neighbourhood or town in Uruguay would you show a foreign friend first, and why there?",
       "followUps": [
         "Where would you never take them?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué barrio o pueblo de Uruguay le mostrarías primero a un amigo extranjero, y por qué ese?",
+      "followUps": [
+        "¿A dónde no lo llevarías nunca?"
       ]
     }
   },
@@ -83,6 +114,13 @@
         "Do Uruguayans who move abroad stay Uruguayan forever?",
         "Which Uruguayan habit would you never lose?"
       ]
+    },
+    "es": {
+      "question": "¿Qué te hace uruguayo: haber nacido en Uruguay, haberte criado ahí, o otra cosa?",
+      "followUps": [
+        "¿Los uruguayos que se van al exterior siguen siendo uruguayos para siempre?",
+        "¿Qué costumbre uruguaya no perderías nunca?"
+      ]
     }
   },
   {
@@ -94,6 +132,12 @@
       "question": "What's your best memory from Carnaval, the Llamadas or a night at the tablado?",
       "followUps": [
         "Which murga or comparsa line can you still sing?"
+      ]
+    },
+    "es": {
+      "question": "¿Cuál es tu mejor recuerdo del Carnaval, las Llamadas o una noche de tablado?",
+      "followUps": [
+        "¿Qué letra de murga o de comparsa todavía te sabés?"
       ]
     }
   },
@@ -107,6 +151,13 @@
       "followUps": [
         "What would you never have learned?",
         "Would you still have ended up friends with the people here?"
+      ]
+    },
+    "es": {
+      "question": "Si te hubieras criado en cualquier otro lugar que no fuera Uruguay, ¿qué sería lo más distinto en vos?",
+      "followUps": [
+        "¿Qué no hubieras aprendido nunca?",
+        "¿Igual habrías terminado siendo amigo de los que están acá?"
       ]
     }
   }

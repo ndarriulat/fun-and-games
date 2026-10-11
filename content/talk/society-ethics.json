@@ -30,6 +30,13 @@
         "What's a white lie you told that you still think was right?",
         "Would you want your friends to lie to you that way?"
       ]
+    },
+    "es": {
+      "question": "¿Cuándo está bien mentir para no herir a alguien, y cuándo ya se pasa de la raya?",
+      "followUps": [
+        "¿Qué mentira piadosa dijiste que todavía pensás que estuvo bien?",
+        "¿Querrías que tus amigos te mintieran así?"
+      ]
     }
   },
   {
@@ -45,6 +52,15 @@
         "Who would you trust to watch the cameras?",
         "What's one thing you'd stop doing if you were always watched?"
       ]
+    },
+    "es": {
+      "question": "¿Qué preferís: vivir en un mundo sin delitos pero con cámaras por todos lados, o con privacidad total y los delitos como están hoy?",
+      "optionA": "Sin delitos, cámaras por todos lados",
+      "optionB": "Privacidad total, delitos como hoy",
+      "followUps": [
+        "¿En quién confiarías para mirar las cámaras?",
+        "¿Qué dejarías de hacer si te estuvieran mirando siempre?"
+      ]
     }
   },
   {
@@ -58,6 +74,13 @@
         "What decision do you wish your parents had asked you about?",
         "Should a kid's vote count as much as an adult's?"
       ]
+    },
+    "es": {
+      "question": "¿A qué edad tendrían que tener voz los gurises en las grandes decisiones de la familia, como mudarse?",
+      "followUps": [
+        "¿Qué decisión te hubiera gustado que tus padres te consultaran?",
+        "¿El voto de un gurí debería valer lo mismo que el de un adulto?"
+      ]
     }
   },
   {
@@ -70,6 +93,13 @@
       "followUps": [
         "Where would you draw the line?",
         "Is there anything of yours you'd hate to be judged on?"
+      ]
+    },
+    "es": {
+      "question": "¿Es justo juzgar hoy a alguien por algo que publicó en internet hace diez años?",
+      "followUps": [
+        "¿Dónde pondrías el límite?",
+        "¿Hay algo tuyo por lo que odiarías que te juzgaran?"
       ]
     }
   },
@@ -86,6 +116,15 @@
         "Who in your life already does the first one?",
         "Which would make the world a better place overall?"
       ]
+    },
+    "es": {
+      "question": "¿Qué preferís: que todos te digan siempre la verdad, por más dura que sea, o que todos sean siempre amables aunque tengan que mentirte un poco?",
+      "optionA": "La verdad, por más dura que sea",
+      "optionB": "Amabilidad, aunque mientan un poco",
+      "followUps": [
+        "¿Quién en tu vida ya hace lo primero?",
+        "¿Cuál de las dos haría un mundo mejor?"
+      ]
     }
   },
   {
@@ -99,6 +138,13 @@
         "How does tipping work where you grew up?",
         "Would you rather tipping disappeared altogether?"
       ]
+    },
+    "es": {
+      "question": "¿Hay que dejar propina aunque te hayan atendido mal? ¿Para qué es la propina, en realidad?",
+      "followUps": [
+        "¿Cómo funciona la propina donde te criaste?",
+        "¿Preferirías que la propina desapareciera del todo?"
+      ]
     }
   },
   {
@@ -111,6 +157,13 @@
       "followUps": [
         "Would it change if it were a bottle of wine instead?",
         "Who is actually harmed here?"
+      ]
+    },
+    "es": {
+      "question": "Ves a alguien robando comida para bebé en el súper. ¿Qué hacés, y por qué?",
+      "followUps": [
+        "¿Cambiaría si fuera una botella de vino?",
+        "¿A quién se perjudica, en realidad?"
       ]
     }
   }
