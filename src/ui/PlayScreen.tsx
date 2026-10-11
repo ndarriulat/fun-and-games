@@ -64,7 +64,12 @@ export function CardControls({
       <button type="button" className="round" aria-label={t.previousCard} disabled={!onBack} onClick={onBack}>
         <Icon name="back" />
       </button>
-      <button type="button" className="round round-main" onClick={main.onClick}>
+      {/* Longer labels ("Respuesta", "Siguiente", "Follow-up") step down so they stay inside the circle. */}
+      <button
+        type="button"
+        className={main.label.length > 6 ? "round round-main round-main-long" : "round round-main"}
+        onClick={main.onClick}
+      >
         {main.label}
       </button>
       <button type="button" className="round" aria-label={t.nextCard} onClick={onNext}>
