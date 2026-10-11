@@ -18,14 +18,14 @@ The group wants one shared phone that a single person holds, reads aloud from an
 
 Tapping a mode goes straight to a full-screen card picked at random from everything not yet played. Filters narrow the mix. Settings control language (English / Español), theme and hidden topics. Played history lives on the device, so cards don't repeat until everything has been played. Then the deck reshuffles with a short message. A Report button sends problems with an item to a free form service. There's no login, no backend and no install: anyone with the link can play.
 
-v1 ships 100 items per mode in both languages, deployed on Vercel and tested on a real trip.
+v1 ships **Trivia and Talk**, 100 items each in both languages, deployed on Vercel and tested on a real trip. **Puzzles moves to v1.1** (decided 2026-10-03; see `.scratch/vamos-v1-1/spec.md`). In v1, Home shows Puzzles as a non-tappable "Coming soon" card. Stories and decisions about Puzzles below are part of v1.1.
 
 ## User Stories
 
 ### Getting started
 
 1. As a player, I want to open a link and start playing immediately, so that nobody has to sign up or install anything in the car.
-2. As a player, I want the home screen to show three big coloured cards (Trivia, Puzzles, Talk), so that I can pick a mode with one tap.
+2. As a player, I want the home screen to show three big coloured cards (Trivia, Talk, Puzzles), so that I can pick a mode with one tap. *(v1: Puzzles is a non-tappable "Coming soon" card.)*
 3. As a player, I want each mode to have its own colour, so that I always know which mode I'm in at a glance.
 4. As a player, I want a settings icon on the home screen, so that I can change language, theme and hidden topics.
 5. As a first-time player whose phone is set to Spanish, I want the app to suggest Español once, so that I don't have to dig through settings.
@@ -68,7 +68,7 @@ v1 ships 100 items per mode in both languages, deployed on Vercel and tested on 
 33. As a group of Uruguayans, we want a Uruguay topic aimed at locals, so that we can test what we actually know about home.
 34. As a group of expats in Portugal, we want a Portugal topic aimed at expats, so that the questions are fair for people who didn't grow up there.
 
-### Puzzles
+### Puzzles (v1.1)
 
 35. As the reader, I want the puzzle text to stay on screen the whole time, so that people can reread it while thinking.
 36. As the reader, I want a Hint button that reveals up to three hints one at a time, from vague to obvious, so that we can get unstuck gradually.
@@ -93,7 +93,7 @@ v1 ships 100 items per mode in both languages, deployed on Vercel and tested on 
 49. As a player, I want every piece of UI text translated as well as the content, so that the app feels native in both languages.
 50. As a player, I want to choose Light, Dark or Follow phone for the theme, with Light as the default, so that it's comfortable day or night.
 51. As a player, I want one toggle per topic to hide it from Trivia and Talk, so that topics nobody in the group enjoys never appear.
-52. As a player, I want all topics shown by default, so that I don't have to configure anything to start.
+52. As a player, I want all topics shown by default except Uruguay, which starts hidden and can be turned on in Settings, so that I don't have to configure anything to start.
 53. As a player, I want hiding a topic not to erase its played history, so that unhiding it later doesn't bring back cards we've already seen.
 
 ### Reporting
@@ -140,6 +140,7 @@ v1 ships 100 items per mode in both languages, deployed on Vercel and tested on 
 ### Choosing the next card
 
 - The **pool** for a mode is: every item in that mode, minus items whose topic is hidden, narrowed by that mode's current filters.
+- **Topic visibility** is defaults in code plus the player's changes. Uruguay is hidden by default; every other topic (Portugal included) is shown. A topic is hidden if the player hid it, or if it's hidden by default and the player hasn't shown it.
 - An item counts as **played** as soon as it is shown on a card. There is no Skip: moving past a card you don't like is just Next.
 - Each mode keeps a **recent trail** of the current card plus up to 10 previous ones, with each card's revealed state (options shown, hints, follow-ups, answer). Back moves along the trail; Next moves forward along it before dealing a new card. The trail lives in memory for the session only. Going back doesn't change played history.
 - The next card is chosen at random from the **unplayed** items in the pool. Randomness is supplied from outside, so tests can make it fixed.
@@ -150,7 +151,7 @@ v1 ships 100 items per mode in both languages, deployed on Vercel and tested on 
 
 ### Device storage
 
-- A single **storage adapter** sits in front of localStorage and persists: language, the suggestion seen/answered flag, theme, hidden topics, filters per mode, and the played-ID history per mode. It's versioned with a schema version number, so the shape can change later without corrupting old data.
+- A single **storage adapter** sits in front of localStorage and persists: language, the suggestion seen/answered flag, theme, topic visibility (only the player's changes from the defaults, so a topic later added as hidden by default stays hidden for existing players), filters per mode, and the played-ID history per mode. It's versioned with a schema version number, so the shape can change later without corrupting old data.
 - Reads tolerate missing or corrupt data (private browsing, cleared storage) and fall back to defaults. The app still works if storage throws.
 
 ### Language
@@ -237,7 +238,7 @@ Validated with the card prototype on the `prototype/card-screen` branch (live: h
 
 - **v1 content targets:**
   - Trivia: about 7 per topic across 14 topics; 40% easy, 40% medium, 20% hard.
-  - Puzzles: 25 per type.
+  - Puzzles: 25 per type (v1.1).
   - Talk: about 8 per topic across 12 topics; about 25% deep and about 25% would-you-rather.
 
   Content is written in batches with Claude: English first, then fact-check, then a separate translation pass into Uruguayan Spanish. The content check gates every batch.
@@ -247,6 +248,8 @@ Validated with the card prototype on the `prototype/card-screen` branch (live: h
   - Reshuffle clears history only for the current pool.
   - Filters are remembered per mode.
   - Uruguay and Portugal share one hide toggle across modes.
+  - Uruguay is hidden by default; topic visibility is stored as changes from the defaults (agreed 2026-10-03).
+  - Puzzles moved to v1.1 (agreed 2026-10-03).
   - Would-you-rather cards carry explicit `optionA`/`optionB`.
   - Puzzles may have an optional `explanation`.
   - Reports use Formspree rather than Tally.
