@@ -104,7 +104,7 @@ Three modes. Trivia and Talk are random across all non-hidden topics by default;
 
 - Next.js + React + TypeScript. No Vite.
 - Front end only in phase 1. No backend, no database, no offline mode.
-- Hosted on Vercel, deployed from a private GitHub repo.
+- Hosted on Vercel, deployed from a public GitHub repo.
 
 ## Milestones
 
@@ -122,7 +122,7 @@ Three modes. Trivia and Talk are random across all non-hidden topics by default;
 
 ## Status
 
-Design agreed (2026-10-01). Puzzles moved to v1.1 and Uruguay hidden by default (2026-10-03); v1 tickets in `.scratch/vamos-v1/`, Puzzles tickets in `.scratch/vamos-v1-1/`. Ticket 01 (walking skeleton: Home + Trivia card, content check, CI), ticket 03 (played history, Back, reshuffle, storage adapter), ticket 22 (Uruguay hidden by default), ticket 05 (Talk mode, Puzzles "Coming soon" on Home, 12 starter Talk cards), ticket 06 (language, Settings screen, first-launch Spanish suggestion) ticket 25 (EN | ES toggle on Home, gear Settings icon) and ticket 24 (Spanish "Más" and "Respuesta" button labels) done.
+Design agreed (2026-10-01). Puzzles moved to v1.1 and Uruguay hidden by default (2026-10-03); v1 tickets in `.scratch/vamos-v1/`, Puzzles tickets in `.scratch/vamos-v1-1/`. Ticket 01 (walking skeleton: Home + Trivia card, content check, CI), ticket 03 (played history, Back, reshuffle, storage adapter), ticket 22 (Uruguay hidden by default), ticket 05 (Talk mode, Puzzles "Coming soon" on Home, 12 starter Talk cards), ticket 06 (language, Settings screen, first-launch Spanish suggestion) ticket 25 (EN | ES toggle on Home, gear Settings icon) ticket 24 (Spanish "Más" and "Respuesta" button labels) and the v1 content, tickets 12–14 and 18–20 (98 Trivia items and 96 Talk cards, all in English and Spanish), done.
 
 ## Commands
 
