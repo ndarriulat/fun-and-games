@@ -1,6 +1,7 @@
 import type { Mode } from "@/content/types";
 import { Icon } from "./icons";
 import { useLanguage } from "./language";
+import { LanguageToggle } from "./LanguageToggle";
 import { spanishSuggestion } from "./strings";
 import type { Screen } from "./App";
 
@@ -18,6 +19,7 @@ export function HomeScreen({ go }: { go: (screen: Screen) => void }) {
     <main className="home">
       <header className="home-top">
         <h1 className="brand">Vamos</h1>
+        <LanguageToggle />
         <button type="button" className="icon-btn" aria-label={t.settings} onClick={() => go("settings")}>
           <Icon name="settings" />
         </button>

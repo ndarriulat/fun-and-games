@@ -98,7 +98,13 @@ button:focus-visible {
 .home-top {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 10px;
+  /* Home has no mode colour, so the pressed EN | ES uses the ink. */
+  --mode: var(--ink);
+}
+
+.home-top .brand {
+  margin-right: auto;
 }
 
 .brand {
@@ -201,7 +207,7 @@ button:focus-visible {
   background: var(--mode);
 }
 
-/* EN | ES on the play screen. */
+/* EN | ES on Home and the play screen. */
 .lang-toggle {
   flex: none;
   height: 52px;

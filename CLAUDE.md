@@ -46,7 +46,7 @@ Three modes. Trivia and Talk are random across all non-hidden topics by default;
 
 ## Screens
 
-- **Home:** three big coloured cards (Trivia / Puzzles / Talk) and a settings icon.
+- **Home:** three big coloured cards (Trivia / Puzzles / Talk); a top bar with the EN | ES toggle and a settings (gear) icon.
 - **Tap a mode:** go straight into a full-screen card from a random mix. A small Filters button narrows topics/types and difficulty.
 - **Card actions:**
   - Trivia: Show options · Reveal
@@ -122,7 +122,7 @@ Three modes. Trivia and Talk are random across all non-hidden topics by default;
 
 ## Status
 
-Design agreed (2026-10-01). Puzzles moved to v1.1 and Uruguay hidden by default (2026-10-03); v1 tickets in `.scratch/vamos-v1/`, Puzzles tickets in `.scratch/vamos-v1-1/`. Ticket 01 (walking skeleton: Home + Trivia card, content check, CI), ticket 03 (played history, Back, reshuffle, storage adapter), ticket 22 (Uruguay hidden by default), ticket 05 (Talk mode, Puzzles "Coming soon" on Home, 12 starter Talk cards) and ticket 06 (language, Settings screen, first-launch Spanish suggestion) done.
+Design agreed (2026-10-01). Puzzles moved to v1.1 and Uruguay hidden by default (2026-10-03); v1 tickets in `.scratch/vamos-v1/`, Puzzles tickets in `.scratch/vamos-v1-1/`. Ticket 01 (walking skeleton: Home + Trivia card, content check, CI), ticket 03 (played history, Back, reshuffle, storage adapter), ticket 22 (Uruguay hidden by default), ticket 05 (Talk mode, Puzzles "Coming soon" on Home, 12 starter Talk cards), ticket 06 (language, Settings screen, first-launch Spanish suggestion) and ticket 25 (EN | ES toggle on Home, gear Settings icon) done.
 
 ## Commands
 

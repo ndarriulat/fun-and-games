@@ -1,7 +1,8 @@
 import type { ReactNode } from "react";
-import { languages, type Mode } from "@/content/types";
+import type { Mode } from "@/content/types";
 import { Icon } from "./icons";
 import { useLanguage } from "./language";
+import { LanguageToggle } from "./LanguageToggle";
 
 /** The frame around every mode's card: top row, the reshuffle notice and the empty state. */
 export function PlayScreen({
@@ -42,27 +43,6 @@ export function PlayScreen({
       {empty && <p className="empty">{t.noCards(title)}</p>}
       {children}
     </main>
-  );
-}
-
-/** Switches language without leaving the card, for a mixed group. */
-function LanguageToggle() {
-  const { language, setLanguage, t } = useLanguage();
-
-  return (
-    <div className="lang-toggle" role="group" aria-label={t.language}>
-      {languages.map((option) => (
-        <button
-          key={option}
-          type="button"
-          className="lang-option"
-          aria-pressed={option === language}
-          onClick={() => setLanguage(option)}
-        >
-          {option.toUpperCase()}
-        </button>
-      ))}
-    </div>
   );
 }
 

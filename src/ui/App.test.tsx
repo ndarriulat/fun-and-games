@@ -198,6 +198,38 @@ describe("Language", () => {
     expect(screen.getByRole("button", { name: "Configuración" })).toBeInTheDocument();
   });
 
+  it("has an EN | ES toggle on Home, next to Settings, with the current language pressed", () => {
+    renderApp();
+
+    const toggle = screen.getByRole("group", { name: "Language" });
+    expect(within(toggle).getByRole("button", { name: "EN" })).toHaveAttribute("aria-pressed", "true");
+    expect(within(toggle).getByRole("button", { name: "ES" })).toHaveAttribute("aria-pressed", "false");
+    expect(toggle.nextElementSibling).toBe(screen.getByRole("button", { name: "Settings" }));
+  });
+
+  it("switches all Home text in place from the toggle on Home", async () => {
+    const { user } = renderApp();
+
+    await user.click(screen.getByRole("button", { name: "ES" }));
+
+    expect(screen.getByRole("button", { name: "ES" })).toHaveAttribute("aria-pressed", "true");
+    expect(screen.getByRole("button", { name: "Configuración" })).toBeInTheDocument();
+    expect(screen.getByRole("group", { name: "Idioma" })).toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: "Settings" })).not.toBeInTheDocument();
+  });
+
+  it("is remembered when switched on Home", async () => {
+    const storage = inMemoryStorage();
+    const { user } = renderApp(testDeps({ storage }));
+    await user.click(screen.getByRole("button", { name: "ES" }));
+    cleanup();
+
+    renderApp(testDeps({ storage }));
+
+    expect(screen.getByRole("button", { name: "ES" })).toHaveAttribute("aria-pressed", "true");
+    expect(screen.getByRole("button", { name: "Configuración" })).toBeInTheDocument();
+  });
+
   it("is remembered when switched from a card", async () => {
     const storage = inMemoryStorage();
     const { user } = await openTrivia(testDeps({ storage }));
@@ -268,6 +300,19 @@ describe("First-launch language suggestion", () => {
 
     expect(suggestion()).not.toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Settings" })).toBeInTheDocument();
+  });
+
+  it("is hidden and not offered again once the player uses the toggle on Home", async () => {
+    const deps = spanishPhone();
+    const { user } = renderApp(deps);
+    expect(suggestion()).toBeInTheDocument();
+
+    await user.click(screen.getByRole("button", { name: "EN" }));
+    expect(suggestion()).not.toBeInTheDocument();
+    cleanup();
+
+    renderApp(deps);
+    expect(suggestion()).not.toBeInTheDocument();
   });
 
   it("isn't offered again once the player has picked a language themselves", async () => {
