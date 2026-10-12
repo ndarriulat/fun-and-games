@@ -74,12 +74,12 @@ describe("Home", () => {
 });
 
 describe("Puzzles on Home", () => {
-  it("shows Puzzles as coming soon, and tapping it does nothing", async () => {
+  it("shows Puzzles as coming soon, and tapping it stays on Home", async () => {
     const { user } = renderApp();
     const puzzles = screen.getByRole("button", { name: /puzzles/i });
 
     expect(puzzles).toHaveTextContent(/coming soon/i);
-    expect(puzzles).toBeDisabled();
+    expect(puzzles).toHaveAttribute("aria-disabled", "true");
 
     await user.click(puzzles);
     expect(screen.getByRole("button", { name: "Settings" })).toBeInTheDocument();

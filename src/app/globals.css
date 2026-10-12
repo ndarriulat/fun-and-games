@@ -135,14 +135,49 @@ button:focus-visible {
   box-shadow: 0 6px 0 rgba(0, 0, 0, 0.15);
 }
 
-/* A mode that isn't playable yet (Puzzles until v1.1). */
-.mode-card:disabled {
+/* A mode that isn't playable yet (Puzzles until v1.1): faded, flat, with a pill, and it wiggles when tapped. */
+.mode-card-soon {
   cursor: default;
   opacity: 0.55;
   box-shadow: none;
 }
 
-.mode-card:not(:disabled):active {
+.mode-soon {
+  align-self: flex-start;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--on-mode);
+  color: var(--mode);
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.wiggle {
+  animation: wiggle 0.45s ease-in-out;
+}
+
+@keyframes wiggle {
+  20% {
+    transform: rotate(-2deg);
+  }
+  40% {
+    transform: rotate(2deg);
+  }
+  60% {
+    transform: rotate(-1.5deg);
+  }
+  80% {
+    transform: rotate(1deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wiggle {
+    animation: none;
+  }
+}
+
+.mode-card:not(.mode-card-soon):active {
   transform: translateY(3px);
   box-shadow: 0 3px 0 rgba(0, 0, 0, 0.15);
 }

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import type { Mode } from "@/content/types";
 import { Icon } from "./icons";
 import { useLanguage } from "./language";
@@ -26,21 +27,39 @@ export function HomeScreen({ go }: { go: (screen: Screen) => void }) {
       </header>
       {suggestSpanish && <SpanishSuggestion />}
       <nav className="mode-list" aria-label={t.modes}>
-        {modes.map(({ mode, screen }) => (
-          <button
-            key={mode}
-            type="button"
-            className="mode-card"
-            data-mode={mode}
-            disabled={!screen}
-            onClick={screen && (() => go(screen))}
-          >
-            <span className="mode-name">{t[mode].name}</span>
-            <span className="mode-blurb">{t[mode].blurb}</span>
-          </button>
-        ))}
+        {modes.map(({ mode, screen }) =>
+          screen ? (
+            <button key={mode} type="button" className="mode-card" data-mode={mode} onClick={() => go(screen)}>
+              <span className="mode-name">{t[mode].name}</span>
+              <span className="mode-blurb">{t[mode].blurb}</span>
+            </button>
+          ) : (
+            <ComingSoonCard key={mode} mode={mode} />
+          ),
+        )}
       </nav>
     </main>
+  );
+}
+
+/** A mode that isn't playable yet. It stays tappable (aria-disabled, not disabled) so a tap can answer with a wiggle. */
+function ComingSoonCard({ mode }: { mode: Mode }) {
+  const { t } = useLanguage();
+  // Bumped on every tap; also the key that restarts the wiggle animation.
+  const [taps, setTaps] = useState(0);
+
+  return (
+    <button
+      key={taps}
+      type="button"
+      className={taps > 0 ? "mode-card mode-card-soon wiggle" : "mode-card mode-card-soon"}
+      data-mode={mode}
+      aria-disabled="true"
+      onClick={() => setTaps(taps + 1)}
+    >
+      <span className="mode-name">{t[mode].name}</span>
+      <span className="mode-soon">{t[mode].blurb}</span>
+    </button>
   );
 }
 
