@@ -13,6 +13,11 @@ export function playablePool<T extends { topic: Topic; en: unknown; es?: unknown
   return items.filter((item) => item[language] !== undefined && !isTopicHidden(item.topic, topicChanges));
 }
 
+/** The language a card is shown in: a card dealt in English and pending translation stays in English after a switch. */
+export function shownIn(item: { en: unknown; es?: unknown }, language: Language): Language {
+  return item[language] !== undefined ? language : "en";
+}
+
 export type Dealt<T> = {
   item: T;
   /** The mode's played history after this deal, including the dealt item. */

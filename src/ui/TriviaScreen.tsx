@@ -1,6 +1,6 @@
 import type { ContentBank } from "@/content/bank";
 import type { Language, TriviaItem } from "@/content/types";
-import { playablePool, shuffle } from "@/play/deal";
+import { playablePool, shownIn, shuffle } from "@/play/deal";
 import type { SavedState } from "@/play/storage";
 import { useDeps } from "./deps";
 import { useLanguage } from "./language";
@@ -27,7 +27,13 @@ export function TriviaScreen({ goHome }: { goHome: () => void }) {
   });
 
   return (
-    <PlayScreen mode="trivia" reshuffled={deck.reshuffled} empty={deck.empty} goHome={goHome}>
+    <PlayScreen
+      mode="trivia"
+      card={deck.card && { itemId: deck.card.item.id, language: shownIn(deck.card.item, language) }}
+      reshuffled={deck.reshuffled}
+      empty={deck.empty}
+      goHome={goHome}
+    >
       {deck.card && (
         <TriviaCard
           key={deck.card.key}

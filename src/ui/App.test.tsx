@@ -1,11 +1,12 @@
 import { cleanup, render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { describe, expect, it } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import {
   corruptStorage,
   fixedRandom,
   inMemoryStorage,
   numberedTrivia,
+  recordingReportSender,
   savedStorage,
   sequenceRandom,
   setStoredTopics,
@@ -804,6 +805,155 @@ describe("Device storage", () => {
     await openTrivia(testDeps({ storage }));
 
     expect(screen.getByText("Which metal makes octopus blood blue?")).toBeInTheDocument();
+  });
+});
+
+describe("Report", () => {
+  beforeEach(() => {
+    // Only the clock: user-event's timers keep running for real.
+    vi.useFakeTimers({ toFake: ["Date"] });
+    vi.setSystemTime(new Date("2026-10-12T09:30:00Z"));
+  });
+
+  afterEach(() => {
+    vi.useRealTimers();
+  });
+
+  it("sends the card, mode, language, reason, note, app version and time, then confirms", async () => {
+    const reports = recordingReportSender();
+    const { user } = await openTrivia(testDeps({ reports }));
+
+    await user.click(screen.getByRole("button", { name: "Report" }));
+    const dialog = screen.getByRole("dialog", { name: "Report this card" });
+    await user.click(within(dialog).getByRole("radio", { name: "Wrong answer" }));
+    await user.type(within(dialog).getByRole("textbox", { name: /note/i }), "It's Canberra, but the fact is off");
+    await user.click(within(dialog).getByRole("button", { name: "Send" }));
+
+    expect(await within(dialog).findByText("Thanks! Report sent.")).toBeInTheDocument();
+    expect(reports.sent).toEqual([
+      {
+        itemId: "trv-geo-90001",
+        mode: "trivia",
+        language: "en",
+        reason: "wrong-answer",
+        note: "It's Canberra, but the fact is off",
+        appVersion: expect.stringMatching(/^\d+\.\d+\.\d+/),
+        timestamp: "2026-10-12T09:30:00.000Z",
+      },
+    ]);
+  });
+
+  it("needs a reason, but not a note, and caps the note at 280 characters", async () => {
+    const reports = recordingReportSender();
+    const { user } = await openTrivia(testDeps({ reports }));
+
+    await user.click(screen.getByRole("button", { name: "Report" }));
+    const dialog = screen.getByRole("dialog", { name: "Report this card" });
+    expect(within(dialog).getByRole("button", { name: "Send" })).toBeDisabled();
+
+    const note = within(dialog).getByRole("textbox", { name: /note/i });
+    await user.click(note);
+    await user.paste("a".repeat(300));
+    expect(note).toHaveValue("a".repeat(280));
+    await user.clear(note);
+
+    await user.click(within(dialog).getByRole("radio", { name: "Confusing" }));
+    await user.click(within(dialog).getByRole("button", { name: "Send" }));
+
+    await within(dialog).findByText("Thanks! Report sent.");
+    expect(reports.sent).toEqual([expect.not.objectContaining({ note: expect.anything() })]);
+    expect(reports.sent[0].reason).toBe("confusing");
+  });
+
+  it("shows an error when sending fails, and Retry sends the same report again", async () => {
+    const reports = recordingReportSender();
+    reports.failNext = true;
+    const { user } = await openTrivia(testDeps({ reports }));
+
+    await user.click(screen.getByRole("button", { name: "Report" }));
+    const dialog = screen.getByRole("dialog", { name: "Report this card" });
+    await user.click(within(dialog).getByRole("radio", { name: "Bad translation" }));
+    await user.type(within(dialog).getByRole("textbox", { name: /note/i }), "Typo");
+    await user.click(within(dialog).getByRole("button", { name: "Send" }));
+
+    expect(await within(dialog).findByRole("alert")).toHaveTextContent("Couldn't send the report");
+    expect(reports.sent).toEqual([]);
+
+    vi.setSystemTime(new Date("2026-10-12T09:31:00Z"));
+    await user.click(within(dialog).getByRole("button", { name: "Retry" }));
+
+    expect(await within(dialog).findByText("Thanks! Report sent.")).toBeInTheDocument();
+    expect(reports.sent).toEqual([
+      expect.objectContaining({
+        itemId: "trv-geo-90001",
+        reason: "bad-translation",
+        note: "Typo",
+        timestamp: "2026-10-12T09:30:00.000Z",
+      }),
+    ]);
+  });
+
+  function expectSameRevealedCard() {
+    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+    expect(screen.getByText("What is the capital of Australia?")).toBeInTheDocument();
+    expect(screen.getByText("Canberra")).toBeInTheDocument();
+  }
+
+  it("returns to the same card, still revealed, on Cancel", async () => {
+    const { user } = await openTrivia();
+    await user.click(screen.getByRole("button", { name: "Reveal" }));
+
+    await user.click(screen.getByRole("button", { name: "Report" }));
+    await user.click(within(screen.getByRole("dialog")).getByRole("button", { name: "Cancel" }));
+
+    expectSameRevealedCard();
+  });
+
+  it("returns to the same card, still revealed, after sending", async () => {
+    const { user } = await openTrivia();
+    await user.click(screen.getByRole("button", { name: "Reveal" }));
+
+    await user.click(screen.getByRole("button", { name: "Report" }));
+    const dialog = screen.getByRole("dialog");
+    await user.click(within(dialog).getByRole("radio", { name: "Other" }));
+    await user.click(within(dialog).getByRole("button", { name: "Send" }));
+    await user.click(await within(dialog).findByRole("button", { name: "Back to the card" }));
+
+    expectSameRevealedCard();
+  });
+
+  it("is on Talk cards too, and sends the Spanish the card is shown in", async () => {
+    const reports = recordingReportSender();
+    const { user } = await openTalk(testDeps({ reports }));
+    await user.click(screen.getByRole("button", { name: "ES" }));
+
+    await user.click(screen.getByRole("button", { name: "Reportar" }));
+    const dialog = screen.getByRole("dialog", { name: "Reportar esta tarjeta" });
+    await user.click(within(dialog).getByRole("radio", { name: "Mala traducción" }));
+    await user.click(within(dialog).getByRole("button", { name: "Enviar" }));
+
+    expect(await within(dialog).findByText("¡Gracias! Reporte enviado.")).toBeInTheDocument();
+    expect(reports.sent).toEqual([
+      expect.objectContaining({ itemId: "tlk-hyp-90001", mode: "talk", language: "es", reason: "bad-translation" }),
+    ]);
+  });
+
+  it("sends English for a card still in English after switching to Spanish, as it's pending translation", async () => {
+    const reports = recordingReportSender();
+    const { user } = await openTrivia(testDeps({ reports }));
+    await user.click(screen.getByRole("button", { name: "Next card" }));
+    await user.click(screen.getByRole("button", { name: "Next card" }));
+    expect(screen.getByText(PORTUGAL_QUESTION)).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "ES" }));
+    expect(screen.getByText(PORTUGAL_QUESTION)).toBeInTheDocument();
+
+    await user.click(screen.getByRole("button", { name: "Reportar" }));
+    const dialog = screen.getByRole("dialog", { name: "Reportar esta tarjeta" });
+    await user.click(within(dialog).getByRole("radio", { name: "Respuesta incorrecta" }));
+    await user.click(within(dialog).getByRole("button", { name: "Enviar" }));
+
+    await within(dialog).findByText("¡Gracias! Reporte enviado.");
+    expect(reports.sent).toEqual([expect.objectContaining({ itemId: "trv-por-90001", language: "en" })]);
   });
 });
 

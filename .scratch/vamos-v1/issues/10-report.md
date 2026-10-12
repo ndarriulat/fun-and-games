@@ -6,15 +6,16 @@ Creating the Formspree form and setting the env var in Vercel is a small human s
 
 **Blocked by:** 01 (Walking skeleton)
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] Report available on every card in every mode
-- [ ] Reason is required; note is optional and length-limited
-- [ ] Sent payload contains item ID, mode, language, reason, note, app version, timestamp
-- [ ] Success shows confirmation; failure shows error with Retry that resends
-- [ ] Closing the overlay returns to the same card
-- [ ] App-level tests use a recording, failable fake sender
+- [x] Report available on every card in every mode
+- [x] Reason is required; note is optional and length-limited
+- [x] Sent payload contains item ID, mode, language, reason, note, app version, timestamp
+- [x] Success shows confirmation; failure shows error with Retry that resends
+- [x] Closing the overlay returns to the same card
+- [x] App-level tests use a recording, failable fake sender
 
 ## Comments
 
 - From ticket 06: when playing in Spanish, a card dealt before the switch that has no Spanish yet stays on screen in English. Report should send the language the card was actually shown in (`item[language] ? language : "en"`), not the app's language.
+- Done. Report is a flag icon in the play screen's top row and opens a sheet over the card. `NEXT_PUBLIC_FORMSPREE_FORM_ID` holds the Formspree form ID. Until it's set in Vercel (then redeploy, since it's inlined at build time), every report fails and shows Retry. App version is the package version plus the short Vercel commit SHA (`NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA`) when there is one. Retry resends the same report, keeping the original timestamp. A blank note is left out of the payload. The Formspree sender itself has no automated test; only the app seam was agreed.

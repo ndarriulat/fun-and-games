@@ -5,12 +5,27 @@ import type { ContentBank } from "@/content/bank";
 import type { Language, Mode } from "@/content/types";
 import type { KeyValueStore } from "@/play/storage";
 
-export type Report = {
+export const reportReasons = ["wrong-answer", "bad-translation", "confusing", "inappropriate", "other"] as const;
+
+export type ReportReason = (typeof reportReasons)[number];
+
+/** The longest note a report can carry. */
+export const REPORT_NOTE_LIMIT = 280;
+
+/** The card being reported. */
+export type ReportedCard = {
   itemId: string;
   mode: Mode;
+  /** The language the card was shown in, which isn't always the app's (a card pending translation stays in English). */
   language: Language;
-  reason: "wrong-answer" | "bad-translation" | "confusing" | "inappropriate" | "other";
+};
+
+export type Report = ReportedCard & {
+  reason: ReportReason;
   note?: string;
+  appVersion: string;
+  /** When it was sent, as an ISO 8601 string. */
+  timestamp: string;
 };
 
 export type ReportSender = {

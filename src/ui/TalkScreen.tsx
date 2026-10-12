@@ -1,6 +1,6 @@
 import type { ContentBank } from "@/content/bank";
 import type { Language, TalkItem } from "@/content/types";
-import { playablePool } from "@/play/deal";
+import { playablePool, shownIn } from "@/play/deal";
 import type { SavedState } from "@/play/storage";
 import { useLanguage } from "./language";
 import { CardControls, PlayScreen, questionSize } from "./PlayScreen";
@@ -23,7 +23,13 @@ export function TalkScreen({ goHome }: { goHome: () => void }) {
   });
 
   return (
-    <PlayScreen mode="talk" reshuffled={deck.reshuffled} empty={deck.empty} goHome={goHome}>
+    <PlayScreen
+      mode="talk"
+      card={deck.card && { itemId: deck.card.item.id, language: shownIn(deck.card.item, language) }}
+      reshuffled={deck.reshuffled}
+      empty={deck.empty}
+      goHome={goHome}
+    >
       {deck.card && (
         <TalkCard
           key={deck.card.key}

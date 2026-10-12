@@ -1,4 +1,5 @@
 import type { Difficulty, Language, TalkTopic, TriviaTopic } from "@/content/types";
+import type { ReportReason } from "./deps";
 
 /** Every piece of UI text. Both languages must fill every key, so a missing one is a type error. */
 export type Strings = {
@@ -21,6 +22,21 @@ export type Strings = {
   choices: string;
   followUp: string;
   followUps: string;
+  report: {
+    open: string;
+    title: string;
+    reason: string;
+    reasons: Record<ReportReason, string>;
+    note: string;
+    charactersLeft: (count: number) => string;
+    send: string;
+    sending: string;
+    cancel: string;
+    sent: string;
+    failed: string;
+    retry: string;
+    backToCard: string;
+  };
   language: string;
   languageNames: Record<Language, string>;
   difficulties: Record<Difficulty, string>;
@@ -51,6 +67,27 @@ const en: Strings = {
   choices: "Choices",
   followUp: "Follow-up",
   followUps: "Follow-ups",
+  report: {
+    open: "Report",
+    title: "Report this card",
+    reason: "What's wrong?",
+    reasons: {
+      "wrong-answer": "Wrong answer",
+      "bad-translation": "Bad translation",
+      confusing: "Confusing",
+      inappropriate: "Inappropriate",
+      other: "Other",
+    },
+    note: "Note (optional)",
+    charactersLeft: (count) => `${count} characters left`,
+    send: "Send",
+    sending: "Sending…",
+    cancel: "Cancel",
+    sent: "Thanks! Report sent.",
+    failed: "Couldn't send the report. Check your signal and try again.",
+    retry: "Retry",
+    backToCard: "Back to the card",
+  },
   language: "Language",
   languageNames,
   difficulties: { easy: "Easy", medium: "Medium", hard: "Hard" },
@@ -107,6 +144,27 @@ const es: Strings = {
   choices: "Alternativas",
   followUp: "Más",
   followUps: "Más preguntas",
+  report: {
+    open: "Reportar",
+    title: "Reportar esta tarjeta",
+    reason: "¿Qué está mal?",
+    reasons: {
+      "wrong-answer": "Respuesta incorrecta",
+      "bad-translation": "Mala traducción",
+      confusing: "Confusa",
+      inappropriate: "Inapropiada",
+      other: "Otra cosa",
+    },
+    note: "Nota (opcional)",
+    charactersLeft: (count) => `Quedan ${count} caracteres`,
+    send: "Enviar",
+    sending: "Enviando…",
+    cancel: "Cancelar",
+    sent: "¡Gracias! Reporte enviado.",
+    failed: "No se pudo enviar el reporte. Fijate si tenés señal y probá de nuevo.",
+    retry: "Reintentar",
+    backToCard: "Volver a la tarjeta",
+  },
   language: "Idioma",
   languageNames,
   difficulties: { easy: "Fácil", medium: "Media", hard: "Difícil" },

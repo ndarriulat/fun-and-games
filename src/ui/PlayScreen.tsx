@@ -1,24 +1,30 @@
-import type { ReactNode } from "react";
+import { useState, type ReactNode } from "react";
 import type { Mode } from "@/content/types";
+import type { ReportedCard } from "./deps";
 import { Icon } from "./icons";
 import { useLanguage } from "./language";
 import { LanguageToggle } from "./LanguageToggle";
+import { ReportOverlay } from "./ReportOverlay";
 
-/** The frame around every mode's card: top row, the reshuffle notice and the empty state. */
+/** The frame around every mode's card: top row, the reshuffle notice, the empty state and Report. */
 export function PlayScreen({
   mode,
+  card,
   reshuffled,
   empty,
   goHome,
   children,
 }: {
   mode: Exclude<Mode, "puzzles">;
+  /** The card on screen, for Report. Missing while there's none. */
+  card?: Omit<ReportedCard, "mode">;
   reshuffled: boolean;
   empty: boolean;
   goHome: () => void;
   children: ReactNode;
 }) {
   const { t } = useLanguage();
+  const [reporting, setReporting] = useState(false);
   const title = t[mode].name;
 
   return (
@@ -34,6 +40,15 @@ export function PlayScreen({
           </span>
         </span>
         <LanguageToggle />
+        <button
+          type="button"
+          className="icon-btn"
+          aria-label={t.report.open}
+          disabled={!card}
+          onClick={() => setReporting(true)}
+        >
+          <Icon name="report" />
+        </button>
       </header>
       {reshuffled && (
         <p className="notice" role="status">
@@ -42,6 +57,7 @@ export function PlayScreen({
       )}
       {empty && <p className="empty">{t.noCards(title)}</p>}
       {children}
+      {reporting && card && <ReportOverlay card={{ ...card, mode }} onClose={() => setReporting(false)} />}
     </main>
   );
 }
