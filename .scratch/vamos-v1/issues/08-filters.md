@@ -12,8 +12,10 @@
 - [ ] Filters persist per mode across reloads
 - [ ] Empty pool shows an empty state that opens Filters
 - [ ] Exhausting a filtered pool reshuffles only that pool
+- [ ] The chip in the play screen's top row shows the current selection after the mode name again, e.g. "Trivia · all topics" / "Trivia · todos los temas" with no filters
 - [ ] App-level tests cover the above
 
 ## Comments
 
 - From ticket 03: pool-only clearing on reshuffle is already implemented in `deal()` (`src/play/deal.ts`) but has no app-level test yet, because there was no second pool. Cover it here: play out a filtered pool, then check that cards outside the filter are still treated as played.
+- From ticket 10 follow-up (2026-10-12): the chip in the top row used to read "Trivia · all topics" / "Trivia · todos los temas". With no filters to pick yet that looked odd, so it shows just the mode name for now. Bring the selection back here: "all topics" / "todos los temas" with no filters, otherwise a summary of what's picked. The chip is also the planned Filters button (spec, Card design: "a Filters chip showing the current selection").

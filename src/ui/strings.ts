@@ -9,7 +9,6 @@ export type Strings = {
   trivia: { name: string; blurb: string };
   puzzles: { name: string; blurb: string };
   talk: { name: string; blurb: string };
-  allTopics: string;
   reshuffled: string;
   noCards: (mode: string) => string;
   previousCard: string;
@@ -54,7 +53,6 @@ const en: Strings = {
   trivia: { name: "Trivia", blurb: "Guess the answer, then reveal" },
   puzzles: { name: "Puzzles", blurb: "Coming soon" },
   talk: { name: "Talk", blurb: "Questions to get everyone talking" },
-  allTopics: "all topics",
   reshuffled: "You've played everything, starting again.",
   noCards: (mode) => `No ${mode} cards yet.`,
   previousCard: "Previous card",
@@ -131,7 +129,6 @@ const es: Strings = {
   trivia: { name: "Trivia", blurb: "Adiviná la respuesta y después mirala" },
   puzzles: { name: "Acertijos", blurb: "Próximamente" },
   talk: { name: "Charla", blurb: "Preguntas para que charlen todos" },
-  allTopics: "todos los temas",
   reshuffled: "Ya jugaron todo, arrancamos de nuevo.",
   noCards: (mode) => `Todavía no hay tarjetas de ${mode}.`,
   previousCard: "Tarjeta anterior",

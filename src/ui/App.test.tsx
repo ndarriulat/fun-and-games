@@ -120,7 +120,8 @@ describe("Language", () => {
     expect(await screen.findByText("¿Cuál es la capital de Australia?")).toBeInTheDocument();
     expect(screen.getByText("Geografía")).toBeInTheDocument();
     expect(screen.getByText("Fácil")).toBeInTheDocument();
-    expect(screen.getByText(/todos los temas/)).toBeInTheDocument();
+    // Just the mode until Filters (ticket 08) gives the chip a selection to show.
+    expect(screen.queryByText(/todos los temas/)).not.toBeInTheDocument();
 
     const options = await showOptions(user, "Ver opciones", "Opciones");
     expect([...options].sort()).toEqual(["Canberra", "Melbourne", "Perth", "Sídney"]);

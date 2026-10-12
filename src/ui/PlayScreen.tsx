@@ -35,9 +35,8 @@ export function PlayScreen({
         </button>
         <span className="chip">
           <i aria-hidden="true" />
-          <span className="chip-text">
-            {title} · {t.allTopics}
-          </span>
+          {/* Ticket 08 brings back the selection after the mode, e.g. "Trivia · all topics". */}
+          <span className="chip-text">{title}</span>
         </span>
         <LanguageToggle />
         <button
