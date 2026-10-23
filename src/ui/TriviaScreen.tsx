@@ -29,7 +29,7 @@ export function TriviaScreen({ goHome }: { goHome: () => void }) {
   return (
     <PlayScreen
       mode="trivia"
-      card={deck.card && { itemId: deck.card.item.id, language: shownIn(deck.card.item, language) }}
+      card={deck.card && reportedTrivia(deck.card.item, deck.card.view, language)}
       reshuffled={deck.reshuffled}
       empty={deck.empty}
       goHome={goHome}
@@ -46,6 +46,23 @@ export function TriviaScreen({ goHome }: { goHome: () => void }) {
       )}
     </PlayScreen>
   );
+}
+
+/** The card as the player saw it, for Report. */
+function reportedTrivia(item: TriviaItem, view: TriviaView, language: Language) {
+  const shown = shownIn(item, language);
+  const text = item[shown] ?? item.en;
+  const choices = [text.answer, ...text.options];
+  const lines = [text.question];
+  if (view.options) lines.push(`Options: ${view.options.map((index) => choices[index]).join(" · ")}`);
+  if (view.revealed) lines.push(`Answer: ${text.answer}`, `Fact: ${text.fact}`);
+  const revealed = [view.options && "options shown", view.revealed && "answer revealed"].filter(Boolean);
+  return {
+    itemId: item.id,
+    language: shown,
+    text: lines.join("\n"),
+    revealed: revealed.length > 0 ? revealed.join(", ") : "nothing",
+  };
 }
 
 function TriviaCard({

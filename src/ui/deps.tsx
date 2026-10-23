@@ -18,12 +18,22 @@ export type ReportedCard = {
   mode: Mode;
   /** The language the card was shown in, which isn't always the app's (a card pending translation stays in English). */
   language: Language;
+  /** The card's text as it was on screen, in the language it was shown in. */
+  text: string;
+  /** What had been revealed on it, e.g. "options shown, answer revealed". */
+  revealed: string;
 };
 
 export type Report = ReportedCard & {
   reason: ReportReason;
   note?: string;
   appVersion: string;
+  /** The app's language, which can differ from the card's. */
+  appLanguage: Language;
+  /** Topics hidden in Settings, or "none". */
+  hiddenTopics: string;
+  /** A random ID kept on this phone, to group reports from the same person without knowing who they are. */
+  deviceId: string;
   /** When it was sent, as an ISO 8601 string. */
   timestamp: string;
 };

@@ -19,6 +19,8 @@ export type SavedState = {
   played: Record<Mode, string[]>;
   /** Only the player's changes from the default topic visibility. */
   topics: TopicChanges;
+  /** A random ID sent with reports, made on the first report. */
+  deviceId?: string;
 };
 
 function defaults(): SavedState {
@@ -78,6 +80,7 @@ function parse(data: unknown): SavedState {
       if (isTopicVisibility(change)) state.topics[topic] = change;
     }
   }
+  if (typeof data.deviceId === "string") state.deviceId = data.deviceId;
   return state;
 }
 

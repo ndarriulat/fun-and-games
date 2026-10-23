@@ -820,7 +820,7 @@ describe("Report", () => {
     vi.useRealTimers();
   });
 
-  it("sends the card, mode, language, reason, note, app version and time, then confirms", async () => {
+  it("sends the card as seen, reason, note, settings, device ID, app version and time, then confirms", async () => {
     const reports = recordingReportSender();
     const { user } = await openTrivia(testDeps({ reports }));
 
@@ -838,7 +838,12 @@ describe("Report", () => {
         language: "en",
         reason: "wrong-answer",
         note: "It's Canberra, but the fact is off",
+        text: "What is the capital of Australia?",
+        revealed: "nothing",
         appVersion: expect.stringMatching(/^\d+\.\d+\.\d+/),
+        appLanguage: "en",
+        hiddenTopics: "uruguay",
+        deviceId: expect.any(String),
         timestamp: "2026-10-12T09:30:00.000Z",
       },
     ]);
@@ -937,6 +942,82 @@ describe("Report", () => {
     expect(reports.sent).toEqual([
       expect.objectContaining({ itemId: "tlk-hyp-90001", mode: "talk", language: "es", reason: "bad-translation" }),
     ]);
+  });
+
+  async function sendReport(user: ReturnType<typeof userEvent.setup>) {
+    await user.click(screen.getByRole("button", { name: /^Report/ }));
+    const dialog = screen.getByRole("dialog");
+    await user.click(within(dialog).getAllByRole("radio")[0]);
+    await user.click(within(dialog).getByRole("button", { name: /Send|Enviar/ }));
+    await user.click(await within(dialog).findByRole("button", { name: /Back to the card|Volver/ }));
+  }
+
+  it("sends the options in the order shown, and the answer and fact once revealed", async () => {
+    const reports = recordingReportSender();
+    const { user } = await openTrivia(testDeps({ reports }));
+    await user.click(screen.getByRole("button", { name: "Show options" }));
+    await user.click(screen.getByRole("button", { name: "Reveal" }));
+    const shown = within(screen.getByRole("list", { name: "Options" }))
+      .getAllByRole("listitem")
+      .map((option) => option.textContent);
+
+    await sendReport(user);
+
+    expect(reports.sent[0]).toMatchObject({
+      text: [
+        "What is the capital of Australia?",
+        `Options: ${shown.join(" · ")}`,
+        "Answer: Canberra",
+        "Fact: Canberra was purpose-built as a compromise between Sydney and Melbourne.",
+      ].join("\n"),
+      revealed: "options shown, answer revealed",
+    });
+  });
+
+  it("sends a Talk card's choices and the follow-ups showing, in the card's language", async () => {
+    const reports = recordingReportSender();
+    const { user } = await openTalk(testDeps({ reports }));
+    await user.click(screen.getByRole("button", { name: "ES" }));
+    await user.click(screen.getByRole("button", { name: "Más" }));
+
+    await sendReport(user);
+
+    expect(reports.sent[0]).toMatchObject({
+      language: "es",
+      appLanguage: "es",
+      text: [
+        "¿Qué preferís: poder volar o ser invisible?",
+        "A: Volar",
+        "B: Ser invisible",
+        "Follow-up: ¿A dónde irías primero?",
+      ].join("\n"),
+      revealed: "1 of 2 follow-ups",
+    });
+  });
+
+  it("sends the topics hidden in Settings", async () => {
+    const reports = recordingReportSender();
+    const storage = savedStorage({ topics: { uruguay: "shown", geography: "hidden", food: "hidden" } });
+    const { user } = await openTalk(testDeps({ reports, storage }));
+
+    await sendReport(user);
+
+    expect(reports.sent[0].hiddenTopics).toBe("geography, food");
+  });
+
+  it("keeps the same device ID across reports and visits", async () => {
+    const reports = recordingReportSender();
+    const storage = inMemoryStorage();
+    const { user } = await openTrivia(testDeps({ reports, storage }));
+    await sendReport(user);
+    cleanup();
+
+    const second = await openTrivia(testDeps({ reports, storage }));
+    await sendReport(second.user);
+
+    expect(reports.sent).toHaveLength(2);
+    expect(reports.sent[0].deviceId).toMatch(/^[0-9a-f-]{36}$/);
+    expect(reports.sent[1].deviceId).toBe(reports.sent[0].deviceId);
   });
 
   it("sends English for a card still in English after switching to Spanish, as it's pending translation", async () => {

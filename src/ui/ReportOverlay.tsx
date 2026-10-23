@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { appStorage } from "@/play/storage";
+import { allTopics, isTopicHidden } from "@/play/topics";
 import { appVersion } from "./appVersion";
 import { REPORT_NOTE_LIMIT, reportReasons, useDeps, type Report, type ReportedCard, type ReportReason } from "./deps";
 import { useLanguage } from "./language";
@@ -7,8 +9,8 @@ type Status = "editing" | "sending" | "sent" | "failed";
 
 /** Over the card: pick a reason, add a note, send. Closing it leaves the card as it was. */
 export function ReportOverlay({ card, onClose }: { card: ReportedCard; onClose: () => void }) {
-  const { reports } = useDeps();
-  const { t } = useLanguage();
+  const { reports, storage } = useDeps();
+  const { language, t } = useLanguage();
   const [reason, setReason] = useState<ReportReason | null>(null);
   const [note, setNote] = useState("");
   const [status, setStatus] = useState<Status>("editing");
@@ -37,11 +39,19 @@ export function ReportOverlay({ card, onClose }: { card: ReportedCard; onClose: 
   function submit() {
     if (!reason) return;
     const trimmed = note.trim();
+    const saved = appStorage(storage);
+    const state = saved.load();
+    const deviceId = state.deviceId ?? crypto.randomUUID();
+    if (!state.deviceId) saved.update((current) => ({ ...current, deviceId }));
+    const hidden = allTopics.filter((topic) => isTopicHidden(topic, state.topics));
     void deliver({
       ...card,
       reason,
       ...(trimmed && { note: trimmed }),
       appVersion,
+      appLanguage: language,
+      hiddenTopics: hidden.length > 0 ? hidden.join(", ") : "none",
+      deviceId,
       timestamp: new Date().toISOString(),
     });
   }

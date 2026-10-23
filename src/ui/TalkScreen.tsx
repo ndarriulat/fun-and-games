@@ -25,7 +25,7 @@ export function TalkScreen({ goHome }: { goHome: () => void }) {
   return (
     <PlayScreen
       mode="talk"
-      card={deck.card && { itemId: deck.card.item.id, language: shownIn(deck.card.item, language) }}
+      card={deck.card && reportedTalk(deck.card.item, deck.card.view, language)}
       reshuffled={deck.reshuffled}
       empty={deck.empty}
       goHome={goHome}
@@ -42,6 +42,21 @@ export function TalkScreen({ goHome }: { goHome: () => void }) {
       )}
     </PlayScreen>
   );
+}
+
+/** The card as the player saw it, for Report. */
+function reportedTalk(item: TalkItem, view: TalkView, language: Language) {
+  const shown = shownIn(item, language);
+  const text = item[shown] ?? item.en;
+  const lines = [text.question];
+  if (item.type === "would-you-rather") lines.push(`A: ${text.optionA}`, `B: ${text.optionB}`);
+  for (const followUp of text.followUps.slice(0, view.followUps)) lines.push(`Follow-up: ${followUp}`);
+  return {
+    itemId: item.id,
+    language: shown,
+    text: lines.join("\n"),
+    revealed: `${view.followUps} of ${text.followUps.length} follow-ups`,
+  };
 }
 
 function TalkCard({
