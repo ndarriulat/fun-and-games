@@ -19,7 +19,6 @@ export function HomeScreen({ go }: { go: (screen: Screen) => void }) {
   return (
     <main className="home">
       <header className="home-top">
-        <h1 className="brand">Vamos</h1>
         <LanguageToggle />
         <button type="button" className="icon-btn" aria-label={t.settings} onClick={() => go("settings")}>
           <Icon name="settings" />
