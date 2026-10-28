@@ -6,6 +6,7 @@ import type { SavedState } from "@/play/storage";
 import { useLanguage } from "./language";
 import { CardControls, PlayScreen, questionSize } from "./PlayScreen";
 import { useDeck } from "./useDeck";
+import { useSpookyEveryFifth } from "./useSpookySounds";
 import { useSwipe } from "./useSwipe";
 
 /** What has been revealed on a Talk card: how many follow-ups are showing. */
@@ -28,6 +29,7 @@ export function TalkScreen({ goHome, edition }: { goHome: () => void; edition?: 
     loadPool: edition ? loadHalloweenPool : loadTalkPool,
     initialView: { followUps: 0 },
   });
+  useSpookyEveryFifth(deck.card?.key, edition === "halloween");
 
   return (
     <PlayScreen

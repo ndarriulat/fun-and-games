@@ -1,6 +1,6 @@
 import { useState, type ReactNode } from "react";
 import type { Mode } from "@/content/types";
-import type { ReportedCard } from "./deps";
+import { useDeps, type ReportedCard } from "./deps";
 import { Icon } from "./icons";
 import { useLanguage } from "./language";
 import { LanguageToggle } from "./LanguageToggle";
@@ -28,12 +28,14 @@ export function PlayScreen({
 }) {
   const { t } = useLanguage();
   const [reporting, setReporting] = useState(false);
-  const title = t[edition ?? mode].name;
+  const { spookySounds } = useDeps();
+  const title = edition ? t.halloween.games[mode].title : t[mode].name;
 
   return (
-    <main className="play" data-mode={edition ?? mode}>
+    // Halloween 2026: phones only allow sound after a tap, so taps here let the spooky sounds play later.
+    <main className="play" data-mode={edition ?? mode} onPointerDown={edition ? spookySounds.unlock : undefined}>
       <header className="play-top">
-        <button type="button" className="icon-btn" aria-label={t.home} onClick={goHome}>
+        <button type="button" className="icon-btn" aria-label={edition ? t.halloween.menuBack : t.home} onClick={goHome}>
           <Icon name="home" />
         </button>
         <span className="chip">

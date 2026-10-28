@@ -12,6 +12,8 @@
   --talk: #0b9483;
   --halloween: #2b1645; /* Halloween 2026 */
   --pumpkin: #ff8a1f; /* Halloween 2026 */
+  --night: #1b0f26; /* Halloween 2026 */
+  --bone: #f3ece2; /* Halloween 2026 */
   --on-mode: #ffffff;
   --font-display: var(--font-display-face), "Arial Rounded MT Bold", system-ui, sans-serif;
   --font-body: var(--font-body-face), system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -119,6 +121,453 @@ button:focus-visible {
   width: 88px;
   height: 49px;
 }
+/* The Halloween menu: a night-time page with one card per game, each in its own Halloween colour. */
+.halloween-menu {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 12px 16px calc(16px + env(safe-area-inset-bottom, 0px));
+  background: var(--night);
+  --mode: var(--ink);
+}
+.halloween-menu-title {
+  flex: 1;
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.8rem;
+  color: var(--pumpkin);
+  text-align: center;
+}
+.halloween-sound {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(243, 236, 226, 0.3);
+  color: var(--bone);
+  font-weight: 800;
+}
+.halloween-sound[aria-pressed="true"] {
+  border-color: var(--pumpkin);
+  color: var(--pumpkin);
+}
+.halloween-sound[aria-pressed="false"] {
+  opacity: 0.6;
+}
+.halloween-games {
+  flex: 1;
+  display: grid;
+  grid-auto-rows: 1fr;
+  gap: 12px;
+}
+.halloween-game {
+  border-radius: var(--radius);
+  padding: 18px 16px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 6px;
+  background: var(--game);
+  color: var(--game-ink);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.35);
+}
+.halloween-game:active {
+  transform: translateY(3px);
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.35);
+}
+.halloween-game .mode-name {
+  font-size: 2.2rem;
+  color: var(--game-title);
+}
+.halloween-game .mode-blurb {
+  font-size: 1rem;
+}
+.halloween-game[data-game="talk"] {
+  --game: var(--halloween);
+  --game-ink: var(--bone);
+  --game-title: var(--pumpkin);
+  border: 2px solid #4a2a6b;
+}
+.halloween-game[data-game="trivia"] {
+  --game: var(--pumpkin);
+  --game-ink: var(--halloween);
+  --game-title: var(--halloween);
+}
+.halloween-game[data-game="taboo"] {
+  --game: #2f5d34;
+  --game-ink: var(--bone);
+  --game-title: #c9f27a;
+}
+.halloween-game[data-game="categories"] {
+  --game: #1f2b55;
+  --game-ink: var(--bone);
+  --game-title: #ffd23f;
+}
+
+/* Halloween Taboo and Categories: the same dark panels and orange text as Halloween Talk's cards. */
+.game-body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.game-panel {
+  border-radius: var(--radius);
+  background: var(--halloween);
+  color: var(--bone);
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.game-heading {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.7rem;
+  line-height: 1.15;
+  color: var(--pumpkin);
+  text-wrap: balance;
+}
+.game-heading-big {
+  font-size: 2.4rem;
+}
+.game-lead {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.45;
+}
+.game-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.game-actions-row {
+  flex-direction: row;
+}
+.game-actions-row > * {
+  flex: 1;
+}
+.game-button {
+  min-height: 56px;
+  border-radius: 18px;
+  padding: 12px 16px;
+  background: none;
+  border: 2px solid var(--pumpkin);
+  color: var(--pumpkin);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.15rem;
+  line-height: 1.15;
+}
+.game-button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+.game-button-main {
+  background: var(--pumpkin);
+  color: var(--halloween);
+  box-shadow: 0 5px 0 #a64a06;
+}
+.game-button-main:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 #a64a06;
+}
+.game-button-big {
+  min-height: 96px;
+  font-size: 1.5rem;
+}
+.game-link {
+  align-self: center;
+  padding: 10px 16px;
+  color: var(--bone);
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.game-timer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.game-timer-bar {
+  flex: 1;
+  height: 12px;
+  border-radius: 6px;
+  background: var(--line);
+  overflow: hidden;
+}
+.game-timer-bar span {
+  display: block;
+  height: 100%;
+  background: var(--pumpkin);
+  transition: width 0.25s linear;
+}
+.game-timer-seconds {
+  min-width: 2.2ch;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 2rem;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+.game-timer-low .game-timer-bar span {
+  background: #d7263d;
+}
+.game-timer-low .game-timer-seconds {
+  color: #d7263d;
+}
+.game-pause {
+  padding: 8px 12px;
+  border-radius: 14px;
+  border: 1.5px solid var(--line);
+  background: var(--surface);
+  font-weight: 800;
+}
+.game-end {
+  align-self: center;
+  padding: 8px 16px;
+  color: var(--muted);
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.game-hint {
+  margin: 0;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+.confirm-body {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.45;
+}
+.player-inputs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+.player-inputs li {
+  display: flex;
+  gap: 8px;
+}
+.player-input {
+  flex: 1;
+  min-width: 0;
+  min-height: 52px;
+  border-radius: 14px;
+  border: 2px solid rgba(243, 236, 226, 0.25);
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--bone);
+  padding: 10px 14px;
+  font: inherit;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+.player-input:focus {
+  border-color: var(--pumpkin);
+  outline: none;
+}
+.player-remove {
+  width: 52px;
+  border-radius: 14px;
+  border: 2px solid rgba(243, 236, 226, 0.25);
+  color: var(--bone);
+  font-size: 1.6rem;
+}
+.player-picker {
+  display: grid;
+  gap: 8px;
+}
+.player-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.player-chip {
+  min-height: 44px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 2px solid var(--pumpkin);
+  color: var(--pumpkin);
+  font-weight: 800;
+  font-size: 1.05rem;
+}
+.player-chip[aria-pressed="true"] {
+  background: var(--pumpkin);
+  color: var(--halloween);
+}
+.score-list {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.score-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1.5px solid var(--line);
+}
+.game-panel .score-row {
+  background: rgba(0, 0, 0, 0.2);
+  border-color: rgba(243, 236, 226, 0.2);
+}
+.score-row dt {
+  font-weight: 700;
+}
+.score-row dd {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.2rem;
+  font-variant-numeric: tabular-nums;
+}
+.taboo-scores {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.taboo-team {
+  border-radius: 16px;
+  padding: 8px 14px;
+  background: var(--surface);
+  border: 1.5px solid var(--line);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.taboo-team-up {
+  border-color: var(--pumpkin);
+  box-shadow: inset 0 0 0 1.5px var(--pumpkin);
+}
+.taboo-team dt {
+  font-weight: 800;
+}
+.taboo-team dd {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.6rem;
+  font-variant-numeric: tabular-nums;
+}
+.taboo-card {
+  flex: 1;
+  border-radius: var(--radius);
+  background: var(--halloween);
+  color: var(--bone);
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.taboo-word {
+  margin: 0 0 8px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 2.6rem;
+  line-height: 1.05;
+  color: var(--pumpkin);
+  text-wrap: balance;
+}
+.taboo-label {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+.taboo-forbidden {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+  font-size: 1.45rem;
+  font-weight: 700;
+}
+.taboo-forbidden li {
+  border-top: 1px solid rgba(243, 236, 226, 0.15);
+  padding-top: 6px;
+}
+.taboo-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.3fr;
+  gap: 8px;
+}
+.taboo-buttons .game-button {
+  min-height: 72px;
+  padding: 8px;
+  font-size: 1.05rem;
+}
+.taboo-buttons .taboo-buzz {
+  border-color: #d7263d;
+  color: #d7263d;
+}
+.category-card {
+  border-radius: var(--radius);
+  background: #1f2b55;
+  padding: 26px 20px;
+}
+.category-name {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 2.1rem;
+  line-height: 1.1;
+  color: #ffd23f;
+  text-wrap: balance;
+}
+.bid-stepper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.game-step {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px solid var(--pumpkin);
+  color: var(--pumpkin);
+  font-size: 2rem;
+  font-weight: 800;
+}
+.game-step:disabled {
+  opacity: 0.35;
+}
+.bid-value {
+  min-width: 2ch;
+  text-align: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 3.4rem;
+  color: var(--pumpkin);
+  font-variant-numeric: tabular-nums;
+}
+.bid-count {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 3rem;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
 /* Halloween Talk's play screen matches its Home card: dark cards and buttons, orange text. */
 .play[data-mode="halloween"] {
   --on-mode: var(--pumpkin);

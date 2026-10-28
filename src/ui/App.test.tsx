@@ -65,14 +65,14 @@ describe("Home", () => {
     vi.useRealTimers();
   });
 
-  it("lists the modes in order: Trivia, Talk, Halloween Talk, then Puzzles", () => {
+  it("lists the modes in order: Trivia, Talk, Halloween, then Puzzles", () => {
     renderApp();
 
     const modes = within(screen.getByRole("navigation")).getAllByRole("button");
     expect(modes.map((mode) => mode.textContent)).toEqual([
       expect.stringMatching(/^Trivia/),
       expect.stringMatching(/^Talk/),
-      expect.stringMatching(/^Halloween Talk/),
+      expect.stringMatching(/^Halloween/),
       expect.stringMatching(/^Puzzles/),
     ]);
   });
@@ -494,7 +494,10 @@ describe("Halloween Talk", () => {
 
   async function openHalloween(deps = testDeps()) {
     const rendered = renderApp(deps);
-    await rendered.user.click(screen.getByRole("button", { name: /^halloween talk/i }));
+    await rendered.user.click(screen.getByRole("button", { name: /^halloween/i }));
+    await rendered.user.click(
+      within(screen.getByRole("navigation", { name: "Halloween games" })).getByRole("button", { name: /^talk/i }),
+    );
     await screen.findByRole("article");
     return rendered;
   }
@@ -554,7 +557,7 @@ describe("Halloween Talk", () => {
     vi.useFakeTimers({ toFake: ["Date"] });
     vi.setSystemTime(new Date(2026, 10, 8, 23, 59));
     renderApp();
-    expect(screen.getByRole("button", { name: /^halloween talk/i })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /^halloween/i })).toBeInTheDocument();
     cleanup();
 
     vi.setSystemTime(new Date(2026, 10, 9, 0, 0));

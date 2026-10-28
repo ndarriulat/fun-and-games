@@ -22,6 +22,8 @@ export const triviaTopicCodes = {
   uruguay: "uru",
   portugal: "por",
   general: "gen",
+  // Halloween 2026: Halloween Trivia's questions.
+  halloween: "hal",
 } as const;
 export type TriviaTopic = keyof typeof triviaTopicCodes;
 

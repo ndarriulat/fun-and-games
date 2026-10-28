@@ -2,6 +2,7 @@ import { bundledContentBank } from "@/content/bundled";
 import type { KeyValueStore } from "@/play/storage";
 import type { AppDeps } from "./deps";
 import { formspreeReportSender } from "./formspreeReportSender";
+import { browserSpookySounds } from "./spookySounds";
 
 /** localStorage, made safe: private browsing or blocked storage just means nothing is remembered. */
 const browserStorage: KeyValueStore = {
@@ -28,4 +29,5 @@ export const productionDeps: AppDeps = {
   // Read in full, not destructured, so Next inlines it at build time.
   reports: formspreeReportSender(process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID),
   browserLanguage: () => (typeof navigator === "undefined" ? "en" : navigator.language),
+  spookySounds: browserSpookySounds, // Halloween 2026
 };

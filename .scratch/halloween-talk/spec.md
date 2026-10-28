@@ -39,3 +39,15 @@ Same as everywhere else: the Home card reads "Charla de Halloween" / "Preguntas 
 
 - A Halloween theme for the rest of the app.
 - Any reusable "seasonal edition" system. If Christmas happens, we'll build it then from what we learn here.
+
+## Update 28 Oct: Halloween menu and games
+
+Home's card becomes **Halloween** and opens a Halloween menu: Halloween Talk, Halloween Trivia, Taboo, Categories. Built in this order, games first (tickets 04–08).
+
+- **Taboo:** two teams, one phone. Each team plays 2 turns of 60 seconds, alternating. Correct +1, said a forbidden word −1, up to 3 free skips a turn. Highest score wins. Separate word lists per language (not translations).
+- **Categories:** two ways to play each round.
+  - *Bidding:* the phone shows a category; players raise bids out loud ("I can name 6"), a bid must beat the last one, so no ties. The top bidder gets 60 seconds to name them; the group judges.
+  - *Writing:* everyone writes on paper or their phone's notes for 60 seconds; the longest valid list wins the round, tied players both get it.
+- **Halloween Trivia:** like Trivia, about 40 questions in both languages, topic `halloween`.
+- **Sounds:** every 5th card in Halloween Talk and Trivia plays one of six spooky sounds (whisper, creak, moan, music box, knocks, heartbeat). A speaker button mutes them, remembered on the phone.
+- **Refresh-safe:** Taboo and Categories save their state on the phone after every change. A refresh mid-turn comes back paused with the time that was left; the menu offers Continue or New game. Each phone plays on its own, so several groups can play at once.

@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "trv-hal-00001",
+    "topic": "halloween",
+    "difficulty": "easy",
+    "en": {
+      "question": "Which vegetable is usually carved into a jack-o'-lantern?",
+      "answer": "Pumpkin",
+      "options": [
+        "Potato",
+        "Watermelon",
+        "Cabbage"
+      ],
+      "fact": "Botanically, a pumpkin is a fruit: a kind of berry, in fact."
+    },
+    "es": {
+      "question": "¿Qué se suele tallar para hacer una linterna de Halloween?",
+      "answer": "Calabaza",
+      "options": [
+        "Papa",
+        "Sandía",
+        "Repollo"
+      ],
+      "fact": "En botánica, la calabaza es una fruta: de hecho, un tipo de baya."
+    }
+  },
+  {
+    "id": "trv-hal-00002",
+    "topic": "halloween",
+    "difficulty": "easy",
+    "en": {
+      "question": "On what date is Halloween celebrated?",
+      "answer": "31 October",
+      "options": [
+        "30 October",
+        "1 November",
+        "2 November"
+      ],
+      "fact": "The name comes from \"All Hallows' Eve\", the evening before 1 November."
+    },
+    "es": {
+      "question": "¿Qué día se celebra Halloween?",
+      "answer": "31 de octubre",
+      "options": [
+        "30 de octubre",
+        "1 de noviembre",
+        "2 de noviembre"
+      ],
+      "fact": "El nombre viene de \"All Hallows' Eve\", la víspera del 1 de noviembre."
+    }
+  },
+  {
+    "id": "trv-hal-00003",
+    "topic": "halloween",
+    "difficulty": "easy",
+    "en": {
+      "question": "Which food are vampires said to avoid?",
+      "answer": "Garlic",
+      "options": [
+        "Onion",
+        "Chilli",
+        "Salt"
+      ],
+      "fact": "In Dracula, garlic flowers are hung around Lucy's room to keep the Count away."
+    },
+    "es": {
+      "question": "¿Qué comida dicen que evitan los vampiros?",
+      "answer": "Ajo",
+      "options": [
+        "Cebolla",
+        "Ají",
+        "Sal"
+      ],
+      "fact": "En Drácula, ponen flores de ajo en el cuarto de Lucy para alejar al conde."
+    }
+  },
+  {
+    "id": "trv-hal-00004",
+    "topic": "halloween",
+    "difficulty": "easy",
+    "en": {
+      "question": "Who wrote the novel Dracula?",
+      "answer": "Bram Stoker",
+      "options": [
+        "Mary Shelley",
+        "Edgar Allan Poe",
+        "Stephen King"
+      ],
+      "fact": "Bram Stoker was Irish, and Dracula came out in 1897."
+    },
+    "es": {
+      "question": "¿Quién escribió la novela Drácula?",
+      "answer": "Bram Stoker",
+      "options": [
+        "Mary Shelley",
+        "Edgar Allan Poe",
+        "Stephen King"
+      ],
+      "fact": "Bram Stoker era irlandés y Drácula se publicó en 1897."
+    }
+  },
+  {
+    "id": "trv-hal-00005",
+    "topic": "halloween",
+    "difficulty": "easy",
+    "en": {
+      "question": "Who wrote Frankenstein?",
+      "answer": "Mary Shelley",
+      "options": [
+        "Bram Stoker",
+        "Jane Austen",
+        "Edgar Allan Poe"
+      ],
+      "fact": "She started writing it at 18, and it was published in 1818."
+    },
+    "es": {
+      "question": "¿Quién escribió Frankenstein?",
+      "answer": "Mary Shelley",
+      "options": [
+        "Bram Stoker",
+        "Jane Austen",
+        "Edgar Allan Poe"
+      ],
+      "fact": "Empezó a escribirla a los 18 años y se publicó en 1818."
+    }
+  },
+  {
+    "id": "trv-hal-00006",
+    "topic": "halloween",
+    "difficulty": "medium",
+    "en": {
+      "question": "In Mary Shelley's novel, who is Frankenstein?",
+      "answer": "The scientist",
+      "options": [
+        "The monster",
+        "The village",
+        "The castle"
+      ],
+      "fact": "Victor Frankenstein makes the creature, which is never given a name."
+    },
+    "es": {
+      "question": "En la novela de Mary Shelley, ¿quién es Frankenstein?",
+      "answer": "El científico",
+      "options": [
+        "El monstruo",
+        "El pueblo",
+        "El castillo"
+      ],
+      "fact": "Víctor Frankenstein crea a la criatura, que nunca tiene nombre."
+    }
+  },
+  {
+    "id": "trv-hal-00007",
+    "topic": "halloween",
+    "difficulty": "easy",
+    "en": {
+      "question": "How many legs does a spider have?",
+      "answer": "8",
+      "options": [
+        "6",
+        "10",
+        "12"
+      ],
+      "fact": "Spiders aren't insects, which have six legs: they're arachnids."
+    },
+    "es": {
+      "question": "¿Cuántas patas tiene una araña?",
+      "answer": "8",
+      "options": [
+        "6",
+        "10",
+        "12"
+      ],
+      "fact": "Las arañas no son insectos, que tienen seis patas: son arácnidos."
+    }
+  },
+  {
+    "id": "trv-hal-00008",
+    "topic": "halloween",
+    "difficulty": "medium",
+    "en": {
+      "question": "Which region does Count Dracula come from?",
+      "answer": "Transylvania",
+      "options": [
+        "Bavaria",
+        "Bohemia",
+        "Normandy"
+      ],
+      "fact": "Transylvania is now part of Romania."
+    },
+    "es": {
+      "question": "¿De qué región es el conde Drácula?",
+      "answer": "Transilvania",
+      "options": [
+        "Baviera",
+        "Bohemia",
+        "Normandía"
+      ],
+      "fact": "Transilvania hoy es parte de Rumania."
+    }
+  },
+  {
+    "id": "trv-hal-00009",
+    "topic": "halloween",
+    "difficulty": "medium",
+    "en": {
+      "question": "In which country did the traditions behind Halloween begin?",
+      "answer": "Ireland",
+      "options": [
+        "United States",
+        "Mexico",
+        "Germany"
+      ],
+      "fact": "They go back to Samhain, a Gaelic festival marking the end of the harvest."
+    },
+    "es": {
+      "question": "¿En qué país empezaron las tradiciones de Halloween?",
+      "answer": "Irlanda",
+      "options": [
+        "Estados Unidos",
+        "México",
+        "Alemania"
+      ],
+      "fact": "Vienen de Samhain, una fiesta gaélica que marcaba el fin de la cosecha."
+    }
+  },
+  {
+    "id": "trv-hal-00010",
+    "topic": "halloween",
+    "difficulty": "hard",
+    "en": {
+      "question": "What is the fear of Halloween called?",
+      "answer": "Samhainophobia",
+      "options": [
+        "Arachnophobia",
+        "Coulrophobia",
+        "Nyctophobia"
+      ],
+      "fact": "The others are the fear of spiders, clowns and the dark."
+    },
+    "es": {
+      "question": "¿Cómo se llama el miedo a Halloween?",
+      "answer": "Samhainofobia",
+      "options": [
+        "Aracnofobia",
+        "Coulrofobia",
+        "Nictofobia"
+      ],
+      "fact": "Las otras son el miedo a las arañas, a los payasos y a la oscuridad."
+    }
+  },
+  {
+    "id": "trv-hal-00011",
+    "topic": "halloween",
+    "difficulty": "medium",
+    "en": {
+      "question": "What is coulrophobia the fear of?",
+      "answer": "Clowns",
+      "options": [
+        "Ghosts",
+        "Cemeteries",
+        "The dark"
+      ],
+      "fact": "Stephen King's It, with Pennywise, didn't help."
+    },
+    "es": {
+      "question": "¿A qué le tiene miedo alguien con coulrofobia?",
+      "answer": "A los payasos",
+      "options": [
+        "A los fantasmas",
+        "A los cementerios",
+        "A la oscuridad"
+      ],
+      "fact": "It, de Stephen King, con Pennywise, no ayudó mucho."
+    }
+  },
+  {
+    "id": "trv-hal-00012",
+    "topic": "halloween",
+    "difficulty": "medium",
+    "en": {
+      "question": "Which film has the famous line \"Here's Johnny!\"?",
+      "answer": "The Shining",
+      "options": [
+        "Psycho",
+        "Halloween",
+        "It"
+      ],
+      "fact": "Jack Nicholson improvised it, copying a US talk-show introduction."
+    },
+    "es": {
+      "question": "¿En qué película se dice la famosa frase \"Here's Johnny!\"?",
+      "answer": "El resplandor",
+      "options": [
+        "Psicosis",
+        "Halloween",
+        "It"
+      ],
+      "fact": "Jack Nicholson la improvisó, imitando la presentación de un programa de la tele de Estados Unidos."
+    }
+  },
+  {
+    "id": "trv-hal-00013",
+    "topic": "halloween",
+    "difficulty": "medium",
+    "en": {
+      "question": "Who directed the 1960 film Psycho?",
+      "answer": "Alfred Hitchcock",
+      "options": [
+        "Stanley Kubrick",
+        "Steven Spielberg",
+        "John Carpenter"
+      ],
+      "fact": "It's said to be the first American film to show a toilet being flushed."
+    },
+    "es": {
+      "question": "¿Quién dirigió la película Psicosis, de 1960?",
+      "answer": "Alfred Hitchcock",
+      "options": [
+        "Stanley Kubrick",
+        "Steven Spielberg",
+        "John Carpenter"
+      ],
+      "fact": "Dicen que fue la primera película de Estados Unidos en mostrar una cisterna."
+    }
+  },
+  {
+    "id": "trv-hal-00014",
+    "topic": "halloween",
+    "difficulty": "medium",
+    "en": {
+      "question": "In the 1978 film Halloween, what is the masked villain called?",
+      "answer": "Michael Myers",
+      "options": [
+        "Freddy Krueger",
+        "Jason Voorhees",
+        "Chucky"
+      ],
+      "fact": "His mask was a cheap Captain Kirk mask, painted white."
+    },
+    "es": {
+      "question": "En la película Halloween, de 1978, ¿cómo se llama el villano enmascarado?",
+      "answer": "Michael Myers",
+      "options": [
+        "Freddy Krueger",
+        "Jason Voorhees",
+        "Chucky"
+      ],
+      "fact": "Su máscara era una careta barata del capitán Kirk, pintada de blanco."
+    }
+  },
+  {
+    "id": "trv-hal-00015",
+    "topic": "halloween",
+    "difficulty": "easy",
+    "en": {
+      "question": "Which celebration takes place in Mexico on 1 and 2 November?",
+      "answer": "Day of the Dead",
+      "options": [
+        "Carnival",
+        "Independence Day",
+        "Cinco de Mayo"
+      ],
+      "fact": "UNESCO lists it as part of the world's intangible cultural heritage."
+    },
+    "es": {
+      "question": "¿Qué se celebra en México el 1 y el 2 de noviembre?",
+      "answer": "El Día de Muertos",
+      "options": [
+        "El Carnaval",
+        "El Día de la Independencia",
+        "El Cinco de Mayo"
+      ],
+      "fact": "La UNESCO lo reconoce como Patrimonio Cultural Inmaterial de la Humanidad."
+    }
+  },
+  {
+    "id": "trv-hal-00016",
+    "topic": "halloween",
+    "difficulty": "medium",
+    "en": {
+      "question": "What do vampire bats feed on?",
+      "answer": "Blood",
+      "options": [
+        "Fruit",
+        "Insects",
+        "Nectar"
+      ],
+      "fact": "They live in Central and South America, and share meals with roost-mates who went hungry."
+    },
+    "es": {
+      "question": "¿De qué se alimentan los murciélagos vampiro?",
+      "answer": "De sangre",
+      "options": [
+        "De fruta",
+        "De insectos",
+        "De néctar"
+      ],
+      "fact": "Viven en América Central y del Sur, y comparten comida con los compañeros que se quedaron sin comer."
+    }
+  },
+  {
+    "id": "trv-hal-00017",
+    "topic": "halloween",
+    "difficulty": "easy",
+    "en": {
+      "question": "Under which moon do werewolves transform?",
+      "answer": "A full moon",
+      "options": [
+        "A new moon",
+        "A half moon",
+        "A crescent moon"
+      ],
+      "fact": "Older legends didn't need the full moon: films made it the rule."
+    },
+    "es": {
+      "question": "¿Con qué luna se transforman los hombres lobo?",
+      "answer": "Luna llena",
+      "options": [
+        "Luna nueva",
+        "Media luna",
+        "Luna creciente"
+      ],
+      "fact": "Las leyendas más viejas no necesitaban luna llena: lo impusieron las películas."
+    }
+  },
+  {
+    "id": "trv-hal-00018",
+    "topic": "halloween",
+    "difficulty": "medium",
+    "en": {
+      "question": "What is the werewolf of Uruguayan and Argentine folklore called?",
+      "answer": "Lobizón",
+      "options": [
+        "Chupacabra",
+        "Pombero",
+        "Yasy Yateré"
+      ],
+      "fact": "Legend says the seventh son in a row becomes one. In Argentina, the president is godparent to seventh sons, a custom linked to the legend."
+    },
+    "es": {
+      "question": "¿Cómo se llama el hombre lobo del folclore uruguayo y argentino?",
+      "answer": "Lobizón",
+      "options": [
+        "Chupacabras",
+        "Pombero",
+        "Yasy Yateré"
+      ],
+      "fact": "La leyenda dice que el séptimo hijo varón seguido se convierte en uno. En Argentina, el presidente es padrino de los séptimos hijos, una costumbre ligada a la leyenda."
+    }
+  },
+  {
+    "id": "trv-hal-00019",
+    "topic": "halloween",
+    "difficulty": "hard",
+    "en": {
+      "question": "Before pumpkins, what did people in Ireland carve lanterns from?",
+      "answer": "Turnips",
+      "options": [
+        "Apples",
+        "Melons",
+        "Coconuts"
+      ],
+      "fact": "Irish immigrants in North America switched to pumpkins, which are much easier to carve."
+    },
+    "es": {
+      "question": "Antes de las calabazas, ¿qué tallaban en Irlanda para hacer linternas?",
+      "answer": "Nabos",
+      "options": [
+        "Manzanas",
+        "Melones",
+        "Cocos"
+      ],
+      "fact": "Los inmigrantes irlandeses en América del Norte pasaron a las calabazas, que son mucho más fáciles de tallar."
+    }
+  },
+  {
+    "id": "trv-hal-00020",
+    "topic": "halloween",
+    "difficulty": "medium",
+    "en": {
+      "question": "Which famous magician died on Halloween in 1926?",
+      "answer": "Harry Houdini",
+      "options": [
+        "David Copperfield",
+        "Penn Jillette",
+        "Dynamo"
+      ],
+      "fact": "Houdini spent years exposing fake psychics."
+    },
+    "es": {
+      "question": "¿Qué mago famoso murió en Halloween de 1926?",
+      "answer": "Harry Houdini",
+      "options": [
+        "David Copperfield",
+        "Penn Jillette",
+        "Dynamo"
+      ],
+      "fact": "Houdini pasó años desenmascarando a falsos videntes."
+    }
+  },
+  {
+    "id": "trv-hal-00021",
+    "topic": "halloween",
+    "difficulty": "medium",
+    "en": {
+      "question": "What is a group of crows called?",
+      "answer": "A murder",
+      "options": [
+        "A coven",
+        "A pack",
+        "A swarm"
+      ],
+      "fact": "A group of owls is a parliament."
+    },
+    "es": {
+      "question": "En inglés, ¿cómo se le dice a una bandada de cuervos?",
+      "answer": "A murder (un asesinato)",
+      "options": [
+        "A coven (un aquelarre)",
+        "A pack (una jauría)",
+        "A swarm (un enjambre)"
+      ],
+      "fact": "Y a un grupo de búhos le dicen \"a parliament\", un parlamento."
+    }
+  },
+  {
+    "id": "trv-hal-00022",
+    "topic": "halloween",
+    "difficulty": "hard",
+    "en": {
+      "question": "In 2023, a record-breaking pumpkin grown in the US weighed about how much?",
+      "answer": "1,250 kg",
+      "options": [
+        "250 kg",
+        "600 kg",
+        "3,000 kg"
+      ],
+      "fact": "That's about the weight of a small car."
+    },
+    "es": {
+      "question": "¿Más o menos cuánto pesó una calabaza récord cultivada en Estados Unidos en 2023?",
+      "answer": "1.250 kg",
+      "options": [
+        "250 kg",
+        "600 kg",
+        "3.000 kg"
+      ],
+      "fact": "Es más o menos lo que pesa un auto chico."
+    }
+  },
+  {
+    "id": "trv-hal-00023",
+    "topic": "halloween",
+    "difficulty": "easy",
+    "en": {
+      "question": "Which film stars Jack Skellington, the Pumpkin King?",
+      "answer": "The Nightmare Before Christmas",
+      "options": [
+        "Coraline",
+        "Corpse Bride",
+        "Frankenweenie"
+      ],
+      "fact": "Many people think Tim Burton directed it, but it was Henry Selick."
+    },
+    "es": {
+      "question": "¿En qué película aparece Jack Skellington, el Rey Calabaza?",
+      "answer": "El extraño mundo de Jack",
+      "options": [
+        "Coraline",
+        "El cadáver de la novia",
+        "Frankenweenie"
+      ],
+      "fact": "Mucha gente cree que la dirigió Tim Burton, pero fue Henry Selick."
+    }
+  },
+  {
+    "id": "trv-hal-00024",
+    "topic": "halloween",
+    "difficulty": "medium",
+    "en": {
+      "question": "Who sang the 1984 Ghostbusters theme?",
+      "answer": "Ray Parker Jr.",
+      "options": [
+        "Michael Jackson",
+        "Phil Collins",
+        "Lionel Richie"
+      ],
+      "fact": "Huey Lewis said it sounded too much like his song I Want a New Drug."
+    },
+    "es": {
+      "question": "¿Quién cantaba el tema de Los Cazafantasmas, de 1984?",
+      "answer": "Ray Parker Jr.",
+      "options": [
+        "Michael Jackson",
+        "Phil Collins",
+        "Lionel Richie"
+      ],
+      "fact": "Huey Lewis dijo que se parecía demasiado a su canción I Want a New Drug."
+    }
+  },
+  {
+    "id": "trv-hal-00025",
+    "topic": "halloween",
+    "difficulty": "easy",
+    "en": {
+      "question": "Who sang Thriller?",
+      "answer": "Michael Jackson",
+      "options": [
+        "Prince",
+        "Madonna",
+        "Lionel Richie"
+      ],
+      "fact": "Horror legend Vincent Price does the spooky spoken part at the end."
+    },
+    "es": {
+      "question": "¿Quién cantaba Thriller?",
+      "answer": "Michael Jackson",
+      "options": [
+        "Prince",
+        "Madonna",
+        "Lionel Richie"
+      ],
+      "fact": "La parte hablada del final la hace Vincent Price, una leyenda del cine de terror."
+    }
+  },
+  {
+    "id": "trv-hal-00026",
+    "topic": "halloween",
+    "difficulty": "medium",
+    "en": {
+      "question": "In which town is the film Hocus Pocus set?",
+      "answer": "Salem",
+      "options": [
+        "Boston",
+        "Sleepy Hollow",
+        "Derry"
+      ],
+      "fact": "Salem, in Massachusetts, is famous for its witch trials of 1692."
+    },
+    "es": {
+      "question": "¿En qué ciudad pasa la película Abracadabra (Hocus Pocus)?",
+      "answer": "Salem",
+      "options": [
+        "Boston",
+        "Sleepy Hollow",
+        "Derry"
+      ],
+      "fact": "Salem, en Massachusetts, es famosa por sus juicios a brujas de 1692."
+    }
+  },
+  {
+    "id": "trv-hal-00027",
+    "topic": "halloween",
+    "difficulty": "medium",
+    "en": {
+      "question": "Which town is haunted by the Headless Horseman?",
+      "answer": "Sleepy Hollow",
+      "options": [
+        "Salem",
+        "Hogsmeade",
+        "Derry"
+      ],
+      "fact": "Washington Irving wrote the story in 1820."
+    },
+    "es": {
+      "question": "¿Qué pueblo recorre el Jinete sin Cabeza?",
+      "answer": "Sleepy Hollow",
+      "options": [
+        "Salem",
+        "Hogsmeade",
+        "Derry"
+      ],
+      "fact": "Washington Irving escribió la historia en 1820."
+    }
+  },
+  {
+    "id": "trv-hal-00028",
+    "topic": "halloween",
+    "difficulty": "easy",
+    "en": {
+      "question": "What is the clown in Stephen King's It called?",
+      "answer": "Pennywise",
+      "options": [
+        "Bozo",
+        "Krusty",
+        "Ronald"
+      ],
+      "fact": "The story is set in Derry, a made-up town in Maine."
+    },
+    "es": {
+      "question": "¿Cómo se llama el payaso de It, de Stephen King?",
+      "answer": "Pennywise",
+      "options": [
+        "Bozo",
+        "Krusty",
+        "Ronald"
+      ],
+      "fact": "La historia pasa en Derry, un pueblo inventado de Maine."
+    }
+  },
+  {
+    "id": "trv-hal-00029",
+    "topic": "halloween",
+    "difficulty": "easy",
+    "en": {
+      "question": "What kind of creature is Casper?",
+      "answer": "A friendly ghost",
+      "options": [
+        "A vampire",
+        "A witch's cat",
+        "A werewolf"
+      ],
+      "fact": "His first cartoon, in 1945, was called The Friendly Ghost."
+    },
+    "es": {
+      "question": "¿Qué es Casper?",
+      "answer": "Un fantasma amigable",
+      "options": [
+        "Un vampiro",
+        "El gato de una bruja",
+        "Un hombre lobo"
+      ],
+      "fact": "Su primer dibujo animado, de 1945, se llamaba The Friendly Ghost."
+    }
+  },
+  {
+    "id": "trv-hal-00030",
+    "topic": "halloween",
+    "difficulty": "medium",
+    "en": {
+      "question": "Which dwarf planet is named after the Roman god of the underworld?",
+      "answer": "Pluto",
+      "options": [
+        "Ceres",
+        "Eris",
+        "Makemake"
+      ],
+      "fact": "An 11-year-old girl from Oxford, Venetia Burney, suggested the name in 1930."
+    },
+    "es": {
+      "question": "¿Qué planeta enano lleva el nombre del dios romano del inframundo?",
+      "answer": "Plutón",
+      "options": [
+        "Ceres",
+        "Eris",
+        "Makemake"
+      ],
+      "fact": "El nombre lo propuso en 1930 Venetia Burney, una niña de 11 años de Oxford."
+    }
+  },
+  {
+    "id": "trv-hal-00031",
+    "topic": "halloween",
+    "difficulty": "medium",
+    "en": {
+      "question": "In Irish folklore, what is a banshee?",
+      "answer": "A wailing female spirit",
+      "options": [
+        "A headless horseman",
+        "A shape-shifting horse",
+        "A tiny shoemaker"
+      ],
+      "fact": "The word comes from the Irish bean sí, \"woman of the fairy mound\"."
+    },
+    "es": {
+      "question": "En el folclore irlandés, ¿qué es una banshee?",
+      "answer": "Un espíritu de mujer que llora",
+      "options": [
+        "Un jinete sin cabeza",
+        "Un caballo que cambia de forma",
+        "Un zapatero diminuto"
+      ],
+      "fact": "La palabra viene del irlandés bean sí, \"mujer de la colina de las hadas\"."
+    }
+  },
+  {
+    "id": "trv-hal-00032",
+    "topic": "halloween",
+    "difficulty": "hard",
+    "en": {
+      "question": "What is the fear of the number 13 called?",
+      "answer": "Triskaidekaphobia",
+      "options": [
+        "Arachnophobia",
+        "Nyctophobia",
+        "Claustrophobia"
+      ],
+      "fact": "Many buildings skip the 13th floor because of it."
+    },
+    "es": {
+      "question": "¿Cómo se llama el miedo al número 13?",
+      "answer": "Triscaidecafobia",
+      "options": [
+        "Aracnofobia",
+        "Nictofobia",
+        "Claustrofobia"
+      ],
+      "fact": "Por eso muchos edificios se saltean el piso 13."
+    }
+  },
+  {
+    "id": "trv-hal-00033",
+    "topic": "halloween",
+    "difficulty": "easy",
+    "en": {
+      "question": "In which Pixar film are children's screams used as power?",
+      "answer": "Monsters, Inc.",
+      "options": [
+        "Coco",
+        "Inside Out",
+        "Toy Story"
+      ],
+      "fact": "By the end, they find laughter works even better."
+    },
+    "es": {
+      "question": "¿En qué película de Pixar los gritos de los niños son energía?",
+      "answer": "Monsters, Inc.",
+      "options": [
+        "Coco",
+        "Intensa-Mente",
+        "Toy Story"
+      ],
+      "fact": "Al final descubren que las risas funcionan todavía mejor."
+    }
+  },
+  {
+    "id": "trv-hal-00034",
+    "topic": "halloween",
+    "difficulty": "medium",
+    "en": {
+      "question": "In The Addams Family, what is the walking hand called?",
+      "answer": "Thing",
+      "options": [
+        "Hand",
+        "Lurch",
+        "Cousin Itt"
+      ],
+      "fact": "Thing has a big role in the series Wednesday, from 2022."
+    },
+    "es": {
+      "question": "En Los locos Addams, ¿cómo se llama la mano que camina?",
+      "answer": "Dedos (Thing)",
+      "options": [
+        "Mano",
+        "Largo",
+        "Tío Cosa"
+      ],
+      "fact": "Dedos tiene un papel importante en la serie Merlina, de 2022."
+    }
+  },
+  {
+    "id": "trv-hal-00035",
+    "topic": "halloween",
+    "difficulty": "hard",
+    "en": {
+      "question": "Where was the chupacabra first reported?",
+      "answer": "Puerto Rico",
+      "options": [
+        "Mexico",
+        "Brazil",
+        "Colombia"
+      ],
+      "fact": "The first sightings were in 1995. The name means \"goat-sucker\"."
+    },
+    "es": {
+      "question": "¿Dónde se habló por primera vez del chupacabras?",
+      "answer": "Puerto Rico",
+      "options": [
+        "México",
+        "Brasil",
+        "Colombia"
+      ],
+      "fact": "Los primeros avistamientos fueron en 1995."
+    }
+  },
+  {
+    "id": "trv-hal-00036",
+    "topic": "halloween",
+    "difficulty": "medium",
+    "en": {
+      "question": "In Portugal, what do children ask for door to door on 1 November?",
+      "answer": "Pão-por-Deus",
+      "options": [
+        "Magusto",
+        "Bacalhau",
+        "Pastel de nata"
+      ],
+      "fact": "They're usually given bread, nuts and sweets. In some areas it's called the Dia do Bolinho."
+    },
+    "es": {
+      "question": "En Portugal, ¿qué piden los niños de puerta en puerta el 1 de noviembre?",
+      "answer": "Pão-por-Deus",
+      "options": [
+        "Magusto",
+        "Bacalhau",
+        "Pastel de nata"
+      ],
+      "fact": "Les suelen dar pan, nueces y golosinas. En algunas zonas le dicen Dia do Bolinho."
+    }
+  },
+  {
+    "id": "trv-hal-00037",
+    "topic": "halloween",
+    "difficulty": "hard",
+    "en": {
+      "question": "Which Portuguese town holds a witches' night every Friday the 13th?",
+      "answer": "Montalegre",
+      "options": [
+        "Sintra",
+        "Óbidos",
+        "Évora"
+      ],
+      "fact": "The whole town in the north of Portugal fills with witches and costumes."
+    },
+    "es": {
+      "question": "¿Qué pueblo portugués hace una noche de brujas cada viernes 13?",
+      "answer": "Montalegre",
+      "options": [
+        "Sintra",
+        "Óbidos",
+        "Évora"
+      ],
+      "fact": "Todo el pueblo, en el norte de Portugal, se llena de brujas y disfraces."
+    }
+  },
+  {
+    "id": "trv-hal-00038",
+    "topic": "halloween",
+    "difficulty": "easy",
+    "en": {
+      "question": "Which two colours are most linked to Halloween?",
+      "answer": "Orange and black",
+      "options": [
+        "Red and green",
+        "Blue and white",
+        "Pink and purple"
+      ],
+      "fact": "Orange for the harvest, black for the long, dark nights."
+    },
+    "es": {
+      "question": "¿Qué dos colores se asocian más con Halloween?",
+      "answer": "Naranja y negro",
+      "options": [
+        "Rojo y verde",
+        "Azul y blanco",
+        "Rosado y violeta"
+      ],
+      "fact": "Naranja por la cosecha, negro por las noches largas y oscuras."
+    }
+  },
+  {
+    "id": "trv-hal-00039",
+    "topic": "halloween",
+    "difficulty": "hard",
+    "en": {
+      "question": "Which 1922 German silent film was one of the first vampire films?",
+      "answer": "Nosferatu",
+      "options": [
+        "Metropolis",
+        "The Cabinet of Dr. Caligari",
+        "M"
+      ],
+      "fact": "It copied Dracula without permission, and a court ordered every copy destroyed. Some survived."
+    },
+    "es": {
+      "question": "¿Qué película muda alemana de 1922 fue una de las primeras de vampiros?",
+      "answer": "Nosferatu",
+      "options": [
+        "Metrópolis",
+        "El gabinete del doctor Caligari",
+        "M"
+      ],
+      "fact": "Copió Drácula sin permiso y un juez ordenó destruir todas las copias. Algunas sobrevivieron."
+    }
+  },
+  {
+    "id": "trv-hal-00040",
+    "topic": "halloween",
+    "difficulty": "medium",
+    "en": {
+      "question": "How many times do you say Beetlejuice's name to summon him?",
+      "answer": "Three",
+      "options": [
+        "Two",
+        "Five",
+        "Seven"
+      ],
+      "fact": "The film came out in 1988, and a sequel followed in 2024."
+    },
+    "es": {
+      "question": "¿Cuántas veces hay que decir el nombre de Beetlejuice para invocarlo?",
+      "answer": "Tres",
+      "options": [
+        "Dos",
+        "Cinco",
+        "Siete"
+      ],
+      "fact": "La película salió en 1988, y la secuela en 2024."
+    }
+  }
+]

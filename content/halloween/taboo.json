@@ -1,0 +1,1006 @@
+{
+  "en": [
+    {
+      "word": "Ghost",
+      "forbidden": [
+        "spirit",
+        "haunt",
+        "dead",
+        "sheet",
+        "boo"
+      ]
+    },
+    {
+      "word": "Pumpkin",
+      "forbidden": [
+        "orange",
+        "carve",
+        "lantern",
+        "vegetable",
+        "patch"
+      ]
+    },
+    {
+      "word": "Witch",
+      "forbidden": [
+        "broom",
+        "spell",
+        "hat",
+        "cauldron",
+        "magic"
+      ]
+    },
+    {
+      "word": "Vampire",
+      "forbidden": [
+        "blood",
+        "bite",
+        "fangs",
+        "Dracula",
+        "bat"
+      ]
+    },
+    {
+      "word": "Zombie",
+      "forbidden": [
+        "dead",
+        "brain",
+        "walk",
+        "undead",
+        "apocalypse"
+      ]
+    },
+    {
+      "word": "Skeleton",
+      "forbidden": [
+        "bones",
+        "skull",
+        "body",
+        "dead",
+        "X-ray"
+      ]
+    },
+    {
+      "word": "Werewolf",
+      "forbidden": [
+        "wolf",
+        "moon",
+        "howl",
+        "man",
+        "full"
+      ]
+    },
+    {
+      "word": "Mummy",
+      "forbidden": [
+        "Egypt",
+        "bandages",
+        "wrapped",
+        "tomb",
+        "pharaoh"
+      ]
+    },
+    {
+      "word": "Spider",
+      "forbidden": [
+        "web",
+        "legs",
+        "eight",
+        "insect",
+        "crawl"
+      ]
+    },
+    {
+      "word": "Bat",
+      "forbidden": [
+        "fly",
+        "cave",
+        "night",
+        "wings",
+        "vampire"
+      ]
+    },
+    {
+      "word": "Sweets",
+      "forbidden": [
+        "candy",
+        "sugar",
+        "chocolate",
+        "trick",
+        "treat"
+      ]
+    },
+    {
+      "word": "Costume",
+      "forbidden": [
+        "dress up",
+        "wear",
+        "mask",
+        "outfit",
+        "party"
+      ]
+    },
+    {
+      "word": "Cemetery",
+      "forbidden": [
+        "grave",
+        "tomb",
+        "dead",
+        "bury",
+        "stone"
+      ]
+    },
+    {
+      "word": "Haunted house",
+      "forbidden": [
+        "ghost",
+        "scary",
+        "home",
+        "spooky",
+        "mansion"
+      ]
+    },
+    {
+      "word": "Broomstick",
+      "forbidden": [
+        "witch",
+        "fly",
+        "sweep",
+        "clean",
+        "ride"
+      ]
+    },
+    {
+      "word": "Cauldron",
+      "forbidden": [
+        "pot",
+        "witch",
+        "boil",
+        "potion",
+        "brew"
+      ]
+    },
+    {
+      "word": "Black cat",
+      "forbidden": [
+        "witch",
+        "unlucky",
+        "luck",
+        "meow",
+        "cross"
+      ]
+    },
+    {
+      "word": "Full moon",
+      "forbidden": [
+        "night",
+        "sky",
+        "werewolf",
+        "round",
+        "bright"
+      ]
+    },
+    {
+      "word": "Coffin",
+      "forbidden": [
+        "box",
+        "dead",
+        "vampire",
+        "bury",
+        "funeral"
+      ]
+    },
+    {
+      "word": "Scarecrow",
+      "forbidden": [
+        "field",
+        "crows",
+        "birds",
+        "straw",
+        "farm"
+      ]
+    },
+    {
+      "word": "Trick or treat",
+      "forbidden": [
+        "sweets",
+        "door",
+        "knock",
+        "kids",
+        "candy"
+      ]
+    },
+    {
+      "word": "Jack-o'-lantern",
+      "forbidden": [
+        "pumpkin",
+        "carve",
+        "face",
+        "candle",
+        "light"
+      ]
+    },
+    {
+      "word": "Frankenstein",
+      "forbidden": [
+        "monster",
+        "doctor",
+        "green",
+        "bolts",
+        "scientist"
+      ]
+    },
+    {
+      "word": "Owl",
+      "forbidden": [
+        "bird",
+        "night",
+        "hoot",
+        "wise",
+        "eyes"
+      ]
+    },
+    {
+      "word": "Potion",
+      "forbidden": [
+        "drink",
+        "magic",
+        "witch",
+        "bottle",
+        "spell"
+      ]
+    },
+    {
+      "word": "Candle",
+      "forbidden": [
+        "light",
+        "flame",
+        "wax",
+        "fire",
+        "wick"
+      ]
+    },
+    {
+      "word": "Cobweb",
+      "forbidden": [
+        "spider",
+        "web",
+        "dust",
+        "corner",
+        "sticky"
+      ]
+    },
+    {
+      "word": "Scream",
+      "forbidden": [
+        "shout",
+        "loud",
+        "yell",
+        "scared",
+        "film"
+      ]
+    },
+    {
+      "word": "Nightmare",
+      "forbidden": [
+        "dream",
+        "sleep",
+        "bad",
+        "wake up",
+        "scary"
+      ]
+    },
+    {
+      "word": "Tombstone",
+      "forbidden": [
+        "grave",
+        "stone",
+        "RIP",
+        "cemetery",
+        "name"
+      ]
+    },
+    {
+      "word": "Monster",
+      "forbidden": [
+        "scary",
+        "creature",
+        "bed",
+        "beast",
+        "under"
+      ]
+    },
+    {
+      "word": "Wizard",
+      "forbidden": [
+        "magic",
+        "wand",
+        "Harry Potter",
+        "spell",
+        "hat"
+      ]
+    },
+    {
+      "word": "Fog",
+      "forbidden": [
+        "mist",
+        "grey",
+        "cloud",
+        "see",
+        "weather"
+      ]
+    },
+    {
+      "word": "Mask",
+      "forbidden": [
+        "face",
+        "cover",
+        "costume",
+        "hide",
+        "wear"
+      ]
+    },
+    {
+      "word": "Shadow",
+      "forbidden": [
+        "dark",
+        "light",
+        "sun",
+        "follow",
+        "silhouette"
+      ]
+    },
+    {
+      "word": "Torch",
+      "forbidden": [
+        "light",
+        "battery",
+        "dark",
+        "flashlight",
+        "beam"
+      ]
+    },
+    {
+      "word": "Alien",
+      "forbidden": [
+        "space",
+        "UFO",
+        "Mars",
+        "green",
+        "planet"
+      ]
+    },
+    {
+      "word": "Clown",
+      "forbidden": [
+        "circus",
+        "red nose",
+        "funny",
+        "make-up",
+        "It"
+      ]
+    },
+    {
+      "word": "Crow",
+      "forbidden": [
+        "bird",
+        "black",
+        "scarecrow",
+        "caw",
+        "raven"
+      ]
+    },
+    {
+      "word": "Eyeball",
+      "forbidden": [
+        "eye",
+        "see",
+        "round",
+        "socket",
+        "look"
+      ]
+    },
+    {
+      "word": "Horror film",
+      "forbidden": [
+        "scary",
+        "movie",
+        "cinema",
+        "watch",
+        "genre"
+      ]
+    },
+    {
+      "word": "Dracula",
+      "forbidden": [
+        "vampire",
+        "count",
+        "Transylvania",
+        "blood",
+        "fangs"
+      ]
+    },
+    {
+      "word": "Ghost story",
+      "forbidden": [
+        "tell",
+        "scary",
+        "campfire",
+        "tale",
+        "spirit"
+      ]
+    },
+    {
+      "word": "Toffee apple",
+      "forbidden": [
+        "apple",
+        "sticky",
+        "stick",
+        "sweet",
+        "caramel"
+      ]
+    },
+    {
+      "word": "Halloween",
+      "forbidden": [
+        "October",
+        "31st",
+        "costume",
+        "scary",
+        "party"
+      ]
+    },
+    {
+      "word": "Spell",
+      "forbidden": [
+        "magic",
+        "witch",
+        "words",
+        "cast",
+        "wand"
+      ]
+    },
+    {
+      "word": "Crystal ball",
+      "forbidden": [
+        "future",
+        "fortune teller",
+        "glass",
+        "see",
+        "round"
+      ]
+    },
+    {
+      "word": "Goosebumps",
+      "forbidden": [
+        "skin",
+        "cold",
+        "scared",
+        "shiver",
+        "arms"
+      ]
+    },
+    {
+      "word": "Basement",
+      "forbidden": [
+        "downstairs",
+        "house",
+        "stairs",
+        "dark",
+        "cellar"
+      ]
+    },
+    {
+      "word": "Crypt",
+      "forbidden": [
+        "tomb",
+        "underground",
+        "vampire",
+        "dead",
+        "stone"
+      ]
+    }
+  ],
+  "es": [
+    {
+      "word": "Fantasma",
+      "forbidden": [
+        "espíritu",
+        "sábana",
+        "muerto",
+        "asustar",
+        "blanco"
+      ]
+    },
+    {
+      "word": "Calabaza",
+      "forbidden": [
+        "zapallo",
+        "naranja",
+        "tallar",
+        "vela",
+        "cara"
+      ]
+    },
+    {
+      "word": "Bruja",
+      "forbidden": [
+        "escoba",
+        "hechizo",
+        "sombrero",
+        "caldero",
+        "verruga"
+      ]
+    },
+    {
+      "word": "Vampiro",
+      "forbidden": [
+        "sangre",
+        "colmillos",
+        "Drácula",
+        "morder",
+        "murciélago"
+      ]
+    },
+    {
+      "word": "Zombi",
+      "forbidden": [
+        "muerto",
+        "cerebro",
+        "caminar",
+        "apocalipsis",
+        "vivo"
+      ]
+    },
+    {
+      "word": "Esqueleto",
+      "forbidden": [
+        "huesos",
+        "calavera",
+        "cuerpo",
+        "muerto",
+        "radiografía"
+      ]
+    },
+    {
+      "word": "Lobizón",
+      "forbidden": [
+        "lobo",
+        "luna",
+        "séptimo hijo",
+        "aullar",
+        "hombre"
+      ]
+    },
+    {
+      "word": "Momia",
+      "forbidden": [
+        "Egipto",
+        "vendas",
+        "faraón",
+        "tumba",
+        "pirámide"
+      ]
+    },
+    {
+      "word": "Araña",
+      "forbidden": [
+        "telaraña",
+        "patas",
+        "ocho",
+        "bicho",
+        "picar"
+      ]
+    },
+    {
+      "word": "Murciélago",
+      "forbidden": [
+        "volar",
+        "cueva",
+        "noche",
+        "alas",
+        "Batman"
+      ]
+    },
+    {
+      "word": "Golosinas",
+      "forbidden": [
+        "caramelos",
+        "dulce",
+        "chocolate",
+        "azúcar",
+        "kiosco"
+      ]
+    },
+    {
+      "word": "Disfraz",
+      "forbidden": [
+        "ponerse",
+        "máscara",
+        "fiesta",
+        "carnaval",
+        "vestirse"
+      ]
+    },
+    {
+      "word": "Cementerio",
+      "forbidden": [
+        "tumba",
+        "muertos",
+        "enterrar",
+        "lápida",
+        "flores"
+      ]
+    },
+    {
+      "word": "Casa embrujada",
+      "forbidden": [
+        "fantasma",
+        "miedo",
+        "casa",
+        "embrujo",
+        "abandonada"
+      ]
+    },
+    {
+      "word": "Escoba",
+      "forbidden": [
+        "barrer",
+        "bruja",
+        "volar",
+        "limpiar",
+        "palo"
+      ]
+    },
+    {
+      "word": "Caldero",
+      "forbidden": [
+        "olla",
+        "bruja",
+        "poción",
+        "hervir",
+        "fuego"
+      ]
+    },
+    {
+      "word": "Gato negro",
+      "forbidden": [
+        "mala suerte",
+        "bruja",
+        "maullar",
+        "cruzarse",
+        "oscuro"
+      ]
+    },
+    {
+      "word": "Luna llena",
+      "forbidden": [
+        "noche",
+        "cielo",
+        "redonda",
+        "lobizón",
+        "brillar"
+      ]
+    },
+    {
+      "word": "Ataúd",
+      "forbidden": [
+        "cajón",
+        "muerto",
+        "vampiro",
+        "enterrar",
+        "velorio"
+      ]
+    },
+    {
+      "word": "Espantapájaros",
+      "forbidden": [
+        "campo",
+        "pájaros",
+        "paja",
+        "chacra",
+        "asustar"
+      ]
+    },
+    {
+      "word": "Dulce o truco",
+      "forbidden": [
+        "golosinas",
+        "puerta",
+        "niños",
+        "pedir",
+        "Halloween"
+      ]
+    },
+    {
+      "word": "Luz mala",
+      "forbidden": [
+        "campo",
+        "noche",
+        "luz",
+        "fantasma",
+        "gaucho"
+      ]
+    },
+    {
+      "word": "Frankenstein",
+      "forbidden": [
+        "monstruo",
+        "doctor",
+        "verde",
+        "tornillos",
+        "científico"
+      ]
+    },
+    {
+      "word": "Lechuza",
+      "forbidden": [
+        "búho",
+        "pájaro",
+        "noche",
+        "ojos",
+        "bruja"
+      ]
+    },
+    {
+      "word": "Poción",
+      "forbidden": [
+        "tomar",
+        "mágica",
+        "bruja",
+        "frasco",
+        "hechizo"
+      ]
+    },
+    {
+      "word": "Vela",
+      "forbidden": [
+        "luz",
+        "fuego",
+        "cera",
+        "prender",
+        "apagón"
+      ]
+    },
+    {
+      "word": "Telaraña",
+      "forbidden": [
+        "araña",
+        "tela",
+        "rincón",
+        "polvo",
+        "pegajosa"
+      ]
+    },
+    {
+      "word": "Grito",
+      "forbidden": [
+        "gritar",
+        "fuerte",
+        "miedo",
+        "voz",
+        "chillar"
+      ]
+    },
+    {
+      "word": "Pesadilla",
+      "forbidden": [
+        "soñar",
+        "dormir",
+        "mal",
+        "despertar",
+        "miedo"
+      ]
+    },
+    {
+      "word": "Lápida",
+      "forbidden": [
+        "tumba",
+        "piedra",
+        "cementerio",
+        "nombre",
+        "descanse en paz"
+      ]
+    },
+    {
+      "word": "Monstruo",
+      "forbidden": [
+        "bicho",
+        "cama",
+        "miedo",
+        "criatura",
+        "debajo"
+      ]
+    },
+    {
+      "word": "Mago",
+      "forbidden": [
+        "magia",
+        "varita",
+        "conejo",
+        "sombrero",
+        "truco"
+      ]
+    },
+    {
+      "word": "Niebla",
+      "forbidden": [
+        "neblina",
+        "gris",
+        "nube",
+        "ver",
+        "frío"
+      ]
+    },
+    {
+      "word": "Máscara",
+      "forbidden": [
+        "cara",
+        "tapar",
+        "careta",
+        "disfraz",
+        "esconder"
+      ]
+    },
+    {
+      "word": "Sombra",
+      "forbidden": [
+        "oscuro",
+        "luz",
+        "sol",
+        "seguir",
+        "silueta"
+      ]
+    },
+    {
+      "word": "Linterna",
+      "forbidden": [
+        "luz",
+        "pilas",
+        "oscuridad",
+        "apagón",
+        "alumbrar"
+      ]
+    },
+    {
+      "word": "Extraterrestre",
+      "forbidden": [
+        "espacio",
+        "ovni",
+        "marciano",
+        "verde",
+        "planeta"
+      ]
+    },
+    {
+      "word": "Payaso",
+      "forbidden": [
+        "circo",
+        "nariz",
+        "gracioso",
+        "maquillaje",
+        "Eso"
+      ]
+    },
+    {
+      "word": "Cuervo",
+      "forbidden": [
+        "pájaro",
+        "negro",
+        "graznar",
+        "espantapájaros",
+        "ave"
+      ]
+    },
+    {
+      "word": "Ojo",
+      "forbidden": [
+        "ver",
+        "mirar",
+        "pestaña",
+        "globo",
+        "cara"
+      ]
+    },
+    {
+      "word": "Película de terror",
+      "forbidden": [
+        "miedo",
+        "cine",
+        "ver",
+        "susto",
+        "género"
+      ]
+    },
+    {
+      "word": "Drácula",
+      "forbidden": [
+        "vampiro",
+        "conde",
+        "Transilvania",
+        "sangre",
+        "colmillos"
+      ]
+    },
+    {
+      "word": "Cuento de terror",
+      "forbidden": [
+        "contar",
+        "miedo",
+        "fogón",
+        "historia",
+        "fantasma"
+      ]
+    },
+    {
+      "word": "Hechizo",
+      "forbidden": [
+        "magia",
+        "bruja",
+        "palabras",
+        "varita",
+        "conjuro"
+      ]
+    },
+    {
+      "word": "Manzana acaramelada",
+      "forbidden": [
+        "manzana",
+        "caramelo",
+        "palito",
+        "dulce",
+        "feria"
+      ]
+    },
+    {
+      "word": "Halloween",
+      "forbidden": [
+        "octubre",
+        "31",
+        "disfraz",
+        "miedo",
+        "fiesta"
+      ]
+    },
+    {
+      "word": "Bola de cristal",
+      "forbidden": [
+        "futuro",
+        "adivina",
+        "vidrio",
+        "ver",
+        "redonda"
+      ]
+    },
+    {
+      "word": "Piel de gallina",
+      "forbidden": [
+        "piel",
+        "frío",
+        "miedo",
+        "escalofrío",
+        "erizar"
+      ]
+    },
+    {
+      "word": "Sótano",
+      "forbidden": [
+        "abajo",
+        "casa",
+        "escalera",
+        "oscuro",
+        "guardar"
+      ]
+    },
+    {
+      "word": "Cripta",
+      "forbidden": [
+        "tumba",
+        "subterráneo",
+        "vampiro",
+        "muertos",
+        "piedra"
+      ]
+    }
+  ]
+}

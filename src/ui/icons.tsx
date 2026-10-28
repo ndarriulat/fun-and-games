@@ -20,6 +20,19 @@ const paths = {
     </>
   ),
   next: <path d="M5 12h14M13 6l6 6-6 6" />,
+  // Halloween 2026: the spooky sounds switch (Feather's "volume-2" and "volume-x").
+  soundOn: (
+    <>
+      <path d="M11 5 6 9H2v6h4l5 4V5z" />
+      <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07" />
+    </>
+  ),
+  soundOff: (
+    <>
+      <path d="M11 5 6 9H2v6h4l5 4V5z" />
+      <path d="m23 9-6 6M17 9l6 6" />
+    </>
+  ),
   back: <path d="M19 12H5M11 6l-6 6 6 6" />,
 };
 

@@ -1,11 +1,13 @@
 import type { ContentBank } from "@/content/bank";
 import type { Language, TriviaItem } from "@/content/types";
 import { playablePool, shownIn, shuffle } from "@/play/deal";
+import { isHalloweenTopic } from "@/play/halloween";
 import type { SavedState } from "@/play/storage";
 import { useDeps } from "./deps";
 import { useLanguage } from "./language";
 import { CardControls, PlayScreen, questionSize } from "./PlayScreen";
 import { useDeck } from "./useDeck";
+import { useSpookyEveryFifth } from "./useSpookySounds";
 import { useSwipe } from "./useSwipe";
 
 /**
@@ -14,21 +16,29 @@ import { useSwipe } from "./useSwipe";
  */
 type TriviaView = { options: number[] | null; revealed: boolean };
 
+// Halloween 2026: regular Trivia leaves out Halloween questions; Halloween Trivia deals only them.
 const loadTriviaPool = async (content: ContentBank, saved: SavedState, language: Language) =>
-  playablePool(await content.trivia(), language, saved.topics);
+  playablePool(await content.trivia(), language, saved.topics).filter((item) => !isHalloweenTopic(item.topic));
 
-export function TriviaScreen({ goHome }: { goHome: () => void }) {
+const loadHalloweenPool = async (content: ContentBank, saved: SavedState, language: Language) =>
+  playablePool(await content.trivia(), language, saved.topics).filter((item) => isHalloweenTopic(item.topic));
+
+/** Trivia, or (Halloween 2026) its Halloween edition: the same cards and controls, with its own pool, name and colour. */
+export function TriviaScreen({ goHome, edition }: { goHome: () => void; edition?: "halloween" }) {
   const { language } = useLanguage();
   const deck = useDeck<TriviaItem, TriviaView>({
+    // The edition shares Trivia's played history; its IDs never overlap with Trivia's.
     mode: "trivia",
     language,
-    loadPool: loadTriviaPool,
+    loadPool: edition ? loadHalloweenPool : loadTriviaPool,
     initialView: { options: null, revealed: false },
   });
+  useSpookyEveryFifth(deck.card?.key, edition === "halloween");
 
   return (
     <PlayScreen
       mode="trivia"
+      edition={edition}
       card={deck.card && reportedTrivia(deck.card.item, deck.card.view, language)}
       reshuffled={deck.reshuffled}
       empty={deck.empty}

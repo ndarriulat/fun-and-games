@@ -14,6 +14,7 @@ import scienceNature from "../../content/trivia/science-nature.json";
 import sport from "../../content/trivia/sport.json";
 import technology from "../../content/trivia/technology.json";
 import uruguay from "../../content/trivia/uruguay.json";
+import triviaHalloween from "../../content/trivia/halloween.json"; // Halloween 2026
 import talkChildhoodMemories from "../../content/talk/childhood-memories.json";
 import talkFood from "../../content/talk/food.json";
 import talkHalloween from "../../content/talk/halloween.json"; // Halloween 2026
@@ -45,6 +46,7 @@ const triviaFiles: Record<TriviaTopic, unknown[]> = {
   sport,
   technology,
   uruguay,
+  halloween: triviaHalloween, // Halloween 2026
 };
 
 const talkFiles: Record<TalkTopic, unknown[]> = {

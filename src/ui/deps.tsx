@@ -4,6 +4,7 @@ import { createContext, useContext, type ReactNode } from "react";
 import type { ContentBank } from "@/content/bank";
 import type { Language, Mode } from "@/content/types";
 import type { KeyValueStore } from "@/play/storage";
+import type { SpookySounds } from "./spookySounds";
 
 export const reportReasons = ["wrong-answer", "bad-translation", "confusing", "inappropriate", "other"] as const;
 
@@ -50,6 +51,8 @@ export type AppDeps = {
   random: () => number;
   reports: ReportSender;
   browserLanguage: () => string;
+  /** Halloween 2026: the spooky sounds in Halloween Talk and Trivia. */
+  spookySounds: SpookySounds;
 };
 
 const DepsContext = createContext<AppDeps | null>(null);
