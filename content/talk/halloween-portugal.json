@@ -1,0 +1,192 @@
+[
+  {
+    "id": "tlk-hpt-00001",
+    "topic": "halloween-portugal",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "In Portugal, children go door to door on 1 November asking for Pão-por-Deus instead of trick-or-treating. Which would you rather keep?",
+      "optionA": "Pão-por-Deus",
+      "optionB": "Trick-or-treat",
+      "followUps": [
+        "What would you hand out at your door?"
+      ]
+    },
+    "es": {
+      "question": "En Portugal, el 1 de noviembre los niños van de puerta en puerta pidiendo Pão-por-Deus en vez de \"trick or treat\". ¿Con cuál te quedás?",
+      "optionA": "Pão-por-Deus",
+      "optionB": "Trick or treat",
+      "followUps": [
+        "¿Qué repartirías en tu puerta?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hpt-00002",
+    "topic": "halloween-portugal",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "Who here is most likely to get lost on a night tour of Sintra and end up at the bottom of Quinta da Regaleira's well?",
+      "followUps": [
+        "Who would go down to rescue them?"
+      ]
+    },
+    "es": {
+      "question": "¿Quién de acá se perdería en una visita nocturna a Sintra y terminaría en el fondo del pozo de la Quinta da Regaleira?",
+      "followUps": [
+        "¿Quién bajaría a rescatarlo?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hpt-00003",
+    "topic": "halloween-portugal",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "What's your scariest Portuguese bureaucracy story?",
+      "followUps": [
+        "How long did it take to sort out?",
+        "Is it still going?"
+      ]
+    },
+    "es": {
+      "question": "¿Cuál es tu historia más terrorífica con la burocracia portuguesa?",
+      "followUps": [
+        "¿Cuánto tardó en resolverse?",
+        "¿Sigue sin resolverse?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hpt-00004",
+    "topic": "halloween-portugal",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "Montalegre holds a witches' night every Friday the 13th. Who here would actually go?",
+      "followUps": [
+        "What would you wear?"
+      ]
+    },
+    "es": {
+      "question": "Montalegre hace una noche de brujas cada viernes 13. ¿Quién de acá iría de verdad?",
+      "followUps": [
+        "¿De qué te disfrazarías?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hpt-00005",
+    "topic": "halloween-portugal",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "What's the spookiest building you've seen in Portugal?",
+      "followUps": [
+        "Would you spend a night there?"
+      ]
+    },
+    "es": {
+      "question": "¿Cuál es el edificio más tenebroso que viste en Portugal?",
+      "followUps": [
+        "¿Pasarías una noche ahí?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hpt-00006",
+    "topic": "halloween-portugal",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "Would you rather walk through Alfama alone at 3am or spend the night in an empty palace in Sintra?",
+      "optionA": "Alfama at 3am",
+      "optionB": "An empty Sintra palace",
+      "followUps": [
+        "What story would you tell the next day?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué preferís: caminar a solas por Alfama a las 3 de la mañana o pasar la noche en un palacio vacío de Sintra?",
+      "optionA": "Alfama a las 3",
+      "optionB": "Un palacio vacío en Sintra",
+      "followUps": [
+        "¿Qué historia contarías al otro día?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hpt-00007",
+    "topic": "halloween-portugal",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "Who here is most likely to believe every word of a Portuguese neighbour's ghost story?",
+      "followUps": [
+        "What would the story be about?"
+      ]
+    },
+    "es": {
+      "question": "¿Quién de acá se creería toda la historia de fantasmas de un vecino portugués?",
+      "followUps": [
+        "¿De qué sería la historia?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hpt-00008",
+    "topic": "halloween-portugal",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "What Portuguese thing scared you a little when you first moved here?",
+      "followUps": [
+        "Does it still?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué cosa de Portugal te dio un poco de miedo cuando recién llegaste?",
+      "followUps": [
+        "¿Todavía te da?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hpt-00009",
+    "topic": "halloween-portugal",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "In Portuguese folklore there's the lobisomem, a werewolf. If one lived in your neighbourhood, how would you spot it?",
+      "followUps": [
+        "Who here would make friends with it?"
+      ]
+    },
+    "es": {
+      "question": "En el folclore portugués existe el lobisomem, un hombre lobo. Si viviera en tu barrio, ¿cómo lo reconocerías?",
+      "followUps": [
+        "¿Quién de acá se haría amigo?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hpt-00010",
+    "topic": "halloween-portugal",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "Who here is most likely to celebrate Halloween, Pão-por-Deus and the Magusto chestnut festival all in the same fortnight?",
+      "followUps": [
+        "Which one would they enjoy most?"
+      ]
+    },
+    "es": {
+      "question": "¿Quién de acá festejaría Halloween, el Pão-por-Deus y el Magusto de las castañas en las mismas dos semanas?",
+      "followUps": [
+        "¿Cuál disfrutaría más?"
+      ]
+    }
+  }
+]

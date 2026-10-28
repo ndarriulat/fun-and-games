@@ -16,6 +16,8 @@ import technology from "../../content/trivia/technology.json";
 import uruguay from "../../content/trivia/uruguay.json";
 import talkChildhoodMemories from "../../content/talk/childhood-memories.json";
 import talkFood from "../../content/talk/food.json";
+import talkHalloween from "../../content/talk/halloween.json"; // Halloween 2026
+import talkHalloweenPortugal from "../../content/talk/halloween-portugal.json"; // Halloween 2026
 import talkFriendshipRelationships from "../../content/talk/friendship-relationships.json";
 import talkFutureTechnology from "../../content/talk/future-technology.json";
 import talkHypotheticals from "../../content/talk/hypotheticals.json";
@@ -58,6 +60,8 @@ const talkFiles: Record<TalkTopic, unknown[]> = {
   "travel-places": talkTravelPlaces,
   uruguay: talkUruguay,
   "work-money": talkWorkMoney,
+  halloween: talkHalloween, // Halloween 2026
+  "halloween-portugal": talkHalloweenPortugal, // Halloween 2026
 };
 
 /** The content bank bundled into the app at build time. */

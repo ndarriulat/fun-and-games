@@ -205,6 +205,31 @@ export const talkFixtures: TalkItem[] = [
       followUps: ["Does it still surprise you?", "What would you tell someone about to move here?"],
     },
   },
+  // Halloween 2026: only Halloween Talk deals it, never regular Talk.
+  {
+    id: "tlk-hal-90001",
+    topic: "halloween",
+    type: "question",
+    intensity: "light",
+    en: {
+      question: "Who's most likely to be the first one to run in a horror movie?",
+      followUps: ["Who would they leave behind?"],
+    },
+    es: {
+      question: "¿Quién sería el primero en salir corriendo en una película de terror?",
+      followUps: ["¿A quién dejaría atrás?"],
+    },
+  },
+  {
+    id: "tlk-hpt-90001",
+    topic: "halloween-portugal",
+    type: "question",
+    intensity: "light",
+    en: {
+      question: "What's your scariest Portuguese bureaucracy story?",
+      followUps: ["Is it still going?"],
+    },
+  },
   // Hidden by default, so with no saved changes it's never dealt.
   {
     id: "tlk-uru-90001",

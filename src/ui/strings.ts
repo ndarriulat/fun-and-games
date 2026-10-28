@@ -9,6 +9,8 @@ export type Strings = {
   trivia: { name: string; blurb: string };
   puzzles: { name: string; blurb: string };
   talk: { name: string; blurb: string };
+  // Halloween 2026
+  halloween: { name: string; blurb: string; ribbon: string };
   reshuffled: string;
   noCards: (mode: string) => string;
   previousCard: string;
@@ -53,6 +55,7 @@ const en: Strings = {
   trivia: { name: "Trivia", blurb: "Guess the answer, then reveal" },
   puzzles: { name: "Puzzles", blurb: "Coming soon" },
   talk: { name: "Talk", blurb: "Questions to get everyone talking" },
+  halloween: { name: "Halloween Talk", blurb: "Spooky questions for the group", ribbon: "Special edition" }, // Halloween 2026
   reshuffled: "You've played everything, starting again.",
   noCards: (mode) => `No ${mode} cards yet.`,
   previousCard: "Previous card",
@@ -118,6 +121,8 @@ const en: Strings = {
     "pop-culture": "Pop Culture",
     uruguay: "Uruguay 🇺🇾",
     portugal: "Portugal 🇵🇹",
+    halloween: "Halloween 🎃", // Halloween 2026
+    "halloween-portugal": "Halloween in Portugal 🇵🇹", // Halloween 2026
   },
 };
 
@@ -129,6 +134,7 @@ const es: Strings = {
   trivia: { name: "Trivia", blurb: "Adiviná la respuesta y después mirala" },
   puzzles: { name: "Acertijos", blurb: "Próximamente" },
   talk: { name: "Charla", blurb: "Preguntas para que charlen todos" },
+  halloween: { name: "Charla de Halloween", blurb: "Preguntas de miedo para el grupo", ribbon: "Edición especial" }, // Halloween 2026
   reshuffled: "Ya jugaron todo, arrancamos de nuevo.",
   noCards: (mode) => `Todavía no hay tarjetas de ${mode}.`,
   previousCard: "Tarjeta anterior",
@@ -194,6 +200,8 @@ const es: Strings = {
     "pop-culture": "Cultura pop",
     uruguay: "Uruguay 🇺🇾",
     portugal: "Portugal 🇵🇹",
+    halloween: "Halloween 🎃", // Halloween 2026
+    "halloween-portugal": "Halloween en Portugal 🇵🇹", // Halloween 2026
   },
 };
 

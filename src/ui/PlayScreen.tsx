@@ -9,6 +9,7 @@ import { ReportOverlay } from "./ReportOverlay";
 /** The frame around every mode's card: top row, the reshuffle notice, the empty state and Report. */
 export function PlayScreen({
   mode,
+  edition,
   card,
   reshuffled,
   empty,
@@ -16,6 +17,8 @@ export function PlayScreen({
   children,
 }: {
   mode: Exclude<Mode, "puzzles">;
+  /** Halloween 2026: a special edition of the mode, with its own name and colour. Reports still say the mode. */
+  edition?: "halloween";
   /** The card on screen, for Report. Missing while there's none. */
   card?: Omit<ReportedCard, "mode">;
   reshuffled: boolean;
@@ -25,10 +28,10 @@ export function PlayScreen({
 }) {
   const { t } = useLanguage();
   const [reporting, setReporting] = useState(false);
-  const title = t[mode].name;
+  const title = t[edition ?? mode].name;
 
   return (
-    <main className="play" data-mode={mode}>
+    <main className="play" data-mode={edition ?? mode}>
       <header className="play-top">
         <button type="button" className="icon-btn" aria-label={t.home} onClick={goHome}>
           <Icon name="home" />

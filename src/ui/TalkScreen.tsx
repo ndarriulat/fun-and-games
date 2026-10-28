@@ -1,6 +1,7 @@
 import type { ContentBank } from "@/content/bank";
 import type { Language, TalkItem } from "@/content/types";
 import { playablePool, shownIn } from "@/play/deal";
+import { isHalloweenTopic } from "@/play/halloween";
 import type { SavedState } from "@/play/storage";
 import { useLanguage } from "./language";
 import { CardControls, PlayScreen, questionSize } from "./PlayScreen";
@@ -10,21 +11,28 @@ import { useSwipe } from "./useSwipe";
 /** What has been revealed on a Talk card: how many follow-ups are showing. */
 type TalkView = { followUps: number };
 
+// Halloween 2026: regular Talk leaves out Halloween cards; Halloween Talk deals only them.
 const loadTalkPool = async (content: ContentBank, saved: SavedState, language: Language) =>
-  playablePool(await content.talk(), language, saved.topics);
+  playablePool(await content.talk(), language, saved.topics).filter((item) => !isHalloweenTopic(item.topic));
 
-export function TalkScreen({ goHome }: { goHome: () => void }) {
+const loadHalloweenPool = async (content: ContentBank, saved: SavedState, language: Language) =>
+  playablePool(await content.talk(), language, saved.topics).filter((item) => isHalloweenTopic(item.topic));
+
+/** Talk, or (Halloween 2026) its Halloween edition: the same cards and controls, with its own pool, name and colour. */
+export function TalkScreen({ goHome, edition }: { goHome: () => void; edition?: "halloween" }) {
   const { language } = useLanguage();
   const deck = useDeck<TalkItem, TalkView>({
+    // The edition shares Talk's played history; its IDs never overlap with Talk's.
     mode: "talk",
     language,
-    loadPool: loadTalkPool,
+    loadPool: edition ? loadHalloweenPool : loadTalkPool,
     initialView: { followUps: 0 },
   });
 
   return (
     <PlayScreen
       mode="talk"
+      edition={edition}
       card={deck.card && reportedTalk(deck.card.item, deck.card.view, language)}
       reshuffled={deck.reshuffled}
       empty={deck.empty}

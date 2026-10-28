@@ -10,6 +10,8 @@
   --trivia: #e8531f;
   --puzzles: #6a4cff;
   --talk: #0b9483;
+  --halloween: #2b1645; /* Halloween 2026 */
+  --pumpkin: #ff8a1f; /* Halloween 2026 */
   --on-mode: #ffffff;
   --font-display: var(--font-display-face), "Arial Rounded MT Bold", system-ui, sans-serif;
   --font-body: var(--font-body-face), system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -56,6 +58,91 @@ button:focus-visible {
 }
 [data-mode="talk"] {
   --mode: var(--talk);
+}
+/* Halloween 2026 */
+[data-mode="halloween"] {
+  --mode: var(--halloween);
+}
+.mode-card[data-mode="halloween"] {
+  position: relative;
+  overflow: hidden;
+}
+.mode-card[data-mode="halloween"] .mode-name {
+  color: var(--pumpkin);
+}
+.halloween-decor {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.halloween-ribbon {
+  position: absolute;
+  top: 26px;
+  left: -42px;
+  width: 170px;
+  padding: 5px 0;
+  transform: rotate(-45deg);
+  background: var(--pumpkin);
+  color: var(--halloween);
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
+}
+.halloween-web {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 120px;
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.35);
+  stroke-width: 1.2;
+}
+.halloween-web .halloween-thread {
+  stroke: rgba(255, 255, 255, 0.55);
+  stroke-width: 1;
+}
+.halloween-spider {
+  fill: #0d0714;
+  stroke: #0d0714;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+}
+.halloween-pumpkins {
+  position: absolute;
+  top: 12px;
+  right: 124px;
+  width: 88px;
+  height: 49px;
+}
+/* Halloween Talk's play screen matches its Home card: dark cards and buttons, orange text. */
+.play[data-mode="halloween"] {
+  --on-mode: var(--pumpkin);
+}
+.play[data-mode="halloween"] .card-front {
+  background: var(--halloween);
+  border-color: var(--halloween);
+  color: var(--pumpkin);
+}
+.play[data-mode="halloween"] .card-meta {
+  color: var(--pumpkin);
+  opacity: 0.75;
+}
+.play[data-mode="halloween"] .choice {
+  background: var(--pumpkin);
+  color: var(--halloween);
+}
+.play[data-mode="halloween"] .choice + .choice {
+  background: none;
+  color: var(--pumpkin);
+  border-color: var(--pumpkin);
+}
+.play[data-mode="halloween"] .follow-up {
+  border-left-color: var(--pumpkin);
 }
 
 .app {

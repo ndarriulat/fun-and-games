@@ -1,0 +1,1480 @@
+[
+  {
+    "id": "tlk-hal-00001",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "Who's most likely to be the first one to run in a horror film?",
+      "followUps": [
+        "Who would they leave behind?",
+        "Who's most likely to survive until the end?"
+      ]
+    },
+    "es": {
+      "question": "¿Quién de acá sería el primero en salir corriendo en una película de terror?",
+      "followUps": [
+        "¿A quién dejaría atrás?",
+        "¿Quién llegaría vivo hasta el final?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00002",
+    "topic": "halloween",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "Would you rather spend a night alone in a haunted house or a week with no phone?",
+      "optionA": "A night in a haunted house",
+      "optionB": "A week with no phone",
+      "followUps": [
+        "What would you do to pass the time?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué preferís: pasar una noche a solas en una casa embrujada o una semana sin celular?",
+      "optionA": "Una noche en una casa embrujada",
+      "optionB": "Una semana sin celular",
+      "followUps": [
+        "¿Qué harías para pasar el rato?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00003",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "If you were a ghost, who or what would you haunt just for fun?",
+      "followUps": [
+        "What would your signature spooky move be?",
+        "How long until they noticed?"
+      ]
+    },
+    "es": {
+      "question": "Si fueras un fantasma, ¿a quién o qué embrujarías solo por diversión?",
+      "followUps": [
+        "¿Cuál sería tu truco de miedo característico?",
+        "¿Cuánto tardarían en darse cuenta?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00004",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "Who's most likely to scream at a jump scare and then pretend it didn't happen?",
+      "followUps": [
+        "What would their excuse be?"
+      ]
+    },
+    "es": {
+      "question": "¿Quién de acá pegaría un grito con un susto y después haría como si nada?",
+      "followUps": [
+        "¿Cuál sería su excusa?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00005",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "Who's most likely to eat all the Halloween sweets before any kids knock on the door?",
+      "followUps": [
+        "Which sweet would go first?",
+        "What would they hand out instead?"
+      ]
+    },
+    "es": {
+      "question": "¿Quién de acá se comería todas las golosinas de Halloween antes de que algún niño toque el timbre?",
+      "followUps": [
+        "¿Cuál golosina caería primero?",
+        "¿Qué repartiría en su lugar?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00006",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "Who's most likely to go down to the basement alone to check out a strange noise?",
+      "followUps": [
+        "What would they take with them for protection?"
+      ]
+    },
+    "es": {
+      "question": "¿Quién de acá bajaría a solas al sótano a ver qué fue ese ruido raro?",
+      "followUps": [
+        "¿Qué llevaría para defenderse?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00007",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "Who's most likely to make friends with the ghost instead of running away?",
+      "followUps": [
+        "What would they do together?",
+        "What would they call the ghost?"
+      ]
+    },
+    "es": {
+      "question": "¿Quién de acá se haría amigo del fantasma en vez de salir corriendo?",
+      "followUps": [
+        "¿Qué harían juntos?",
+        "¿Qué nombre le pondría al fantasma?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00008",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "Who's most likely to turn up in the most over-the-top costume?",
+      "followUps": [
+        "What would it be?",
+        "How long would it take them to make?"
+      ]
+    },
+    "es": {
+      "question": "¿Quién de acá aparecería con el disfraz más exagerado?",
+      "followUps": [
+        "¿De qué sería?",
+        "¿Cuánto tardaría en armarlo?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00009",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "Who's most likely to sleep with the lights on after a scary film?",
+      "followUps": [
+        "Who would they call at 3am?"
+      ]
+    },
+    "es": {
+      "question": "¿Quién de acá dormiría con la luz prendida después de ver una de terror?",
+      "followUps": [
+        "¿A quién llamaría a las 3 de la mañana?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00010",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "Who's most likely to survive a zombie apocalypse the longest?",
+      "followUps": [
+        "What's their secret?",
+        "Who would they team up with?"
+      ]
+    },
+    "es": {
+      "question": "¿Quién de acá sobreviviría más tiempo a un apocalipsis zombi?",
+      "followUps": [
+        "¿Cuál es su secreto?",
+        "¿Con quién haría equipo?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00011",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "Who's most likely to read the spell from the creepy old book out loud, even when everyone says don't?",
+      "followUps": [
+        "What happens next?"
+      ]
+    },
+    "es": {
+      "question": "¿Quién de acá leería en voz alta el hechizo del libro viejo, aunque todos le digan que no?",
+      "followUps": [
+        "¿Qué pasa después?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00012",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "Who's most likely to get lost in a haunted maze and refuse to ask for help?",
+      "followUps": [
+        "How long would they last before giving up?"
+      ]
+    },
+    "es": {
+      "question": "¿Quién de acá se perdería en un laberinto embrujado y no pediría ayuda ni loco?",
+      "followUps": [
+        "¿Cuánto aguantaría antes de rendirse?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00013",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "Who's most likely to secretly be a vampire?",
+      "followUps": [
+        "What's the evidence?",
+        "Who would they let in on the secret?"
+      ]
+    },
+    "es": {
+      "question": "¿Quién de acá es un vampiro en secreto?",
+      "followUps": [
+        "¿Qué pruebas hay?",
+        "¿A quién le contaría el secreto?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00014",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "Who's most likely to laugh at the scariest part of a horror film?",
+      "followUps": [
+        "Is it nerves, or are they really that brave?"
+      ]
+    },
+    "es": {
+      "question": "¿Quién de acá se reiría en la parte más terrorífica de una película de miedo?",
+      "followUps": [
+        "¿Son nervios o de verdad es tan valiente?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00015",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "Who's most likely to hand out toothbrushes instead of sweets on Halloween?",
+      "followUps": [
+        "What else would they hand out?",
+        "How would the kids react?"
+      ]
+    },
+    "es": {
+      "question": "¿Quién de acá repartiría cepillos de dientes en vez de golosinas en Halloween?",
+      "followUps": [
+        "¿Qué otra cosa repartiría?",
+        "¿Cómo reaccionarían los niños?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00016",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "Who's most likely to pull a scary prank on everyone tonight?",
+      "followUps": [
+        "What would the prank be?",
+        "Who would fall for it first?"
+      ]
+    },
+    "es": {
+      "question": "¿Quién de acá le haría una broma de terror a todos esta noche?",
+      "followUps": [
+        "¿Cuál sería la broma?",
+        "¿Quién caería primero?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00017",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "Who's most likely to talk a monster out of eating them?",
+      "followUps": [
+        "What would they say?"
+      ]
+    },
+    "es": {
+      "question": "¿Quién de acá convencería a un monstruo de no comérselo?",
+      "followUps": [
+        "¿Qué le diría?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00018",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "You hear someone call your name from an empty room. Do you answer?",
+      "followUps": [
+        "What if it used a nickname only this group knows?"
+      ]
+    },
+    "es": {
+      "question": "Escuchás que alguien te llama desde un cuarto vacío. ¿Contestás?",
+      "followUps": [
+        "¿Y si usa un apodo que solo conoce este grupo?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00019",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "You wake up at 3:33am and every clock in the house has stopped. What do you do first?",
+      "followUps": [
+        "Who do you text?"
+      ]
+    },
+    "es": {
+      "question": "Te despertás a las 3:33 y todos los relojes de la casa están parados. ¿Qué hacés primero?",
+      "followUps": [
+        "¿A quién le escribís?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00020",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "Who's most likely to turn out to be the villain behind it all in a mystery film?",
+      "followUps": [
+        "What would give them away?"
+      ]
+    },
+    "es": {
+      "question": "¿Quién de acá resultaría ser el villano detrás de todo en una película de misterio?",
+      "followUps": [
+        "¿Qué lo delataría?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00021",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "Who's most likely to be the hero who saves everyone at the last second?",
+      "followUps": [
+        "And who would take the credit?"
+      ]
+    },
+    "es": {
+      "question": "¿Quién de acá sería el héroe que salva a todos en el último segundo?",
+      "followUps": [
+        "¿Y quién se llevaría el mérito?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00022",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "Who's most likely to carve the best pumpkin?",
+      "followUps": [
+        "What would they carve on it?",
+        "Who would carve the worst one?"
+      ]
+    },
+    "es": {
+      "question": "¿Quién de acá tallaría la mejor calabaza?",
+      "followUps": [
+        "¿Qué le tallaría?",
+        "¿Y quién tallaría la peor?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00023",
+    "topic": "halloween",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "Would you rather be a vampire or a werewolf?",
+      "optionA": "Vampire",
+      "optionB": "Werewolf",
+      "followUps": [
+        "What would be the hardest part?",
+        "Where would you live?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué preferís: ser vampiro u hombre lobo?",
+      "optionA": "Vampiro",
+      "optionB": "Hombre lobo",
+      "followUps": [
+        "¿Qué sería lo más difícil?",
+        "¿Dónde vivirías?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00024",
+    "topic": "halloween",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "Would you rather have a ghost as a flatmate or a skeleton as a best friend?",
+      "optionA": "A ghost flatmate",
+      "optionB": "A skeleton best friend",
+      "followUps": [
+        "What would the house rules be?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué preferís: tener un fantasma de compañero de casa o un esqueleto de mejor amigo?",
+      "optionA": "Un fantasma de compañero",
+      "optionB": "Un esqueleto de mejor amigo",
+      "followUps": [
+        "¿Cuáles serían las reglas de la casa?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00025",
+    "topic": "halloween",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "Would you rather be chased by a slow zombie forever or a fast one for five minutes?",
+      "optionA": "A slow zombie forever",
+      "optionB": "A fast zombie for five minutes",
+      "followUps": [
+        "What's your escape plan?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué preferís: que te persiga un zombi lento para siempre o uno rápido durante cinco minutos?",
+      "optionA": "Uno lento para siempre",
+      "optionB": "Uno rápido cinco minutos",
+      "followUps": [
+        "¿Cuál es tu plan de escape?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00026",
+    "topic": "halloween",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "Would you rather wear the same costume every Halloween for life or let this group choose your costume every year?",
+      "optionA": "The same costume forever",
+      "optionB": "The group chooses",
+      "followUps": [
+        "Which costume would you be scared they'd choose?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué preferís: usar el mismo disfraz todos los Halloween de tu vida o que este grupo elija tu disfraz cada año?",
+      "optionA": "El mismo disfraz siempre",
+      "optionB": "Que elija el grupo",
+      "followUps": [
+        "¿Qué disfraz te daría miedo que elijan?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00027",
+    "topic": "halloween",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "Would you rather have a black cat that talks or a broomstick that flies?",
+      "optionA": "A talking black cat",
+      "optionB": "A flying broomstick",
+      "followUps": [
+        "What would you use it for first?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué preferís: un gato negro que habla o una escoba que vuela?",
+      "optionA": "Un gato negro que habla",
+      "optionB": "Una escoba que vuela",
+      "followUps": [
+        "¿Para qué lo usarías primero?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00028",
+    "topic": "halloween",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "At midnight, would you rather watch a horror film alone or walk through a cemetery with friends?",
+      "optionA": "A horror film alone",
+      "optionB": "A cemetery with friends",
+      "followUps": [
+        "Which friend would you want next to you?"
+      ]
+    },
+    "es": {
+      "question": "A medianoche, ¿qué preferís: ver una película de terror a solas o caminar por un cementerio con amigos?",
+      "optionA": "Una película a solas",
+      "optionB": "Un cementerio con amigos",
+      "followUps": [
+        "¿Qué amigo querrías al lado?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00029",
+    "topic": "halloween",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "Would you rather find a spider in your shoe or a bat in your bedroom?",
+      "optionA": "A spider in your shoe",
+      "optionB": "A bat in your bedroom",
+      "followUps": [
+        "How loud would you scream?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué preferís: encontrar una araña en el zapato o un murciélago en tu cuarto?",
+      "optionA": "Una araña en el zapato",
+      "optionB": "Un murciélago en el cuarto",
+      "followUps": [
+        "¿Qué tan fuerte gritarías?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00030",
+    "topic": "halloween",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "Would you rather live rent-free in a haunted castle or pay rent for a normal flat?",
+      "optionA": "A free haunted castle",
+      "optionB": "A normal flat with rent",
+      "followUps": [
+        "What would you do about the ghosts?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué preferís: vivir gratis en un castillo embrujado o pagar alquiler en un apartamento normal?",
+      "optionA": "Un castillo embrujado gratis",
+      "optionB": "Un apartamento normal con alquiler",
+      "followUps": [
+        "¿Qué harías con los fantasmas?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00031",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "You find a door in your home you've never seen before. Do you open it?",
+      "followUps": [
+        "What's behind it?",
+        "Do you tell anyone?"
+      ]
+    },
+    "es": {
+      "question": "Encontrás una puerta en tu casa que nunca habías visto. ¿La abrís?",
+      "followUps": [
+        "¿Qué hay del otro lado?",
+        "¿Se lo contás a alguien?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00032",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "What's a real place you've been that gave you a bad feeling you couldn't explain?",
+      "followUps": [
+        "Would you go back?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué lugar real en el que estuviste te dio una mala sensación que no pudiste explicar?",
+      "followUps": [
+        "¿Volverías?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00033",
+    "topic": "halloween",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "Would you rather always know when a jump scare is coming or never be scared by anything again?",
+      "optionA": "Always know it's coming",
+      "optionB": "Never be scared again",
+      "followUps": [
+        "Would horror films still be fun?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué preferís: saber siempre cuándo viene un susto o que nunca más nada te dé miedo?",
+      "optionA": "Saber cuándo viene",
+      "optionB": "Que nada te dé miedo",
+      "followUps": [
+        "¿Las películas de terror seguirían siendo divertidas?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00034",
+    "topic": "halloween",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "Would you rather go trick-or-treating as an adult in a full costume or hand out sweets dressed as a giant pumpkin?",
+      "optionA": "Trick-or-treat in costume",
+      "optionB": "Hand out sweets as a pumpkin",
+      "followUps": [
+        "Who here would join you?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué preferís: salir a pedir golosinas de grande con disfraz completo o repartir golosinas con disfraz de calabaza gigante?",
+      "optionA": "Pedir golosinas disfrazado",
+      "optionB": "Repartir golosinas de calabaza",
+      "followUps": [
+        "¿Quién de acá se sumaría?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00035",
+    "topic": "halloween",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "Would you rather have a mummy as your personal chef or Frankenstein's monster as your personal trainer?",
+      "optionA": "A mummy chef",
+      "optionB": "Frankenstein's monster as a trainer",
+      "followUps": [
+        "What would be on the menu?",
+        "What would the workout be like?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué preferís: una momia de chef personal o el monstruo de Frankenstein de entrenador personal?",
+      "optionA": "Una momia de chef",
+      "optionB": "Frankenstein de entrenador",
+      "followUps": [
+        "¿Qué habría en el menú?",
+        "¿Cómo sería la rutina?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00036",
+    "topic": "halloween",
+    "type": "would-you-rather",
+    "intensity": "light",
+    "en": {
+      "question": "Would you rather spend Halloween at a huge costume party or at home with a horror film marathon?",
+      "optionA": "A costume party",
+      "optionB": "A film marathon at home",
+      "followUps": [
+        "Which films would make the list?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué preferís: pasar Halloween en una fiesta de disfraces enorme o en casa con una maratón de películas de terror?",
+      "optionA": "Una fiesta de disfraces",
+      "optionB": "Una maratón en casa",
+      "followUps": [
+        "¿Qué películas entrarían en la lista?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00037",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "What's the scariest film you've actually watched all the way through?",
+      "followUps": [
+        "Did you sleep that night?",
+        "Would you watch it again?"
+      ]
+    },
+    "es": {
+      "question": "¿Cuál es la película más terrorífica que viste entera?",
+      "followUps": [
+        "¿Dormiste esa noche?",
+        "¿La volverías a ver?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00038",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "What's the best costume you've ever worn, or wish you had?",
+      "followUps": [
+        "Who helped you make it, or who would you ask?"
+      ]
+    },
+    "es": {
+      "question": "¿Cuál es el mejor disfraz que usaste, o que te hubiera gustado usar?",
+      "followUps": [
+        "¿Quién te ayudó a armarlo, o a quién le pedirías ayuda?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00039",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "What's something completely normal that secretly scares you?",
+      "followUps": [
+        "Since when?",
+        "Has anyone here noticed?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué cosa totalmente normal te da miedo en secreto?",
+      "followUps": [
+        "¿Desde cuándo?",
+        "¿Alguien de acá se dio cuenta?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00040",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "If you could be any film monster for one night, which one would you pick?",
+      "followUps": [
+        "What would you do with the night?"
+      ]
+    },
+    "es": {
+      "question": "Si pudieras ser cualquier monstruo de película por una noche, ¿cuál elegirías?",
+      "followUps": [
+        "¿Qué harías esa noche?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00041",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "What's the most mysterious thing that's ever happened to you or someone you know?",
+      "followUps": [
+        "Do you have an explanation for it?",
+        "Do you still think about it?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué es lo más misterioso que te pasó a vos o a alguien que conocés?",
+      "followUps": [
+        "¿Tenés una explicación?",
+        "¿Todavía pensás en eso?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00042",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "Who here would you want next to you in a haunted house, and why?",
+      "followUps": [
+        "Who would you definitely leave at home?"
+      ]
+    },
+    "es": {
+      "question": "¿A quién de acá querrías al lado en una casa embrujada, y por qué?",
+      "followUps": [
+        "¿A quién dejarías en casa sí o sí?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00043",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "You're writing a horror film set exactly where we are right now. What's the plot?",
+      "followUps": [
+        "Who here plays the lead?"
+      ]
+    },
+    "es": {
+      "question": "Estás escribiendo una película de terror que pasa justo donde estamos ahora. ¿De qué se trata?",
+      "followUps": [
+        "¿Quién de acá sería el protagonista?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00044",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "What would your name be as a witch, wizard or vampire?",
+      "followUps": [
+        "What would your special power be?"
+      ]
+    },
+    "es": {
+      "question": "Si fueras bruja, brujo o vampiro, ¿cómo te llamarías?",
+      "followUps": [
+        "¿Cuál sería tu poder especial?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00045",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "Your phone shows a photo you didn't take: you, asleep, last night. What do you do?",
+      "followUps": [
+        "Who's the first person you suspect?"
+      ]
+    },
+    "es": {
+      "question": "En tu celular aparece una foto que no sacaste: vos durmiendo, anoche. ¿Qué hacés?",
+      "followUps": [
+        "¿De quién sospechás primero?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00046",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "If you had to survive one night in a haunted house, what three things would you take?",
+      "followUps": [
+        "The lights go out: which one do you grab first?"
+      ]
+    },
+    "es": {
+      "question": "Si tuvieras que sobrevivir una noche en una casa embrujada, ¿qué tres cosas llevarías?",
+      "followUps": [
+        "Se corta la luz: ¿cuál agarrás primero?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00047",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "Do you believe in ghosts? What would it take to change your mind?",
+      "followUps": [
+        "Has anything ever almost convinced you?"
+      ]
+    },
+    "es": {
+      "question": "¿Creés en los fantasmas? ¿Qué haría falta para que cambies de opinión?",
+      "followUps": [
+        "¿Alguna vez algo casi te convence?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00048",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "What group costume should this group do next Halloween?",
+      "followUps": [
+        "Who gets which part?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué disfraz grupal deberíamos hacer el próximo Halloween?",
+      "followUps": [
+        "¿Quién sería cada personaje?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00049",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "What sound would scare you most if you heard it at 3am?",
+      "followUps": [
+        "What would you do?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué ruido te daría más miedo escuchar a las 3 de la mañana?",
+      "followUps": [
+        "¿Qué harías?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00050",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "light",
+    "en": {
+      "question": "If monsters were real, which one would make the best neighbour?",
+      "followUps": [
+        "And the worst?"
+      ]
+    },
+    "es": {
+      "question": "Si los monstruos existieran, ¿cuál sería el mejor vecino?",
+      "followUps": [
+        "¿Y el peor?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00051",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "You look in the mirror and your reflection blinks a second too late. What's your next move?",
+      "followUps": [
+        "Do you tell someone, or pretend you didn't see it?"
+      ]
+    },
+    "es": {
+      "question": "Te mirás al espejo y tu reflejo parpadea un segundo tarde. ¿Qué hacés?",
+      "followUps": [
+        "¿Le contás a alguien o hacés como que no viste nada?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00052",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "What's the creepiest thing a child has ever said to you?",
+      "followUps": [
+        "Was there ever an explanation?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué es lo más escalofriante que te dijo un niño alguna vez?",
+      "followUps": [
+        "¿Tuvo alguna explicación?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00053",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "You get a text from your own number: \"Don't go home tonight.\" Do you go home?",
+      "followUps": [
+        "Where would you go instead?"
+      ]
+    },
+    "es": {
+      "question": "Te llega un mensaje desde tu propio número: \"No vuelvas a casa esta noche\". ¿Volvés?",
+      "followUps": [
+        "¿A dónde irías?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00054",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "You're driving at night and pass the same hitchhiker three times. What do you do?",
+      "followUps": [
+        "Do you stop the fourth time?"
+      ]
+    },
+    "es": {
+      "question": "Vas manejando de noche y pasás tres veces al lado de la misma persona haciendo dedo. ¿Qué hacés?",
+      "followUps": [
+        "¿La cuarta vez parás?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00055",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "What's a sound in your home at night that you've never been able to explain?",
+      "followUps": [
+        "Have you ever gone to check?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué ruido de tu casa a la noche nunca pudiste explicar?",
+      "followUps": [
+        "¿Alguna vez fuiste a ver?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00056",
+    "topic": "halloween",
+    "type": "would-you-rather",
+    "intensity": "deep",
+    "en": {
+      "question": "Would you rather spend a night in a hospital that closed 50 years ago or in a forest where people go missing?",
+      "optionA": "The abandoned hospital",
+      "optionB": "The forest",
+      "followUps": [
+        "What would you take with you?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué preferís: pasar una noche en un hospital abandonado hace 50 años o en un bosque donde desaparece gente?",
+      "optionA": "El hospital abandonado",
+      "optionB": "El bosque",
+      "followUps": [
+        "¿Qué llevarías?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00057",
+    "topic": "halloween",
+    "type": "would-you-rather",
+    "intensity": "deep",
+    "en": {
+      "question": "Would you rather hear knocking from inside your wardrobe or footsteps on your roof?",
+      "optionA": "Knocking in the wardrobe",
+      "optionB": "Footsteps on the roof",
+      "followUps": [
+        "Which one would you check first?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué preferís: escuchar golpes desde adentro de tu ropero o pasos en el techo?",
+      "optionA": "Golpes en el ropero",
+      "optionB": "Pasos en el techo",
+      "followUps": [
+        "¿Cuál revisarías primero?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00058",
+    "topic": "halloween",
+    "type": "would-you-rather",
+    "intensity": "deep",
+    "en": {
+      "question": "Would you rather see a face at your fifth-floor window or hear your name whispered from under your bed?",
+      "optionA": "A face at the window",
+      "optionB": "A whisper under the bed",
+      "followUps": [
+        "Which one would make you move house?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué preferís: ver una cara en tu ventana de un quinto piso o escuchar tu nombre susurrado debajo de la cama?",
+      "optionA": "Una cara en la ventana",
+      "optionB": "Un susurro debajo de la cama",
+      "followUps": [
+        "¿Cuál te haría mudarte?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00059",
+    "topic": "halloween",
+    "type": "would-you-rather",
+    "intensity": "deep",
+    "en": {
+      "question": "Would you rather live with a ghost that moves your things or one that only watches you?",
+      "optionA": "One that moves things",
+      "optionB": "One that only watches",
+      "followUps": [
+        "Would you give it a name?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué preferís: vivir con un fantasma que te cambia las cosas de lugar o con uno que solo te mira?",
+      "optionA": "Uno que cambia las cosas",
+      "optionB": "Uno que solo mira",
+      "followUps": [
+        "¿Le pondrías nombre?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00060",
+    "topic": "halloween",
+    "type": "would-you-rather",
+    "intensity": "deep",
+    "en": {
+      "question": "Would you rather be stuck in a lift with the lights off for an hour or alone in an empty theme park at night?",
+      "optionA": "A dark lift",
+      "optionB": "An empty theme park",
+      "followUps": [
+        "What would you do to stay calm?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué preferís: pasar una hora en un ascensor trancado y a oscuras o a solas en un parque de diversiones vacío de noche?",
+      "optionA": "Un ascensor trancado",
+      "optionB": "Un parque de diversiones vacío",
+      "followUps": [
+        "¿Qué harías para mantener la calma?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00061",
+    "topic": "halloween",
+    "type": "would-you-rather",
+    "intensity": "deep",
+    "en": {
+      "question": "Would you rather your old toys move around at night or the eyes in your paintings follow you?",
+      "optionA": "Toys that move",
+      "optionB": "Paintings that watch",
+      "followUps": [
+        "Would you get rid of them?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué preferís: que tus juguetes viejos se muevan de noche o que los ojos de los cuadros te sigan?",
+      "optionA": "Juguetes que se mueven",
+      "optionB": "Cuadros que te siguen",
+      "followUps": [
+        "¿Te desharías de ellos?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00062",
+    "topic": "halloween",
+    "type": "would-you-rather",
+    "intensity": "deep",
+    "en": {
+      "question": "Would you rather get a phone call from yourself or a letter from yourself dated ten years from now?",
+      "optionA": "A call from yourself",
+      "optionB": "A letter from the future",
+      "followUps": [
+        "What would it say?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué preferís: recibir una llamada tuya o una carta tuya fechada dentro de diez años?",
+      "optionA": "Una llamada tuya",
+      "optionB": "Una carta del futuro",
+      "followUps": [
+        "¿Qué diría?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00063",
+    "topic": "halloween",
+    "type": "would-you-rather",
+    "intensity": "deep",
+    "en": {
+      "question": "Would you rather spend the night locked in a doll museum or a wax museum?",
+      "optionA": "A doll museum",
+      "optionB": "A wax museum",
+      "followUps": [
+        "Which room would you avoid?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué preferís: que te dejen adentro toda la noche en un museo de muñecas o en uno de cera?",
+      "optionA": "Un museo de muñecas",
+      "optionB": "Un museo de cera",
+      "followUps": [
+        "¿Qué sala evitarías?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00064",
+    "topic": "halloween",
+    "type": "would-you-rather",
+    "intensity": "deep",
+    "en": {
+      "question": "Would you rather always hear whispers you can't understand or understand whispers nobody else can hear?",
+      "optionA": "Whispers you can't understand",
+      "optionB": "Whispers only you hear",
+      "followUps": [
+        "Would you tell anyone?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué preferís: escuchar siempre susurros que no entendés o entender susurros que nadie más escucha?",
+      "optionA": "Susurros que no entendés",
+      "optionB": "Susurros que solo vos escuchás",
+      "followUps": [
+        "¿Se lo contarías a alguien?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00065",
+    "topic": "halloween",
+    "type": "would-you-rather",
+    "intensity": "deep",
+    "en": {
+      "question": "Would you rather drive at night down a road with no lights, or one where the lights switch off as you pass?",
+      "optionA": "A road with no lights",
+      "optionB": "Lights that switch off",
+      "followUps": [
+        "What's playing on the radio?"
+      ]
+    },
+    "es": {
+      "question": "¿Qué preferís: manejar de noche por una ruta sin luces o por una donde las luces se apagan cuando pasás?",
+      "optionA": "Una ruta sin luces",
+      "optionB": "Luces que se apagan",
+      "followUps": [
+        "¿Qué suena en la radio?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00066",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "One person in this group is secretly not human. Who, and what gave them away?",
+      "followUps": [
+        "How long have they been pretending?"
+      ]
+    },
+    "es": {
+      "question": "Hay alguien en este grupo que en secreto no es humano. ¿Quién es, y qué lo delató?",
+      "followUps": [
+        "¿Hace cuánto que finge?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00067",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "Who's most likely to turn out to have been a ghost all along without knowing it?",
+      "followUps": [
+        "What were the clues?"
+      ]
+    },
+    "es": {
+      "question": "¿Quién de acá resultaría haber sido un fantasma todo este tiempo sin saberlo?",
+      "followUps": [
+        "¿Cuáles eran las pistas?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00068",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "Who's most likely to come back from a camping trip… different?",
+      "followUps": [
+        "What changed?",
+        "Who would notice first?"
+      ]
+    },
+    "es": {
+      "question": "¿Quién de acá volvería de un campamento… distinto?",
+      "followUps": [
+        "¿Qué cambió?",
+        "¿Quién se daría cuenta primero?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00069",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "Who's most likely to make a deal with a mysterious stranger without reading the small print?",
+      "followUps": [
+        "What did they get, and what did they give away?"
+      ]
+    },
+    "es": {
+      "question": "¿Quién de acá haría un trato con un desconocido misterioso sin leer la letra chica?",
+      "followUps": [
+        "¿Qué ganó y qué dio a cambio?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00070",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "Who's most likely to open the door at 3am when nobody's expected?",
+      "followUps": [
+        "Who's standing there?"
+      ]
+    },
+    "es": {
+      "question": "¿Quién de acá abriría la puerta a las 3 de la mañana sin estar esperando a nadie?",
+      "followUps": [
+        "¿Quién está ahí?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00071",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "Who's most likely to hear a music box playing in the dark and follow the sound?",
+      "followUps": [
+        "Where does it lead?"
+      ]
+    },
+    "es": {
+      "question": "¿Quién de acá escucharía una cajita de música en la oscuridad y seguiría el sonido?",
+      "followUps": [
+        "¿A dónde lleva?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00072",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "Who's most likely to be the creepy neighbour in someone else's horror story?",
+      "followUps": [
+        "What do they do that's so creepy?"
+      ]
+    },
+    "es": {
+      "question": "¿Quién de acá sería el vecino raro en la historia de terror de otro?",
+      "followUps": [
+        "¿Qué hace que da tanto miedo?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00073",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "Who's most likely to find a cursed object at a flea market and buy it anyway?",
+      "followUps": [
+        "What is it?",
+        "How hard did they haggle?"
+      ]
+    },
+    "es": {
+      "question": "¿Quién de acá encontraría un objeto maldito en una feria y lo compraría igual?",
+      "followUps": [
+        "¿Qué es?",
+        "¿Cuánto regateó?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00074",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "Who's most likely to hear a strange voice on a recording and keep listening instead of deleting it?",
+      "followUps": [
+        "What does the voice say?"
+      ]
+    },
+    "es": {
+      "question": "¿Quién de acá escucharía una voz rara en una grabación y la seguiría escuchando en vez de borrarla?",
+      "followUps": [
+        "¿Qué dice la voz?"
+      ]
+    }
+  },
+  {
+    "id": "tlk-hal-00075",
+    "topic": "halloween",
+    "type": "question",
+    "intensity": "deep",
+    "en": {
+      "question": "Who's most likely to be the last one awake when the strange things start happening?",
+      "followUps": [
+        "Would they wake the others?"
+      ]
+    },
+    "es": {
+      "question": "¿Quién de acá sería el último despierto cuando empiezan a pasar cosas raras?",
+      "followUps": [
+        "¿Despertaría a los demás?"
+      ]
+    }
+  }
+]

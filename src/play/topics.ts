@@ -1,9 +1,13 @@
+import { isHalloweenTopic } from "./halloween";
 import { talkTopicCodes, triviaTopicCodes, type TalkTopic, type TriviaTopic } from "@/content/types";
 
 /** A topic that can be hidden in Settings. Topics in both modes (Uruguay, Portugal) are one topic. */
 export type Topic = TriviaTopic | TalkTopic;
 
-export const allTopics = [...new Set([...Object.keys(triviaTopicCodes), ...Object.keys(talkTopicCodes)])] as Topic[];
+// Halloween 2026: Halloween Talk's topics can't be hidden, so they're left out.
+export const allTopics = [...new Set([...Object.keys(triviaTopicCodes), ...Object.keys(talkTopicCodes)])].filter(
+  (topic) => !isHalloweenTopic(topic),
+) as Topic[];
 
 /**
  * The player's changes from the default visibility, never the full list. A topic added later as

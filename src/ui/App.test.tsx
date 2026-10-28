@@ -23,6 +23,8 @@ const FOOD_QUESTION = "What's the best meal you've ever had?";
 const PORTUGAL_TALK_QUESTION = "What surprised you most when you moved to Portugal?";
 const URUGUAY_TALK_QUESTION = "What's the most Uruguayan thing you've ever done abroad?";
 const PORTUGAL_QUESTION = "What is the name of Lisbon's famous yellow tram route through Alfama?";
+const HALLOWEEN_QUESTION = "Who's most likely to be the first one to run in a horror movie?";
+const HALLOWEEN_PORTUGAL_QUESTION = "What's your scariest Portuguese bureaucracy story?";
 const URUGUAY_QUESTION = "In what year did Uruguay host and win the first FIFA World Cup?";
 
 async function openTrivia(deps = testDeps()) {
@@ -34,7 +36,7 @@ async function openTrivia(deps = testDeps()) {
 
 async function openTalk(deps = testDeps()) {
   const rendered = renderApp(deps);
-  await rendered.user.click(screen.getByRole("button", { name: /talk/i }));
+  await rendered.user.click(screen.getByRole("button", { name: /^talk/i }));
   await screen.findByRole("article");
   return rendered;
 }
@@ -53,13 +55,24 @@ function renderApp(deps = testDeps()) {
 }
 
 describe("Home", () => {
-  it("lists the modes in order: Trivia, Talk, then Puzzles", () => {
+  beforeEach(() => {
+    // Halloween 2026: a date when Halloween Talk is on Home, so these hold after it's gone.
+    vi.useFakeTimers({ toFake: ["Date"] });
+    vi.setSystemTime(new Date(2026, 9, 31, 20, 0));
+  });
+
+  afterEach(() => {
+    vi.useRealTimers();
+  });
+
+  it("lists the modes in order: Trivia, Talk, Halloween Talk, then Puzzles", () => {
     renderApp();
 
     const modes = within(screen.getByRole("navigation")).getAllByRole("button");
     expect(modes.map((mode) => mode.textContent)).toEqual([
       expect.stringMatching(/^Trivia/),
       expect.stringMatching(/^Talk/),
+      expect.stringMatching(/^Halloween Talk/),
       expect.stringMatching(/^Puzzles/),
     ]);
   });
@@ -69,7 +82,7 @@ describe("Home", () => {
 
     expect(screen.getByRole("button", { name: /trivia/i })).toBeInTheDocument();
     expect(screen.getByRole("button", { name: /puzzles/i })).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: /talk/i })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /^talk/i })).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Settings" })).toBeInTheDocument();
   });
 });
@@ -137,7 +150,7 @@ describe("Language", () => {
     const { user } = renderApp();
     await chooseSpanishInSettings(user);
 
-    await user.click(screen.getByRole("button", { name: /charla/i }));
+    await user.click(screen.getByRole("button", { name: /^charla(?! de halloween)/i }));
 
     expect(await screen.findByText("¿Qué preferís: poder volar o ser invisible?")).toBeInTheDocument();
     expect(screen.getByText("Qué pasaría si")).toBeInTheDocument();
@@ -470,6 +483,84 @@ describe("Trivia", () => {
 
     expect(screen.getByRole("button", { name: "Settings" })).toBeInTheDocument();
     expect(screen.queryByRole("article")).not.toBeInTheDocument();
+  });
+});
+
+// Halloween 2026: remove with ticket 03.
+describe("Halloween Talk", () => {
+  afterEach(() => {
+    vi.useRealTimers();
+  });
+
+  async function openHalloween(deps = testDeps()) {
+    const rendered = renderApp(deps);
+    await rendered.user.click(screen.getByRole("button", { name: /^halloween talk/i }));
+    await screen.findByRole("article");
+    return rendered;
+  }
+
+  it("deals only Halloween cards, Portugal's included, under its own name", async () => {
+    const { user } = await openHalloween();
+    expect(screen.getByText(HALLOWEEN_QUESTION)).toBeInTheDocument();
+    expect(screen.getByRole("main")).toHaveTextContent("Halloween Talk");
+
+    await user.click(screen.getByRole("button", { name: "Next card" }));
+    expect(screen.getByText(HALLOWEEN_PORTUGAL_QUESTION)).toBeInTheDocument();
+    expect(screen.getByText("Halloween in Portugal 🇵🇹")).toBeInTheDocument();
+
+    await user.click(screen.getByRole("button", { name: "Next card" }));
+
+    // Both Halloween cards played, so it starts again.
+    expect(screen.getByRole("status")).toHaveTextContent("You've played everything, starting again.");
+  });
+
+  it("is never dealt in regular Talk", async () => {
+    const { user } = await openTalk();
+    const dealt = [screen.getByRole("article").textContent];
+    for (let i = 0; i < 6; i++) {
+      await user.click(screen.getByRole("button", { name: "Next card" }));
+      dealt.push(screen.getByRole("article").textContent);
+    }
+
+    expect(dealt.join(" ")).not.toContain(HALLOWEEN_QUESTION);
+    expect(dealt.join(" ")).not.toContain(HALLOWEEN_PORTUGAL_QUESTION);
+  });
+
+  it("switches language in place, like Talk", async () => {
+    const { user } = await openHalloween();
+
+    await user.click(screen.getByRole("button", { name: "ES" }));
+
+    expect(screen.getByText("¿Quién sería el primero en salir corriendo en una película de terror?")).toBeInTheDocument();
+    expect(screen.getByRole("main")).toHaveTextContent("Charla de Halloween");
+  });
+
+  it("reports its cards as Talk, with their Halloween ID", async () => {
+    const reports = recordingReportSender();
+    const { user } = await openHalloween(testDeps({ reports }));
+
+    await user.click(screen.getByRole("button", { name: "Report" }));
+    const dialog = screen.getByRole("dialog");
+    await user.click(within(dialog).getByRole("radio", { name: "Confusing" }));
+    await user.click(within(dialog).getByRole("button", { name: "Send" }));
+
+    await within(dialog).findByText("Thanks! Report sent.");
+    expect(reports.sent).toEqual([
+      expect.objectContaining({ itemId: "tlk-hal-90001", mode: "talk", hiddenTopics: "uruguay" }),
+    ]);
+  });
+
+  it("is on Home until the end of 8 November 2026, then gone", () => {
+    vi.useFakeTimers({ toFake: ["Date"] });
+    vi.setSystemTime(new Date(2026, 10, 8, 23, 59));
+    renderApp();
+    expect(screen.getByRole("button", { name: /^halloween talk/i })).toBeInTheDocument();
+    cleanup();
+
+    vi.setSystemTime(new Date(2026, 10, 9, 0, 0));
+    renderApp();
+    expect(screen.queryByRole("button", { name: /halloween/i })).not.toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /^talk/i })).toBeInTheDocument();
   });
 });
 

@@ -56,6 +56,9 @@ export const talkTopicCodes = {
   "pop-culture": "pop",
   uruguay: "uru",
   portugal: "por",
+  // Halloween 2026: Halloween Talk's cards.
+  halloween: "hal",
+  "halloween-portugal": "hpt",
 } as const;
 export type TalkTopic = keyof typeof talkTopicCodes;
 
