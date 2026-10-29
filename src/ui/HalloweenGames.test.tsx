@@ -493,6 +493,23 @@ describe("Spooky sounds", () => {
     expect(spookySounds.played).toBe(0);
   });
 
+  it("plays the chosen sound on the soundboard, even when muted", async () => {
+    const spookySounds = recordingSpookySounds();
+    const { user } = renderApp(testDeps({ spookySounds }));
+    await user.click(screen.getByRole("button", { name: /^halloween/i }));
+    await user.click(screen.getByRole("button", { name: "Spooky sounds" }));
+    expect(screen.getByRole("button", { name: "Spooky sounds" })).toHaveAttribute("aria-pressed", "false");
+
+    await user.click(screen.getByRole("button", { name: "Sounds" }));
+    expect(screen.queryByRole("button", { name: "Random sound" })).not.toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Creaky door" }));
+    await user.click(screen.getByRole("button", { name: "Heartbeat" }));
+
+    expect(spookySounds.names).toEqual(["creak", "heartbeat"]);
+    await user.click(screen.getByRole("button", { name: "Halloween games" }));
+    expect(screen.getByRole("navigation", { name: "Halloween games" })).toBeInTheDocument();
+  });
+
   it("never plays in regular Talk", async () => {
     const spookySounds = recordingSpookySounds();
     const { user } = renderApp(testDeps({ spookySounds }));

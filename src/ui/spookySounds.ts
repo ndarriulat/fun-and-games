@@ -7,8 +7,12 @@
  */
 export type SpookySounds = {
   unlock(): void;
-  play(): void;
+  /** Plays the named sound, or a random one. */
+  play(name?: SoundName): void;
 };
+
+export const soundNames = ["whisper", "creak", "moan", "musicBox", "knocks", "heartbeat"] as const;
+export type SoundName = (typeof soundNames)[number];
 
 type Sound = (ctx: AudioContext, out: AudioNode, at: number) => void;
 
@@ -176,20 +180,21 @@ const heartbeat: Sound = (ctx, out, t) => {
   }
 };
 
-const sounds = [whisper, creak, moan, musicBox, knocks, heartbeat];
+const sounds: Record<SoundName, Sound> = { whisper, creak, moan, musicBox, knocks, heartbeat };
 
 /** The real sounds, for the browser. Does nothing where there's no Web Audio. */
 export const browserSpookySounds: SpookySounds = {
   unlock() {
     audio();
   },
-  play() {
+  play(name) {
     const ctx = audio();
     if (!ctx) return;
     const out = ctx.createGain();
     // About half volume: noticeable, not a jump scare.
     out.gain.value = 0.5;
     out.connect(ctx.destination);
-    sounds[Math.floor(Math.random() * sounds.length)](ctx, out, ctx.currentTime + 0.03);
+    const pick = name ?? soundNames[Math.floor(Math.random() * soundNames.length)];
+    sounds[pick](ctx, out, ctx.currentTime + 0.03);
   },
 };

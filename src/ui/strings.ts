@@ -1,5 +1,6 @@
 import type { Difficulty, Language, TalkTopic, TriviaTopic } from "@/content/types";
 import type { ReportReason } from "./deps";
+import type { SoundName } from "./spookySounds";
 
 /** Halloween 2026: the games in the Halloween menu. */
 export type HalloweenGame = "talk" | "trivia" | "taboo" | "categories";
@@ -26,6 +27,7 @@ export type Strings = {
     secondsLeft: (seconds: number) => string;
     menuBack: string;
     sounds: string;
+    soundboard: { name: string; lead: string; names: Record<SoundName, string> };
     newGame: string;
     continueGame: string;
     endGame: string;
@@ -147,7 +149,7 @@ const en: Strings = {
   // Halloween 2026
   halloween: {
     name: "Halloween",
-    blurb: "Spooky games for the group",
+    blurb: "Spooky games for the evening",
     ribbon: "Special edition",
     menu: "Halloween games",
     games: {
@@ -162,6 +164,18 @@ const en: Strings = {
     secondsLeft: (seconds) => `${seconds} seconds left`,
     menuBack: "Halloween games",
     sounds: "Spooky sounds",
+    soundboard: {
+      name: "Sounds",
+      lead: "Tap one to play it, just for fun.",
+      names: {
+        whisper: "Whisper",
+        creak: "Creaky door",
+        moan: "Ghost moan",
+        musicBox: "Music box",
+        knocks: "Three knocks",
+        heartbeat: "Heartbeat",
+      },
+    },
     newGame: "New game",
     continueGame: "Continue game",
     endGame: "End game",
@@ -321,7 +335,7 @@ const es: Strings = {
   // Halloween 2026
   halloween: {
     name: "Halloween",
-    blurb: "Juegos de miedo para el grupo",
+    blurb: "Juegos de miedo para la noche",
     ribbon: "Edición especial",
     menu: "Juegos de Halloween",
     games: {
@@ -336,6 +350,18 @@ const es: Strings = {
     secondsLeft: (seconds) => `Quedan ${seconds} segundos`,
     menuBack: "Juegos de Halloween",
     sounds: "Sonidos de miedo",
+    soundboard: {
+      name: "Sonidos",
+      lead: "Tocá uno para escucharlo, solo por diversión.",
+      names: {
+        whisper: "Susurro",
+        creak: "Puerta que cruje",
+        moan: "Lamento de fantasma",
+        musicBox: "Cajita de música",
+        knocks: "Tres golpes",
+        heartbeat: "Latidos",
+      },
+    },
     newGame: "Juego nuevo",
     continueGame: "Seguir el juego",
     endGame: "Terminar el juego",

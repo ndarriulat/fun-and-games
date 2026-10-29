@@ -2,7 +2,7 @@ import { inMemoryContentBank } from "@/content/bank";
 import type { Mode, TalkItem, TriviaItem } from "@/content/types";
 import type { KeyValueStore } from "@/play/storage";
 import type { AppDeps, Report, ReportSender } from "@/ui/deps";
-import type { SpookySounds } from "@/ui/spookySounds";
+import type { SoundName, SpookySounds } from "@/ui/spookySounds";
 
 export function inMemoryStorage(seed: Record<string, string> = {}): KeyValueStore & { data: Map<string, string> } {
   const data = new Map(Object.entries(seed));
@@ -43,12 +43,14 @@ export function sequenceRandom(...values: number[]): () => number {
 }
 
 /** Halloween 2026: counts the spooky sounds played instead of playing them. */
-export function recordingSpookySounds(): SpookySounds & { played: number } {
+export function recordingSpookySounds(): SpookySounds & { played: number; names: (SoundName | "random")[] } {
   const sounds = {
     played: 0,
+    names: [] as (SoundName | "random")[],
     unlock() {},
-    play() {
+    play(name?: SoundName) {
       sounds.played++;
+      sounds.names.push(name ?? "random");
     },
   };
   return sounds;

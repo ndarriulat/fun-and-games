@@ -140,23 +140,56 @@ button:focus-visible {
   color: var(--pumpkin);
   text-align: center;
 }
-.halloween-sound {
-  align-self: center;
+.halloween-tools {
   display: flex;
-  align-items: center;
+  justify-content: center;
   gap: 10px;
-  padding: 10px 16px;
-  border-radius: 999px;
+}
+.halloween-mute {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
   border: 1.5px solid rgba(243, 236, 226, 0.3);
   color: var(--bone);
-  font-weight: 800;
+  display: grid;
+  place-items: center;
+  opacity: 0.6;
 }
-.halloween-sound[aria-pressed="true"] {
+.halloween-mute[aria-pressed="true"] {
   border-color: var(--pumpkin);
   color: var(--pumpkin);
+  opacity: 1;
 }
-.halloween-sound[aria-pressed="false"] {
-  opacity: 0.6;
+.halloween-soundboard {
+  height: 44px;
+  padding: 0 20px;
+  border-radius: 999px;
+  border: 1.5px solid var(--pumpkin);
+  color: var(--pumpkin);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.05rem;
+}
+.soundboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.sound-tile {
+  min-height: 84px;
+  border-radius: 20px;
+  padding: 12px;
+  background: var(--halloween);
+  color: var(--pumpkin);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.2rem;
+  line-height: 1.15;
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.3);
+}
+.sound-tile:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
 }
 .halloween-games {
   flex: 1;
@@ -175,6 +208,85 @@ button:focus-visible {
   background: var(--game);
   color: var(--game-ink);
   box-shadow: 0 6px 0 rgba(0, 0, 0, 0.35);
+}
+.halloween-game {
+  position: relative;
+  overflow: hidden;
+}
+.halloween-game .mode-name,
+.halloween-game .mode-blurb {
+  position: relative;
+  z-index: 1;
+  max-width: calc(100% - 84px);
+}
+.game-icon {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  width: 72px;
+  height: 72px;
+  transform: translateY(-50%);
+  fill: none;
+  stroke: var(--game-title);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.game-icon .fill {
+  fill: var(--game-title);
+  stroke: none;
+}
+.game-decor {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.45;
+}
+.game-decor-web {
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  fill: none;
+  stroke: var(--game-ink);
+  stroke-width: 1;
+}
+.game-decor-bats {
+  top: 12px;
+  left: 14px;
+  width: 80px;
+  height: 40px;
+  fill: var(--game-title);
+}
+.game-decor-spider {
+  top: 0;
+  left: 46%;
+  width: 40px;
+  height: 70px;
+  fill: var(--game-title);
+  stroke: var(--game-title);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+}
+.game-decor-spider .thread {
+  stroke-width: 1;
+}
+.game-decor-witch {
+  top: 10px;
+  left: 14px;
+  width: 108px;
+  height: 60px;
+  fill: #0d0714;
+  opacity: 0.7;
+}
+.game-decor-witch .moon {
+  fill: var(--game-title);
+}
+.game-decor-witch .broom,
+.game-decor-witch .brim,
+.game-decor-witch .arm {
+  stroke: #0d0714;
+  stroke-width: 2.5;
+  stroke-linecap: round;
 }
 .halloween-game:active {
   transform: translateY(3px);
