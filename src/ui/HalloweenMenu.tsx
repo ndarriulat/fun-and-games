@@ -1,5 +1,7 @@
 // Halloween 2026: remove in ticket 03, with everything marked "Halloween 2026".
+import { useState } from "react";
 import type { Screen } from "./App";
+import { ReportOverlay } from "./ReportOverlay";
 import { GameDecor, GameIcon } from "./HalloweenIcons";
 import { Icon } from "./icons";
 import { useLanguage } from "./language";
@@ -11,8 +13,9 @@ const games: HalloweenGame[] = ["talk", "trivia", "taboo", "categories"];
 
 /** Home's Halloween card opens this: the four Halloween games. */
 export function HalloweenMenu({ go, goHome }: { go: (screen: Screen) => void; goHome: () => void }) {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
   const sound = useSoundSetting();
+  const [feedback, setFeedback] = useState(false);
 
   return (
     <main className="halloween-menu">
@@ -54,6 +57,17 @@ export function HalloweenMenu({ go, goHome }: { go: (screen: Screen) => void; go
           </button>
         ))}
       </nav>
+      <button type="button" className="game-end halloween-feedback" onClick={() => setFeedback(true)}>
+        {t.halloween.feedback.open}
+      </button>
+      {feedback && (
+        <ReportOverlay
+          card={{ itemId: "halloween-feedback", mode: "halloween-feedback", language, text: "", revealed: "" }}
+          title={t.halloween.feedback.title}
+          feedback
+          onClose={() => setFeedback(false)}
+        />
+      )}
     </main>
   );
 }

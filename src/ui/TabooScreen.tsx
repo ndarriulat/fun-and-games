@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState, type ReactNode } from "react";
 import words from "../../content/halloween/taboo.json";
 import { gameSave, shuffledIndexes } from "@/play/halloweenSaves";
 import { ConfirmDialog } from "./ConfirmDialog";
+import { ReportOverlay } from "./ReportOverlay";
 import { useDeps } from "./deps";
 import { Icon } from "./icons";
 import { useLanguage } from "./language";
@@ -67,6 +68,7 @@ export function TabooScreen({ goHome }: { goHome: () => void }) {
   });
   const [game, setGame] = useState<TabooGame | null>(null);
   const [confirming, setConfirming] = useState<"end" | "new" | null>(null);
+  const [reporting, setReporting] = useState(false);
 
   useEffect(() => {
     if (game) save.save(game);
@@ -89,7 +91,7 @@ export function TabooScreen({ goHome }: { goHome: () => void }) {
   }
 
   useCountdown({
-    running: game?.phase === "playing" && !confirming,
+    running: game?.phase === "playing" && !confirming && !reporting,
     timeLeftMs: game?.timeLeftMs ?? 0,
     onTick: (timeLeftMs) => setGame((current) => current && { ...current, timeLeftMs }),
     onEnd: () => {
@@ -119,6 +121,19 @@ export function TabooScreen({ goHome }: { goHome: () => void }) {
     });
   }
 
+  /** The word on screen, for Report. Words have no IDs, so it's named by language and list position. */
+  function reportedWord(current: TabooGame) {
+    const index = current.order[current.position % current.order.length] % list.length;
+    const { word: name, forbidden } = list[index];
+    return {
+      itemId: `taboo-${language}-${index}`,
+      mode: "halloween-taboo" as const,
+      language,
+      text: `${name}\nDon't say: ${forbidden.join(", ")}`,
+      revealed: `turn ${current.turn + 1} of ${TURNS}`,
+    };
+  }
+
   /** Throws the game away, after the player confirmed: back to the start, with nothing to continue. */
   function endGame() {
     save.save(null);
@@ -142,6 +157,20 @@ export function TabooScreen({ goHome }: { goHome: () => void }) {
           <span className="chip-text">{t.halloween.games.taboo.title}</span>
         </span>
         <LanguageToggle />
+        {game && (game.phase === "playing" || game.phase === "paused") && (
+          <button
+            type="button"
+            className="icon-btn"
+            aria-label={t.halloween.reportWord}
+            onClick={() => {
+              // The clock stops while reporting.
+              if (game.phase === "playing") setGame({ ...game, phase: "paused" });
+              setReporting(true);
+            }}
+          >
+            <Icon name="report" />
+          </button>
+        )}
       </header>
       {game && game.phase !== "game-over" && <Scores scores={game.scores} turn={game.turn} />}
       <div className="game-body">{children}</div>
@@ -157,6 +186,9 @@ export function TabooScreen({ goHome }: { goHome: () => void }) {
         >
           {t.halloween.endGame}
         </button>
+      )}
+      {reporting && game && (
+        <ReportOverlay card={reportedWord(game)} title={t.halloween.reportWord} onClose={() => setReporting(false)} />
       )}
       {confirming && (
         <ConfirmDialog

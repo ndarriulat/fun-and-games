@@ -140,6 +140,10 @@ button:focus-visible {
   color: var(--pumpkin);
   text-align: center;
 }
+.halloween-feedback {
+  color: var(--bone);
+  opacity: 0.75;
+}
 .halloween-tools {
   display: flex;
   justify-content: center;

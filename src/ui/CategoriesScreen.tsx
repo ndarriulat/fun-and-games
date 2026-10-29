@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState, type ReactNode } from "react";
 import categories from "../../content/halloween/categories.json";
 import { gameSave, shuffledIndexes } from "@/play/halloweenSaves";
 import { ConfirmDialog } from "./ConfirmDialog";
+import { ReportOverlay } from "./ReportOverlay";
 import { useDeps } from "./deps";
 import { Icon } from "./icons";
 import { useLanguage } from "./language";
@@ -109,6 +110,7 @@ export function CategoriesScreen({ goHome }: { goHome: () => void }) {
   /** The names being typed in before a new game, or null when not setting one up. */
   const [names, setNames] = useState<string[] | null>(null);
   const [confirming, setConfirming] = useState<Confirming>(null);
+  const [reporting, setReporting] = useState(false);
 
   useEffect(() => {
     if (game) save.save(game);
@@ -117,7 +119,7 @@ export function CategoriesScreen({ goHome }: { goHome: () => void }) {
   const s = t.halloween.categories;
 
   useCountdown({
-    running: !!game && isTimed(game.phase) && !confirming,
+    running: !!game && isTimed(game.phase) && !confirming && !reporting,
     timeLeftMs: game?.timeLeftMs ?? 0,
     onTick: (timeLeftMs) => setGame((current) => current && { ...current, timeLeftMs }),
     onEnd: () => {
@@ -207,6 +209,18 @@ export function CategoriesScreen({ goHome }: { goHome: () => void }) {
     nextCategory();
   }
 
+  /** The category on screen, for Report, named by its place in the list. */
+  function reportedCategory(current: CategoriesGame) {
+    const index = current.order[current.position % current.order.length] % categories.length;
+    return {
+      itemId: `category-${index}`,
+      mode: "halloween-categories" as const,
+      language,
+      text: categories[index][language],
+      revealed: current.phase,
+    };
+  }
+
   const pause = () =>
     setGame((current) =>
       current && isTimed(current.phase) ? { ...current, phase: "paused", pausedFrom: current.phase } : current,
@@ -221,6 +235,20 @@ export function CategoriesScreen({ goHome }: { goHome: () => void }) {
         <span className="chip-text">{t.halloween.games.categories.title}</span>
       </span>
       <LanguageToggle />
+      {game && game.phase !== "over" && (
+        <button
+          type="button"
+          className="icon-btn"
+          aria-label={t.halloween.reportCategory}
+          onClick={() => {
+            // The clock stops while reporting.
+            pause();
+            setReporting(true);
+          }}
+        >
+          <Icon name="report" />
+        </button>
+      )}
     </header>
   );
 
@@ -228,6 +256,13 @@ export function CategoriesScreen({ goHome }: { goHome: () => void }) {
     <main className="play halloween-game-screen" data-mode="halloween" onClickCapture={spookySounds.unlock}>
       {header}
       <div className="game-body">{children}</div>
+      {reporting && game && (
+        <ReportOverlay
+          card={reportedCategory(game)}
+          title={t.halloween.reportCategory}
+          onClose={() => setReporting(false)}
+        />
+      )}
       {confirming && (
         <ConfirmDialog
           {...(confirming === "skip"

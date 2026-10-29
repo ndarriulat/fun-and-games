@@ -93,13 +93,13 @@
     "en": {
       "question": "Which neighbourhood or town in Uruguay would you show a foreign friend first, and why there?",
       "followUps": [
-        "Where would you never take them?"
+        "What would surprise them most?"
       ]
     },
     "es": {
       "question": "¿Qué barrio o pueblo de Uruguay le mostrarías primero a un amigo extranjero, y por qué ese?",
       "followUps": [
-        "¿A dónde no lo llevarías nunca?"
+        "¿Qué es lo que más lo sorprendería?"
       ]
     }
   },

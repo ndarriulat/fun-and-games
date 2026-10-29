@@ -3,7 +3,13 @@ import { act, cleanup, render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import type { TriviaItem } from "@/content/types";
-import { inMemoryStorage, recordingSpookySounds, testDeps, triviaFixtures } from "@/test/fakes";
+import {
+  inMemoryStorage,
+  recordingReportSender,
+  recordingSpookySounds,
+  testDeps,
+  triviaFixtures,
+} from "@/test/fakes";
 import { App } from "./App";
 
 beforeEach(() => {
@@ -519,5 +525,73 @@ describe("Spooky sounds", () => {
     await nextCards(user, 9);
 
     expect(spookySounds.played).toBe(0);
+  });
+});
+
+describe("Reports and feedback", () => {
+  it("reports the Taboo word on screen, pausing the clock", async () => {
+    const reports = recordingReportSender();
+    const { user } = await openGame(/^taboo/i, testDeps({ reports }));
+    await user.click(screen.getByRole("button", { name: "New game" }));
+    expect(screen.queryByRole("button", { name: "Report this word" })).not.toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Start turn" }));
+    const word = screen.getByRole("article").querySelector(".taboo-word")?.textContent;
+
+    await user.click(screen.getByRole("button", { name: "Report this word" }));
+    const dialog = screen.getByRole("dialog", { name: "Report this word" });
+    await user.click(within(dialog).getByRole("radio", { name: "Confusing" }));
+    await user.click(within(dialog).getByRole("button", { name: "Send" }));
+    await within(dialog).findByText("Thanks! Report sent.");
+    await user.click(within(dialog).getByRole("button", { name: "Back to the card" }));
+
+    expect(reports.sent).toEqual([
+      expect.objectContaining({
+        itemId: expect.stringMatching(/^taboo-en-\d+$/),
+        mode: "halloween-taboo",
+        reason: "confusing",
+        text: expect.stringMatching(new RegExp(`^${word}\nDon't say: `)),
+      }),
+    ]);
+    expect(screen.getByRole("button", { name: "Resume" })).toBeInTheDocument();
+  });
+
+  it("reports the category on screen", async () => {
+    const reports = recordingReportSender();
+    const { user } = await openGame(/^categories/i, testDeps({ reports }));
+    await user.click(screen.getByRole("button", { name: "New game" }));
+    await user.type(screen.getByRole("textbox", { name: "Player 1" }), "Nico");
+    await user.type(screen.getByRole("textbox", { name: "Player 2" }), "Ana");
+    await user.click(screen.getByRole("button", { name: "Start game" }));
+    const category = screen.getByRole("article").textContent;
+
+    await user.click(screen.getByRole("button", { name: "Report this category" }));
+    const dialog = screen.getByRole("dialog", { name: "Report this category" });
+    await user.click(within(dialog).getByRole("radio", { name: "Other" }));
+    await user.click(within(dialog).getByRole("button", { name: "Send" }));
+    await within(dialog).findByText("Thanks! Report sent.");
+
+    expect(reports.sent).toEqual([
+      expect.objectContaining({ itemId: expect.stringMatching(/^category-\d+$/), mode: "halloween-categories", text: category }),
+    ]);
+  });
+
+  it("sends general feedback from the Halloween menu, once there's a message", async () => {
+    const reports = recordingReportSender();
+    const { user } = renderApp(testDeps({ reports }));
+    await user.click(screen.getByRole("button", { name: /^halloween/i }));
+
+    await user.click(screen.getByRole("button", { name: "Send feedback" }));
+    const dialog = screen.getByRole("dialog", { name: "Send feedback" });
+    expect(within(dialog).queryByRole("radio")).not.toBeInTheDocument();
+    expect(within(dialog).getByRole("button", { name: "Send" })).toBeDisabled();
+    await user.type(within(dialog).getByRole("textbox", { name: /Your feedback/ }), "Taboo needs more words!");
+    await user.click(within(dialog).getByRole("button", { name: "Send" }));
+    await within(dialog).findByText("Thanks! Feedback sent.");
+    await user.click(within(dialog).getByRole("button", { name: "Close" }));
+
+    expect(reports.sent).toEqual([
+      expect.objectContaining({ mode: "halloween-feedback", reason: "other", note: "Taboo needs more words!" }),
+    ]);
+    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
   });
 });

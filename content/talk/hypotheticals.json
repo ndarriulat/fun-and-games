@@ -58,7 +58,7 @@
       "optionB": "Always get away with a lie",
       "followUps": [
         "Who would you test it on first?",
-        "Would it make your friendships better or worse?"
+        "Would you tell anyone you had it?"
       ]
     },
     "es": {
@@ -67,7 +67,7 @@
       "optionB": "Que nunca me descubran",
       "followUps": [
         "¿Con quién lo probarías primero?",
-        "¿Tus amistades mejorarían o empeorarían?"
+        "¿Se lo contarías a alguien?"
       ]
     }
   },

@@ -7,13 +7,13 @@
     "en": {
       "question": "If you could only eat one country's food for the rest of your life, which would you pick?",
       "followUps": [
-        "Which dish from the others would you miss most?"
+        "Which country's food is the most overrated?"
       ]
     },
     "es": {
       "question": "Si pudieras comer la comida de un solo país por el resto de tu vida, ¿cuál elegirías?",
       "followUps": [
-        "¿Qué plato de los otros extrañarías más?"
+        "¿La comida de qué país está más sobrevalorada?"
       ]
     }
   },

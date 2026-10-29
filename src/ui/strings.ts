@@ -28,6 +28,9 @@ export type Strings = {
     menuBack: string;
     sounds: string;
     soundboard: { name: string; lead: string; names: Record<SoundName, string> };
+    feedback: { open: string; title: string; lead: string; note: string; sent: string; close: string };
+    reportWord: string;
+    reportCategory: string;
     newGame: string;
     continueGame: string;
     endGame: string;
@@ -176,6 +179,16 @@ const en: Strings = {
         heartbeat: "Heartbeat",
       },
     },
+    feedback: {
+      open: "Send feedback",
+      title: "Send feedback",
+      lead: "Ideas, bugs, a word that's too hard, anything about the Halloween games. It all helps.",
+      note: "Your feedback",
+      sent: "Thanks! Feedback sent.",
+      close: "Close",
+    },
+    reportWord: "Report this word",
+    reportCategory: "Report this category",
     newGame: "New game",
     continueGame: "Continue game",
     endGame: "End game",
@@ -362,6 +375,16 @@ const es: Strings = {
         heartbeat: "Latidos",
       },
     },
+    feedback: {
+      open: "Mandar comentarios",
+      title: "Mandar comentarios",
+      lead: "Ideas, errores, una palabra demasiado difícil, lo que sea sobre los juegos de Halloween. Todo ayuda.",
+      note: "Tu comentario",
+      sent: "¡Gracias! Comentario enviado.",
+      close: "Cerrar",
+    },
+    reportWord: "Reportar esta palabra",
+    reportCategory: "Reportar esta categoría",
     newGame: "Juego nuevo",
     continueGame: "Seguir el juego",
     endGame: "Terminar el juego",

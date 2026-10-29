@@ -1,6 +1,6 @@
 # 28: Talk feels repetitive about lying to friends
 
-**Status:** needs-triage
+**Status:** done
 
 **Reported by Nico (28 Oct 2026):** regular Talk (not Halloween Talk) keeps coming back to lying to friends.
 
@@ -15,6 +15,10 @@
 
 **Not urgent:** after Halloween.
 
-- [ ] Decide which to keep
-- [ ] Rewrite the others in English and Spanish, same IDs
-- [ ] Skim all Talk cards for other repeated themes
+- [x] Decide which to keep
+- [x] Rewrite the others in English and Spanish, same IDs
+- [x] Skim all Talk cards for other repeated themes
+
+## Comments
+
+**29 Oct:** kept `soc-00002` (the real debate), `fri-00008` (honest advice, not lying) and `hyp-00003`, swapping its "friendships better or worse?" follow-up for "Would you tell anyone you had it?". Replaced `soc-00006` (same ID) with "Would you rather live in a town where everyone knows your business, or a city where nobody knows your name?". While skimming all 96: `fod-00001` repeated `fod-00002`'s "which dish would you miss most" follow-up (now "Which country's food is the most overrated?"), and `uru-00005` repeated `tra-00007`'s "Where would you never take them?" (now "What would surprise them most?"). Both languages.

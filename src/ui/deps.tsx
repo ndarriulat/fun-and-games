@@ -13,10 +13,16 @@ export type ReportReason = (typeof reportReasons)[number];
 /** The longest note a report can carry. */
 export const REPORT_NOTE_LIMIT = 280;
 
+/** Halloween 2026: general feedback has room for more. */
+export const FEEDBACK_LIMIT = 1000;
+
+/** Halloween 2026: what else can be reported, besides a mode's card. */
+export type HalloweenReportKind = "halloween-taboo" | "halloween-categories" | "halloween-feedback";
+
 /** The card being reported. */
 export type ReportedCard = {
   itemId: string;
-  mode: Mode;
+  mode: Mode | HalloweenReportKind;
   /** The language the card was shown in, which isn't always the app's (a card pending translation stays in English). */
   language: Language;
   /** The card's text as it was on screen, in the language it was shown in. */

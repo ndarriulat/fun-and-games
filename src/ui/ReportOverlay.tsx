@@ -2,16 +2,39 @@ import { useEffect, useState } from "react";
 import { appStorage } from "@/play/storage";
 import { allTopics, isTopicHidden } from "@/play/topics";
 import { appVersion } from "./appVersion";
-import { REPORT_NOTE_LIMIT, reportReasons, useDeps, type Report, type ReportedCard, type ReportReason } from "./deps";
+import {
+  FEEDBACK_LIMIT,
+  REPORT_NOTE_LIMIT,
+  reportReasons,
+  useDeps,
+  type Report,
+  type ReportedCard,
+  type ReportReason,
+} from "./deps";
 import { useLanguage } from "./language";
 
 type Status = "editing" | "sending" | "sent" | "failed";
 
-/** Over the card: pick a reason, add a note, send. Closing it leaves the card as it was. */
-export function ReportOverlay({ card, onClose }: { card: ReportedCard; onClose: () => void }) {
+/**
+ * Over the card: pick a reason, add a note, send. Closing it leaves the card as it was.
+ * Halloween 2026: `title` names what's reported (a Taboo word, a category), and `feedback` turns it
+ * into general feedback: no reasons, just a message, which is then required.
+ */
+export function ReportOverlay({
+  card,
+  onClose,
+  title,
+  feedback = false,
+}: {
+  card: ReportedCard;
+  onClose: () => void;
+  title?: string;
+  feedback?: boolean;
+}) {
   const { reports, storage } = useDeps();
   const { language, t } = useLanguage();
-  const [reason, setReason] = useState<ReportReason | null>(null);
+  const [reason, setReason] = useState<ReportReason | null>(feedback ? "other" : null);
+  const limit = feedback ? FEEDBACK_LIMIT : REPORT_NOTE_LIMIT;
   const [note, setNote] = useState("");
   const [status, setStatus] = useState<Status>("editing");
   // Kept so Retry resends exactly what failed.
@@ -60,16 +83,16 @@ export function ReportOverlay({ card, onClose }: { card: ReportedCard; onClose: 
     <div className="overlay">
       <div className="report" role="dialog" aria-modal="true" aria-labelledby="report-title">
         <h2 id="report-title" className="report-title">
-          {t.report.title}
+          {title ?? t.report.title}
         </h2>
         {status === "sent" ? (
           <>
             <p className="report-sent" role="status">
-              {t.report.sent}
+              {feedback ? t.halloween.feedback.sent : t.report.sent}
             </p>
             <div className="report-actions">
               <button type="button" className="report-primary" onClick={onClose}>
-                {t.report.backToCard}
+                {feedback ? t.halloween.feedback.close : t.report.backToCard}
               </button>
             </div>
           </>
@@ -83,7 +106,8 @@ export function ReportOverlay({ card, onClose }: { card: ReportedCard; onClose: 
               else submit();
             }}
           >
-            <fieldset className="report-reasons" disabled={status !== "editing"}>
+            {feedback && <p className="confirm-body">{t.halloween.feedback.lead}</p>}
+            <fieldset className="report-reasons" disabled={status !== "editing"} hidden={feedback}>
               <legend className="setting-name">{t.report.reason}</legend>
               {reportReasons.map((option) => (
                 <label key={option} className="report-reason">
@@ -99,15 +123,15 @@ export function ReportOverlay({ card, onClose }: { card: ReportedCard; onClose: 
               ))}
             </fieldset>
             <label className="report-note">
-              <span className="setting-name">{t.report.note}</span>
+              <span className="setting-name">{feedback ? t.halloween.feedback.note : t.report.note}</span>
               <textarea
                 value={note}
-                maxLength={REPORT_NOTE_LIMIT}
-                rows={3}
+                maxLength={limit}
+                rows={feedback ? 5 : 3}
                 disabled={status !== "editing"}
                 onChange={(event) => setNote(event.target.value)}
               />
-              <span className="report-count">{t.report.charactersLeft(REPORT_NOTE_LIMIT - note.length)}</span>
+              <span className="report-count">{t.report.charactersLeft(limit - note.length)}</span>
             </label>
             {status === "failed" && (
               <p className="report-error" role="alert">
@@ -118,7 +142,11 @@ export function ReportOverlay({ card, onClose }: { card: ReportedCard; onClose: 
               <button type="button" className="report-secondary" onClick={onClose}>
                 {t.report.cancel}
               </button>
-              <button type="submit" className="report-primary" disabled={!reason || status === "sending"}>
+              <button
+                type="submit"
+                className="report-primary"
+                disabled={!reason || (feedback && !note.trim()) || status === "sending"}
+              >
                 {status === "sending" ? t.report.sending : status === "failed" ? t.report.retry : t.report.send}
               </button>
             </div>

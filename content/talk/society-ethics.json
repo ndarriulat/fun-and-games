@@ -109,21 +109,21 @@
     "type": "would-you-rather",
     "intensity": "light",
     "en": {
-      "question": "Would you rather everyone always told you the brutal truth, or everyone was always kind, even if it meant fibbing?",
-      "optionA": "The brutal truth, always",
-      "optionB": "Kindness, even with fibs",
+      "question": "Would you rather live in a town where everyone knows your business, or a city where nobody knows your name?",
+      "optionA": "A town where everyone knows you",
+      "optionB": "A city where nobody knows you",
       "followUps": [
-        "Who in your life already does the first one?",
-        "Which would make the world a better place overall?"
+        "Which one did you grow up in?",
+        "What's the best thing about nobody knowing you?"
       ]
     },
     "es": {
-      "question": "¿Qué preferís: que todos te digan siempre la verdad, por más dura que sea, o que todos sean siempre amables aunque tengan que mentirte un poco?",
-      "optionA": "La verdad, por más dura que sea",
-      "optionB": "Amabilidad, aunque mientan un poco",
+      "question": "¿Qué preferís: vivir en un pueblo donde todos saben tu vida, o en una ciudad donde nadie sabe tu nombre?",
+      "optionA": "Un pueblo donde todos te conocen",
+      "optionB": "Una ciudad donde nadie te conoce",
       "followUps": [
-        "¿Quién en tu vida ya hace lo primero?",
-        "¿Cuál de las dos haría un mundo mejor?"
+        "¿En cuál de los dos te criaste?",
+        "¿Qué tiene de bueno que nadie te conozca?"
       ]
     }
   },
