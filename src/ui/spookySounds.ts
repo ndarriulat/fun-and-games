@@ -23,8 +23,15 @@ function audio(): AudioContext | null {
   if (typeof window === "undefined") return null;
   const Context = window.AudioContext ?? (window as unknown as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
   if (!Context) return null;
-  context ??= new Context();
-  if (context.state === "suspended") void context.resume();
+  if (!context) {
+    // On iPhone (Safari 17+), play like a media app, so the ring/silent switch doesn't mute the
+    // sounds. The app's own mute button still works.
+    const session = (navigator as { audioSession?: { type: string } }).audioSession;
+    if (session) session.type = "playback";
+    context = new Context();
+  }
+  // "interrupted" is Safari's state after a call or the app going to the background.
+  if (context.state !== "running") void context.resume();
   return context;
 }
 
@@ -185,11 +192,19 @@ const sounds: Record<SoundName, Sound> = { whisper, creak, moan, musicBox, knock
 /** The real sounds, for the browser. Does nothing where there's no Web Audio. */
 export const browserSpookySounds: SpookySounds = {
   unlock() {
-    audio();
+    const ctx = audio();
+    if (!ctx) return;
+    // iPhones only fully unlock sound once something actually plays inside a tap: one silent sample.
+    const silence = ctx.createBufferSource();
+    silence.buffer = ctx.createBuffer(1, 1, ctx.sampleRate);
+    silence.connect(ctx.destination);
+    silence.start();
   },
   play(name) {
     const ctx = audio();
     if (!ctx) return;
+    // A sound tapped on directly (the soundboard) unlocks as it plays.
+    browserSpookySounds.unlock();
     const out = ctx.createGain();
     // About half volume: noticeable, not a jump scare.
     out.gain.value = 0.5;

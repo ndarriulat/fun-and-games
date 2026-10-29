@@ -133,7 +133,7 @@ export function TabooScreen({ goHome }: { goHome: () => void }) {
   }
 
   const frame = (children: ReactNode) => (
-    <main className="play halloween-game-screen" data-mode="halloween" onPointerDown={spookySounds.unlock}>
+    <main className="play halloween-game-screen" data-mode="halloween" onClickCapture={spookySounds.unlock}>
       <header className="play-top">
         <button type="button" className="icon-btn" aria-label={t.halloween.menuBack} onClick={goHome}>
           <Icon name="home" />

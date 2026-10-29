@@ -32,8 +32,8 @@ export function PlayScreen({
   const title = edition ? t.halloween.games[mode].title : t[mode].name;
 
   return (
-    // Halloween 2026: phones only allow sound after a tap, so taps here let the spooky sounds play later.
-    <main className="play" data-mode={edition ?? mode} onPointerDown={edition ? spookySounds.unlock : undefined}>
+    // Halloween 2026: phones only allow sound after a tap (counted when the finger lifts), so any tap here lets the spooky sounds play later.
+    <main className="play" data-mode={edition ?? mode} onClickCapture={edition ? spookySounds.unlock : undefined}>
       <header className="play-top">
         <button type="button" className="icon-btn" aria-label={edition ? t.halloween.menuBack : t.home} onClick={goHome}>
           <Icon name="home" />

@@ -225,7 +225,7 @@ export function CategoriesScreen({ goHome }: { goHome: () => void }) {
   );
 
   const shell = (children: ReactNode) => (
-    <main className="play halloween-game-screen" data-mode="halloween" onPointerDown={spookySounds.unlock}>
+    <main className="play halloween-game-screen" data-mode="halloween" onClickCapture={spookySounds.unlock}>
       {header}
       <div className="game-body">{children}</div>
       {confirming && (
